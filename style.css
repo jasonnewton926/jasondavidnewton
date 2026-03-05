@@ -1,129 +1,160 @@
-/* General reset */
-* {
+/* GENERAL */
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
+    font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    background: #f4f4f4;
     color: #333;
-    background: #f9f9f9;
 }
 
-/* Navigation */
-nav {
-    background-color: #1e2a38;
-    padding: 15px 0;
+/* HERO SECTION */
+.hero {
+    background: linear-gradient(to right, #1e2a38, #2c3e50);
+    color: #fff;
+    text-align: center;
+    padding: 100px 20px 50px;
 }
 
-nav ul {
-    list-style: none;
+.hero h1 {
+    font-size: 3em;
+    margin: 0 0 10px;
+}
+
+.hero h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.hero p {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 1.1em;
+}
+
+.hero-buttons a {
+    padding: 12px 25px;
+    margin: 5px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background: #ff7f50;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: #ff6333;
+}
+
+.btn-secondary {
+    background: #fff;
+    color: #1e2a38;
+    border: 2px solid #1e2a38;
+}
+
+.btn-secondary:hover {
+    background: #1e2a38;
+    color: #fff;
+}
+
+/* NAVIGATION */
+.nav-bar {
+    background: #1e2a38;
+}
+
+.nav-bar ul {
     display: flex;
     justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 10px 0;
     flex-wrap: wrap;
 }
 
-nav li {
-    margin: 5px 15px;
+.nav-bar li {
+    margin: 0 15px;
 }
 
-nav a {
+.nav-bar a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
 }
 
-nav a:hover {
-    color: #00bfff;
+.nav-bar a:hover {
+    text-decoration: underline;
 }
 
-/* Header section */
-header {
-    text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #0077ff, #00bfff);
-    color: white;
-}
-
-header h1 {
-    font-size: 2.8em;
-}
-
-header p {
-    font-size: 1.3em;
-    margin-top: 15px;
-}
-
-/* Container */
-.container {
-    max-width: 1000px;
-    margin: 40px auto;
+/* SECTION PREVIEW */
+.section-preview {
+    max-width: 900px;
+    margin: 50px auto;
     padding: 0 20px;
+    text-align: center;
 }
 
-/* Card sections */
-.card {
-    background: white;
-    padding: 20px;
-    margin-bottom: 25px;
-    border-radius: 10px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Headings */
-h2 {
+.section-preview h2 {
+    font-size: 2em;
     margin-bottom: 15px;
     color: #1e2a38;
 }
 
-h3 {
-    margin-bottom: 10px;
-    color: #0077ff;
+.section-preview p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
 }
 
-/* Social links */
-.social-links {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 15px 0;
-}
-
-.social-links a {
-    color: #1e2a38;
-    text-decoration: none;
-    font-weight: bold;
-    margin: 5px 10px;
-}
-
-.social-links a:hover {
-    color: #0077ff;
-}
-
-/* Footer */
-footer {
+/* SOCIAL ICONS */
+.social-section {
+    background: #fff;
     text-align: center;
-    padding: 25px;
-    background-color: #1e2a38;
-    color: #fff;
-    font-size: 0.9em;
-    margin-top: 50px;
+    padding: 50px 20px;
 }
 
-/* Responsive */
-@media(max-width: 600px) {
-    nav ul {
-        flex-direction: column;
+.social-section h2 {
+    font-size: 2em;
+    margin-bottom: 25px;
+    color: #1e2a38;
+}
+
+.social-icons a {
+    margin: 0 10px;
+    display: inline-block;
+    transition: transform 0.2s;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+}
+
+.social-icons img {
+    width: 40px;
+    height: 40px;
+}
+
+/* FOOTER */
+footer {
+    background: #1e2a38;
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    font-size: 0.9em;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.2em;
     }
-    nav li {
-        margin: 10px 0;
+    .hero h2 {
+        font-size: 1.2em;
     }
-    header h1 {
-        font-size: 2em;
-    }
-    header p {
-        font-size: 1em;
+    .social-icons img {
+        width: 35px;
+        height: 35px;
     }
 }
