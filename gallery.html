@@ -2,215 +2,129 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Gallery | Jason David Newton</title>
-
-<meta name="description" content="Photo gallery of Jason David Newton from Moses Lake Washington featuring personal life, outdoor activities, and photography.">
-
+<meta name="description" content="Photo gallery of Jason David Newton from Moses Lake, WA featuring personal life, outdoor activities, and photography.">
 <link rel="stylesheet" href="style.css">
 
 <style>
-
 /* GALLERY GRID */
-
-.gallery-grid{
-max-width:1000px;
-margin:auto;
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
-padding:40px 20px;
+.gallery-grid {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
 }
-
-.gallery-grid img{
-width:100%;
-border-radius:6px;
-transition:transform .3s;
+.gallery-grid img {
+    width: 100%;
+    border-radius: 6px;
+    transition: transform .3s;
 }
-
-.gallery-grid img:hover{
-transform:scale(1.05);
+.gallery-grid img:hover {
+    transform: scale(1.05);
 }
-
-.vsco-link{
-text-align:center;
-margin-top:20px;
+.vsco-link {
+    text-align: center;
+    margin-top: 20px;
 }
-
-.vsco-button{
-display:inline-block;
-padding:12px 24px;
-background:#1f4f7a;
-color:white;
-border-radius:5px;
-font-weight:bold;
+.vsco-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #1f4f7a;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
 }
-
-.vsco-button:hover{
-background:#163a59;
+.vsco-button:hover {
+    background: #163a59;
 }
-
 </style>
 
 </head>
 
 <body>
 
-
+<!-- NAVIGATION -->
 <header class="navbar">
-
 <div class="nav-container">
-
-<div class="logo">
-Jason David Newton
+    <div class="logo">Jason David Newton</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 </div>
-
-<nav>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-<li><a href="about.html">About</a></li>
-<li><a href="experience.html">Experience</a></li>
-<li><a href="blog.html">Blog</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</nav>
-
-</div>
-
 </header>
 
-
-
+<!-- HERO SECTION -->
 <section class="hero">
-
 <div class="hero-content">
-
-<h1>Photo Gallery</h1>
-
-<h2>Life in Moses Lake, Washington</h2>
-
-<p>
-
-This gallery shares some moments from my life including family, outdoor activities, travel, and everyday experiences. Photography is something I enjoy as a way to capture meaningful moments.
-
-</p>
-
+    <h1>Photo Gallery</h1>
+    <h2>Life in Moses Lake, Washington</h2>
+    <p>
+        Capturing moments from family life, outdoor adventures, and the beautiful landscapes of the Pacific Northwest. Photography is a way I preserve meaningful experiences.
+    </p>
 </div>
-
 </section>
 
-
-
+<!-- LIFE MOMENTS SECTION -->
 <section class="section">
-
 <div class="section-content">
-
-<h2>Moments From Life</h2>
-
-<p>
-
-Photos from life in the Pacific Northwest including outdoor activities, family time, and places around Moses Lake, Washington.
-
-</p>
-
+    <h2>Moments From Life</h2>
+    <p>
+        A glimpse into daily life, hobbies, outdoor activities, and experiences around Moses Lake, Washington.
+    </p>
 </div>
-
 </section>
 
-
-
+<!-- GALLERY GRID -->
 <div class="gallery-grid">
-
-<img src="images/photo1.jpg" alt="Moses Lake Washington scenery">
-<img src="images/photo2.jpg" alt="Outdoor life in Washington State">
-<img src="images/photo3.jpg" alt="Snowboarding in Washington">
-<img src="images/photo4.jpg" alt="Family life and fatherhood">
-<img src="images/photo5.jpg" alt="Golf in Moses Lake Washington">
-<img src="images/photo6.jpg" alt="Pacific Northwest landscape">
-
+    <img src="images/photo1.jpg" alt="Moses Lake Washington scenery">
+    <img src="images/photo2.jpg" alt="Outdoor life in Washington State">
+    <img src="images/photo3.jpg" alt="Snowboarding in Washington">
+    <img src="images/photo4.jpg" alt="Family life and fatherhood">
+    <img src="images/photo5.jpg" alt="Golf in Moses Lake Washington">
+    <img src="images/photo6.jpg" alt="Pacific Northwest landscape">
 </div>
 
-
-
+<!-- VSCO PROFILE SECTION -->
 <section class="section alt">
-
 <div class="section-content">
-
-<h2>More Photography</h2>
-
-<p>
-
-I occasionally share photography on my VSCO profile where I post additional images from everyday life, outdoor adventures, and the Pacific Northwest.
-
-</p>
-
-<div class="vsco-link">
-
-<a href="https://vsco.co/YOURUSERNAME" target="_blank" class="vsco-button">
-View My VSCO Photography
-</a>
-
+    <h2>More Photography</h2>
+    <p>
+        I also share photography on my VSCO profile where you can find additional images from everyday life, outdoor adventures, and the Pacific Northwest.
+    </p>
+    <div class="vsco-link">
+        <a href="https://vsco.co/jasonnewtonmoseslakewa" target="_blank" class="vsco-button">
+            View My VSCO Photography
+        </a>
+    </div>
 </div>
-
-</div>
-
 </section>
 
-
-
+<!-- FOOTER -->
 <footer>
-
 <div class="footer-icons">
-
-<a href="https://www.linkedin.com/" target="_blank">
-<img src="icons/linkedin.png" alt="LinkedIn">
-</a>
-
-<a href="https://www.facebook.com/" target="_blank">
-<img src="icons/facebook.png" alt="Facebook">
-</a>
-
-<a href="https://www.instagram.com/" target="_blank">
-<img src="icons/instagram.png" alt="Instagram">
-</a>
-
-<a href="https://www.tiktok.com/" target="_blank">
-<img src="icons/tiktok.png" alt="TikTok">
-</a>
-
-<a href="https://x.com/" target="_blank">
-<img src="icons/x.png" alt="X">
-</a>
-
-<a href="https://www.pinterest.com/" target="_blank">
-<img src="icons/pinterest.png" alt="Pinterest">
-</a>
-
-<a href="https://truthsocial.com/" target="_blank">
-<img src="icons/truthsocial.png" alt="Truth Social">
-</a>
-
-<a href="https://youtube.com/" target="_blank">
-<img src="icons/youtube.png" alt="YouTube">
-</a>
-
+    <a href="https://www.linkedin.com/in/jasonnewton926" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+    <a href="https://www.facebook.com/jasonnewton926" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/jasonnewton926" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+    <a href="https://www.tiktok.com/@jasonnewton926" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+    <a href="https://x.com/jasonnewton926" target="_blank"><img src="icons/x.png" alt="X"></a>
+    <a href="https://www.pinterest.com/jasonnewton926" target="_blank"><img src="icons/pinterest.png" alt="Pinterest"></a>
+    <a href="https://truthsocial.com/@jasonnewton926" target="_blank"><img src="icons/truthsocial.png" alt="Truth Social"></a>
+    <a href="https://youtube.com/@jasonnewton926" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
 </div>
-
 <p>© 2026 Jason David Newton</p>
-
 <p>Moses Lake, Washington</p>
-
 </footer>
 
-
 </body>
-
 </html>
