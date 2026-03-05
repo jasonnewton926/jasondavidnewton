@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Gallery | Jason David Newton</title>
-<meta name="description" content="Photo gallery of Jason David Newton from Moses Lake, WA featuring personal life, outdoor activities, and photography.">
+<title>Photo Gallery | Jason David Newton - Moses Lake, Washington</title>
+<meta name="description" content="Explore the photo gallery of Jason David Newton from Moses Lake, Washington, featuring family life, outdoor adventures, photography, and Pacific Northwest landscapes.">
+<meta name="keywords" content="Jason David Newton, Moses Lake Washington, outdoor activities Moses Lake, family life Washington, Pacific Northwest photography">
+<!-- Open Graph for Social Sharing -->
+<meta property="og:title" content="Photo Gallery | Jason David Newton - Moses Lake, WA">
+<meta property="og:description" content="Capturing moments from life in Moses Lake, Washington by Jason David Newton.">
+<meta property="og:image" content="https://jasondavidnewton.com/images/photo1.jpg"> <!-- Update with a real image URL -->
+<meta property="og:url" content="https://jasondavidnewton.com/gallery.html">
+<meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
-
 <style>
-/* GALLERY GRID */
+/* GALLERY GRID (Updated for captions) */
 .gallery-grid {
     max-width: 1000px;
     margin: auto;
@@ -18,13 +23,33 @@
     gap: 20px;
     padding: 40px 20px;
 }
+.gallery-item {
+    position: relative;
+}
 .gallery-grid img {
     width: 100%;
     border-radius: 6px;
     transition: transform .3s;
+    loading: lazy; /* Lazy loading for performance */
 }
 .gallery-grid img:hover {
     transform: scale(1.05);
+}
+.gallery-caption {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity .3s;
+}
+.gallery-item:hover .gallery-caption {
+    opacity: 1;
 }
 .vsco-link {
     text-align: center;
@@ -42,15 +67,30 @@
     background: #163a59;
 }
 </style>
-
+<!-- Schema Markup for ImageGallery -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  "name": "Jason David Newton Photo Gallery - Moses Lake, Washington",
+  "description": "Photos by Jason David Newton capturing life in Moses Lake, WA, including family, outdoors, and landscapes.",
+  "author": {
+    "@type": "Person",
+    "name": "Jason David Newton",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Moses Lake",
+      "addressRegion": "WA"
+    }
+  }
+}
+</script>
 </head>
-
 <body>
-
 <!-- NAVIGATION -->
 <header class="navbar">
 <div class="nav-container">
-    <div class="logo">Jason David Newton</div>
+    <div class="logo">Jason David Newton - Moses Lake, Washington</div>
     <nav>
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -63,68 +103,81 @@
     </nav>
 </div>
 </header>
-
 <!-- HERO SECTION -->
 <section class="hero">
 <div class="hero-content">
-    <h1>Photo Gallery</h1>
-    <h2>Life in Moses Lake, Washington</h2>
+    <h1>Photo Gallery of Jason David Newton</h1>
+    <h2>Life and Adventures in Moses Lake, Washington</h2>
     <p>
-        Capturing moments from family life, outdoor adventures, and the beautiful landscapes of the Pacific Northwest. Photography is a way I preserve meaningful experiences.
+        As Jason David Newton from Moses Lake, Washington, I capture meaningful moments from family life, outdoor activities like snowboarding and golf, and the stunning landscapes of the Pacific Northwest. Photography helps me share my experiences in Moses Lake, WA.
     </p>
 </div>
 </section>
-
 <!-- LIFE MOMENTS SECTION -->
 <section class="section">
 <div class="section-content">
-    <h2>Moments From Life</h2>
+    <h2>Moments From Life in Moses Lake</h2>
     <p>
-        A glimpse into daily life, hobbies, outdoor activities, and experiences around Moses Lake, Washington.
+        Discover a glimpse into the daily life of Jason David Newton in Moses Lake, Washington—including hobbies, family time, outdoor adventures, and local scenery. These images highlight the beauty of living in Moses Lake, WA.
     </p>
 </div>
 </section>
-
 <!-- GALLERY GRID -->
 <div class="gallery-grid">
-    <img src="images/photo1.jpg" alt="Moses Lake Washington scenery">
-    <img src="images/photo2.jpg" alt="Outdoor life in Washington State">
-    <img src="images/photo3.jpg" alt="Snowboarding in Washington">
-    <img src="images/photo4.jpg" alt="Family life and fatherhood">
-    <img src="images/photo5.jpg" alt="Golf in Moses Lake Washington">
-    <img src="images/photo6.jpg" alt="Pacific Northwest landscape">
+    <div class="gallery-item">
+        <img src="images/photo1.jpg" alt="Moses Lake Washington scenery by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Scenic views of Moses Lake, WA</div>
+    </div>
+    <div class="gallery-item">
+        <img src="images/photo2.jpg" alt="Outdoor life in Washington State captured by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Outdoor adventures in the Pacific Northwest</div>
+    </div>
+    <div class="gallery-item">
+        <img src="images/photo3.jpg" alt="Snowboarding in Washington by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Snowboarding trips near Moses Lake</div>
+    </div>
+    <div class="gallery-item">
+        <img src="images/photo4.jpg" alt="Family life and fatherhood in Moses Lake by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Family moments in Moses Lake, WA</div>
+    </div>
+    <div class="gallery-item">
+        <img src="images/photo5.jpg" alt="Golf in Moses Lake Washington by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Golfing in the Moses Lake area</div>
+    </div>
+    <div class="gallery-item">
+        <img src="images/photo6.jpg" alt="Pacific Northwest landscape photographed by Jason David Newton" loading="lazy">
+        <div class="gallery-caption">Landscapes of the Pacific Northwest</div>
+    </div>
 </div>
-
 <!-- VSCO PROFILE SECTION -->
 <section class="section alt">
 <div class="section-content">
-    <h2>More Photography</h2>
+    <h2>More Photography by Jason David Newton</h2>
     <p>
-        I also share photography on my VSCO profile where you can find additional images from everyday life, outdoor adventures, and the Pacific Northwest.
+        Check out additional images from my life in Moses Lake, Washington, including everyday adventures and nature shots, on my VSCO profile. (Profile is live but add photos for the best experience!)
     </p>
     <div class="vsco-link">
-        <a href="https://vsco.co/jasonnewtonmoseslakewa" target="_blank" class="vsco-button">
+        <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank" class="vsco-button">
             View My VSCO Photography
         </a>
     </div>
 </div>
 </section>
-
 <!-- FOOTER -->
 <footer>
 <div class="footer-icons">
-    <a href="https://www.linkedin.com/in/jasonnewton926" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    <a href="https://www.facebook.com/jasonnewton926" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://www.instagram.com/jasonnewton926" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
-    <a href="https://www.tiktok.com/@jasonnewton926" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
-    <a href="https://x.com/jasonnewton926" target="_blank"><img src="icons/x.png" alt="X"></a>
-    <a href="https://www.pinterest.com/jasonnewton926" target="_blank"><img src="icons/pinterest.png" alt="Pinterest"></a>
-    <a href="https://truthsocial.com/@jasonnewton926" target="_blank"><img src="icons/truthsocial.png" alt="Truth Social"></a>
-    <a href="https://youtube.com/@jasonnewton926" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+    <a href="https://www.linkedin.com/in/jason-david-newton-moses-lake-wa" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.instagram.com/jasonnewton926" target="_blank" rel="noopener"><img src="icons/instagram.png" alt="Instagram profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.tiktok.com/@jasonnewton926" target="_blank" rel="noopener"><img src="icons/tiktok.png" alt="TikTok profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener"><img src="icons/x.png" alt="X profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.pinterest.com/jasonnewton926" target="_blank" rel="noopener"><img src="icons/pinterest.png" alt="Pinterest profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://truthsocial.com/@jasonnewton926" target="_blank" rel="noopener"><img src="icons/truthsocial.png" alt="Truth Social profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener"><img src="icons/youtube.png" alt="YouTube channel of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank" rel="noopener"><img src="icons/vsco.png" alt="VSCO photography profile of Jason David Newton Moses Lake Washington"></a>
 </div>
-<p>© 2026 Jason David Newton</p>
+<p>© 2026 Jason David Newton - Moses Lake, Washington</p>
 <p>Moses Lake, Washington</p>
 </footer>
-
 </body>
 </html>
