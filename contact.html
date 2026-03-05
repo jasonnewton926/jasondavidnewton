@@ -1,79 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Contact | Jason David Newton</title>
+<meta name="description" content="Contact Jason David Newton from Moses Lake, Washington. Connect via email, phone, or social media.">
 <link rel="stylesheet" href="style.css">
+
+<style>
+/* CONTACT PAGE SPECIFIC */
+.contact-section {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+}
+
+.contact-section h2 {
+    text-align: center;
+    font-size: 2em;
+    color: #1e2a38;
+    margin-bottom: 20px;
+}
+
+.contact-section p {
+    text-align: center;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.contact-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.contact-details a {
+    color: #1e2a38;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* CONTACT FORM */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+.contact-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact-form button {
+    padding: 12px 25px;
+    background: #ff7f50;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background: #ff6333;
+}
+
+/* FOOTER ICONS */
+.footer-icons a img {
+    width: 40px;
+    height: 40px;
+    margin: 0 8px;
+    transition: transform 0.2s;
+}
+
+.footer-icons a:hover img {
+    transform: scale(1.2);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95em;
+    }
+
+    .footer-icons a img {
+        width: 35px;
+        height: 35px;
+    }
+}
+</style>
 </head>
+
 <body>
 
+<header class="navbar">
+<div class="nav-container">
+<div class="logo">Jason David Newton</div>
 <nav>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="experience.html">Experience</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="gallery.html">Gallery</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="experience.html">Experience</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
 </nav>
-
-<header>
-    <h1>Contact Me</h1>
-    <p>Connect via email or social media.</p>
+</div>
 </header>
 
-<div class="container">
-    <div class="card">
-        <h2>Email</h2>
-        <p><a href="mailto:jasonnewton926@gmail.com">jasonnewton926@gmail.com</a></p>
-    </div>
+<section class="hero">
+<div class="hero-content">
+<h1>Contact Me</h1>
+<h2>Get in Touch</h2>
+<p>Feel free to reach out via email, phone, or social media. I’m happy to connect with professionals, collaborators, or anyone wanting to network or learn more about my work.</p>
+</div>
+</section>
 
-    <div class="card">
-        <h2>Social Links</h2>
-        <div class="social-links">
-            <a href="https://www.linkedin.com/in/jason-newton-moses-lake-wa-98837-washington" target="_blank">LinkedIn</a>
-            <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank">TikTok</a>
-            <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank">Facebook</a>
-            <a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank">Instagram</a>
-            <a href="https://x.com/JasonDNewton" target="_blank">X</a>
-            <a href="https://pin.it/4U17t7K4p" target="_blank">Pinterest</a>
-            <a href="https://truthsocial.com/@JasonNewton" target="_blank">Truth Social</a>
-            <a href="https://www.youtube.com/@JasonDavidNewton" target="_blank">YouTube</a>
-            <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank">VSCO</a>
-        </div>
-    </div>
+<section class="contact-section">
+<h2>Contact Details</h2>
+<div class="contact-details">
+<p>📍 Moses Lake, Washington</p>
+<p>📧 <a href="mailto:jasonnewton926@gmail.com">jasonnewton926@gmail.com</a></p>
+<p>📞 <a href="tel:+15097712196">(509) 771-2196</a></p>
+<p>💼 <a href="https://www.linkedin.com/in/jason-newton-moses-lake-wa-98837-washington" target="_blank">LinkedIn Profile</a></p>
 </div>
 
+<h2>Send Me a Message</h2>
+<form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+<label for="name">Name</label>
+<input type="text" id="name" name="name" placeholder="Your Name" required>
+
+<label for="email">Email</label>
+<input type="email" id="email" name="_replyto" placeholder="Your Email" required>
+
+<label for="message">Message</label>
+<textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+<button type="submit">Send Message</button>
+</form>
+</section>
+
 <footer>
-  <div class="social-icons">
-    <a href="https://www.linkedin.com/in/jason-newton-moses-lake-wa-98837-washington" target="_blank">
-      <img src="icons/linkedin.png" alt="LinkedIn" width="40">
-    </a>
-    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank">
-      <img src="icons/tiktok.png" alt="TikTok" width="40">
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank">
-      <img src="icons/facebook.png" alt="Facebook" width="40">
-    </a>
-    <a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank">
-      <img src="icons/instagram.png" alt="Instagram" width="40">
-    </a>
-    <a href="https://x.com/JasonDNewton" target="_blank">
-      <img src="icons/x.png" alt="X" width="40">
-    </a>
-    <a href="https://pin.it/4U17t7K4p" target="_blank">
-      <img src="icons/pintrest.png" alt="Pinterest" width="40">
-    </a>
-    <a href="https://truthsocial.com/@JasonNewton" target="_blank">
-      <img src="icons/truthsocial.png" alt="Truth Social" width="40">
-    </a>
-    <a href="https://www.youtube.com/@JasonDavidNewton" target="_blank">
-      <img src="icons/youtube.png" alt="YouTube" width="40">
-    </a>
-  </div>
-  <p>&copy; 2026 Jason David Newton | Moses Lake, WA</p>
+<div class="footer-icons" style="text-align:center; margin-bottom:15px;">
+<a href="https://www.linkedin.com/in/jason-newton-moses-lake-wa-98837-washington" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a>
+<a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank"><img src="icons/facebook.png" alt="Facebook"></a>
+<a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a>
+<a href="https://www.tiktok.com/@jasonnewtonmoseslakewa?is_from_webapp=1&sender_device=pc" target="_blank"><img src="icons/tiktok.png" alt="TikTok"></a>
+<a href="https://x.com/JasonNewtonMLWA" target="_blank"><img src="icons/x.png" alt="X"></a>
+<a href="https://pin.it/4U17t7K4p" target="_blank"><img src="icons/pinterest.png" alt="Pinterest"></a>
+<a href="https://truthsocial.com/@JasonNewton" target="_blank"><img src="icons/truthsocial.png" alt="Truth Social"></a>
+<a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank"><img src="icons/youtube.png" alt="YouTube"></a>
+</div>
+
+<p style="text-align:center;">&copy; 2026 Jason David Newton | Moses Lake, WA</p>
 </footer>
 
 </body>
