@@ -56,6 +56,38 @@
 .contact-form button:hover {
     background: #163a59;
 }
+
+/* SOCIAL CARDS SECTION */
+.social-cards {
+    max-width: 900px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 40px 20px;
+}
+.social-card {
+    background: white;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+.social-card:hover {
+    transform: translateY(-5px);
+}
+.social-card img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+.social-card a {
+    display: block;
+    color: #1f4f7a;
+    font-weight: bold;
+    text-decoration: none;
+}
 </style>
 <!-- Schema Markup for Person -->
 <script type="application/ld+json">
@@ -81,7 +113,7 @@
   "description": "Jason David Newton is a mechanical technician and operations leader based in Moses Lake, Washington. He is a Washington State University graduate, holds a U.S. Coast Guard Merchant Mariner Credential, and is dedicated to faith, family, and community.",
   "url": "https://jasondavidnewton.com/",
   "sameAs": [
-    "https://www.linkedin.com/in/jason-david-newton-moses-lake-wa",
+    "https://www.linkedin.com/in/jason-david-newton-moses-lake-wa-98837-washington",
     "https://www.facebook.com/profile.php?id=61586469156125",
     "https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en",
     "https://www.tiktok.com/@jasonnewtonmoseslakewa",
@@ -111,14 +143,11 @@
     </nav>
 </div>
 </header>
-<!-- HERO SECTION (Added keywords) -->
+<!-- HERO / PAGE HEADER -->
 <section class="hero">
 <div class="hero-content">
-    <h1>Contact Jason David Newton</h1>
-    <h2>Moses Lake, Washington</h2>
-    <p>
-        Have a question, want to collaborate, or just say hi? Send me a message below! Reach out to Jason David Newton in Moses Lake, Washington via email or social media.
-    </p>
+    <h1>Contact Me</h1>
+    <p>Have a question, want to collaborate, or just say hi? Send me a message below!</p>
 </div>
 </section>
 <!-- CONTACT FORM -->
@@ -135,10 +164,75 @@
     </form>
 </div>
 </section>
-<!-- FOOTER (Updated social links with keyword alts) -->
+<!-- SOCIAL CARDS SECTION (Added for more visibility) -->
+<section class="section alt">
+<div class="section-content">
+    <h2>Connect with Me on Social Media</h2>
+    <p>Follow Jason David Newton from Moses Lake, Washington on these platforms for updates, photos, and more.</p>
+    <div class="social-cards">
+        <!-- LinkedIn Card -->
+        <div class="social-card">
+            <img src="icons/linkedin.png" alt="LinkedIn icon">
+            <p>LinkedIn</p>
+            <a href="https://www.linkedin.com/in/jason-david-newton-moses-lake-wa-98837-washington" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- Facebook Card -->
+        <div class="social-card">
+            <img src="icons/facebook.png" alt="Facebook icon">
+            <p>Facebook</p>
+            <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- Instagram Card -->
+        <div class="social-card">
+            <img src="icons/instagram.png" alt="Instagram icon">
+            <p>Instagram</p>
+            <a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- TikTok Embed Card -->
+        <div class="social-card">
+            <img src="icons/tiktok.png" alt="TikTok icon">
+            <p>TikTok</p>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@jasonnewtonmoseslakewa" data-unique-id="jasonnewtonmoseslakewa" data-embed-type="creator" style="max-width: 780px; min-width: 288px;" >
+                <section> <a target="_blank" href="https://www.tiktok.com/@jasonnewtonmoseslakewa?refer=creator_embed">@jasonnewtonmoseslakewa</a> </section> 
+            </blockquote> <script async src="https://www.tiktok.com/embed.js"></script>
+        </div>
+        <!-- X Card -->
+        <div class="social-card">
+            <img src="icons/x.png" alt="X icon">
+            <p>X (Twitter)</p>
+            <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- Pinterest Card -->
+        <div class="social-card">
+            <img src="icons/pinterest.png" alt="Pinterest icon">
+            <p>Pinterest</p>
+            <a href="https://pin.it/4U17t7K4p" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- Truth Social Card -->
+        <div class="social-card">
+            <img src="icons/truthsocial.png" alt="Truth Social icon">
+            <p>Truth Social</p>
+            <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener">View Profile</a>
+        </div>
+        <!-- YouTube Card -->
+        <div class="social-card">
+            <img src="icons/youtube.png" alt="YouTube icon">
+            <p>YouTube</p>
+            <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener">View Channel</a>
+        </div>
+        <!-- VSCO Card -->
+        <div class="social-card">
+            <img src="icons/vsco.png" alt="VSCO icon">
+            <p>VSCO</p>
+            <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank" rel="noopener">View Profile</a>
+        </div>
+    </div>
+</div>
+</section>
+<!-- FOOTER -->
 <footer>
 <div class="footer-icons">
-    <a href="https://www.linkedin.com/in/jason-david-newton-moses-lake-wa" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.linkedin.com/in/jason-david-newton-moses-lake-wa-98837-washington" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank" rel="noopener"><img src="icons/instagram.png" alt="Instagram profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener"><img src="icons/tiktok.png" alt="TikTok profile of Jason David Newton Moses Lake Washington"></a>
@@ -146,10 +240,10 @@
     <a href="https://pin.it/4U17t7K4p" target="_blank" rel="noopener"><img src="icons/pinterest.png" alt="Pinterest profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener"><img src="icons/truthsocial.png" alt="Truth Social profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener"><img src="icons/youtube.png" alt="YouTube channel of Jason David Newton Moses Lake Washington"></a>
-    <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank" rel="noopener"><img src="icons/vsco.png" alt="VSCO photography profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://jasondavidnewtonmoseslakewa.vsco.site/" target="_blank" rel="noopener"><img src="icons/vsco.png" alt="VSCO profile of Jason David Newton Moses Lake Washington"></a>
 </div>
-<p>Email: <a href="mailto:jasonnewton926@gmail.com">jasonnewton926@gmail.com</a></p>
-<p>© 2026 Jason David Newton | Moses Lake, Washington</p>
+<p>© 2026 Jason David Newton</p>
+<p>Moses Lake, Washington</p>
 </footer>
 </body>
 </html>
