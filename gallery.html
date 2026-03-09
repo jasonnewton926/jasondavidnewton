@@ -1,11 +1,12 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photo Gallery | Jason David Newton - Moses Lake, Washington</title>
-<meta name="description" content="Explore the photo gallery of Jason David Newton from Moses Lake, Washington, featuring family life, fatherhood moments, maritime experience, and Pacific Northwest nature.">
-<meta name="keywords" content="Jason David Newton, Moses Lake Washington, family photos Moses Lake, fatherhood Washington, maritime photos, Pacific Northwest nature photography">
+<meta name="description" content="Explore the photo gallery of Jason David Newton from Moses Lake, Washington, featuring fatherhood and family, maritime experience, and Pacific Northwest nature.">
+<meta name="keywords" content="Jason David Newton, Moses Lake Washington, family photos Moses Lake, fatherhood Washington, maritime photos, Pacific Northwest nature">
 <!-- Open Graph for Social Sharing -->
 <meta property="og:title" content="Photo Gallery | Jason David Newton - Moses Lake, WA">
 <meta property="og:description" content="Capturing meaningful moments from family life, fatherhood, maritime work, and the beauty of the Pacific Northwest by Jason David Newton in Moses Lake, Washington.">
@@ -14,14 +15,14 @@
 <meta property="og:type" content="website">
 <link rel="stylesheet" href="style.css">
 <style>
-/* GALLERY GRID */
+/* GALLERY GRID (Updated for multiple sections) */
 .gallery-grid {
     max-width: 1000px;
     margin: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
-    padding: 40px 20px;
+    padding: 20px;
 }
 .gallery-item {
     position: relative;
@@ -29,7 +30,7 @@
 .gallery-grid img {
     width: 100%;
     border-radius: 6px;
-    transition: transform .3s;
+    transition: transform .3s ease;
     loading: lazy;
 }
 .gallery-grid img:hover {
@@ -62,6 +63,7 @@
     color: white;
     border-radius: 5px;
     font-weight: bold;
+    transition: background .2s;
 }
 .vsco-button:hover {
     background: #163a59;
@@ -110,7 +112,7 @@
     <h1>Photo Gallery of Jason David Newton</h1>
     <h2>Life and Adventures in Moses Lake, Washington</h2>
     <p>
-        As Jason David Newton from Moses Lake, Washington, I capture meaningful moments from family life, fatherhood, maritime work, and the beauty of the Pacific Northwest. Photography helps me preserve and share these experiences in Moses Lake, WA.
+        As Jason David Newton from Moses Lake, Washington, I capture meaningful moments from family life, fatherhood, maritime adventures, and the stunning landscapes of the Pacific Northwest. Photography helps me preserve and share these experiences in Moses Lake, WA.
     </p>
 </div>
 </section>
@@ -119,117 +121,186 @@
 <div class="section-content">
     <h2>Fatherhood and Family</h2>
     <p>
-        Heartwarming moments with my son, family, and loved ones in Moses Lake, Washington — from everyday play to special occasions.
+        Heartwarming moments with my son and family in Moses Lake, Washington, highlighting love, joy, and everyday adventures.
     </p>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-father-son-outdoors.jpg" alt="Jason David Newton with his son enjoying the outdoors in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Father-son time outdoors in Moses Lake</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" alt="Jason David Newton playfully lifting his son in a fun moment in Moses Lake, WA" loading="lazy">
-            <div class="gallery-caption">Playful dad-son lift at home</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-family-christmas-couch.jpg" alt="Jason David Newton and his son relaxing by the Christmas tree in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Holiday family moment</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-holding-newborn-son.jpg" alt="Jason David Newton holding his newborn son at home in Moses Lake, WA" loading="lazy">
-            <div class="gallery-caption">Newborn father-son bond</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-dad-son-baby-carrier-outdoor.jpg" alt="Jason David Newton carrying his son in a baby carrier on a porch in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Active dad life outdoors</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" alt="Jason David Newton with family and friends at sunset in Moses Lake, WA" loading="lazy">
-            <div class="gallery-caption">Family and friends gathering</div>
-        </div>
-        <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-aquarium.jpg" alt="Jason David Newton and his son at the aquarium in the Pacific Northwest" loading="lazy">
+            <img src="images/jason-david-newton-moses-lake-dad-son-aquarium.jpg" alt="Jason David Newton with his son at the aquarium in Moses Lake, Washington" loading="lazy">
             <div class="gallery-caption">Father-son aquarium visit</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-on-shoulders-sunset.jpg" alt="Jason David Newton with his son on shoulders at sunset in Moses Lake, WA" loading="lazy">
-            <div class="gallery-caption">Son on shoulders at sunset</div>
+            <img src="images/jason-david-newton-moses-lake-dad-son-baby-carrier-outdoor.jpg" alt="Jason David Newton carrying his son in a baby carrier outdoors in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Active dad life outdoors</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-pumpkin-patch.jpg" alt="Jason David Newton and his son at the pumpkin patch in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Father-son at pumpkin patch</div>
+            <img src="images/jason-david-newton-moses-lake-dad-son-corn.jpg" alt="Jason David Newton with his son playing in corn in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Father-son corn play</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-park-swing.jpg" alt="Jason David Newton pushing his son on a swing at the park in Moses Lake, WA" loading="lazy">
-            <div class="gallery-caption">Dad-son swing time at park</div>
+            <img src="images/jason-david-newton-moses-lake-dad-son-fall.jpg" alt="Jason David Newton with his son during fall in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Fall father-son moment</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-reading-book.jpg" alt="Jason David Newton reading a book with his son in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Father-son reading moment</div>
+            <img src="images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="Jason David Newton playing with his son in fall in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Fall playtime with son</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-ice-cream.jpg" alt="Jason David Newton enjoying ice cream with family in Moses Lake, WA" loading="lazy">
+            <img src="images/jason-david-newton-moses-lake-dad-son-feeding-bottle.jpg" alt="Jason David Newton feeding his son a bottle in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Tender bottle-feeding moment</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-grace-harvest-church.jpg" alt="Jason David Newton with his son at Grace Harvest Church in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Father-son at church</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg" alt="Jason David Newton, his son, and grandfather enjoying ice cream in Moses Lake, WA" loading="lazy">
             <div class="gallery-caption">Family ice cream outing</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-bottle-feed.jpg" alt="Jason David Newton bottle-feeding his son at home in Moses Lake, Washington" loading="lazy">
-            <div class="gallery-caption">Tender bottle-feeding moment</div>
+            <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg" alt="Jason David Newton, his son, and grandfather at the library in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Family library visit</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-playground.jpg" alt="Jason David Newton, his son, and grandfather at the playground in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Grandfather and dad-son playground fun</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-grandmother-grace-harvest-church.jpg" alt="Jason David Newton, his son, and grandmother at Grace Harvest Church in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Family at church</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-halloween.jpg" alt="Jason David Newton with his son on Halloween in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Halloween father-son fun</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-happy.jpg" alt="Jason David Newton with his happy son in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Happy dad-son moment</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg" alt="Jason David Newton with his son in winter hats in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Winter hat father-son</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-library-coloring.jpg" alt="Jason David Newton coloring with his son at the library in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Father-son library coloring</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-library-playing.jpg" alt="Jason David Newton playing with his son at the library in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Library playtime</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-library-reading.jpg" alt="Jason David Newton reading to his son at the library in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Father-son library reading</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg" alt="Jason David Newton and his son in matching baby carrier costume in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Matching costume father-son</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-on-shoulders.jpg" alt="Jason David Newton with his son on shoulders in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Son on dad's shoulders</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Jason David Newton with his son on shoulders at sunset in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Sunset shoulders moment</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" alt="Jason David Newton playfully lifting his son in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Playful lift with son</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-playground.jpg" alt="Jason David Newton with his son at the playground in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Father-son playground fun</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-playing-on-floor-inside.jpg" alt="Jason David Newton playing with his son on the floor indoors in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Indoor floor playtime</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg" alt="Jason David Newton with his son wearing sunglasses in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Dad-son sunglasses moment</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-family-christmas-couch.jpg" alt="Jason David Newton with family on the couch during Christmas in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Christmas family couch</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" alt="Jason David Newton with family and friends at sunset in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Group family sunset</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-harvest-family-picture.jpg" alt="Jason David Newton with family at harvest time in Moses Lake, Washington" loading="lazy">
+            <div class="gallery-caption">Harvest family picture</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-holding-newborn-son.jpg" alt="Jason David Newton holding his newborn son in Moses Lake, WA" loading="lazy">
+            <div class="gallery-caption">Holding newborn son</div>
         </div>
     </div>
-</div>
 </section>
 <!-- MARITIME EXPERIENCE SECTION -->
 <section class="section alt">
 <div class="section-content">
     <h2>Maritime Experience</h2>
     <p>
-        Photos from my maritime engineering days, including work aboard vessels and shipyard projects as Jason David Newton.
+        Photos from my maritime engineering days, including work aboard the Starbound and shipyard projects as Jason David Newton.
     </p>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-starbound-ship.jpg" alt="Jason David Newton in front of the Starbound ship in maritime work" loading="lazy">
-            <div class="gallery-caption">With the Starbound vessel</div>
+            <img src="images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Jason David Newton at Dutch Harbor with Starbound ship in Alaska" loading="lazy">
+            <div class="gallery-caption">Starbound at Dutch Harbor</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-bent-crane.jpg" alt="Jason David Newton with bent crane equipment in shipyard" loading="lazy">
-            <div class="gallery-caption">Shipyard crane maintenance</div>
+            <img src="images/jason-david-newton-moses-lake-shiplife-starbound-shipyard-project.jpg" alt="Jason David Newton at Starbound shipyard project" loading="lazy">
+            <div class="gallery-caption">Starbound shipyard work</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-engineering-team.jpg" alt="Jason David Newton with maritime engineering team" loading="lazy">
-            <div class="gallery-caption">Engineering team on deck</div>
+            <img src="images/jason-david-newton-moses-lake-shiplife-starbound-bent-crane.jpg" alt="Jason David Newton with bent crane on Starbound ship" loading="lazy">
+            <div class="gallery-caption">Bent crane on Starbound</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-shipyard-project.jpg" alt="Jason David Newton at shipyard project site" loading="lazy">
-            <div class="gallery-caption">Shipyard project work</div>
+            <img src="images/jason-david-newton-moses-lake-shiplife-engineering-team-starbound.jpg" alt="Jason David Newton with engineering team on Starbound ship" loading="lazy">
+            <div class="gallery-caption">Maritime engineering team</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-shiplife-starbound-sundown.jpg" alt="Sundown view from Starbound ship by Jason David Newton" loading="lazy">
+            <div class="gallery-caption">Sundown from Starbound</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-shiplife-starbound-shipyard.jpg" alt="Jason David Newton at Starbound shipyard" loading="lazy">
+            <div class="gallery-caption">Starbound shipyard</div>
         </div>
     </div>
-</div>
 </section>
 <!-- PACIFIC NORTHWEST NATURE SECTION -->
 <section class="section">
 <div class="section-content">
     <h2>Pacific Northwest Nature</h2>
     <p>
-        Scenic landscapes, sunsets, rivers, and outdoor views from the Pacific Northwest, captured during travels and adventures.
+        Scenic landscapes, sunsets, rivers, and outdoor views from the Pacific Northwest, captured by Jason David Newton during adventures and travels.
     </p>
     <div class="gallery-grid">
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" alt="Sunset over Seattle skyline and ocean in the Pacific Northwest" loading="lazy">
-            <div class="gallery-caption">Seattle sunset over water</div>
+            <img src="images/jason-david-newton-moses-lake-mountains-river-index-washington.jpg" alt="Mountains and river landscape in the Pacific Northwest by Jason David Newton" loading="lazy">
+            <div class="gallery-caption">Mountains and river index view</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-mountains-river.jpg" alt="Mountains and river landscape in the Pacific Northwest" loading="lazy">
-            <div class="gallery-caption">River and mountain scenery</div>
+            <img src="images/jason-david-newton-moses-lake-mountains-sky-road.jpg" alt="Sky road with mountains in the Pacific Northwest by Jason David Newton" loading="lazy">
+            <div class="gallery-caption">Scenic mountain road</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-rainforest.jpg" alt="Rainforest trail in the Pacific Northwest" loading="lazy">
+            <img src="images/jason-david-newton-moses-lake-rainforest-pacific-northwest.jpg" alt="Rainforest in the Pacific Northwest by Jason David Newton" loading="lazy">
             <div class="gallery-caption">Pacific Northwest rainforest</div>
         </div>
         <div class="gallery-item">
-            <img src="images/jason-david-newton-moses-lake-mountains-sky-road.jpg" alt="Road with mountains and sky in the Pacific Northwest" loading="lazy">
-            <div class="gallery-caption">Scenic road with mountains</div>
+            <img src="images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" alt="Seattle sunset over ocean in the Pacific Northwest by Jason David Newton" loading="lazy">
+            <div class="gallery-caption">Seattle sunset ocean view</div>
+        </div>
+        <div class="gallery-item">
+            <img src="images/jason-david-newton-moses-lake-sunset-seattle.jpg" alt="Sunset in Seattle by Jason David Newton" loading="lazy">
+            <div class="gallery-caption">Seattle sunset</div>
         </div>
     </div>
-</div>
 </section>
 <!-- VSCO PROFILE SECTION -->
 <section class="section alt">
@@ -263,3 +334,4 @@
 </footer>
 </body>
 </html>
+```
