@@ -61,36 +61,43 @@
 }
 </script>
 <style>
-/* Responsive LinkedIn Badge Integration */
-.linkedin-badge-container {
+/* Polished & Responsive LinkedIn Badge */
+.linkedin-badge-wrapper {
     text-align: center;
-    margin: 30px 0;
-    padding: 15px;
-    background: #0a1f33;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    transition: transform 0.2s, box-shadow 0.2s;
-    max-width: 350px;
+    margin: 40px 0 60px;
+    padding: 20px;
+    background: linear-gradient(135deg, #0a1f33, #1f4f7a);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 380px;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid rgba(77, 166, 255, 0.3); /* subtle accent border */
 }
-.linkedin-badge-container:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+.linkedin-badge-wrapper:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.5);
 }
-.linkedin-badge-container .badge-base {
+.linkedin-badge-wrapper .badge-base {
     width: 100% !important;
-    max-width: 300px !important;
+    max-width: 320px !important;
     margin: 0 auto !important;
 }
 @media (max-width: 768px) {
-    .linkedin-badge-container {
-        max-width: 300px;
-        padding: 10px;
-        margin: 20px auto;
+    .linkedin-badge-wrapper {
+        margin: 30px 0 50px;
+        padding: 15px;
+        max-width: 340px;
     }
-    .linkedin-badge-container .badge-base {
+    .linkedin-badge-wrapper .badge-base {
         max-width: 280px !important;
+    }
+}
+@media (max-width: 480px) {
+    .linkedin-badge-wrapper {
+        padding: 10px;
+        margin: 20px 0 40px;
     }
 }
 </style>
@@ -133,6 +140,14 @@
     </div>
 </div>
 </section>
+
+<!-- LinkedIn Badge - placed right under hero for strong professional first impression -->
+<div class="linkedin-badge-wrapper">
+    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1">
+        <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a>
+    </div>
+</div>
+
 <!-- PERSONAL VALUES -->
 <section class="section">
 <div class="section-content">
@@ -158,12 +173,6 @@
     <p>
         At <strong>Simplot FG</strong>, I supervised teams of 30–50 personnel, ensuring plant operations, maintenance, and safety standards were exceeded. I have a proven track record in leadership, operational excellence, and process optimization.
     </p>
-    <!-- LinkedIn Badge - visually integrated -->
-    <div class="linkedin-badge-container">
-        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1">
-            <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a>
-        </div>
-    </div>
     <a href="experience.html" class="section-button">Explore My Career</a>
 </div>
 </section>
