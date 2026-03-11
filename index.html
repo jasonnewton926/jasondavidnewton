@@ -22,6 +22,8 @@
   gtag('js', new Date());
   gtag('config', 'G-XXXXXX');
 </script>
+<!-- LinkedIn Badge Script - loaded in head for reliability -->
+<script src="https://platform.linkedin.com/badges/js/profile.js" type="text/javascript"></script>
 <!-- Schema Markup for Person -->
 <script type="application/ld+json">
 {
@@ -59,11 +61,10 @@
 }
 </script>
 <style>
-/* Smooth Easing Curve */
+/* Your existing smooth easing and animations unchanged - keeping them as-is */
 :root {
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
-/* Scroll-Triggered Fade-In + Slide-Up with Mobile-Optimized Stagger */
 .fade-in-section {
     opacity: 0;
     transform: translateY(50px);
@@ -73,7 +74,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-/* Staggered Delays - shorter on mobile */
 .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
 .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
 .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
@@ -89,7 +89,6 @@
     .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
     .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
 }
-/* Hero Content Entrance */
 .hero-content {
     opacity: 0;
     transform: scale(0.97);
@@ -99,7 +98,6 @@
     opacity: 1;
     transform: scale(1);
 }
-/* Navbar Scroll Animation */
 .navbar {
     transition: all 0.4s var(--ease);
     background: var(--primary-dark);
@@ -112,7 +110,6 @@
 .navbar.scrolled .logo {
     font-size: 1.25rem;
 }
-/* Enhanced LinkedIn Badge */
 .linkedin-badge-wrapper {
     text-align: center;
     margin: 40px 0 60px;
@@ -161,7 +158,6 @@
 .linkedin-badge-wrapper:hover .badge-base {
     transform: scale(1.04);
 }
-/* Footer Icons Animation */
 .footer-icons a {
     display: inline-block;
     transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
@@ -179,7 +175,6 @@
     opacity: 1;
     transform: translateY(0);
 }
-/* Responsive Adjustments */
 @media (max-width: 768px) {
     .linkedin-badge-wrapper {
         margin: 30px 0 50px;
@@ -242,7 +237,6 @@
         <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a>
     </div>
 </div>
-
 <!-- PERSONAL VALUES -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -334,7 +328,7 @@
   document.addEventListener("DOMContentLoaded", () => {
     const fadeSections = document.querySelectorAll('.fade-in-section');
     const heroContent = document.querySelector('.hero-content');
-    const navbar = document.query selector('.navbar');
+    const navbar = document.querySelector('.navbar');
     const footerIcons = document.querySelector('.footer-icons');
     // Hero entrance on load
     setTimeout(() => {
