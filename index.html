@@ -63,6 +63,7 @@
 :root {
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 /* Scroll-Triggered Fade-In + Slide-Up with Mobile-Optimized Stagger */
 .fade-in-section {
     opacity: 0;
@@ -73,12 +74,14 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Staggered Delays - shorter on mobile */
 .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
 .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
 .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
 .fade-in-section:nth-child(4) { transition-delay: 0.55s; }
 .fade-in-section:nth-child(5) { transition-delay: 0.7s; }
+
 @media (max-width: 768px) {
     .fade-in-section {
         transform: translateY(40px);
@@ -89,6 +92,7 @@
     .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
     .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
 }
+
 /* Hero Content Entrance */
 .hero-content {
     opacity: 0;
@@ -99,6 +103,7 @@
     opacity: 1;
     transform: scale(1);
 }
+
 /* Navbar Scroll Animation */
 .navbar {
     transition: all 0.4s var(--ease);
@@ -112,18 +117,90 @@
 .navbar.scrolled .logo {
     font-size: 1.25rem;
 }
-/* Minimal Animation LinkedIn Badge */
+
+/* LinkedIn Static Fallback Badge (replaces broken embed) */
 .linkedin-badge-wrapper {
     text-align: center;
     margin: 40px 0 60px;
+    padding: 25px;
+    background: linear-gradient(135deg, #0a1f33, #163a59);
+    border-radius: 16px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    transition: all 0.4s var(--ease);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+    position: relative;
+    overflow: hidden;
+}
+.linkedin-badge-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 16px;
+    padding: 2px;
+    background: linear-gradient(135deg, #4da6ff, #2e86de);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
     transition: opacity 0.4s var(--ease);
 }
 .linkedin-badge-wrapper:hover {
-    opacity: 0.9;
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.5);
 }
+.linkedin-badge-wrapper:hover::before {
+    opacity: 0.7;
+}
+.linkedin-badge-wrapper img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #4da6ff;
+    object-fit: cover;
+    margin-bottom: 15px;
+    transition: transform 0.4s var(--ease);
+}
+.linkedin-badge-wrapper:hover img {
+    transform: scale(1.08);
+}
+.linkedin-badge-wrapper .name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0 5px;
+}
+.linkedin-badge-wrapper .headline {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 0 0 8px;
+}
+.linkedin-badge-wrapper .location {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+.linkedin-badge-wrapper a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #4da6ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.linkedin-badge-wrapper a:hover {
+    background: #2e86de;
+    transform: translateY(-3px);
+}
+
 /* Footer Icons Animation */
 .footer-icons a {
     display: inline-block;
@@ -142,11 +219,17 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .linkedin-badge-wrapper {
         margin: 30px 0 50px;
+        padding: 20px;
         max-width: 340px;
+    }
+    .linkedin-badge-wrapper img {
+        width: 120px;
+        height: 120px;
     }
     .navbar.scrolled {
         padding: 0.6rem 1rem;
@@ -174,6 +257,7 @@
     </nav>
 </div>
 </header>
+
 <!-- HERO SECTION -->
 <section class="hero">
 <div class="hero-content">
@@ -195,10 +279,16 @@
     </div>
 </div>
 </section>
-<!-- LinkedIn Badge - right under hero -->
+
+<!-- LinkedIn Static Fallback Badge - right under hero -->
 <div class="linkedin-badge-wrapper fade-in-section">
-    <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1"><a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a></div>
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQF9dR0bR0bR0bQ/profile-displayphoto-shrink_800_800/B4EZ0bR0bR0bR0bR0bQ?e=1744243200&v=beta&t=..." alt="Jason David Newton LinkedIn Profile Photo" loading="lazy">
+        <div class="name">Jason Newton</div>
+        <div class="headline">Mechanical Technician at Group 14 Technologies</div>
+        <div class="location">Moses Lake, Washington</div>
+        <div>View on LinkedIn</div>
+    </a>
 </div>
 
 <!-- PERSONAL VALUES -->
@@ -310,7 +400,7 @@
       if (currentScroll > 50) {
         navbar.classList.add('scrolled');
       } else {
-        navbar.classList.add('scrolled');
+        navbar.classList.remove('scrolled');
       }
       lastScroll = currentScroll;
     });
