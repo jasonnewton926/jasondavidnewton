@@ -112,7 +112,7 @@
 .navbar.scrolled .logo {
     font-size: 1.25rem;
 }
-/* Enhanced LinkedIn Badge */
+/* Enhanced LinkedIn Static Fallback Badge */
 .linkedin-badge-wrapper {
     text-align: center;
     margin: 40px 0 60px;
@@ -152,15 +152,49 @@
 .linkedin-badge-wrapper:hover::before {
     opacity: 0.7;
 }
-.linkedin-badge-wrapper .badge-base {
-    width: 100% !important;
-    max-width: 340px !important;
-    margin: 0 auto !important;
+.linkedin-badge-wrapper img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 4px solid #4da6ff;
+    object-fit: cover;
+    margin-bottom: 15px;
     transition: transform 0.4s var(--ease);
 }
-.linkedin-badge-wrapper:hover .badge-base {
-    transform: scale(1.04);
+.linkedin-badge-wrapper:hover img {
+    transform: scale(1.08);
 }
+.linkedin-badge-wrapper .name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: white;
+    margin: 10px 0 5px;
+}
+.linkedin-badge-wrapper .headline {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin: 0 0 8px;
+}
+.linkedin-badge-wrapper .location {
+    font-size: 1rem;
+    color: #aaa;
+    margin-bottom: 15px;
+}
+.linkedin-badge-wrapper a {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #4da6ff;
+    color: white;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s var(--ease), transform 0.3s var(--ease);
+}
+.linkedin-badge-wrapper a:hover {
+    background: #2e86de;
+    transform: translateY(-3px);
+}
+
 /* Footer Icons Animation */
 .footer-icons a {
     display: inline-block;
@@ -179,6 +213,7 @@
     opacity: 1;
     transform: translateY(0);
 }
+
 /* Responsive Adjustments */
 @media (max-width: 768px) {
     .linkedin-badge-wrapper {
@@ -186,8 +221,9 @@
         padding: 20px;
         max-width: 340px;
     }
-    .linkedin-badge-wrapper .badge-base {
-        max-width: 300px !important;
+    .linkedin-badge-wrapper img {
+        width: 120px;
+        height: 120px;
     }
     .navbar.scrolled {
         padding: 0.6rem 1rem;
@@ -236,11 +272,15 @@
     </div>
 </div>
 </section>
-<!-- LinkedIn Badge - right under hero -->
+<!-- LinkedIn Static Fallback Badge - right under hero -->
 <div class="linkedin-badge-wrapper fade-in-section">
-    <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1">
-        <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a>
-    </div>
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener">
+        <img src="https://media.licdn.com/dms/image/v2/D4E03AQF9dR0bR0bR0bQ/profile-displayphoto-shrink_800_800/B4EZ0bR0bR0bR0bR0bQ?e=1744243200&v=beta&t=..." alt="Jason David Newton LinkedIn Profile Photo" loading="lazy">
+        <div class="name">Jason Newton</div>
+        <div class="headline">Mechanical Technician at Group 14 Technologies</div>
+        <div class="location">Moses Lake, Washington</div>
+        <div>View on LinkedIn</div>
+    </a>
 </div>
 
 <!-- PERSONAL VALUES -->
@@ -317,9 +357,6 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top">↑</button>
 
-<!-- LinkedIn Badge Script - loaded at end for reliable execution -->
-<script src="https://platform.linkedin.com/badges/js/profile.js" type="text/javascript"></script>
-
 <script>
   // Back-to-Top JS
   let mybutton = document.getElementById("back-to-top");
@@ -381,14 +418,6 @@
 
     fadeSections.forEach(section => observer.observe(section));
     observer.observe(footerIcons);
-
-    // Debug: Check if badge loaded images after 3 seconds
-    setTimeout(() => {
-      const badge = document.querySelector('.LI-profile-badge');
-      if (badge && !badge.querySelector('img')) {
-        console.warn('LinkedIn badge did not load images. Likely blocked by ad blocker/privacy extension or profile settings.');
-      }
-    }, 3000);
   });
 </script>
 <style>
