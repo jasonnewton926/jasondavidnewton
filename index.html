@@ -382,12 +382,13 @@
     fadeSections.forEach(section => observer.observe(section));
     observer.observe(footerIcons);
 
-    // Optional: Force LinkedIn badge reload after 2 seconds if needed
+    // Debug: Check if badge loaded images after 3 seconds
     setTimeout(() => {
-      if (document.querySelector('.LI-profile-badge') && !document.querySelector('.LI-profile-badge img')) {
-        console.log('LinkedIn badge may have failed to load - check extensions or profile visibility');
+      const badge = document.querySelector('.LI-profile-badge');
+      if (badge && !badge.querySelector('img')) {
+        console.warn('LinkedIn badge did not load images. Likely blocked by ad blocker/privacy extension or profile settings.');
       }
-    }, 2000);
+    }, 3000);
   });
 </script>
 <style>
