@@ -14,7 +14,6 @@
     <meta property="og:type" content="website">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
@@ -23,7 +22,6 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-
     <!-- Schema.org markup -->
     <script type="application/ld+json">
     {
@@ -43,7 +41,6 @@
       }
     }
     </script>
-
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -63,23 +60,22 @@
       "url": "https://jasondavidnewton.com",
       "sameAs": [
         "https://x.com/JasonDNewton",
-        "https://www.instagram.com/jasonnewtonmoseslakewa",
+        "https://www.instagram.com/jasondavidnewton/",
         "https://www.linkedin.com/in/jason-newton-moses-lake",
         "https://www.facebook.com/profile.php?id=61586469156125",
         "https://www.tiktok.com/@jasonnewtonmoseslakewa",
+        "https://www.threads.net/@jasondavidnewton",
         "https://pin.it/4U17t7K4p",
         "https://truthsocial.com/@JasonNewton",
         "https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ",
-        "https://jasondavidnewtonmoseslakewa.vsco.site/"
+        "https://vsco.co/jasondavidnewtonmoseslakewa/gallery"
       ]
     }
     </script>
-
     <style>
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
-
     .fade-in-section {
         opacity: 0;
         transform: translateY(50px);
@@ -89,13 +85,11 @@
         opacity: 1;
         transform: translateY(0);
     }
-
     .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
     .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
     .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
     .fade-in-section:nth-child(4) { transition-delay: 0.55s; }
     .fade-in-section:nth-child(5) { transition-delay: 0.7s; }
-
     @media (max-width: 768px) {
         .fade-in-section { transform: translateY(40px); }
         .fade-in-section:nth-child(1) { transition-delay: 0.05s; }
@@ -104,7 +98,6 @@
         .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
         .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
     }
-
     .hero-content {
         opacity: 0;
         transform: scale(0.97);
@@ -114,7 +107,6 @@
         opacity: 1;
         transform: scale(1);
     }
-
     .navbar {
         transition: all 0.4s var(--ease);
     }
@@ -124,7 +116,6 @@
         padding: 0.8rem 1.25rem;
     }
     .navbar.scrolled .logo { font-size: 1.25rem; }
-
     .footer-icons {
         opacity: 0;
         transform: translateY(30px);
@@ -134,7 +125,6 @@
         opacity: 1;
         transform: translateY(0);
     }
-
     .gallery-grid {
         max-width: 1000px;
         margin: auto;
@@ -163,7 +153,6 @@
         transition: opacity 0.3s;
     }
     .gallery-item:hover .gallery-caption { opacity: 1; }
-
     .vsco-link { text-align: center; margin-top: 20px; }
     .vsco-button {
         display: inline-block;
@@ -175,7 +164,6 @@
         text-decoration: none;
     }
     .vsco-button:hover { background: #163a59; }
-
     .lightbox {
         display: none;
         position: fixed;
@@ -195,12 +183,8 @@
         transform: translate(-50%, -50%);
     }
     .lightbox:target { display: block; }
-
-    /* ────────────────────────────────────────────────
-       Hamburger Menu – Pure CSS
-    ──────────────────────────────────────────────── */
+    /* Hamburger Menu – Pure CSS */
     .nav-toggle-checkbox { display: none; }
-
     @media (max-width: 768px) {
         .nav-toggle {
             display: block;
@@ -243,19 +227,16 @@
     </style>
 </head>
 <body>
-
-<!-- ─── Navigation ─────────────────────────────────────── -->
+<!-- Navigation -->
 <header class="navbar" aria-label="Main Navigation">
     <div class="nav-container">
         <div class="logo">Jason David Newton | Moses Lake, WA</div>
-
         <input type="checkbox" id="mobile-menu" class="nav-toggle-checkbox" hidden>
         <label for="mobile-menu" class="nav-toggle" aria-label="Toggle Navigation">
             <span></span>
             <span></span>
             <span></span>
         </label>
-
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
@@ -269,7 +250,7 @@
     </div>
 </header>
 
-<!-- ─── Hero ───────────────────────────────────────────── -->
+<!-- Hero -->
 <section class="hero">
     <div class="hero-content">
         <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg"
@@ -282,14 +263,12 @@
     </div>
 </section>
 
-<!-- ─── Gallery Section ────────────────────────────────── -->
+<!-- Gallery Section -->
 <section class="section fade-in-section">
     <div class="section-content">
         <h2>Moments From Life in Moses Lake</h2>
         <p>Family, fatherhood, friends, outdoor activities, maritime memories, and Pacific Northwest beauty.</p>
-
         <div class="gallery-grid" aria-label="Photo Gallery">
-
             <div class="gallery-item">
                 <a href="#lightbox-1" aria-label="View enlarged father-son aquarium adventure">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg"
@@ -300,7 +279,6 @@
                 </div>
                 <div class="gallery-caption">Father-son aquarium adventure</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-2" aria-label="View enlarged fall playtime with son">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg"
@@ -311,7 +289,6 @@
                 </div>
                 <div class="gallery-caption">Fall playtime with son</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-3" aria-label="View enlarged fall standing father-son">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg"
@@ -322,7 +299,6 @@
                 </div>
                 <div class="gallery-caption">Fall standing father-son</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-4" aria-label="View enlarged family ice cream outing">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg"
@@ -333,7 +309,6 @@
                 </div>
                 <div class="gallery-caption">Family ice cream outing</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-5" aria-label="View enlarged family library visit">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg"
@@ -344,7 +319,6 @@
                 </div>
                 <div class="gallery-caption">Family library visit</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-6" aria-label="View enlarged Halloween father-son fun">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-halloween.jpg"
@@ -355,7 +329,6 @@
                 </div>
                 <div class="gallery-caption">Halloween father-son fun</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-7" aria-label="View enlarged happy dad-son moment">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-happy.jpg"
@@ -366,7 +339,6 @@
                 </div>
                 <div class="gallery-caption">Happy dad-son moment</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-8" aria-label="View enlarged winter hat father-son">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg"
@@ -377,7 +349,6 @@
                 </div>
                 <div class="gallery-caption">Winter hat father-son</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-9" aria-label="View enlarged matching costume father-son">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg"
@@ -388,7 +359,6 @@
                 </div>
                 <div class="gallery-caption">Matching costume father-son</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-10" aria-label="View enlarged sunset shoulders moment">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg"
@@ -399,7 +369,6 @@
                 </div>
                 <div class="gallery-caption">Sunset shoulders moment</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-11" aria-label="View enlarged playful lift with son">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg"
@@ -410,7 +379,6 @@
                 </div>
                 <div class="gallery-caption">Playful lift with son</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-12" aria-label="View enlarged dad-son sunglasses moment">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg"
@@ -421,7 +389,6 @@
                 </div>
                 <div class="gallery-caption">Dad-son sunglasses moment</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-13" aria-label="View enlarged Christmas family couch">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-christmas-couch.jpg"
@@ -432,7 +399,6 @@
                 </div>
                 <div class="gallery-caption">Christmas family couch</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-14" aria-label="View enlarged group family sunset">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg"
@@ -443,7 +409,6 @@
                 </div>
                 <div class="gallery-caption">Group family sunset</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-15" aria-label="View enlarged father-son time outdoors">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-father-son-outdoors.jpg"
@@ -454,7 +419,6 @@
                 </div>
                 <div class="gallery-caption">Father-son time outdoors</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-17" aria-label="View enlarged Seattle sunset ocean view">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg"
@@ -465,7 +429,6 @@
                 </div>
                 <div class="gallery-caption">Seattle sunset ocean view</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-18" aria-label="View enlarged Starbound at Dutch Harbor">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg"
@@ -476,7 +439,6 @@
                 </div>
                 <div class="gallery-caption">Starbound at Dutch Harbor</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-19" aria-label="View enlarged skydiving adventure">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg"
@@ -487,7 +449,6 @@
                 </div>
                 <div class="gallery-caption">Skydiving adventure</div>
             </div>
-
             <div class="gallery-item">
                 <a href="#lightbox-20" aria-label="View enlarged Seattle sunset">
                     <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-sunset-seattle.jpg"
@@ -498,12 +459,10 @@
                 </div>
                 <div class="gallery-caption">Seattle sunset</div>
             </div>
-
         </div>
     </div>
 </section>
-
-<!-- ─── VSCO Link ──────────────────────────────────────── -->
+<!-- VSCO Link -->
 <section class="section alt fade-in-section">
     <div class="section-content">
         <h2>More Photography</h2>
@@ -515,13 +474,11 @@
         </div>
     </div>
 </section>
-
-<!-- ─── Instagram Embed ───────────────────────────────── -->
+<!-- Instagram Embed -->
 <section class="section fade-in-section">
     <div class="section-content">
         <h2>Follow on Instagram</h2>
         <p>More real-time moments from Moses Lake, family life, and the Pacific Northwest.</p>
-
         <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/jasondavidnewton/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);">
             <div style="padding:16px;">
                 <a href="https://www.instagram.com/jasondavidnewton/?utm_source=ig_embed&amp;utm_campaign=loading" style="background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank">
@@ -534,13 +491,11 @@
                     </div>
                     <div style="padding: 19% 0;"></div>
                     <div style="display:block; height:50px; margin:0 auto 12px; width:50px;">
-                        <!-- Instagram SVG icon (kept as-is) -->
                         <svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg>
                     </div>
                     <div style="padding-top:8px;">
                         <div style="color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this profile on Instagram</div>
                     </div>
-                    <!-- rest of the placeholder HTML remains unchanged -->
                 </a>
                 <p style="color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin:8px 0 0; padding:8px 0 7px; text-align:center;">
                     <a href="https://www.instagram.com/jasondavidnewton/" style="color:#c9c8cd;" target="_blank">Jason David Newton</a> (@<a href="https://www.instagram.com/jasondavidnewton/" style="color:#c9c8cd;" target="_blank">jasondavidnewton</a>) • Instagram photos and videos
@@ -550,14 +505,15 @@
         <script async src="//www.instagram.com/embed.js"></script>
     </div>
 </section>
-
-<!-- ─── Footer ─────────────────────────────────────────── -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-icons">
         <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener"><img src="icons/linkedin.png" alt="LinkedIn profile Jason David Newton"></a>
         <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener"><img src="icons/facebook.png" alt="Facebook profile Jason David Newton"></a>
-        <a href="https://www.instagram.com/jasonnewtonmoseslakewa/?hl=en" target="_blank" rel="noopener"><img src="icons/instagram.png" alt="Instagram profile Jason David Newton"></a>
+        <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener"><img src="icons/instagram.png" alt="Instagram profile Jason David Newton"></a>
         <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener"><img src="icons/tiktok.png" alt="TikTok profile Jason David Newton"></a>
+        <a href="https://wa.me/+15097712196" target="_blank" rel="noopener"><img src="icons/whatsapp.png" alt="WhatsApp chat with Jason David Newton"></a>
+        <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener"><img src="icons/threads.png" alt="Threads profile Jason David Newton"></a>
         <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener"><img src="icons/x.png" alt="X profile Jason David Newton"></a>
         <a href="https://pin.it/4U17t7K4p" target="_blank" rel="noopener"><img src="icons/pinterest.png" alt="Pinterest profile Jason David Newton"></a>
         <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener"><img src="icons/truthsocial.png" alt="Truth Social profile Jason David Newton"></a>
@@ -567,10 +523,8 @@
     <p>© 2026 Jason David Newton</p>
     <p>Moses Lake, Washington</p>
 </footer>
-
 <!-- Back to Top -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top">↑</button>
-
 <script>
 // Back-to-top functionality
 let mybutton = document.getElementById("back-to-top");
@@ -586,19 +540,16 @@ function topFunction() {
     document.body.scrollTop = 0;
     document.documentElement.scrollTop = 0;
 }
-
 // Scroll-triggered animations & navbar effect
 document.addEventListener("DOMContentLoaded", () => {
     const fadeSections = document.querySelectorAll('.fade-in-section');
     const heroContent = document.querySelector('.hero-content');
     const navbar = document.querySelector('.navbar');
     const footerIcons = document.querySelector('.footer-icons');
-
     // Hero fade-in
     setTimeout(() => {
         heroContent.classList.add('loaded');
     }, 300);
-
     // Navbar shrink on scroll
     window.addEventListener('scroll', () => {
         if (window.scrollY > 50) {
@@ -607,7 +558,6 @@ document.addEventListener("DOMContentLoaded", () => {
             navbar.classList.remove('scrolled');
         }
     });
-
     // Intersection Observer for fade-ins
     const isMobile = window.innerWidth < 768;
     const observer = new IntersectionObserver((entries) => {
@@ -624,12 +574,10 @@ document.addEventListener("DOMContentLoaded", () => {
         threshold: isMobile ? 0.08 : 0.15,
         rootMargin: "0px 0px -12% 0px"
     });
-
     fadeSections.forEach(el => observer.observe(el));
     observer.observe(footerIcons);
 });
 </script>
-
 <style>
 #back-to-top {
     position: fixed;
@@ -650,6 +598,5 @@ document.addEventListener("DOMContentLoaded", () => {
     background: #163a59;
 }
 </style>
-
 </body>
 </html>
