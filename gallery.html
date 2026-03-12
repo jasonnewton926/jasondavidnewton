@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Photo Gallery | Jason David Newton Moses Lake - Moses Lake, Washington</title>
 <meta name="description" content="Explore the photo gallery of Jason David Newton Moses Lake from Moses Lake, Washington, featuring family life, fatherhood moments, maritime experience, and Pacific Northwest landscapes.">
-<meta name="keywords" content="Jason David Newton Moses Lake, Moses Lake Washington, family photos Moses Lake WA, fatherhood Moses Lake, maritime photos Moses Lake, Pacific Northwest photography Moses Lake WA">
+<meta name="keywords" content="Jason David Newton Moses Lake, Moses Lake Washington, family photos Moses Lake WA, fatherhood Moses Lake Washington, maritime photos Moses Lake, Pacific Northwest photography Moses Lake WA">
 <!-- Open Graph for Social Sharing -->
 <meta property="og:title" content="Photo Gallery | Jason David Newton Moses Lake - Moses Lake, WA">
 <meta property="og:description" content="Capturing meaningful moments from family life, fatherhood, and the beauty of Moses Lake, Washington by Jason David Newton Moses Lake.">
@@ -14,6 +14,8 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
+<!-- Preload hero image for faster mobile load -->
+<link rel="preload" href="images/profile-jason-david-newton-moses-lake.jpg" as="image">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
 <script>
@@ -112,13 +114,44 @@
     opacity: 1;
     transform: translateY(0);
 }
-/* Responsive Adjustments */
+/* Responsive Adjustments - Ensure mobile menu visible */
 @media (max-width: 768px) {
     .navbar.scrolled {
         padding: 0.6rem 1rem;
     }
     .navbar.scrolled .logo {
         font-size: 1.2rem;
+    }
+    .nav-toggle {
+        display: block;
+    }
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: var(--primary-dark);
+        padding: 1rem;
+    }
+    .navbar ul.active {
+        display: flex;
+    }
+    .nav-toggle.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav-toggle.active span:nth-child(2) {
+        opacity: 0;
+    }
+    .nav-toggle.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+    /* Responsive Instagram embed */
+    .instagram-media {
+        max-width: 100% !important;
+        min-width: 100% !important;
     }
 }
 /* GALLERY GRID */
@@ -196,6 +229,11 @@
 }
 .lightbox:target {
     display: block;
+}
+/* Fallback for images not loading */
+.gallery-grid img {
+    min-height: 250px; /* Placeholder height if img fails */
+    background-color: #eee; /* Gray placeholder */
 }
 </style>
 </head>
