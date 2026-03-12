@@ -14,8 +14,6 @@
 <meta property="og:type" content="website">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
-<!-- Preload hero image for faster load -->
-<link rel="preload" href="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" as="image">
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
 <script>
@@ -24,7 +22,7 @@
   gtag('js', new Date());
   gtag('config', 'G-LSWP3B1PKE');
 </script>
-<!-- Schema Markup for ImageGallery (SEO boost for image search) -->
+<!-- Schema Markup for ImageGallery -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -114,54 +112,13 @@
     opacity: 1;
     transform: translateY(0);
 }
-/* Responsive Adjustments - Enhanced for mobile menu and image loading */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
     .navbar.scrolled {
         padding: 0.6rem 1rem;
     }
     .navbar.scrolled .logo {
         font-size: 1.2rem;
-    }
-    .nav-toggle {
-        display: block;
-        cursor: pointer;
-    }
-    .navbar ul {
-        display: none;
-        flex-direction: column;
-        gap: 1rem;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background: var(--primary-dark);
-        padding: 1rem;
-    }
-    .navbar ul.active {
-        display: flex;
-    }
-    .nav-toggle.active span:nth-child(1) {
-        transform: rotate(45deg) translate(5px, 5px);
-    }
-    .nav-toggle.active span:nth-child(2) {
-        opacity: 0;
-    }
-    .nav-toggle.active span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -6px);
-    }
-    /* Responsive Instagram embed */
-    .instagram-media {
-        max-width: 100% !important;
-        min-width: 100% !important;
-    }
-    /* Gallery grid for mobile - single column, smaller images */
-    .gallery-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 20px 10px;
-    }
-    .gallery-grid img {
-        max-height: 300px; /* Limit height for faster mobile load */
     }
 }
 /* GALLERY GRID */
@@ -240,19 +197,6 @@
 .lightbox:target {
     display: block;
 }
-/* Fallback for images not loading */
-.gallery-grid img {
-    min-height: 250px; /* Placeholder height if img fails */
-    background-color: #eee; /* Gray placeholder */
-}
-.nav-toggle span {
-    display: block;
-    width: 25px;
-    height: 3px;
-    background: white;
-    margin: 5px 0;
-    transition: 0.3s;
-}
 </style>
 </head>
 <body>
@@ -278,7 +222,7 @@
 <!-- HERO SECTION -->
 <section class="hero">
 <div class="hero-content">
-    <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton Moses Lake from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
+    <img src="images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton Moses Lake from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
     <h1>Photo Gallery of Jason David Newton Moses Lake</h1>
     <h2>Life and Adventures in Moses Lake, Washington</h2>
     <p>
@@ -296,173 +240,172 @@
     <div class="gallery-grid" aria-label="Photo Gallery">
         <div class="gallery-item">
             <a href="#lightbox-1" aria-label="View enlarged father-son aquarium adventure">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg 2x" alt="Jason David Newton Moses Lake with his son at the aquarium in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-aquarium.jpg" alt="Jason David Newton with his son at the aquarium in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-1" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg" alt="Enlarged father-son aquarium adventure">
+                <img src="images/jason-david-newton-moses-lake-dad-son-aquarium.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Father-son aquarium adventure</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-2" aria-label="View enlarged fall playtime with son">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg 2x" alt="Jason David Newton playing with his son in fall in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="Jason David Newton playing with his son in fall in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-2" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="Enlarged fall playtime with son">
+                <img src="images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Fall playtime with son</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-3" aria-label="View enlarged fall standing father-son">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg 2x" alt="Jason David Newton standing with his son in fall in Moses Lake, WA" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg" alt="Jason David Newton standing with his son in fall in Moses Lake, WA" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-3" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg" alt="Enlarged fall standing father-son">
+                <img src="images/jason-david-newton-moses-lake-dad-son-fall-standing.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Fall standing father-son</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-4" aria-label="View enlarged family ice cream outing">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg 2x" alt="Jason David Newton, his son, and grandfather enjoying ice cream in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg" alt="Jason David Newton, his son, and grandfather enjoying ice cream in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-4" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg" alt="Enlarged family ice cream outing">
+                <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-icecream.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Family ice cream outing</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-5" aria-label="View enlarged family library visit">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg 2x" alt="Jason David Newton, his son, and grandfather at the library in Moses Lake, WA" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg" alt="Jason David Newton, his son, and grandfather at the library in Moses Lake, WA" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-5" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg" alt="Enlarged family library visit">
+                <img src="images/jason-david-newton-moses-lake-dad-son-grandfather-library.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Family library visit</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-6" aria-label="View enlarged Halloween father-son fun">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-halloween.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-halloween.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-halloween.jpg 2x" alt="Jason David Newton with his son on Halloween in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-halloween.jpg" alt="Jason David Newton with his son on Halloween in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-6" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-halloween.jpg" alt="Enlarged Halloween father-son fun">
+                <img src="images/jason-david-newton-moses-lake-dad-son-halloween.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Halloween father-son fun</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-7" aria-label="View enlarged happy dad-son moment">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-happy.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-happy.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-happy.jpg 2x" alt="Jason David Newton with his happy son in Moses Lake, WA" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-happy.jpg" alt="Jason David Newton with his happy son in Moses Lake, WA" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-7" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-happy.jpg" alt="Enlarged happy dad-son moment">
+                <img src="images/jason-david-newton-moses-lake-dad-son-happy.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Happy dad-son moment</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-8" aria-label="View enlarged winter hat father-son">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg 2x" alt="Jason David Newton with his son in winter hats in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg" alt="Jason David Newton with his son in winter hats in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-8" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg" alt="Enlarged winter hat father-son">
+                <img src="images/jason-david-newton-moses-lake-dad-son-hat-winter.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Winter hat father-son</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-9" aria-label="View enlarged matching costume father-son">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg 2x" alt="Jason David Newton and his son in matching baby carrier costume in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg" alt="Jason David Newton and his son in matching baby carrier costume in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-9" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg" alt="Enlarged matching costume father-son">
+                <img src="images/jason-david-newton-moses-lake-dad-son-matching-baby-carrier-costume.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Matching costume father-son</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-10" aria-label="View enlarged sunset shoulders moment">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg 2x" alt="Jason David Newton with his son on shoulders at sunset in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Jason David Newton with his son on shoulders at sunset in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-10" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Enlarged sunset shoulders moment">
+                <img src="images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Sunset shoulders moment</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-11" aria-label="View enlarged playful lift with son">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg 2x" alt="Jason David Newton playfully lifting his son in Moses Lake, WA" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" alt="Jason David Newton playfully lifting his son in Moses Lake, WA" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-11" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" alt="Enlarged playful lift with son">
+                <img src="images/jason-david-newton-moses-lake-dad-son-playful-lift.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Playful lift with son</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-12" aria-label="View enlarged dad-son sunglasses moment">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg 2x" alt="Jason David Newton with his son wearing sunglasses in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg" alt="Jason David Newton with his son wearing sunglasses in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-12" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg" alt="Enlarged dad-son sunglasses moment">
+                <img src="images/jason-david-newton-moses-lake-dad-son-sunglasses.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Dad-son sunglasses moment</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-13" aria-label="View enlarged Christmas family couch">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-christmas-couch.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-christmas-couch.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-christmas-couch.jpg 2x" alt="Jason David Newton with family on the couch during Christmas in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-family-christmas-couch.jpg" alt="Jason David Newton with family on the couch during Christmas in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-13" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-christmas-couch.jpg" alt="Enlarged Christmas family couch">
+                <img src="images/jason-david-newton-moses-lake-family-christmas-couch.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Christmas family couch</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-14" aria-label="View enlarged group family sunset">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg 2x" alt="Jason David Newton with family and friends at sunset in Moses Lake, WA" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" alt="Jason David Newton with family and friends at sunset in Moses Lake, WA" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-14" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" alt="Enlarged group family sunset">
+                <img src="images/jason-david-newton-moses-lake-family-friends-group-sunset.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Group family sunset</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-15" aria-label="View enlarged father-son time outdoors">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-father-son-outdoors.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-father-son-outdoors.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-father-son-outdoors.jpg 2x" alt="Jason David Newton with his son enjoying the outdoors in Moses Lake, Washington" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-father-son-outdoors.jpg" alt="Jason David Newton with his son enjoying the outdoors in Moses Lake, Washington" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-15" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-father-son-outdoors.jpg" alt="Enlarged father-son time outdoors">
+                <img src="images/jason-david-newton-moses-lake-father-son-outdoors.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Father-son time outdoors</div>
         </div>
-        <!-- Removed lightbox-16 as per your request (holding-newborn-son.JPG deleted) -->
         <div class="gallery-item">
             <a href="#lightbox-17" aria-label="View enlarged Seattle sunset ocean view">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg 2x" alt="Seattle sunset over ocean in the Pacific Northwest by Jason David Newton" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" alt="Seattle sunset over ocean in the Pacific Northwest by Jason David Newton" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-17" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" alt="Enlarged Seattle sunset ocean view">
+                <img src="images/jason-david-newton-moses-lake-seattle-sunset-ocean.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Seattle sunset ocean view</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-18" aria-label="View enlarged Starbound at Dutch Harbor">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg 2x" alt="Jason David Newton at Dutch Harbor with Starbound ship in Alaska" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Jason David Newton at Dutch Harbor with Starbound ship in Alaska" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-18" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Enlarged Starbound at Dutch Harbor">
+                <img src="images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Starbound at Dutch Harbor</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-19" aria-label="View enlarged skydiving adventure">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg 2x" alt="Jason David Newton skydiving in the Pacific Northwest" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-skydiving.jpg" alt="Jason David Newton skydiving in the Pacific Northwest" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-19" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg" alt="Enlarged skydiving adventure">
+                <img src="images/jason-david-newton-moses-lake-skydiving.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Skydiving adventure</div>
         </div>
         <div class="gallery-item">
             <a href="#lightbox-20" aria-label="View enlarged Seattle sunset">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-sunset-seattle.jpg" srcset="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-sunset-seattle.jpg 1x, https://jasondavidnewton.com/images/jason-david-newton-moses-lake-sunset-seattle.jpg 2x" alt="Sunset in Seattle by Jason David Newton" loading="lazy">
+                <img src="images/jason-david-newton-moses-lake-sunset-seattle.jpg" alt="Sunset in Seattle by Jason David Newton" loading="lazy">
             </a>
             <div class="lightbox" id="lightbox-20" onclick="location.href='#'">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-sunset-seattle.jpg" alt="Enlarged Seattle sunset">
+                <img src="images/jason-david-newton-moses-lake-sunset-seattle.jpg" alt="Enlarged image">
             </div>
             <div class="gallery-caption">Seattle sunset</div>
         </div>
