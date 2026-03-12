@@ -3,18 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hobbies & Adventures | Jason David Newton | Moses Lake, Washington</title>
-    <meta name="description" content="Jason David Newton from Moses Lake, Washington enjoys hobbies like lifting weights, golf, snowboarding, music, movies, reading, and Pacific Northwest outdoor adventures.">
-    <meta name="keywords" content="Jason David Newton hobbies Moses Lake, lifting weights Moses Lake WA, golf Moses Lake Washington, snowboarding Pacific Northwest, music movies reading hobbies">
-    <!-- Open Graph -->
-    <meta property="og:title" content="Hobbies & Adventures | Jason David Newton | Moses Lake, Washington">
-    <meta property="og:description" content="Discover the hobbies and personal adventures of Jason David Newton in Moses Lake, WA: fitness, golf, snowboarding, entertainment, and enjoying the Pacific Northwest.">
+    <title>Jason David Newton | Mechanical Technician & Operations Leader in Moses Lake, Washington</title>
+    <meta name="description" content="Official website of Jason David Newton from Moses Lake, Washington. Mechanical Technician at Group 14 Technologies, Washington State University graduate, maritime engineer, father, and faith-driven community member in Moses Lake, WA. Connect for opportunities.">
+    <meta name="keywords" content="Jason David Newton Moses Lake, Mechanical Technician Moses Lake WA, Operations Leader Moses Lake Washington, Washington State University Graduate Moses Lake, Maritime Engineer Moses Lake, Father Moses Lake WA, Grace Harvest Church Moses Lake">
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="Jason David Newton | Moses Lake, Washington">
+    <meta property="og:description" content="Discover the professional and personal life of Jason David Newton, a mechanical technician, operations leader, father, and man of faith in Moses Lake, WA.">
     <meta property="og:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
-    <meta property="og:url" content="https://jasondavidnewton.com/hobbies.html">
+    <meta property="og:url" content="https://jasondavidnewton.com/">
     <meta property="og:type" content="website">
+    <!-- Twitter Card (used by X and sometimes Google) -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
+    <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
+    <meta name="twitter:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <!-- GA4 -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -22,80 +27,188 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-    <!-- Schema: Person with knowsAbout for hobbies -->
+    <!-- Schema Markup for Person (enhanced with image, added education/community ties for entity signals) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jason David Newton",
+      "jobTitle": "Mechanical Technician",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Group 14 Technologies"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Washington State University"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Grace Harvest Church"
+      },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Moses Lake",
         "addressRegion": "Washington",
         "addressCountry": "US"
       },
-      "memberOf": {
-        "@type": "Organization",
-        "name": "Grace Harvest Church"
-      },
-      "knowsAbout": [
-        "Weightlifting", "Golf", "Snowboarding", "Music", "Movies", "Reading", "Outdoor Recreation"
-      ],
-      "description": "Jason David Newton enjoys personal hobbies including lifting weights, golf, snowboarding, music, movies, reading, and exploring the Pacific Northwest outdoors while living in Moses Lake, Washington.",
+      "description": "Jason David Newton is a mechanical technician and operations leader based in Moses Lake, Washington. He is a Washington State University graduate, holds a U.S. Coast Guard Merchant Mariner Credential, and is dedicated to faith, family, and community.",
       "url": "https://jasondavidnewton.com/",
       "image": "https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg",
       "sameAs": [
         "https://www.linkedin.com/in/jason-newton-moses-lake",
+        "https://www.facebook.com/profile.php?id=61586469156125",
         "https://www.instagram.com/jasondavidnewton/",
-        "https://x.com/JasonDNewton"
+        "https://www.tiktok.com/@jasonnewtonmoseslakewa",
+        "https://wa.me/+15097712196",
+        "https://www.threads.net/@jasondavidnewton",
+        "https://x.com/JasonDNewton",
+        "https://www.pinterest.com/JasonNewtonMosesLakeWA/",
+        "https://truthsocial.com/@JasonNewton",
+        "https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ",
+        "https://vsco.co/jasondavidnewtonmoseslakewa/gallery"
+      ]
+    }
+    </script>
+    <!-- BreadcrumbList Schema for Home Page -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasondavidnewton.com/"
+        }
       ]
     }
     </script>
     <style>
-    /* Consistent inline styles */
-    :root { --ease: cubic-bezier(0.4, 0, 0.2, 1); }
-    .fade-in-section { opacity: 0; transform: translateY(50px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
-    .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+    /* Smooth Easing Curve */
+    :root {
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    /* Scroll-Triggered Fade-In + Slide-Up with Mobile-Optimized Stagger */
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* Staggered Delays - shorter on mobile */
     .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
     .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
     .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
     .fade-in-section:nth-child(4) { transition-delay: 0.55s; }
+    .fade-in-section:nth-child(5) { transition-delay: 0.7s; }
     @media (max-width: 768px) {
-        .fade-in-section { transform: translateY(40px); }
+        .fade-in-section {
+            transform: translateY(40px);
+        }
         .fade-in-section:nth-child(1) { transition-delay: 0.05s; }
         .fade-in-section:nth-child(2) { transition-delay: 0.15s; }
         .fade-in-section:nth-child(3) { transition-delay: 0.25s; }
         .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
+        .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
     }
-    .navbar { transition: all 0.4s var(--ease); background: var(--primary-dark); }
-    .navbar.scrolled { background: rgba(10, 31, 51, 0.92); box-shadow: 0 4px 20px rgba(0,0,0,0.5); padding: 0.8rem 1.25rem; }
-    .navbar.scrolled .logo { font-size: 1.25rem; }
-    .footer-icons a { display: inline-block; transition: transform 0.3s var(--ease), filter 0.3s var(--ease); }
-    .footer-icons a:hover { transform: scale(1.25) rotate(8deg); filter: brightness(1.3) drop-shadow(0 0 8px rgba(77, 166, 255, 0.7)); }
-    .footer-icons { opacity: 0; transform: translateY(30px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
-    .footer-icons.visible { opacity: 1; transform: translateY(0); }
-    @media (max-width: 768px) { .navbar.scrolled { padding: 0.6rem 1rem; } .navbar.scrolled .logo { font-size: 1.2rem; } }
+    /* Hero Content Entrance */
+    .hero-content {
+        opacity: 0;
+        transform: scale(0.97);
+        transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+    }
+    .hero-content.loaded {
+        opacity: 1;
+        transform: scale(1);
+    }
+    /* Navbar Scroll Animation */
+    .navbar {
+        transition: all 0.4s var(--ease);
+        background: var(--primary-dark);
+    }
+    .navbar.scrolled {
+        background: rgba(10, 31, 51, 0.92);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        padding: 0.8rem 1.25rem;
+    }
+    .navbar.scrolled .logo {
+        font-size: 1.25rem;
+    }
+    /* Footer Icons Animation */
+    .footer-icons a {
+        display: inline-block;
+        transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
+    }
+    .footer-icons a:hover {
+        transform: scale(1.25) rotate(8deg);
+        filter: brightness(1.3) drop-shadow(0 0 8px rgba(77, 166, 255, 0.7));
+    }
+    .footer-icons {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    .footer-icons.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    /* Responsive Adjustments */
+    @media (max-width: 768px) {
+        .navbar.scrolled {
+            padding: 0.6rem 1rem;
+        }
+        .navbar.scrolled .logo {
+            font-size: 1.2rem;
+        }
+    }
+    /* Hamburger Menu - Pure CSS */
     .nav-toggle-checkbox { display: none; }
     @media (max-width: 768px) {
-        .nav-toggle { display: block; cursor: pointer; }
-        .nav-toggle span { display: block; width: 25px; height: 3px; background: var(--text-light); margin: 5px auto; transition: 0.3s; }
-        .navbar nav ul { display: none; flex-direction: column; gap: 1rem; position: absolute; top: 100%; left: 0; width: 100%; background: var(--primary-dark); padding: 1rem; }
-        #mobile-menu:checked ~ nav ul { display: flex; }
-        #mobile-menu:checked + .nav-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        #mobile-menu:checked + .nav-toggle span:nth-child(2) { opacity: 0; }
-        #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
+        .nav-toggle {
+            display: block;
+            cursor: pointer;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+        .navbar nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary-dark);
+            padding: 1rem;
+        }
+        #mobile-menu:checked ~ nav ul {
+            display: flex;
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(2) {
+            opacity: 0;
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
     }
-    /* Hobbies-specific: Card grid/list */
-    .hobbies-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .hobby-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .hobby-card:hover { transform: translateY(-8px); }
-    .hobby-card h3 { margin-top: 0; color: var(--primary-blue); }
-    .hobby-card p { margin: 10px 0; }
-    @media (max-width: 768px) { .hobbies-grid { grid-template-columns: 1fr; } .hobby-card { padding: 15px; } }
     </style>
 </head>
 <body>
-<!-- NAVIGATION (Updated with full consistent menu including new pages) -->
+<!-- NAVIGATION (Added new pages: Education after About, Community after Experience, Hobbies after Blog, Resources before Contact for logical flow) -->
 <header class="navbar" aria-label="Main Navigation">
 <div class="nav-container">
     <div class="logo">Jason David Newton | Moses Lake, Washington</div>
@@ -119,52 +232,79 @@
     </nav>
 </div>
 </header>
-<!-- HOBBIES CONTENT (Added internal links to experience, community, gallery, contact, blog for better flow/SEO) -->
-<section class="section fade-in-section">
-<div class="section-content">
-    <h1>My Hobbies & Adventures in Moses Lake, Washington</h1>
-    <p>Outside of work at Group 14 Technologies (see my <a href="experience.html">experience</a>) and family/community commitments (explore my <a href="community.html">community page</a>), I recharge through a mix of physical activities, entertainment, and enjoying the Pacific Northwest. These hobbies keep me balanced, energized, and connected to the beauty around Moses Lake, WA. Reflections in my <a href="blog.html">blog</a>.</p>
-</div>
-</section>
-<section class="section alt fade-in-section">
-<div class="section-content">
-    <h2>My Favorite Hobbies</h2>
-    <div class="hobbies-grid">
-        <div class="hobby-card">
-            <h3>Lifting Weights</h3>
-            <p>Strength training is a daily ritual—building discipline and resilience that carries over to everything else. Whether at home or the gym, it's my go-to for staying strong and focused in Moses Lake.</p>
-        </div>
-        <div class="hobby-card">
-            <h3>Golf</h3>
-            <p>Love hitting the links around Grant County. It's relaxing, challenging, and a great way to enjoy Washington's open spaces. Looking for local course recommendations? Hit me up!</p>
-        </div>
-        <div class="hobby-card">
-            <h3>Snowboarding</h3>
-            <p>When winter hits the Pacific Northwest, I'm on the slopes. The thrill of carving fresh powder recharges me—perfect escape from the everyday in Moses Lake and beyond.</p>
-        </div>
-        <div class="hobby-card">
-            <h3>Music & Movies</h3>
-            <p>Cranking tunes or diving into a good film is my unwind time. From classic rock to new releases, it's all about good vibes and storytelling after a long day.</p>
-        </div>
-        <div class="hobby-card">
-            <h3>Reading</h3>
-            <p>Whether leadership books, biographies, or faith-inspired reads, books fuel personal growth and quiet reflection—essential in my busy life. Check related <a href="resources.html">resources</a>.</p>
-        </div>
-        <div class="hobby-card">
-            <h3>Pacific Northwest Adventures</h3>
-            <p>Exploring Washington's lakes, trails, and scenery keeps me grounded. From local Moses Lake spots to bigger PNW getaways, the outdoors inspire gratitude and adventure.</p>
-            <!-- Link to gallery for visual tie-in -->
-            <p>Check out some captured moments in my <a href="gallery.html">photo gallery</a>.</p>
-        </div>
+<!-- HERO SECTION -->
+<section class="hero">
+<div class="hero-content">
+    <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
+    <h1>Jason David Newton</h1>
+    <h2>Moses Lake, Washington</h2>
+    <h3>Mechanical Technician • Operations Leader • Father • Man of Faith</h3>
+    <p>
+        Welcome to the official website of Jason David Newton from Moses Lake, Washington! I’m a results-driven mechanical and operations professional with over a decade of experience in industrial and maritime environments in Moses Lake, WA. I lead with integrity, faith, and a commitment to excellence in every project.
+    </p>
+    <p>
+        Currently, I serve as a Mechanical Technician at <strong>Group 14 Technologies</strong> in Moses Lake, Washington, where I manage maintenance, fabrication, and planning while ensuring high-performance systems run safely and efficiently.
+    </p>
+    <div class="hero-buttons">
+        <a href="about.html" class="btn-primary">Learn More About Me</a>
+        <a href="experience.html" class="btn-secondary">View My Experience</a>
+        <a href="gallery.html" class="btn-secondary">View Gallery</a>
+        <a href="contact.html" class="btn-secondary">Contact Me</a>
     </div>
 </div>
 </section>
+<!-- PERSONAL VALUES (Added link to community.html for church involvement) -->
 <section class="section fade-in-section">
 <div class="section-content">
-    <h2>Why These Matter</h2>
-    <p>These hobbies aren't just fun—they help me stay sharp, connect with nature, and bring balance amid work and family life. Living in Moses Lake gives the perfect backdrop for it all. Got similar interests or PNW tips? <a href="contact.html">Share them with me</a> or connect on socials!</p>
-    <!-- Optional images: Uncomment/add after upload -->
-    <!-- <img src="https://jasondavidnewton.com/images/golf-moses-lake.jpg" alt="Golfing near Moses Lake, Washington" style="max-width: 400px; border-radius: 8px; margin: 20px auto; display: block;" loading="lazy"> -->
+    <h2>Faith, Family & Personal Growth in Moses Lake</h2>
+    <p>
+        Being a father and growing in my faith are my guiding lights. Fatherhood is my greatest blessing, and my faith in Jesus Christ shapes my approach to life, work, and community in Moses Lake, Washington.
+    </p>
+    <p>
+        As a member of <strong>Grace Harvest Church</strong> in Moses Lake, WA, I strive to serve and grow within a community that prioritizes compassion, integrity, and personal development. Explore my <a href="community.html">community involvement</a>.
+    </p>
+    <p>
+        I live by the principle that leading with faith, loving well, and serving others creates lasting impact.
+    </p>
+</div>
+</section>
+<!-- PROFESSIONAL OVERVIEW (Added link to education.html for degree/credential) -->
+<section class="section alt fade-in-section">
+<div class="section-content">
+    <h2>Professional Background of Jason David Newton</h2>
+    <p>
+        I earned my <strong>Bachelor of Arts in Business Management & Operations</strong> from <strong>Washington State University</strong> in 2016 and hold a <strong>U.S. Coast Guard Merchant Mariner Credential (QMED)</strong>. Learn more on my <a href="education.html">education page</a>. My experience includes operating refrigeration plants, diesel-electric power systems, and large-scale industrial production lines.
+    </p>
+    <p>
+        At <strong>Simplot FG</strong>, I supervised teams of 30–50 personnel, ensuring plant operations, maintenance, and safety standards were exceeded. I have a proven track record in leadership, operational excellence, and process optimization in Moses Lake, WA.
+    </p>
+    <a href="experience.html" class="section-button">Explore My Career</a>
+</div>
+</section>
+<!-- LIFE OUTSIDE WORK (Added links to hobbies.html and community.html) -->
+<section class="section fade-in-section">
+<div class="section-content">
+    <h2>Life Outside of Work in Moses Lake</h2>
+    <p>
+        Outside my career, I enjoy spending time with my son, lifting weights, golf, snowboarding, Bible study, music, movies, and coaching youth football in Moses Lake, Washington. Discover more about my <a href="hobbies.html">hobbies and adventures</a> or my <a href="community.html">community coaching</a>. I am passionate about mentoring, community involvement, and continuous personal growth.
+    </p>
+    <p>
+        Living in the Pacific Northwest fuels my appreciation for community, hard work, and the outdoors.
+    </p>
+</div>
+</section>
+<!-- BLOG PREVIEW (Added subtle link to resources.html if relevant, but kept as-is since blog-focused) -->
+<section class="section alt fade-in-section">
+<div class="section-content">
+    <h2>From My Blog - Insights from Jason David Newton</h2>
+    <p>
+        Insights on faith, personal growth, professional leadership, and life lessons from Moses Lake, Washington. Here are some recent posts (check <a href="resources.html">resources</a> for more reading tips):
+    </p>
+    <ul style="list-style: none; padding:0;">
+        <li><a href="blog.html#why-hard-work-still-matters" class="section-button">Why Hard Work Still Matters</a></li>
+        <li><a href="blog.html#faith-and-staying-grounded" class="section-button">Faith and Staying Grounded</a></li>
+        <li><a href="blog.html#lessons-from-working-at-sea" class="section-button">Lessons from Working at Sea</a></li>
+    </ul>
 </div>
 </section>
 <!-- FOOTER -->
@@ -188,7 +328,7 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// Same animation script
+// Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -202,10 +342,17 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Scroll-Triggered Animations + Navbar Scroll + Footer Icons
 document.addEventListener("DOMContentLoaded", () => {
   const fadeSections = document.querySelectorAll('.fade-in-section');
+  const heroContent = document.querySelector('.hero-content');
   const navbar = document.querySelector('.navbar');
   const footerIcons = document.querySelector('.footer-icons');
+  // Hero entrance on load
+  setTimeout(() => {
+    heroContent.classList.add('loaded');
+  }, 300);
+  // Navbar scroll effect
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
@@ -216,6 +363,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastScroll = currentScroll;
   });
+  // Responsive scroll observer
   const isMobile = window.innerWidth < 768;
   const observerOptions = {
     threshold: isMobile ? 0.08 : 0.15,
@@ -250,11 +398,10 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor: pointer;
     font-size: 18px;
     z-index: 1000;
-    transition: all 0.3s var(--ease);
+    transition: background .2s;
   }
   #back-to-top:hover {
     background: #163a59;
-    transform: scale(1.15);
   }
 </style>
 </body>
