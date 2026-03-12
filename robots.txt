@@ -1,4 +1,7 @@
+# robots.txt for jasondavidnewton.com
+# Allow all search engines to crawl the entire site
 User-agent: *
 Allow: /
 
+# Point Google (and others) to the sitemap
 Sitemap: https://jasondavidnewton.com/sitemap.xml
