@@ -166,8 +166,10 @@
             font-size: 1.2rem;
         }
     }
-    /* Hamburger Menu - Pure CSS */
-    .nav-toggle-checkbox { display: none; }
+    /* Hamburger Menu - Pure CSS Checkbox Hack */
+    .nav-toggle-checkbox {
+        display: none;
+    }
     @media (max-width: 768px) {
         .nav-toggle {
             display: block;
@@ -208,7 +210,7 @@
     </style>
 </head>
 <body>
-<!-- NAVIGATION (Added new pages: Education after About, Community after Experience, Hobbies after Blog, Resources before Contact for logical flow) -->
+<!-- NAVIGATION -->
 <header class="navbar" aria-label="Main Navigation">
 <div class="nav-container">
     <div class="logo">Jason David Newton | Moses Lake, Washington</div>
@@ -240,10 +242,10 @@
     <h2>Moses Lake, Washington</h2>
     <h3>Mechanical Technician • Operations Leader • Father • Man of Faith</h3>
     <p>
-        Welcome to the official website of Jason David Newton from Moses Lake, Washington! I’m a results-driven mechanical and operations professional with over a decade of experience in industrial and maritime environments in Moses Lake, WA. I lead with integrity, faith, and a commitment to excellence in every project.
+        Hey, welcome to my site – I'm Jason David Newton from Moses Lake, Washington. I work as a Mechanical Technician at Group 14 Technologies, handling maintenance and keeping things running smooth. Outside of that, I'm all about my family, faith at Grace Harvest Church, and getting out in the Pacific Northwest.
     </p>
     <p>
-        Currently, I serve as a Mechanical Technician at <strong>Group 14 Technologies</strong> in Moses Lake, Washington, where I manage maintenance, fabrication, and planning while ensuring high-performance systems run safely and efficiently.
+        Whether you're here for career stuff, faith talks, or just to connect, take a look around. Currently, I'm focused on leading with integrity and making a difference in my community.
     </p>
     <div class="hero-buttons">
         <a href="about.html" class="btn-primary">Learn More About Me</a>
@@ -253,52 +255,49 @@
     </div>
 </div>
 </section>
-<!-- PERSONAL VALUES (Added link to community.html for church involvement) -->
+<!-- PERSONAL VALUES -->
 <section class="section fade-in-section">
 <div class="section-content">
     <h2>Faith, Family & Personal Growth in Moses Lake</h2>
     <p>
-        Being a father and growing in my faith are my guiding lights. Fatherhood is my greatest blessing, and my faith in Jesus Christ shapes my approach to life, work, and community in Moses Lake, Washington.
+        Faith and family are what keep me going. Being a dad has taught me more about responsibility than anything else, and my faith in Jesus Christ helps me stay centered through it all. Here in Moses Lake, I'm part of Grace Harvest Church, where I find community and purpose.
     </p>
     <p>
-        As a member of <strong>Grace Harvest Church</strong> in Moses Lake, WA, I strive to serve and grow within a community that prioritizes compassion, integrity, and personal development. Explore my <a href="community.html">community involvement</a>.
-    </p>
-    <p>
-        I live by the principle that leading with faith, loving well, and serving others creates lasting impact.
+        Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html">community involvement</a> for more on this.
     </p>
 </div>
 </section>
-<!-- PROFESSIONAL OVERVIEW (Added link to education.html for degree/credential) -->
+<!-- PROFESSIONAL OVERVIEW -->
 <section class="section alt fade-in-section">
 <div class="section-content">
     <h2>Professional Background of Jason David Newton</h2>
     <p>
-        I earned my <strong>Bachelor of Arts in Business Management & Operations</strong> from <strong>Washington State University</strong> in 2016 and hold a <strong>U.S. Coast Guard Merchant Mariner Credential (QMED)</strong>. Learn more on my <a href="education.html">education page</a>. My experience includes operating refrigeration plants, diesel-electric power systems, and large-scale industrial production lines.
+        I graduated from Washington State University with a Bachelor of Arts in Business Management & Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.
     </p>
     <p>
-        At <strong>Simplot FG</strong>, I supervised teams of 30–50 personnel, ensuring plant operations, maintenance, and safety standards were exceeded. I have a proven track record in leadership, operational excellence, and process optimization in Moses Lake, WA.
+        At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.
     </p>
     <a href="experience.html" class="section-button">Explore My Career</a>
 </div>
 </section>
-<!-- LIFE OUTSIDE WORK (Added links to hobbies.html and community.html) -->
+<!-- LIFE OUTSIDE WORK -->
 <section class="section fade-in-section">
 <div class="section-content">
     <h2>Life Outside of Work in Moses Lake</h2>
     <p>
-        Outside my career, I enjoy spending time with my son, lifting weights, golf, snowboarding, Bible study, music, movies, and coaching youth football in Moses Lake, Washington. Discover more about my <a href="hobbies.html">hobbies and adventures</a> or my <a href="community.html">community coaching</a>. I am passionate about mentoring, community involvement, and continuous personal growth.
+        When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html">hobbies and adventures</a> or see my <a href="community.html">coaching in the community</a>.
     </p>
     <p>
-        Living in the Pacific Northwest fuels my appreciation for community, hard work, and the outdoors.
+        The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.
     </p>
 </div>
 </section>
-<!-- BLOG PREVIEW (Added subtle link to resources.html if relevant, but kept as-is since blog-focused) -->
+<!-- BLOG PREVIEW -->
 <section class="section alt fade-in-section">
 <div class="section-content">
     <h2>From My Blog - Insights from Jason David Newton</h2>
     <p>
-        Insights on faith, personal growth, professional leadership, and life lessons from Moses Lake, Washington. Here are some recent posts (check <a href="resources.html">resources</a> for more reading tips):
+        I share thoughts on faith, growth, leadership, and life lessons from Moses Lake. Here's a glimpse – head to the <a href="blog.html">full blog</a> for more, or check <a href="resources.html">resources</a> for books I like.
     </p>
     <ul style="list-style: none; padding:0;">
         <li><a href="blog.html#why-hard-work-still-matters" class="section-button">Why Hard Work Still Matters</a></li>
@@ -328,7 +327,7 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// Back-to-Top JS
+// Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -348,11 +347,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroContent = document.querySelector('.hero-content');
   const navbar = document.querySelector('.navbar');
   const footerIcons = document.querySelector('.footer-icons');
-  // Hero entrance on load
   setTimeout(() => {
     heroContent.classList.add('loaded');
   }, 300);
-  // Navbar scroll effect
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
@@ -363,7 +360,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastScroll = currentScroll;
   });
-  // Responsive scroll observer
   const isMobile = window.innerWidth < 768;
   const observerOptions = {
     threshold: isMobile ? 0.08 : 0.15,
