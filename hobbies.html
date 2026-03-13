@@ -12,7 +12,7 @@
     <meta property="og:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <meta property="og:url" content="https://jasondavidnewton.com/hobbies.html">
     <meta property="og:type" content="website">
-    <!-- Twitter Card (used by X and sometimes Google) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
@@ -127,25 +127,7 @@
     .hobby-card:hover { transform: translateY(-8px); }
     .hobby-card h3 { margin-top: 0; color: var(--primary-blue); }
     .hobby-card p { margin: 10px 0; }
-    .hobby-card i { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; display: block; }
-    .section-button {
-        display: inline-block;
-        padding: 12px 24px;
-        background: var(--primary-blue);
-        color: white;
-        border-radius: 5px;
-        font-weight: bold;
-        text-decoration: none;
-        margin-top: 20px;
-    }
-    .section-button:hover { background: #163a59; }
-    .book-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-    .book-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .book-card:hover { transform: translateY(-8px); }
-    .book-card img { max-width: 100%; height: auto; border-radius: 4px; margin-bottom: 15px; }
-    .book-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
-    .book-card p { margin: 8px 0; font-size: 1rem; }
-    @media (max-width: 768px) { .hobbies-grid { grid-template-columns: 1fr; } .hobby-card { padding: 15px; } .book-grid { grid-template-columns: 1fr; } .book-card { padding: 15px; } }
+    @media (max-width: 768px) { .hobbies-grid { grid-template-columns: 1fr; } .hobby-card { padding: 15px; } }
     </style>
 </head>
 <body>
@@ -173,65 +155,53 @@
     </nav>
 </div>
 </header>
-<!-- HOBBIES CONTENT -->
-<section class="hero">
-<div class="hero-content">
-    <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
-    <h1>Hobbies & Adventures</h1>
-    <h2>Moses Lake, Washington</h2>
-    <p>Outside of my job at Group 14 Technologies and family stuff, I like to unwind with some activities that keep me going. Lifting, golf, snowboarding, catching tunes or movies, reading a bit, and getting out in the PNW – it all helps balance things out here in Moses Lake. Check out my <a href="community.html">community page</a> or <a href="blog.html">blog</a> for how it ties in.</p>
+<!-- HOBBIES CONTENT (Updated with human tone) -->
+<section class="section fade-in-section">
+<div class="section-content">
+    <h1>My Hobbies & Adventures in Moses Lake, Washington</h1>
+    <p>Outside of work at Group 14 Technologies (see my <a href="experience.html">experience</a>) and family/community commitments (explore my <a href="community.html">community page</a>), I recharge through a mix of physical activities, entertainment, and enjoying the Pacific Northwest. These hobbies keep me balanced, energized, and connected to the beauty around Moses Lake, WA. Reflections in my <a href="blog.html">blog</a>.</p>
 </div>
 </section>
-<section class="section fade-in-section">
+<section class="section alt fade-in-section">
 <div class="section-content">
     <h2>My Favorite Hobbies</h2>
     <div class="hobbies-grid">
         <div class="hobby-card">
             <i class="fas fa-dumbbell"></i>
             <h3>Lifting Weights</h3>
-            <p>It's my daily go-to for staying strong and clearing my head. Whether at the gym or home, that pump keeps me disciplined and ready for whatever comes.</p>
-            <a href="contact.html" class="section-button">Share Your Fitness Tips</a>
+            <p>Strength training is a daily ritual—building discipline and resilience that carries over to everything else. Whether at home or the gym, it's my go-to for staying strong and focused in Moses Lake.</p>
         </div>
         <div class="hobby-card">
-            <i class="fas fa-golf-ball"></i>
             <h3>Golf</h3>
-            <p>Hitting the courses around Grant County is a great way to relax and challenge myself. Washington's open spaces make it even better – always up for local recommendations.</p>
-            <a href="contact.html" class="section-button">Recommend a Course</a>
+            <p>Love hitting the links around Grant County. It's relaxing, challenging, and a great way to enjoy Washington's open spaces. Looking for local course recommendations? Hit me up!</p>
         </div>
         <div class="hobby-card">
-            <i class="fas fa-snowboarding"></i>
             <h3>Snowboarding</h3>
-            <p>Winter in the PNW means time on the slopes. Carving through fresh powder is the ultimate recharge – pure thrill away from the daily routine in Moses Lake.</p>
-            <a href="contact.html" class="section-button">Share Slope Stories</a>
+            <p>When winter hits the Pacific Northwest, I'm on the slopes. The thrill of carving fresh powder recharges me—perfect escape from the everyday in Moses Lake and beyond.</p>
         </div>
         <div class="hobby-card">
-            <i class="fas fa-music"></i>
             <h3>Music & Movies</h3>
-            <p>Nothing like cranking some classic rock or settling in for a good flick to unwind. It's all about those vibes and stories after a long day.</p>
-            <a href="contact.html" class="section-button">Recommend a Movie/Song</a>
+            <p>Cranking tunes or diving into a good film is my unwind time. From classic rock to new releases, it's all about good vibes and storytelling after a long day.</p>
         </div>
         <div class="hobby-card">
-            <i class="fas fa-book"></i>
             <h3>Reading</h3>
-            <p>Books on leadership, faith, or just good stories keep my mind sharp. It's quiet time that sparks new ideas – essential in my busy world.</p>
-            <a href="contact.html" class="section-button">Share Book Recs</a>
+            <p>Whether leadership books, biographies, or faith-inspired reads, books fuel personal growth and quiet reflection—essential in my busy life. Check related <a href="resources.html">resources</a>.</p>
         </div>
         <div class="hobby-card">
-            <i class="fas fa-hiking"></i>
             <h3>Pacific Northwest Adventures</h3>
-            <p>Exploring lakes, trails, and scenery around Washington keeps me grounded. From Moses Lake spots to bigger getaways, it's all about gratitude and adventure.</p>
+            <p>Exploring Washington's lakes, trails, and scenery keeps me grounded. From local Moses Lake spots to bigger PNW getaways, the outdoors inspire gratitude and adventure.</p>
+            <!-- Link to gallery for visual tie-in -->
             <p>Check out some captured moments in my <a href="gallery.html">photo gallery</a>.</p>
-            <a href="gallery.html" class="section-button">View Gallery</a>
         </div>
     </div>
 </div>
 </section>
-<section class="section alt fade-in-section">
+<section class="section fade-in-section">
 <div class="section-content">
     <h2>What I'm Reading Right Now</h2>
     <div class="hobbies-grid">
         <div class="hobby-card">
-            <img src="https://jasondavidnewton.com/images/raising-boys-cover.jpg" alt="Raising Emotionally Strong Boys book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
+            <img src="https://jasondavidnewton.com/images/raising-emotionally-strong-boys.jpg" alt="Raising Emotionally Strong Boys book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
             <h3>Raising Emotionally Strong Boys: Tools Your Son Can Build on for Life</h3>
             <p>By David Thomas. This one's hitting close to home as a dad – practical tips on helping boys handle emotions and build resilience. It's got me thinking a lot about guiding my son through life's ups and downs.</p>
             <a href="https://www.amazon.com/Raising-Emotionally-Strong-Boys-Tools/dp/0764239988" class="section-button" target="_blank" rel="noopener">Buy on Amazon</a>
@@ -244,19 +214,19 @@
     <h2>Top 3 Books I Recommend</h2>
     <div class="book-grid">
         <div class="book-card">
-            <img src="https://jasondavidnewton.com/images/wild-at-heart-cover.jpg" alt="Wild at Heart book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
+            <img src="https://jasondavidnewton.com/images/wild-at-heart.jpg" alt="Wild at Heart book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
             <h3>Wild at Heart</h3>
             <p>By John Eldredge. A classic on what it means to be a man – adventure, risk, and heart. It's shaped how I approach fatherhood and life.</p>
             <a href="https://www.amazon.com/Wild-Heart-Revised-Updated-Discovering/dp/1400200393" class="section-button" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
         <div class="book-card">
-            <img src="https://jasondavidnewton.com/images/fathered-by-god-cover.jpg" alt="Fathered by God book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
+            <img src="https://jasondavidnewton.com/images/fathered-by-god.jpg" alt="Fathered by God book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
             <h3>Fathered by God</h3>
             <p>By John Eldredge. Builds on Wild at Heart, focusing on stages of manhood and God's role as father. Deep stuff that's helped me grow personally.</p>
             <a href="https://www.amazon.com/Fathered-God-Learning-Could-Never/dp/1400280273" class="section-button" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
         <div class="book-card">
-            <img src="https://jasondavidnewton.com/images/parenting-love-logic-cover.jpg" alt="Parenting with Love and Logic book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
+            <img src="https://jasondavidnewton.com/images/parenting-love-logic.jpg" alt="Parenting with Love and Logic book cover" style="max-width: 200px; height: auto; display: block; margin: 0 auto 15px; border-radius: 4px;" loading="lazy">
             <h3>Parenting with Love and Logic</h3>
             <p>By Foster Cline and Jim Fay. Practical advice on raising responsible kids with empathy. It's been a game-changer for me as a parent.</p>
             <a href="https://www.amazon.com/Parenting-Love-Logic-Updated-Expanded/dp/1576839540" class="section-button" target="_blank" rel="noopener">Buy on Amazon</a>
@@ -266,8 +236,8 @@
 </section>
 <section class="section fade-in-section">
 <div class="section-content">
-    <h2>Why These Hobbies Matter to Me</h2>
-    <p>These aren't just ways to pass time – they keep me sharp, connected to nature, and balanced between work and family. Moses Lake's got the perfect setup for it all, from local trails to winter slopes. If you've got similar interests or tips for PNW spots, I'd love to hear 'em – <a href="contact.html">share away</a>!</p>
+    <h2>Why These Hobbies Matter</h2>
+    <p>These hobbies aren't just fun—they help me stay sharp, connect with nature, and bring balance amid work and family life. Living in Moses Lake gives the perfect backdrop for it all. Got similar interests or PNW tips? <a href="contact.html">Share them with me</a> or connect on socials!</p>
     <!-- Optional images: Uncomment/add after upload -->
     <!-- <img src="https://jasondavidnewton.com/images/golf-moses-lake.jpg" alt="Golfing near Moses Lake, Washington" style="max-width: 400px; border-radius: 8px; margin: 20px auto; display: block;" loading="lazy"> -->
 </div>
@@ -293,7 +263,7 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// Same animation script
+// Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -307,6 +277,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Scroll-Triggered Animations + Navbar Scroll + Footer Icons
 document.addEventListener("DOMContentLoaded", () => {
   const fadeSections = document.querySelectorAll('.fade-in-section');
   const heroContent = document.querySelector('.hero-content');
