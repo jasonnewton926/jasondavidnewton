@@ -19,6 +19,8 @@
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
@@ -119,15 +121,17 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
     }
     /* Community-specific: Responsive involvement cards/list */
-    .involvement-list { list-style: none; padding: 0; max-width: 900px; margin: 0 auto; }
-    .involvement-item { background: var(--section-bg); border-radius: 8px; padding: 20px; margin-bottom: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
-    .involvement-item:hover { transform: translateY(-5px); }
-    .involvement-item h3 { margin-top: 0; color: var(--primary-blue); }
-    @media (max-width: 768px) { .involvement-item { padding: 15px; } }
+    .involvement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+    .involvement-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .involvement-card:hover { transform: translateY(-8px); }
+    .involvement-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.5rem; }
+    .involvement-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
+    .involvement-card i { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; display: block; }
+    @media (max-width: 768px) { .involvement-grid { grid-template-columns: 1fr; } .involvement-card { padding: 15px; } .involvement-card h3 { font-size: 1.3rem; } .involvement-card p { font-size: 1rem; } }
     </style>
 </head>
 <body>
-<!-- NAVIGATION (exact match to index) -->
+<!-- NAVIGATION -->
 <header class="navbar" aria-label="Main Navigation">
 <div class="nav-container">
     <div class="logo">Jason David Newton | Moses Lake, Washington</div>
@@ -151,58 +155,60 @@
     </nav>
 </div>
 </header>
-
+<!-- HERO SECTION -->
+<section class="hero">
+<div class="hero-content">
+    <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
+    <h1>Community Involvement</h1>
+    <h2>Moses Lake, Washington</h2>
+    <p>Giving back to Moses Lake is a big part of who I am. Through faith at Grace Harvest Church, coaching kids in football, and local volunteering, I try to make a difference. It's all tied to my family life and work – keeps me grounded. Check out my <a href="blog.html">personal reflections</a> for more on this.</p>
+</div>
+</section>
 <!-- COMMUNITY CONTENT -->
 <section class="section fade-in-section">
 <div class="section-content">
-    <h1>Community Involvement in Moses Lake, Washington</h1>
-    <p>Giving back to my community is a core part of who I am. As a resident of Moses Lake, Washington, I’m deeply committed to serving others through faith, mentoring, and local activities. My involvement reflects my Christian values from Grace Harvest Church and my passion for guiding the next generation as a father and coach. Explore how this ties into my <a href="blog.html">personal reflections</a>.</p>
-</div>
-</section>
-
-<section class="section alt fade-in-section">
-<div class="section-content">
     <h2>Key Areas of Involvement</h2>
-    <ul class="involvement-list">
-        <li class="involvement-item">
+    <div class="involvement-grid">
+        <div class="involvement-card">
+            <i class="fas fa-church"></i>
             <h3>Grace Harvest Church</h3>
-            <p>Active member of Grace Harvest Church in Moses Lake, WA (313 Fig St). I participate in worship services, Bible study, and community outreach efforts. The church's vision—"Together we will worship God, serve our city, and make disciples"—guides my service. Join us Sundays at 9:00am or 11:00am for practical Bible teaching and fellowship. Learn more at <a href="https://graceharvestchurch.org/" target="_blank" rel="noopener">graceharvestchurch.org</a>. See related <a href="resources.html">faith resources</a>.</p>
-        </li>
-        <li class="involvement-item">
+            <p>Active member at Grace Harvest Church in Moses Lake (313 Fig St). I join worship, Bible study, and outreach. Their vision – worship God, serve the city, make disciples – guides what I do. Come Sundays at 9:00am or 11:00am for teaching and community. More at <a href="https://graceharvestchurch.org/" target="_blank" rel="noopener">graceharvestchurch.org</a>. See faith tools in <a href="resources.html">resources</a>.</p>
+        </div>
+        <div class="involvement-card">
+            <i class="fas fa-football-ball"></i>
             <h3>Youth Football Coaching</h3>
-            <p>Coaching youth football in Moses Lake through programs like Moses Lake Grid Kids and Columbia Basin Youth Football (e.g., Jr. Mavericks). I mentor young athletes in teamwork, discipline, and resilience—skills that translate from my <a href="experience.html">professional life</a> to the field. It's rewarding to see kids grow, build confidence, and have fun while learning life lessons rooted in hard work and faith. Photos in my <a href="gallery.html">gallery</a>.</p>
-        </li>
-        <li class="involvement-item">
+            <p>Coaching kids in Moses Lake through Grid Kids and Columbia Basin programs. I teach teamwork, discipline, perseverance – stuff from my <a href="experience.html">career</a> that helps on and off the field. Seeing them grow is the best part. Photos in my <a href="gallery.html">gallery</a>.</p>
+        </div>
+        <div class="involvement-card">
+            <i class="fas fa-hands-helping"></i>
             <h3>Mentoring & Volunteering</h3>
-            <p>Through church and community events, I volunteer in mentoring roles, supporting families and youth in Moses Lake. Whether it's helping with local initiatives or encouraging personal growth, I aim to make a positive impact in Grant County and the Pacific Northwest. This aligns with my <a href="hobbies.html">personal interests</a> in youth development.</p>
-        </li>
-    </ul>
+            <p>Through church and local events, I mentor youth and volunteer in Grant County. It's about supporting families and building community – aligns with my <a href="hobbies.html">interests</a> in growth and the Pacific Northwest.</p>
+        </div>
+    </div>
 </div>
 </section>
-
 <section class="section fade-in-section">
 <div class="section-content">
     <h2>Why Community Matters to Me</h2>
-    <p>My faith at Grace Harvest Church teaches that serving others is central to a meaningful life. Balancing my role at Group 14 Technologies with family and community keeps me grounded. These experiences enrich my fatherhood and inspire ongoing growth. Interested in getting involved or chatting about Moses Lake life? <a href="contact.html">Reach out</a> or connect on socials!</p>
-    <!-- Optional: Add photo, e.g., coaching or church event -->
-    <!-- <img src="https://jasondavidnewton.com/images/community-coaching.jpg" alt="Youth football coaching in Moses Lake" style="max-width: 400px; border-radius: 8px; margin: 20px auto; display: block;" loading="lazy"> -->
+    <p>My faith teaches serving others is key to a good life. Balancing work at Group 14 with family and community keeps things real. These experiences make me a better person. Got ideas or want to join? <a href="contact.html">Reach out</a> or connect on socials!</p>
+    <!-- Optional image placeholder -->
+    <!-- <img src="https://jasondavidnewton.com/images/community-coaching.jpg" alt="Youth football coaching in Moses Lake" style="max-width: 600px; border-radius: 8px; margin: 20px auto; display: block;" loading="lazy"> -->
 </div>
 </section>
-
-<!-- FOOTER (exact match) -->
+<!-- FOOTER -->
 <footer aria-label="Footer with Social Links">
 <div class="footer-icons">
-    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram"></a>
-    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok"></a>
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" aria-label="WhatsApp chat with Jason David Newton Moses Lake Washington"><img src="icons/whatsapp.png" alt="WhatsApp chat with Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" aria-label="Threads profile of Jason David Newton Moses Lake Washington"><img src="icons/threads.png" alt="Threads profile of Jason David Newton Moses Lake Washington"></a>
-    <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X"></a>
-    <a href="https://www.pinterest.com/JasonNewtonMosesLakeWA/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest"></a>
-    <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social"></a>
-    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube"></a>
-    <a href="https://vsco.co/jasondavidnewtonmoseslakewa/gallery" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO"></a>
+    <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.pinterest.com/JasonNewtonMosesLakeWA/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube channel of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://vsco.co/jasondavidnewtonmoseslakewa/gallery" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO profile of Jason David Newton Moses Lake Washington"></a>
 </div>
 <p>© 2026 Jason David Newton</p>
 <p>Moses Lake, Washington</p>
@@ -210,7 +216,7 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// Animations script (same as index)
+// Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -224,10 +230,15 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Scroll-Triggered Animations + Navbar Scroll + Footer Icons
 document.addEventListener("DOMContentLoaded", () => {
   const fadeSections = document.querySelectorAll('.fade-in-section');
+  const heroContent = document.querySelector('.hero-content');
   const navbar = document.querySelector('.navbar');
   const footerIcons = document.querySelector('.footer-icons');
+  setTimeout(() => {
+    if (heroContent) heroContent.classList.add('loaded');
+  }, 300);
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
