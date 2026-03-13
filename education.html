@@ -12,7 +12,7 @@
     <meta property="og:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <meta property="og:url" content="https://jasondavidnewton.com/education.html">
     <meta property="og:type" content="website">
-    <!-- Twitter Card (used by X and sometimes Google) -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
@@ -20,7 +20,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
@@ -29,13 +29,24 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-    <!-- Schema Markup for Person (enhanced with memberOf for consistency) -->
+    <!-- Schema Markup for Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jason David Newton",
       "educationalCredentialAwarded": [
+        {
+          "@type": "EducationalOccupationalCredential",
+          "name": "Associate of Arts and Sciences",
+          "credentialCategory": "degree",
+          "educationalLevel": "Associate",
+          "recognizedBy": {
+            "@type": "EducationalOrganization",
+            "name": "Big Bend Community College"
+          },
+          "dateAwarded": "2013"
+        },
         {
           "@type": "EducationalOccupationalCredential",
           "name": "Bachelor of Arts in Business Management & Operations",
@@ -49,12 +60,13 @@
         },
         {
           "@type": "EducationalOccupationalCredential",
-          "name": "U.S. Coast Guard Merchant Mariner Credential (QMED)",
+          "name": "U.S. Coast Guard Merchant Mariner Credential (QMED) with Electrician and Refrigerating Engineer endorsements",
           "credentialCategory": "certification",
           "recognizedBy": {
             "@type": "EducationalOrganization",
             "name": "Mid-Atlantic Maritime Academy"
-          }
+          },
+          "dateAwarded": "2021"
         }
       ],
       "memberOf": {
@@ -106,7 +118,6 @@
     }
     </script>
     <style>
-    /* Inline styles from index.html for consistency */
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
@@ -218,7 +229,7 @@
             transform: rotate(-45deg) translate(7px, -6px);
         }
     }
-    /* Additional: Make table responsive */
+    /* Enhanced table styling */
     .education-table {
         width: 100%;
         border-collapse: collapse;
@@ -232,6 +243,19 @@
     .education-table th {
         background: var(--primary-blue);
         color: var(--text-light);
+    }
+    .education-table tr:nth-child(even) {
+        background: #f9f9f9;
+    }
+    .education-table tr:hover {
+        background: #e6f2ff;
+    }
+    .education-table ul {
+        margin: 0;
+        padding-left: 20px;
+    }
+    .education-table li {
+        margin-bottom: 6px;
     }
     @media (max-width: 768px) {
         .education-table thead {
@@ -260,7 +284,7 @@
     </style>
 </head>
 <body>
-<!-- NAVIGATION (Updated with full consistent menu including new pages) -->
+<!-- NAVIGATION -->
 <header class="navbar" aria-label="Main Navigation">
 <div class="nav-container">
     <div class="logo">Jason David Newton | Moses Lake, Washington</div>
@@ -284,16 +308,18 @@
     </nav>
 </div>
 </header>
+
 <!-- EDUCATION CONTENT -->
 <section class="section fade-in-section">
 <div class="section-content">
     <h1>My Educational Journey in Moses Lake, Washington</h1>
-    <p>As a Mechanical Technician at Group 14 Technologies in Moses Lake, Washington, my education has been foundational to my career in operations, maintenance, and leadership. From business principles to hands-on maritime training, these experiences inform my daily work while aligning with my faith at Grace Harvest Church and commitment to family. See how this ties into my <a href="community.html">community involvement</a>.</p>
+    <p>Being a Mechanical Technician at Group 14 Technologies in Moses Lake means my education has to be practical – operations, maintenance, leadership. From gen ed at Big Bend to business at WSU, and then hands-on maritime training, it's all helped me do the job right. It's also tied to my faith at Grace Harvest Church and being a dad. See how it connects to <a href="community.html">community work</a>.</p>
 </div>
 </section>
+
 <section class="section alt fade-in-section">
 <div class="section-content">
-    <h2>Educational Milestones</h2>
+    <h2><i class="fas fa-graduation-cap"></i> Educational Milestones</h2>
     <table class="education-table">
         <thead>
             <tr>
@@ -305,47 +331,75 @@
         </thead>
         <tbody>
             <tr>
-                <td data-label="Year">2010-2013</td>
+                <td data-label="Year">2010–2013</td>
                 <td data-label="Credential/Degree">Associate of Arts and Sciences</td>
                 <td data-label="Institution">Big Bend Community College, Moses Lake, WA</td>
-                <td data-label="Key Skills & Insights">Big Bend's AAS is basically a transfer degree that lets you knock out all the gen ed stuff – math, science, writing – so you can move on to a four-year school without missing a beat. It's practical for locals like me, and it built that broad base I needed for business classes later on. Helped me transition smoothly while staying close to home.</td>
+                <td data-label="Key Skills & Insights">
+                    <ul>
+                        <li>Transfer degree – covered gen ed (math, science, writing)</li>
+                        <li>Local start, made WSU jump easier</li>
+                        <li>Built broad base for problem-solving</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
-                <td data-label="Year">2013-2016</td>
+                <td data-label="Year">2013–2016</td>
                 <td data-label="Credential/Degree">Bachelor of Arts in Business Management & Operations</td>
                 <td data-label="Institution">Washington State University, Pullman, WA</td>
-                <td data-label="Key Skills & Insights">WSU's Carson College program focuses on things like supply chain, operations strategy, and leading teams – it's all about making businesses run better. The coursework was hands-on, with projects that mirrored real-world challenges, which has been huge for my roles in manufacturing and tech. Tied in nicely with my values from Grace Harvest Church, emphasizing ethical leadership.</td>
+                <td data-label="Key Skills & Insights">
+                    <ul>
+                        <li>Operations, supply chain, leadership</li>
+                        <li>Hands-on projects – real-world focus</li>
+                        <li>Ethical leadership ties to my faith values</li>
+                    </ul>
+                </td>
             </tr>
             <tr>
-                <td data-label="Year">2020-2021</td>
-                <td data-label="Credential/Degree">U.S. Coast Guard Merchant Mariner Credential (Qualified Member of the Engine Department - QMED) with Electrician and Refrigerating Engineer endorsements</td>
+                <td data-label="Year">2020–2021</td>
+                <td data-label="Credential/Degree">U.S. Coast Guard Merchant Mariner Credential (QMED) – Electrician & Refrigerating Engineer</td>
                 <td data-label="Institution">Mid-Atlantic Maritime Academy, Virginia Beach, VA</td>
-                <td data-label="Key Skills & Insights">MAMA offers USCG-approved training that's intense but effective – covering marine engineering basics, electrical systems, refrigeration, and safety protocols. The QMED credential, with those endorsements, qualified me for engine room duties on vessels, and it's all practical, with simulations and real equipment. It's shaped how I handle high-stakes maintenance, bringing that discipline back to my work in Moses Lake. Photos from that time in my <a href="gallery.html">gallery</a>.</td>
+                <td data-label="Key Skills & Insights">
+                    <ul>
+                        <li>Marine engineering, electrical, refrigeration</li>
+                        <li>Safety, teamwork, high-pressure fixes</li>
+                        <li>Practical drills – discipline I use daily</li>
+                    </ul>
+                    Photos in my <a href="gallery.html">gallery</a>.
+                </td>
             </tr>
         </tbody>
     </table>
 </div>
 </section>
+
 <section class="section fade-in-section">
 <div class="section-content">
-    <h2>How Education Shapes My Life</h2>
-    <p>Education's more than just the papers you get – it's the lessons that stick with you over time. My AAS from Big Bend gave me that solid start, WSU built on it with business smarts for leading teams, and the maritime credential from MAMA added the technical grit for fixing things under pressure. All of it blends with my faith and family life here in Moses Lake, helping me mentor others and stay grounded. If you're curious about how it connects to my career, head over to the <a href="experience.html">experience page</a>, or drop a note on <a href="contact.html">contact</a>.</p>
+    <h2><i class="fas fa-graduation-cap"></i> How Education Shapes My Life</h2>
+    <p>Education's more than degrees – it's the stuff that sticks. Big Bend gave me the basics, WSU added business know-how, and MAMA brought the technical edge. Together, they help me handle work, mentor kids, and be a better dad here in Moses Lake. Faith ties it all together.</p>
+    <ul>
+        <li>Operations & leadership from WSU</li>
+        <li>Technical grit from maritime training</li>
+        <li>Ethical focus from church & family</li>
+    </ul>
+    <p>Want to see how it plays out in my career? Check the <a href="experience.html">experience page</a>, or let's chat on <a href="contact.html">contact</a>.</p>
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" class="section-button" target="_blank" rel="noopener">Connect on LinkedIn</a>
 </div>
 </section>
+
 <!-- FOOTER -->
 <footer aria-label="Footer with Social Links">
 <div class="footer-icons">
-    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn"></a>
-    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook"></a>
-    <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram"></a>
-    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok"></a>
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok profile of Jason David Newton Moses Lake Washington"></a>
     <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" aria-label="WhatsApp chat with Jason David Newton Moses Lake Washington"><img src="icons/whatsapp.png" alt="WhatsApp chat with Jason David Newton Moses Lake Washington"></a>
     <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" aria-label="Threads profile of Jason David Newton Moses Lake Washington"><img src="icons/threads.png" alt="Threads profile of Jason David Newton Moses Lake Washington"></a>
-    <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X"></a>
-    <a href="https://www.pinterest.com/JasonNewtonMosesLakeWA/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest"></a>
-    <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social"></a>
-    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube"></a>
-    <a href="https://vsco.co/jasondavidnewtonmoseslakewa/gallery" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO"></a>
+    <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.pinterest.com/JasonNewtonMosesLakeWA/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social profile of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube channel of Jason David Newton Moses Lake Washington"></a>
+    <a href="https://vsco.co/jasondavidnewtonmoseslakewa/gallery" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO profile of Jason David Newton Moses Lake Washington"></a>
 </div>
 <p>© 2026 Jason David Newton</p>
 <p>Moses Lake, Washington</p>
@@ -353,7 +407,7 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// Script from index.html for animations, etc.
+// Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
@@ -367,6 +421,7 @@ function topFunction() {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 }
+// Scroll-Triggered Animations + Navbar Scroll + Footer Icons
 document.addEventListener("DOMContentLoaded", () => {
   const fadeSections = document.querySelectorAll('.fade-in-section');
   const heroContent = document.querySelector('.hero-content');
@@ -424,6 +479,19 @@ document.addEventListener("DOMContentLoaded", () => {
   #back-to-top:hover {
     background: #163a59;
     transform: scale(1.15);
+  }
+  .section-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background: var(--primary-blue);
+    color: white;
+    border-radius: 5px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-top: 20px;
+  }
+  .section-button:hover {
+    background: #163a59;
   }
 </style>
 </body>
