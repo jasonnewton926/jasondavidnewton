@@ -19,6 +19,8 @@
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons (to enhance visual appeal) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
@@ -213,13 +215,32 @@
             transform: rotate(-45deg) translate(7px, -6px);
         }
     }
+    /* About-specific: Card grid/list for sections */
+    .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+    .about-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .about-card:hover { transform: translateY(-8px); }
+    .about-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.5rem; }
+    .about-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
+    .about-card i { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; display: block; }
+    .section-button {
+        display: inline-block;
+        padding: 12px 24px;
+        background: var(--primary-blue);
+        color: white;
+        border-radius: 5px;
+        font-weight: bold;
+        text-decoration: none;
+        margin-top: 15px;
+    }
+    .section-button:hover { background: #163a59; }
+    @media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } .about-card { padding: 15px; } .about-card h3 { font-size: 1.3rem; } .about-card p { font-size: 1rem; } }
     </style>
 </head>
 <body>
 <!-- NAVIGATION -->
 <header class="navbar" aria-label="Main Navigation">
 <div class="nav-container">
-    <div class="logo">Jason David Newton - Moses Lake, Washington</div>
+    <div class="logo">Jason David Newton | Moses Lake, Washington</div>
     <input type="checkbox" id="mobile-menu" class="nav-toggle-checkbox" hidden>
     <label for="mobile-menu" class="nav-toggle" aria-label="Toggle Navigation">
         <span></span><span></span><span></span>
@@ -247,59 +268,40 @@
     <h1>About Jason David Newton</h1>
     <h2>Moses Lake, Washington</h2>
     <p>
-        As Jason David Newton from Moses Lake, Washington, I’m a results-driven mechanical and operations professional with over a decade of experience spanning industrial manufacturing, heavy maintenance, and maritime engineering. My work is guided by integrity, technical skill, and a commitment to excellence in Moses Lake, WA.
+        Hey, I'm Jason David Newton from Moses Lake, Washington. I'm a mechanical technician at Group 14 Technologies, where I handle maintenance and operations – it's hands-on work that keeps things running smooth. But there's more to me than the job; family, faith, and giving back are what really drive me.
     </p>
 </div>
 </section>
-<!-- PROFESSIONAL BACKGROUND -->
+<!-- ABOUT CONTENT (as cards for visual appeal) -->
 <section class="section fade-in-section">
 <div class="section-content">
-    <h2>Professional Background</h2>
-    <p>
-        I earned my <strong>Bachelor of Arts in Business Management & Operations</strong> from <strong>Washington State University</strong> in 2016. Learn more on my <a href="education.html">education page</a>. My career has been focused on maintaining critical systems, leading teams, and optimizing processes across industrial and maritime environments in Moses Lake, Washington.
-    </p>
-    <p>
-        Currently, I serve as a Mechanical Technician at <strong>Group 14 Technologies</strong> in Moses Lake, managing maintenance, fabrication, and planning efforts to ensure operational reliability and efficiency.
-    </p>
-</div>
-</section>
-<!-- MARITIME EXPERIENCE -->
-<section class="section alt fade-in-section">
-<div class="section-content">
-    <h2>Maritime Engineering Experience</h2>
-    <p>
-        I hold a <strong>U.S. Coast Guard Merchant Mariner Credential (QMED)</strong> from <strong>Mid-Atlantic Maritime Academy</strong>. Explore details on my <a href="education.html">education page</a>. During my time aboard commercial fishing vessels, I operated and maintained complex mechanical systems including large-scale refrigeration plants, boilers, diesel-electric power systems, and onboard fish processing equipment.
-    </p>
-    <p>
-        This experience strengthened my technical expertise and reinforced the importance of teamwork, discipline, and reliability in high-pressure, mission-critical environments in Moses Lake, Washington.
-    </p>
-</div>
-</section>
-<!-- LEADERSHIP & COMMUNITY -->
-<section class="section fade-in-section">
-<div class="section-content">
-    <h2>Leadership & Community Involvement in Moses Lake</h2>
-    <p>
-        I’ve led teams of 30–50 personnel at <strong>Simplot FG</strong>, overseeing safety, production, and maintenance. Leadership for me is about empowering others, driving results, and creating a culture of accountability and growth in Moses Lake, Washington.
-    </p>
-    <p>
-        Outside of work, I remain committed to community engagement. I have coached youth football, volunteered locally, and actively participate in Grace Harvest Church to serve and mentor others in Moses Lake, WA. See more on my <a href="community.html">community page</a>.
-    </p>
-</div>
-</section>
-<!-- FAITH, FAMILY, & PERSONAL LIFE -->
-<section class="section alt fade-in-section">
-<div class="section-content">
-    <h2>Faith, Family & Personal Life</h2>
-    <p>
-        Being a father is my most important role. Raising my son with love, guidance, and example drives everything I do in Moses Lake, Washington.
-    </p>
-    <p>
-        My faith in Jesus Christ shapes my decisions, relationships, and work ethic. I aim to live faithfully, serve others, and grow personally and spiritually every day through Bible study and church involvement. Check my <a href="resources.html">resources page</a> for faith tools.
-    </p>
-    <p>
-        In my personal time, I enjoy lifting weights, golf, snowboarding, music, movies, reading, and coaching youth sports in the Moses Lake area. Explore my <a href="hobbies.html">hobbies page</a> for more.
-    </p>
+    <div class="about-grid">
+        <div class="about-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Professional Background</h3>
+            <p>With over a decade in industrial and maritime engineering, I've focused on fixing systems, leading teams, and optimizing processes. At Group 14 Technologies in Moses Lake, I manage maintenance and planning to keep operations safe and efficient. It's rewarding, but it starts with the basics I learned along the way.</p>
+            <a href="experience.html" class="section-button">See My Experience</a>
+        </div>
+        <div class="about-card">
+            <i class="fas fa-ship"></i>
+            <h3>Maritime Engineering Experience</h3>
+            <p>Out on commercial fishing vessels, I handled everything from refrigeration plants to diesel-electric systems. It taught me to stay calm under pressure and work as a team – skills I still use today. Holding a U.S. Coast Guard Merchant Mariner Credential just adds to that foundation.</p>
+            <a href="education.html" class="section-button">View Credentials</a>
+        </div>
+        <div class="about-card">
+            <i class="fas fa-users"></i>
+            <h3>Leadership & Community Involvement</h3>
+            <p>Leading teams of 30-50 at places like Simplot FG meant focusing on safety, efficiency, and people. In Moses Lake, I carry that over to community stuff – coaching youth football, volunteering, and being part of Grace Harvest Church. It's about making an impact where I live.</p>
+            <a href="community.html" class="section-button">Explore Community</a>
+        </div>
+        <div class="about-card">
+            <i class="fas fa-heart"></i>
+            <h3>Faith, Family & Personal Life</h3>
+            <p>Family comes first – being a dad is the best part of my day. My faith in Jesus Christ keeps me grounded, guiding how I live and work. Outside that, I enjoy lifting weights, golf, snowboarding, music, movies, and getting out in the Pacific Northwest. It's all about balance.</p>
+            <a href="hobbies.html" class="section-button">My Hobbies</a>
+            <a href="contact.html" class="section-button">Connect With Me</a>
+        </div>
+    </div>
 </div>
 </section>
 <!-- FOOTER -->
@@ -343,11 +345,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const heroContent = document.querySelector('.hero-content');
   const navbar = document.querySelector('.navbar');
   const footerIcons = document.querySelector('.footer-icons');
-  // Hero entrance on load
   setTimeout(() => {
     heroContent.classList.add('loaded');
   }, 300);
-  // Navbar scroll effect
   let lastScroll = 0;
   window.addEventListener('scroll', () => {
     const currentScroll = window.scrollY;
@@ -358,7 +358,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastScroll = currentScroll;
   });
-  // Responsive scroll observer
   const isMobile = window.innerWidth < 768;
   const observerOptions = {
     threshold: isMobile ? 0.08 : 0.15,
