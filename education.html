@@ -29,7 +29,7 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-    <!-- Schema Markup -->
+    <!-- Schema Markup for Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -96,7 +96,7 @@
       ]
     }
     </script>
-    <!-- BreadcrumbList -->
+    <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -143,7 +143,15 @@
         .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
         .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
     }
+    .hero {
+        background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+        color: var(--text-light);
+        padding: 6.25rem 1.25rem 3.75rem;
+        text-align: center;
+    }
     .hero-content {
+        max-width: 800px;
+        margin: auto;
         opacity: 0;
         transform: scale(0.97);
         transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
@@ -151,6 +159,26 @@
     .hero-content.loaded {
         opacity: 1;
         transform: scale(1);
+    }
+    .hero img {
+        max-width: 200px;
+        border-radius: 50%;
+        margin-bottom: 20px;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+    .hero h1 {
+        font-size: 3rem;
+        margin-bottom: 0.625rem;
+    }
+    .hero h2 {
+        font-size: 1.375rem;
+        font-weight: normal;
+        margin-bottom: 1.25rem;
+    }
+    .hero p {
+        font-size: 1.125rem;
+        max-width: 700px;
+        margin: 0 auto 2rem;
     }
     .navbar {
         transition: all 0.4s var(--ease);
@@ -182,6 +210,10 @@
         transform: translateY(0);
     }
     @media (max-width: 768px) {
+        .hero { padding: 5rem 1rem 3rem; }
+        .hero h1 { font-size: 2.125rem; }
+        .hero h2 { font-size: 1.125rem; }
+        .hero p { font-size: 1rem; }
         .navbar.scrolled { padding: 0.6rem 1rem; }
         .navbar.scrolled .logo { font-size: 1.2rem; }
     }
@@ -195,18 +227,18 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(2) { opacity: 0; }
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
     }
-    /* Education table enhancements */
+    /* Enhanced table styling */
     .education-table {
         width: 100%;
         border-collapse: collapse;
         margin: 30px 0;
         background: white;
-        box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         border-radius: 8px;
         overflow: hidden;
     }
     .education-table th, .education-table td {
-        padding: 16px;
+        padding: 16px 12px;
         text-align: left;
         border-bottom: 1px solid #eee;
     }
@@ -226,12 +258,29 @@
         line-height: 1.5;
     }
     .school-logo {
-        max-width: 160px;
+        max-width: 140px;
         height: auto;
         display: block;
-        margin: 0 auto 15px;
+        margin: 0 auto 12px;
         border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .section-content h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1.25rem;
+    }
+    .section-content h2 {
+        font-size: 1.8rem;
+        margin: 2.5rem 0 1.5rem;
+        color: var(--primary-blue);
+    }
+    .section-content p {
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
+    }
+    .section-content strong {
+        color: var(--primary-blue);
     }
     @media (max-width: 768px) {
         .education-table thead { display: none; }
@@ -257,7 +306,9 @@
             font-weight: bold;
             color: var(--primary-blue);
         }
-        .school-logo { max-width: 120px; margin: 0 auto 12px; }
+        .school-logo { max-width: 120px; margin: 0 auto 10px; }
+        .section-content h1 { font-size: 2rem; }
+        .section-content h2 { font-size: 1.5rem; }
     }
     </style>
 </head>
@@ -287,15 +338,22 @@
 </div>
 </header>
 
-<!-- EDUCATION CONTENT -->
-<section class="section fade-in-section">
-<div class="section-content">
-    <h1>My Educational Journey in Moses Lake, Washington</h1>
-    <p>Being a Mechanical Technician at Group 14 Technologies means my education has to be practical – operations, maintenance, leading people. Started with the basics at Big Bend, moved into business at WSU, then got the hands-on maritime side from MAMA. All of it helps me do the job right every day, and it ties right into my faith at Grace Harvest Church and being a dad. You can see how it connects to my <a href="community.html">community work</a>.</p>
+<!-- HERO SECTION (matched to index.html style) -->
+<section class="hero">
+<div class="hero-content">
+    <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" 
+         alt="Jason David Newton from Moses Lake, Washington" 
+         loading="lazy">
+    <h1>Education</h1>
+    <h2>Moses Lake, Washington</h2>
+    <p>
+        My education has been the backbone of what I do every day at Group 14 Technologies – from the basics at Big Bend to business at WSU, and then the hands-on maritime stuff from MAMA. It's all practical, and it ties right into being a dad, my faith at Grace Harvest Church, and giving back here in Moses Lake.
+    </p>
 </div>
 </section>
 
-<section class="section alt fade-in-section">
+<!-- EDUCATION CONTENT -->
+<section class="section fade-in-section">
 <div class="section-content">
     <h2><i class="fas fa-graduation-cap"></i> Educational Milestones</h2>
     <table class="education-table">
@@ -309,66 +367,45 @@
         </thead>
         <tbody>
             <tr>
-                <td colspan="4" style="text-align:center; border:none; padding:0 0 15px 0;">
+                <td data-label="Year">2010–2013</td>
+                <td data-label="Credential/Degree">Associate of Arts and Sciences</td>
+                <td data-label="Institution">
                     <img src="https://jasondavidnewton.com/images/bigbend-logo.jpg" 
                          alt="Big Bend Community College logo" 
                          class="school-logo" 
                          loading="lazy">
+                    Big Bend Community College, Moses Lake, WA
                 </td>
-            </tr>
-            <tr>
-                <td data-label="Year">2010–2013</td>
-                <td data-label="Credential/Degree">Associate of Arts and Sciences</td>
-                <td data-label="Institution">Big Bend Community College, Moses Lake, WA</td>
                 <td data-label="Key Skills & Insights">
-                    <ul>
-                        <li>Transfer degree – knocked out gen ed (math, science, writing)</li>
-                        <li>Local start – made WSU transition smooth</li>
-                        <li>Broad foundation for problem-solving later on</li>
-                    </ul>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="4" style="text-align:center; border:none; padding:15px 0;">
-                    <img src="https://jasondavidnewton.com/images/wsu-logo.jpg" 
-                         alt="Washington State University logo" 
-                         class="school-logo" 
-                         loading="lazy">
+                    Transfer degree that covered all the gen ed – math, science, writing. Stayed local, built a solid base, and made the jump to WSU way easier.
                 </td>
             </tr>
             <tr>
                 <td data-label="Year">2013–2016</td>
                 <td data-label="Credential/Degree">Bachelor of Arts in Business Management & Operations</td>
-                <td data-label="Institution">Washington State University, Pullman, WA</td>
-                <td data-label="Key Skills & Insights">
-                    <ul>
-                        <li>Operations, supply chain, team leadership</li>
-                        <li>Hands-on projects – real-world feel</li>
-                        <li>Ethical leadership that aligns with my faith</li>
-                    </ul>
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="4" style="text-align:center; border:none; padding:15px 0;">
-                    <img src="https://jasondavidnewton.com/images/mama-logo.jpg" 
-                         alt="Mid-Atlantic Maritime Academy logo" 
+                <td data-label="Institution">
+                    <img src="https://jasondavidnewton.com/images/wsu-logo.jpg" 
+                         alt="Washington State University logo" 
                          class="school-logo" 
                          loading="lazy">
+                    Washington State University, Pullman, WA
+                </td>
+                <td data-label="Key Skills & Insights">
+                    Operations, supply chain, leading teams. Hands-on projects that felt real-world. The ethical leadership part still lines up with my values from Grace Harvest Church.
                 </td>
             </tr>
             <tr>
                 <td data-label="Year">2020–2021</td>
                 <td data-label="Credential/Degree">U.S. Coast Guard Merchant Mariner Credential (QMED) – Electrician & Refrigerating Engineer</td>
-                <td data-label="Institution">Mid-Atlantic Maritime Academy, Virginia Beach, VA</td>
+                <td data-label="Institution">
+                    <img src="https://jasondavidnewton.com/images/mama-logo.jpg" 
+                         alt="Mid-Atlantic Maritime Academy logo" 
+                         class="school-logo" 
+                         loading="lazy">
+                    Mid-Atlantic Maritime Academy, Virginia Beach, VA
+                </td>
                 <td data-label="Key Skills & Insights">
-                    <ul>
-                        <li>Marine engineering, electrical systems, refrigeration</li>
-                        <li>Safety protocols, teamwork in high-pressure settings</li>
-                        <li>Practical drills – discipline I carry into every job</li>
-                    </ul>
-                    Some shots from that time in my <a href="gallery.html">gallery</a>.
+                    Marine engineering, electrical systems, refrigeration, safety. Intense practical training – teamwork and discipline under pressure. Still use that mindset every day at work.
                 </td>
             </tr>
         </tbody>
@@ -379,8 +416,8 @@
 <section class="section fade-in-section">
 <div class="section-content">
     <h2><i class="fas fa-graduation-cap"></i> How Education Shapes My Life</h2>
-    <p>Education's more than just the degrees you end up with – it's the stuff that sticks with you. Big Bend gave me the basics close to home, WSU added the business side for running things smoothly, and MAMA brought the real technical grit for fixing stuff under pressure. All of it works together to help me handle the job, mentor kids, and be a better dad right here in Moses Lake. Faith keeps it all grounded.</p>
-    <p>Want to see how it actually plays out day to day? Check the <a href="experience.html">experience page</a>, or let's chat on <a href="contact.html">contact</a>.</p>
+    <p>Education's more than the degrees you end up with – it's the stuff that sticks with you. Big Bend got me started close to home, WSU gave me the business side for running things efficiently, and MAMA added the real technical grit for fixing problems when it matters. All of it comes together to help me do my job at Group 14, mentor kids in the community, and be the kind of dad I want to be here in Moses Lake. Faith keeps it all in perspective.</p>
+    <p>Want to see how it actually plays out day to day? Check the <a href="experience.html">experience page</a>, or let's connect on <a href="contact.html">contact</a>.</p>
     <a href="https://www.linkedin.com/in/jason-newton-moses-lake" class="section-button" target="_blank" rel="noopener">Connect on LinkedIn</a>
 </div>
 </section>
