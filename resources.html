@@ -19,7 +19,7 @@
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for icons -->
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <!-- GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
@@ -29,7 +29,7 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-    <!-- Schema Markup for Person (updated with full sameAs list) -->
+    <!-- Schema Markup for Person -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -122,7 +122,15 @@
     }
     /* Resources-specific: Card grid/list */
     .resources-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
-    .resource-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; cursor: pointer; }
+    .resource-card { 
+        background: var(--section-bg); 
+        border-radius: 8px; 
+        padding: 20px; 
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1); 
+        transition: transform 0.3s; 
+        cursor: pointer; 
+        position: relative;
+    }
     .resource-card:hover { transform: translateY(-8px); }
     .resource-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.5rem; }
     .resource-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
@@ -138,7 +146,12 @@
         margin-top: 15px;
     }
     .section-button:hover { background: #163a59; }
-    @media (max-width: 768px) { .resources-grid { grid-template-columns: 1fr; } .resource-card { padding: 15px; } .resource-card h3 { font-size: 1.3rem; } .resource-card p { font-size: 1rem; } }
+    @media (max-width: 768px) { 
+        .resources-grid { grid-template-columns: 1fr; } 
+        .resource-card { padding: 15px; } 
+        .resource-card h3 { font-size: 1.3rem; } 
+        .resource-card p { font-size: 1rem; } 
+    }
     </style>
 </head>
 <body>
@@ -172,7 +185,7 @@
     <img src="https://jasondavidnewton.com/images/profile-jason-david-newton-moses-lake.jpg" alt="Jason David Newton from Moses Lake, Washington" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
     <h1>Resources & Recommendations</h1>
     <h2>Moses Lake, Washington</h2>
-    <p>Here are some curated tools, sites, books, and tips that have been helpful in my life as a Mechanical Technician, father, man of faith at Grace Harvest Church, and resident of Moses Lake, Washington. Feel free to explore and share your favorites.</p>
+    <p>Here are some tools, apps, books, and sites that have been helpful in my life as a dad, a guy working in tech, and someone trying to live out my faith at Grace Harvest Church here in Moses Lake. Take what you like and leave the rest – hope it helps you too.</p>
 </div>
 </section>
 <!-- RESOURCES CONTENT -->
@@ -183,14 +196,20 @@
         <div class="resource-card" onclick="window.open('https://www.bible.com/', '_blank')">
             <i class="fas fa-bible"></i>
             <h3>YouVersion Bible App</h3>
-            <p>Daily reading plans, devotionals, and community features—great for consistent Bible study on the go. I use it regularly for personal growth and reflection.</p>
-            <a href="https://www.bible.com/" class="section-button" target="_blank" rel="noopener">Explore YouVersion</a>
+            <p>Daily reading plans, devotionals, and community features—great for staying consistent with Bible study even on busy days. I use it all the time for quiet reflection.</p>
+            <a href="https://www.bible.com/" class="section-button" target="_blank" rel="noopener">Try YouVersion</a>
         </div>
         <div class="resource-card" onclick="window.open('https://graceharvestchurch.org/', '_blank')">
             <i class="fas fa-church"></i>
             <h3>Grace Harvest Church</h3>
-            <p>My home church in Moses Lake—practical teaching, worship, and community service opportunities. Join us Sundays at 9:00am or 11:00am.</p>
+            <p>My home church in Moses Lake—solid teaching, worship, and ways to serve. Join us Sundays at 9:00am or 11:00am.</p>
             <a href="https://graceharvestchurch.org/" class="section-button" target="_blank" rel="noopener">Visit Church Site</a>
+        </div>
+        <div class="resource-card" onclick="window.open('https://www.churchcenter.com/', '_blank')">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>Church Center App</h3>
+            <p>Grace Harvest uses Church Center for events, groups, giving, and staying connected. Download the app to see what's happening and get involved.</p>
+            <a href="https://www.churchcenter.com/" class="section-button" target="_blank" rel="noopener">Get Church Center App</a>
         </div>
     </div>
 </div>
@@ -202,13 +221,13 @@
         <div class="resource-card" onclick="window.open('experience.html', '_self')">
             <i class="fas fa-file-download"></i>
             <h3>My Resume & Experience</h3>
-            <p>Download my resume or explore my career history for insights into operations, maintenance, and leadership in industrial settings.</p>
+            <p>Download my resume or check out my career path for insights into operations, maintenance, and leadership in industrial/tech settings.</p>
             <a href="/assets/Jason_David_Newton_Resume.pdf" class="section-button" download>Download Resume</a>
         </div>
         <div class="resource-card" onclick="window.open('https://www.franklincovey.com/the-7-habits/', '_blank')">
             <i class="fas fa-book-open"></i>
             <h3>"The 7 Habits of Highly Effective People" by Stephen Covey</h3>
-            <p>Timeless principles on personal and professional effectiveness—helped shape my approach to teamwork and accountability at work.</p>
+            <p>Timeless stuff on personal effectiveness and leading well—really shaped how I approach teamwork and accountability at work.</p>
             <a href="https://www.franklincovey.com/the-7-habits/" class="section-button" target="_blank" rel="noopener">Learn More</a>
         </div>
     </div>
@@ -221,14 +240,14 @@
         <div class="resource-card" onclick="window.open('https://www.focusonthefamily.com/', '_blank')">
             <i class="fas fa-family"></i>
             <h3>Focus on the Family</h3>
-            <p>Christian resources for parenting, marriage, and family life—practical advice rooted in faith.</p>
+            <p>Christian resources for parenting, marriage, and family life—practical advice rooted in faith that I've found helpful.</p>
             <a href="https://www.focusonthefamily.com/" class="section-button" target="_blank" rel="noopener">Explore Focus on the Family</a>
         </div>
-        <div class="resource-card" onclick="window.open('https://www.megmeekermd.com/books/strong-fathers-strong-daughters/', '_blank')">
+        <div class="resource-card" onclick="window.open('https://www.amazon.com/Intentional-Father-Practical-Guide-Raising/dp/0801018684', '_blank')">
             <i class="fas fa-book"></i>
-            <h3>Strong Fathers, Strong Daughters (book by Meg Meeker)</h3>
-            <p>Insights on raising confident kids—valuable as a dad committed to guiding my son with love and discipline.</p>
-            <a href="https://www.megmeekermd.com/books/strong-fathers-strong-daughters/" class="section-button" target="_blank" rel="noopener">Learn More</a>
+            <h3>The Intentional Father by Jon Tyson</h3>
+            <p>Practical guide for dads on raising sons with purpose—lots of real steps and conversations that have stuck with me as a father.</p>
+            <a href="https://www.amazon.com/Intentional-Father-Practical-Guide-Raising/dp/0801018684" class="section-button" target="_blank" rel="noopener">Buy on Amazon</a>
         </div>
     </div>
 </div>
@@ -240,7 +259,7 @@
         <div class="resource-card" onclick="window.open('https://www.wta.org/', '_blank')">
             <i class="fas fa-hiking"></i>
             <h3>Washington Trails Association (WTA)</h3>
-            <p>Trail guides, maps, and conditions for hiking/snowboarding in the PNW—perfect for local Moses Lake explorations and beyond.</p>
+            <p>Trail guides, maps, and conditions for hiking/snowboarding in the PNW—great for local Moses Lake trips and bigger adventures.</p>
             <a href="https://www.wta.org/" class="section-button" target="_blank" rel="noopener">Explore WTA</a>
         </div>
         <div class="resource-card" onclick="window.open('https://parks.wa.gov/', '_blank')">
@@ -261,7 +280,7 @@
 <section class="section fade-in-section">
 <div class="section-content">
     <h2>Get Involved or Share</h2>
-    <p>These are starting points—resources that have blessed me. Have suggestions or want to discuss any? <a href="contact.html">Contact me</a> or connect on socials. Let's build each other up!</p>
+    <p>These are just starting points—resources that have been helpful to me. Got suggestions or want to talk about any of this? <a href="contact.html">Reach out</a> or connect on socials. Let's keep encouraging each other!</p>
 </div>
 </section>
 <!-- FOOTER -->
