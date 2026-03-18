@@ -26,32 +26,102 @@
     --text-light: white;
     --gray: #ccc;
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Dark mode variables (applied via [data-theme="dark"] or prefers-color-scheme) */
+    --bg: var(--light-bg);
+    --card-bg: var(--section-bg);
+    --text: var(--text-dark);
+    --text-inverse: var(--text-light);
+    --navbar-bg: var(--primary-dark);
+    --footer-bg: var(--primary-dark);
 }
 
-/* Fallbacks if :root vars fail to parse (older browsers) */
-body {
-    background: #f4f6f8;
-    color: #333333;
-}
-
-/* Prevent dark mode OS overrides from breaking light theme contrast */
+/* System preference: respect user's OS dark mode setting */
 @media (prefers-color-scheme: dark) {
-    :root {
-        --light-bg: #f4f6f8;
-        --section-bg: #ffffff;
-        --text-dark: #333333;
-        --text-light: #ffffff;
+    :root:not([data-theme="light"]) {
+        --bg: #0f172a;               /* slate-900 – deep but readable */
+        --card-bg: #1e293b;          /* slate-800 – card background */
+        --text: #e2e8f0;             /* slate-200 – light text */
+        --text-inverse: #0f172a;
+        --navbar-bg: #020617;        /* near-black for navbar/footer */
+        --footer-bg: #020617;
+        --section-bg: #1e293b;
+        --alt-bg: #0f172a;
+        --gray: #64748b;             /* slate-500 – better contrast */
     }
-    body { background: var(--light-bg); color: var(--text-dark); }
 }
 
+/* Explicit user choice overrides */
+[data-theme="light"] {
+    --bg: var(--light-bg);
+    --card-bg: var(--section-bg);
+    --text: var(--text-dark);
+    --text-inverse: var(--text-light);
+    --navbar-bg: var(--primary-dark);
+    --footer-bg: var(--primary-dark);
+    --section-bg: white;
+    --alt-bg: #eef2f5;
+}
+
+[data-theme="dark"] {
+    --bg: #0f172a;
+    --card-bg: #1e293b;
+    --text: #e2e8f0;
+    --text-inverse: #0f172a;
+    --navbar-bg: #020617;
+    --footer-bg: #020617;
+    --section-bg: #1e293b;
+    --alt-bg: #0f172a;
+    --gray: #64748b;
+}
+
+/* Apply variables globally */
+body {
+    background: var(--bg);
+    color: var(--text);
+}
+
+.section, .section.alt {
+    background: var(--card-bg);
+}
+
+.navbar, footer {
+    background: var(--navbar-bg) !important;
+    color: var(--text-inverse);
+}
+
+.hero {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
+    color: var(--text-inverse);
+}
+
+/* Cards & content areas adapt */
+.badge-card, .resource-card, .hobby-card, .involvement-card {
+    background: var(--card-bg);
+    color: var(--text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* softer shadow in dark mode */
+}
+
+/* Links & buttons */
+a { color: var(--accent-blue); }
+a:hover { color: var(--accent-hover); }
+
+.section-button, .social-btn, .btn-primary {
+    background: var(--primary-blue);
+    color: var(--text-inverse) !important;
+    border: none;
+}
+
+.section-button:hover, .social-btn:hover, .btn-primary:hover {
+    background: var(--accent-hover);
+}
+
+/* Rest of your original CSS – unchanged below this point */
 html, body { height: 100%; }
 body {
     margin: 0;
     font-family: 'Roboto', 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
     line-height: 1.6;
-    color: var(--text-dark);
-    background: var(--light-bg);
     -webkit-font-smoothing: antialiased;
     min-height: 100vh;
     display: flex;
@@ -64,12 +134,10 @@ h1, h2, h3 {
 }
 a { text-decoration: none; color: inherit; }
 
-/* ===================================
-   NAVBAR
-=================================== */
+/* NAVBAR */
 .navbar {
-    background: var(--primary-dark);
-    color: var(--text-light);
+    background: var(--navbar-bg);
+    color: var(--text-inverse);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -92,7 +160,7 @@ a { text-decoration: none; color: inherit; }
     margin: 0;
 }
 .navbar a {
-    color: var(--text-light);
+    color: var(--text-inverse);
     font-weight: 500;
     transition: color 0.2s ease;
 }
@@ -109,7 +177,7 @@ a { text-decoration: none; color: inherit; }
     display: block;
     width: 25px;
     height: 3px;
-    background: var(--text-light);
+    background: var(--text-inverse);
     margin: 5px auto;
     transition: 0.3s;
 }
@@ -123,8 +191,8 @@ a { text-decoration: none; color: inherit; }
         top: 100%;
         left: 0;
         width: 100%;
-        background: var(--primary-dark);
-        padding: 1.5rem 1rem;  /* more touch-friendly padding */
+        background: var(--navbar-bg);
+        padding: 1.5rem 1rem;
     }
     .navbar ul.active { display: flex; }
     .nav-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
@@ -132,12 +200,10 @@ a { text-decoration: none; color: inherit; }
     .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 }
 
-/* ===================================
-   HERO SECTION
-=================================== */
+/* HERO SECTION */
 .hero {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
-    color: var(--text-light);
+    color: var(--text-inverse);
     padding: 6.25rem 1.25rem 3.75rem;
     text-align: center;
 }
@@ -149,9 +215,7 @@ a { text-decoration: none; color: inherit; }
 .hero h2 { font-size: 1.375rem; font-weight: normal; margin-bottom: 0.625rem; }
 .hero p { margin-bottom: 1.5625rem; font-size: 1.0625rem; }
 
-/* ===================================
-   BUTTONS (global) – FIXED blue-on-blue issue
-=================================== */
+/* BUTTONS (global) – with dark mode fix */
 .btn-primary,
 .btn-secondary,
 .section-button,
@@ -163,16 +227,11 @@ a { text-decoration: none; color: inherit; }
     transition: background 0.2s ease, transform 0.1s ease;
     cursor: pointer;
 }
-
-/* Force white text on dark button backgrounds – prevents inheritance of blue text */
-.btn-primary,
-.section-button,
-.social-btn {
+.btn-primary, .section-button, .social-btn {
     background: var(--primary-blue);
-    color: var(--text-light) !important;  /* WHITE text – overrides any parent blue inheritance */
+    color: var(--text-inverse) !important;
     border: none;
 }
-
 .btn-primary:hover,
 .section-button:hover,
 .social-btn:hover,
@@ -185,11 +244,9 @@ a { text-decoration: none; color: inherit; }
     outline-offset: 2px;
 }
 
-/* ===================================
-   SECTIONS & ANIMATIONS
-=================================== */
-.section { padding: 3.75rem 1.25rem; background: var(--section-bg); }
-.section.alt { background: var(--alt-bg); }
+/* SECTIONS & ANIMATIONS */
+.section { padding: 3.75rem 1.25rem; background: var(--card-bg); }
+.section.alt { background: var(--card-bg); }
 .section-content {
     max-width: 900px;
     margin: auto;
@@ -203,7 +260,7 @@ a { text-decoration: none; color: inherit; }
     transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-/* Staggered delays – your original kept intact */
+/* Your original stagger delays */
 .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
 .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
 .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
@@ -232,9 +289,7 @@ a { text-decoration: none; color: inherit; }
 }
 .hero-content.loaded { opacity: 1; transform: scale(1); }
 
-/* ===================================
-   FOOTER & SOCIAL ICONS
-=================================== */
+/* FOOTER & SOCIAL ICONS */
 .footer-icons { margin-bottom: 1rem; text-align: center; }
 .footer-icons a {
     margin: 0 0.5rem;
@@ -256,8 +311,8 @@ a { text-decoration: none; color: inherit; }
     transform: translateY(0);
 }
 footer {
-    background: var(--primary-dark);
-    color: var(--text-light);
+    background: var(--footer-bg);
+    color: var(--text-inverse);
     text-align: center;
     padding: 2.5rem 1.25rem;
     margin-top: auto;
@@ -291,9 +346,7 @@ footer {
     z-index: 10;
 }
 
-/* ===================================
-   SOCIAL BADGES GRID (contact page)
-=================================== */
+/* SOCIAL BADGES GRID (contact page) */
 .social-badges-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -301,11 +354,11 @@ footer {
     margin-top: 30px;
 }
 .badge-card {
-    background: #0a1f33;
+    background: var(--card-bg);
     border-radius: 12px;
     padding: 20px;
     text-align: center;
-    color: white;
+    color: var(--text);
     box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     transition: transform 0.2s, box-shadow 0.2s;
 }
@@ -319,15 +372,15 @@ footer {
     display: block;
     margin: 0 auto;
     padding: 10px 20px;
-    background: #1f4f7a;
-    color: white;
+    background: var(--primary-blue);
+    color: var(--text-inverse) !important;
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
     transition: background 0.2s;
     max-width: 220px;
 }
-.badge-card .social-btn:hover { background: #163a59; }
+.badge-card .social-btn:hover { background: var(--accent-hover); }
 
 /* Instagram Embed Styling */
 .instagram-media {
@@ -338,9 +391,7 @@ footer {
     width: auto !important;
 }
 
-/* ===================================
-   GALLERY GRID & LIGHTBOX
-=================================== */
+/* GALLERY GRID & LIGHTBOX */
 .gallery-grid {
     max-width: 1000px;
     margin: auto;
@@ -388,12 +439,10 @@ footer {
 }
 .lightbox:target { display: block; }
 
-/* ===================================
-   ACCESSIBLE CARD / STRETCHED LINK
-=================================== */
+/* ACCESSIBLE CARD / STRETCHED LINK */
 .involvement-card {
     position: relative;
-    background: var(--section-bg);
+    background: var(--card-bg);
     border-radius: 8px;
     padding: 20px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
@@ -410,9 +459,7 @@ footer {
     z-index: 1;
 }
 
-/* ===================================
-   CONTACT FORM
-=================================== */
+/* CONTACT FORM */
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
@@ -437,9 +484,7 @@ footer {
 }
 .contact-form textarea { resize: vertical; min-height: 120px; }
 
-/* ===================================
-   ACCESSIBILITY & PRINT
-=================================== */
+/* ACCESSIBILITY & PRINT */
 :focus-visible {
     outline: 3px solid var(--accent-blue);
     outline-offset: 2px;
@@ -455,7 +500,7 @@ footer {
     border: 0;
 }
 
-/* Print styles – prevent dark areas wasting ink */
+/* Print styles */
 @media print {
     .navbar, footer, .hero { background: white !important; color: black !important; }
     a { text-decoration: underline; color: blue; }
