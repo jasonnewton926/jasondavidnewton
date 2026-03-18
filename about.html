@@ -129,10 +129,11 @@
     </script>
 
     <style>
-    /* [Your existing about-grid styles unchanged] */
+    /* Smooth Easing Curve */
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
     }
+    /* Scroll-Triggered Fade-In + Slide-Up with Mobile-Optimized Stagger */
     .fade-in-section {
         opacity: 0;
         transform: translateY(50px);
@@ -142,6 +143,7 @@
         opacity: 1;
         transform: translateY(0);
     }
+    /* Staggered Delays - shorter on mobile */
     .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
     .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
     .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
@@ -157,6 +159,7 @@
         .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
         .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
     }
+    /* Hero Content Entrance */
     .hero-content {
         opacity: 0;
         transform: scale(0.97);
@@ -166,6 +169,7 @@
         opacity: 1;
         transform: scale(1);
     }
+    /* Navbar Scroll Animation */
     .navbar {
         transition: all 0.4s var(--ease);
         background: var(--primary-dark);
@@ -178,6 +182,7 @@
     .navbar.scrolled .logo {
         font-size: 1.25rem;
     }
+    /* Footer Icons Animation */
     .footer-icons a {
         display: inline-block;
         transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
@@ -195,6 +200,7 @@
         opacity: 1;
         transform: translateY(0);
     }
+    /* Responsive Adjustments */
     @media (max-width: 768px) {
         .navbar.scrolled {
             padding: 0.6rem 1rem;
@@ -203,6 +209,7 @@
             font-size: 1.2rem;
         }
     }
+    /* Hamburger Menu - Pure CSS Checkbox Hack */
     .nav-toggle-checkbox {
         display: none;
     }
@@ -243,6 +250,7 @@
             transform: rotate(-45deg) translate(7px, -6px);
         }
     }
+    /* About-specific: Card grid/list for sections */
     .about-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
     .about-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
     .about-card:hover { transform: translateY(-8px); }
@@ -363,7 +371,58 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 <script>
-// [Your existing script unchanged]
+// Back-to-top JS
+let mybutton = document.getElementById("back-to-top");
+window.onscroll = function() {scrollFunction()};
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+// Scroll-Triggered Animations + Navbar Scroll + Footer Icons
+document.addEventListener("DOMContentLoaded", () => {
+  const fadeSections = document.querySelectorAll('.fade-in-section');
+  const heroContent = document.querySelector('.hero-content');
+  const navbar = document.querySelector('.navbar');
+  const footerIcons = document.querySelector('.footer-icons');
+  setTimeout(() => {
+    heroContent.classList.add('loaded');
+  }, 300);
+  let lastScroll = 0;
+  window.addEventListener('scroll', () => {
+    const currentScroll = window.scrollY;
+    if (currentScroll > 50) {
+      navbar.classList.add('scrolled');
+    } else {
+      navbar.classList.remove('scrolled');
+    }
+    lastScroll = currentScroll;
+  });
+  const isMobile = window.innerWidth < 768;
+  const observerOptions = {
+    threshold: isMobile ? 0.08 : 0.15,
+    rootMargin: "0px 0px -12% 0px"
+  };
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        if (entry.target === footerIcons) {
+          entry.target.classList.add('visible');
+        }
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  fadeSections.forEach(section => observer.observe(section));
+  observer.observe(footerIcons);
+});
 </script>
 <style>
   #back-to-top {
