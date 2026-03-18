@@ -115,20 +115,28 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(2) { opacity: 0; }
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
     }
-    /* Community-specific: Responsive involvement cards */
-    .involvement-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+    /* Stretched link for accessible card clicking */
     .involvement-card {
+        position: relative;
         background: var(--section-bg);
         border-radius: 8px;
         padding: 20px;
         box-shadow: 0 2px 8px rgba(0,0,0,0.1);
         transition: transform 0.3s, box-shadow 0.3s;
-        cursor: pointer;
-        position: relative;
     }
     .involvement-card:hover {
         transform: translateY(-8px);
         box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    }
+    .involvement-card a.section-button {
+        position: relative;
+        z-index: 2; /* button above stretched link */
+    }
+    .involvement-card a.section-button::after {
+        content: "";
+        position: absolute;
+        top: -20px; right: -20px; bottom: -20px; left: -20px;
+        z-index: 1;
     }
     .involvement-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.5rem; }
     .involvement-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
@@ -145,6 +153,17 @@
         transition: background 0.3s;
     }
     .section-button:hover { background: #163a59; }
+    /* Screen-reader-only text */
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
+    }
     @media (max-width: 768px) {
         .involvement-grid { grid-template-columns: 1fr; }
         .involvement-card { padding: 15px; }
@@ -196,24 +215,30 @@
 <div class="section-content">
     <h2>Key Areas of Involvement</h2>
     <div class="involvement-grid">
-        <div class="involvement-card" onclick="window.open('https://graceharvestchurch.org/', '_blank')">
-            <i class="fas fa-church"></i>
+        <div class="involvement-card">
+            <i class="fas fa-church" aria-hidden="true"></i>
             <h3>Grace Harvest Church</h3>
             <p>Active member at Grace Harvest Church in Moses Lake (313 Fig St). I join worship, Bible study, and outreach. Their vision – worship God, serve the city, make disciples – guides what I do. Come Sundays at 9:00am or 11:00am for teaching and community. More at graceharvestchurch.org. See faith tools in <a href="resources.html">resources</a>.</p>
-            <a href="https://graceharvestchurch.org/" class="section-button" target="_blank" rel="noopener">Visit Church Site</a>
+            <a href="https://graceharvestchurch.org/" class="section-button" target="_blank" rel="noopener">
+                Visit Church Site <span class="sr-only">(opens in new tab)</span>
+            </a>
         </div>
-        <div class="involvement-card" onclick="window.open('gallery.html', '_self')">
-            <i class="fas fa-football-ball"></i>
+        <div class="involvement-card">
+            <i class="fas fa-football-ball" aria-hidden="true"></i>
             <h3>Youth Football Coaching</h3>
             <p>Coaching kids in Moses Lake through Grid Kids and Columbia Basin programs. Back in 2017-2018, I coached the 7th grade team at Frontier Middle School – those seasons were full of ups and downs, but watching the kids learn teamwork and push themselves was incredible. I teach discipline and perseverance – stuff from my <a href="experience.html">career</a> that helps on and off the field. Seeing them grow is the best part. Photos in my <a href="gallery.html">gallery</a>.</p>
-            <a href="gallery.html" class="section-button">View Gallery Photos</a>
+            <a href="gallery.html" class="section-button">
+                View Gallery Photos <span class="sr-only">(internal link)</span>
+            </a>
         </div>
-        <div class="involvement-card" onclick="window.open('contact.html', '_self')">
-            <i class="fas fa-hands-helping"></i>
+        <div class="involvement-card">
+            <i class="fas fa-hands-helping" aria-hidden="true"></i>
             <h3>Mentoring & Volunteering</h3>
             <p>Through church and local events, I mentor youth and volunteer in Grant County. It's about supporting families and building community – aligns with my <a href="hobbies.html">interests</a> in growth and the Pacific Northwest.</p>
             <p>If you’ve got a volunteering opportunity or need a hand with something around Moses Lake, feel free to reach out – I’d be happy to help or point you in the right direction.</p>
-            <a href="contact.html" class="section-button">Reach Out</a>
+            <a href="contact.html" class="section-button">
+                Reach Out <span class="sr-only">(internal link)</span>
+            </a>
         </div>
     </div>
 </div>
