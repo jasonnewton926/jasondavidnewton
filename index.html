@@ -258,6 +258,69 @@
     .share-buttons a { color: var(--primary-blue); font-size: 1.4rem; transition: color 0.2s; }
     .share-buttons a:hover { color: var(--accent-blue); }
     @media (max-width: 768px) { .blog-preview-grid { grid-template-columns: 1fr; } }
+    /* Hovercard styles */
+    .gravatar-hovercard {
+        position: fixed;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 125px);
+        right: 12px;
+        z-index: 999;
+        max-width: 320px;
+    }
+    .gravatar-hovercard__trigger {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        cursor: pointer;
+        transition: transform 0.3s ease;
+    }
+    .gravatar-hovercard__trigger:hover,
+    .gravatar-hovercard__trigger:active {
+        transform: scale(1.1);
+    }
+    .gravatar-hovercard__expanded {
+        display: none;
+        position: relative;
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.18);
+        overflow: hidden;
+        margin-top: 8px;
+    }
+    .gravatar-hovercard.expanded .gravatar-hovercard__expanded {
+        display: block;
+    }
+    .gravatar-hovercard__close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+        background: rgba(0,0,0,0.5);
+        color: white;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 18px;
+        cursor: pointer;
+        z-index: 10;
+        transition: background 0.2s;
+    }
+    .gravatar-hovercard__close:hover,
+    .gravatar-hovercard__close:active {
+        background: rgba(0,0,0,0.8);
+    }
+    @media (max-width: 768px) {
+        .gravatar-hovercard {
+            bottom: calc(env(safe-area-inset-bottom, 0px) + 140px);
+            right: 10px;
+            max-width: 210px;
+        }
+        .gravatar-hovercard__trigger { width: 50px; height: 50px; }
+        .gravatar-hovercard__close { width: 28px; height: 28px; font-size: 16px; }
+    }
     </style>
 </head>
 <body>
@@ -505,86 +568,15 @@
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 
-<!-- GRAVATAR HOVERCARD WIDGET – FULLY DEBUGGED MOBILE VERSION -->
-<div class="gravatar-hovercard" style="position: fixed; bottom: env(safe-area-inset-bottom, 0px); bottom: calc(env(safe-area-inset-bottom, 0px) + 140px); right: 12px; z-index: 999; max-width: 320px; pointer-events: auto;">
-  <style>
-    .gravatar-hovercard__inner { 
-      background: var(--card-bg); 
-      border-radius: 12px; 
-      box-shadow: 0 8px 25px rgba(0,0,0,0.18); 
-      overflow: hidden; 
-      transition: transform 0.25s ease-out;
-      touch-action: manipulation;
-    }
-    .gravatar-hovercard:hover .gravatar-hovercard__inner,
-    .gravatar-hovercard:active .gravatar-hovercard__inner { 
-      transform: scale(1.02); 
-    }
-    .gravatar-hovercard__header-image { 
-      height: 80px; 
-      background-size: cover; 
-    }
-    .gravatar-hovercard__avatar { 
-      border: 3px solid var(--card-bg); 
-      border-radius: 50%; 
-      margin-top: -40px; 
-    }
-    .gravatar-hovercard__name, 
-    .gravatar-hovercard__job, 
-    .gravatar-hovercard__location, 
-    .gravatar-hovercard__description { 
-      color: var(--text); 
-      margin: 4px 0; 
-    }
-    .gravatar-hovercard__social-links { 
-      display: flex; 
-      flex-wrap: nowrap; 
-      overflow-x: auto; 
-      gap: 8px; 
-      padding: 8px 10px; 
-      background: rgba(0,0,0,0.02); 
-      scrollbar-width: none; 
-      -ms-overflow-style: none; 
-      scroll-snap-type: x mandatory; 
-      -webkit-overflow-scrolling: touch; 
-    }
-    .gravatar-hovercard__social-links::-webkit-scrollbar { display: none; }
-    .gravatar-hovercard__social-link { 
-      flex: 0 0 auto; 
-      scroll-snap-align: start; 
-    }
-    .gravatar-hovercard__social-link img { 
-      width: 20px; 
-      height: 20px; 
-      opacity: 0.85; 
-      transition: opacity 0.2s, transform 0.2s; 
-    }
-    .gravatar-hovercard__social-link:hover img,
-    .gravatar-hovercard__social-link:active img { 
-      opacity: 1; 
-      transform: scale(1.2); 
-    }
-    .gravatar-hovercard__footer {
-      padding: 8px 10px;
-      text-align: center;
-      font-size: 0.8rem;
-      color: var(--text-light);
-    }
-    @media (max-width: 768px) { 
-      .gravatar-hovercard { 
-        bottom: calc(env(safe-area-inset-bottom, 0px) + 125px); 
-        right: 10px; 
-        max-width: 210px; 
-      } 
-      .gravatar-hovercard__header-image { height: 70px; }
-      .gravatar-hovercard__avatar { width: 55px; height: 55px; margin-top: -35px; }
-      .gravatar-hovercard__social-links { gap: 6px; padding: 6px 8px; }
-      .gravatar-hovercard__social-link img { width: 18px; height: 18px; }
-      .gravatar-hovercard__name { font-size: 0.95rem; }
-      .gravatar-hovercard__job, .gravatar-hovercard__location, .gravatar-hovercard__description { font-size: 0.75rem; }
-    }
-  </style>
-  <div class="gravatar-hovercard__inner">
+<!-- GRAVATAR HOVERCARD – COLLAPSIBLE WITH X CLOSE BUTTON -->
+<div class="gravatar-hovercard" id="gravatarHovercard">
+  <div class="gravatar-hovercard__trigger" onclick="document.getElementById('gravatarHovercard').classList.toggle('expanded')">
+    <img src="https://0.gravatar.com/avatar/22f0838a90e4d391fc8c92da8ae60d0d059c5c6735c9d59200f1c6ad2f3a0971?s=128&d=initials" alt="Jason David Newton" style="width:100%; height:100%; object-fit:cover;">
+  </div>
+  <div class="gravatar-hovercard__expanded">
+    <button class="gravatar-hovercard__close" onclick="document.getElementById('gravatarHovercard').classList.remove('expanded')">
+      <i class="fas fa-times"></i>
+    </button>
     <div class="gravatar-hovercard__header-image" style="background: url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024') 50% 50% / 100% no-repeat;"></div>
     <div class="gravatar-hovercard__header">
       <a class="gravatar-hovercard__avatar-link" href="https://jasondavidnewton.link?utm_source=hovercard" target="_blank">
@@ -600,23 +592,23 @@
       <p class="gravatar-hovercard__description">Jason David Newton | Moses Lake WA | Maintenance Professional | Mechanical Technician at Group 14 Technologies | jasondavidnewton.com | jasonnewton.me |10+ years in maintenance & leadership. Devoted Christian dad at Grace Harvest Church</p>
     </div>
     <div class="gravatar-hovercard__social-links">
-      <a class="gravatar-hovercard__social-link" href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank"><img src="icons/linkedin.png" width="20" height="20" alt="LinkedIn"></a>
-      <a class="gravatar-hovercard__social-link" href="https://about.me/jason-david-newton" target="_blank"><img src="icons/aboutme.png" width="20" height="20" alt="About.me"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank"><img src="icons/crunchbase.png" width="20" height="20" alt="Crunchbase"></a>
-      <a class="gravatar-hovercard__social-link" href="https://muckrack.com/jason-david-newton" target="_blank"><img src="icons/muckrack.png" width="20" height="20" alt="Muck Rack"></a>
-      <a class="gravatar-hovercard__social-link" href="https://medium.com/@JasonDavidNewton" target="_blank"><img src="icons/medium.png" width="20" height="20" alt="Medium"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank"><img src="icons/facebook.png" width="20" height="20" alt="Facebook"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.instagram.com/jasondavidnewton/" target="_blank"><img src="icons/instagram.png" width="20" height="20" alt="Instagram"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank"><img src="icons/tiktok.png" width="20" height="20" alt="TikTok"></a>
-      <a class="gravatar-hovercard__social-link" href="https://wa.me/+15097712196" target="_blank"><img src="icons/whatsapp.png" width="20" height="20" alt="WhatsApp"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.threads.net/@jasondavidnewton" target="_blank"><img src="icons/threads.png" width="20" height="20" alt="Threads"></a>
-      <a class="gravatar-hovercard__social-link" href="https://x.com/JasonDNewton" target="_blank"><img src="icons/x.png" width="20" height="20" alt="X"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.pinterest.com/JasonDavidNewton/" target="_blank"><img src="icons/pinterest.png" width="20" height="20" alt="Pinterest"></a>
-      <a class="gravatar-hovercard__social-link" href="https://truthsocial.com/@JasonNewton" target="_blank"><img src="icons/truthsocial.png" width="20" height="20" alt="Truth Social"></a>
-      <a class="gravatar-hovercard__social-link" href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank"><img src="icons/youtube.png" width="20" height="20" alt="YouTube"></a>
-      <a class="gravatar-hovercard__social-link" href="https://jasondavidnewton.vsco.site" target="_blank"><img src="icons/vsco.png" width="20" height="20" alt="VSCO"></a>
-      <a class="gravatar-hovercard__social-link" href="https://jasonnewton.me/" target="_blank"><img src="icons/carrd.png" width="20" height="20" alt="Carrd"></a>
-      <a class="gravatar-hovercard__social-link" href="https://jasondavidnewton.link/" target="_blank"><img src="icons/gravatar.png" width="20" height="20" alt="Gravatar"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank"><img src="icons/linkedin.png" width="26" height="26" alt="LinkedIn"></a>
+      <a class="gravatar-hovercard__social-link" href="https://about.me/jason-david-newton" target="_blank"><img src="icons/aboutme.png" width="26" height="26" alt="About.me"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank"><img src="icons/crunchbase.png" width="26" height="26" alt="Crunchbase"></a>
+      <a class="gravatar-hovercard__social-link" href="https://muckrack.com/jason-david-newton" target="_blank"><img src="icons/muckrack.png" width="26" height="26" alt="Muck Rack"></a>
+      <a class="gravatar-hovercard__social-link" href="https://medium.com/@JasonDavidNewton" target="_blank"><img src="icons/medium.png" width="26" height="26" alt="Medium"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank"><img src="icons/facebook.png" width="26" height="26" alt="Facebook"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.instagram.com/jasondavidnewton/" target="_blank"><img src="icons/instagram.png" width="26" height="26" alt="Instagram"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank"><img src="icons/tiktok.png" width="26" height="26" alt="TikTok"></a>
+      <a class="gravatar-hovercard__social-link" href="https://wa.me/+15097712196" target="_blank"><img src="icons/whatsapp.png" width="26" height="26" alt="WhatsApp"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.threads.net/@jasondavidnewton" target="_blank"><img src="icons/threads.png" width="26" height="26" alt="Threads"></a>
+      <a class="gravatar-hovercard__social-link" href="https://x.com/JasonDNewton" target="_blank"><img src="icons/x.png" width="26" height="26" alt="X"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.pinterest.com/JasonDavidNewton/" target="_blank"><img src="icons/pinterest.png" width="26" height="26" alt="Pinterest"></a>
+      <a class="gravatar-hovercard__social-link" href="https://truthsocial.com/@JasonNewton" target="_blank"><img src="icons/truthsocial.png" width="26" height="26" alt="Truth Social"></a>
+      <a class="gravatar-hovercard__social-link" href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank"><img src="icons/youtube.png" width="26" height="26" alt="YouTube"></a>
+      <a class="gravatar-hovercard__social-link" href="https://jasondavidnewton.vsco.site" target="_blank"><img src="icons/vsco.png" width="26" height="26" alt="VSCO"></a>
+      <a class="gravatar-hovercard__social-link" href="https://jasonnewton.me/" target="_blank"><img src="icons/carrd.png" width="26" height="26" alt="Carrd"></a>
+      <a class="gravatar-hovercard__social-link" href="https://jasondavidnewton.link/" target="_blank"><img src="icons/gravatar.png" width="26" height="26" alt="Gravatar"></a>
     </div>
     <div class="gravatar-hovercard__footer">
       <a class="gravatar-hovercard__profile-url" href="https://jasondavidnewton.link/?utm_source=profile-card" target="_blank">jasondavidnewton.link</a>
