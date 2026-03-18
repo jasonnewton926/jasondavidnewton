@@ -6,7 +6,6 @@
 <title>Jason David Newton – Contact | Mechanical Technician in Moses Lake, Washington</title>
 <meta name="description" content="Contact Jason David Newton from Moses Lake, Washington. Reach out via email, WhatsApp, Threads, social media, or the form for inquiries, connections, or community.">
 <meta name="keywords" content="Jason David Newton Moses Lake, Moses Lake Washington, contact Jason David Newton Moses Lake WA">
-
 <!-- Canonical -->
 <link rel="canonical" href="https://jasondavidnewton.com/contact.html">
 <!-- Robots -->
@@ -16,7 +15,6 @@
 <!-- Preconnect -->
 <link rel="preconnect" href="https://cdnjs.cloudflare.com">
 <link rel="preconnect" href="https://www.googletagmanager.com">
-
 <!-- Open Graph -->
 <meta property="og:title" content="Jason David Newton – Contact | Mechanical Technician in Moses Lake, Washington">
 <meta property="og:description" content="Get in touch with Jason David Newton in Moses Lake, Washington via email, WhatsApp, Threads, or other profiles.">
@@ -24,18 +22,15 @@
 <meta property="og:url" content="https://jasondavidnewton.com/contact.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Jason David Newton">
-
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Jason David Newton – Contact | Mechanical Technician in Moses Lake, Washington">
 <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
 <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
-
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link rel="stylesheet" href="style.css">
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
 <script>
@@ -44,10 +39,8 @@
   gtag('js', new Date());
   gtag('config', 'G-LSWP3B1PKE');
 </script>
-
 <!-- LinkedIn Badge Script -->
 <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
-
 <!-- Person Schema (full standardized) -->
 <script type="application/ld+json">
 {
@@ -86,7 +79,6 @@
   ]
 }
 </script>
-
 <!-- WebPage Schema -->
 <script type="application/ld+json">
 {
@@ -96,7 +88,6 @@
   "url": "https://jasondavidnewton.com/contact.html"
 }
 </script>
-
 <!-- BreadcrumbList Schema -->
 <script type="application/ld+json">
 {
@@ -108,7 +99,6 @@
   ]
 }
 </script>
-
 <style>
 /* Smooth Easing Curve */
 :root { --ease: cubic-bezier(0.4, 0, 0.2, 1); }
@@ -227,9 +217,16 @@
             <li><a href="hobbies.html">Hobbies</a></li>
             <li><a href="gallery.html">Gallery</a></li>
             <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
 </div>
 </header>
 <!-- HERO SECTION – STANDARDIZED -->
@@ -421,6 +418,33 @@
 </footer>
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
+<!-- DARK MODE TOGGLE JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlRoot = document.documentElement;
+
+    if (!toggleBtn || !themeIcon) return;
+
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  });
+</script>
+
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
