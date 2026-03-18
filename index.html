@@ -9,6 +9,8 @@
     <link rel="canonical" href="https://jasondavidnewton.com/">
     <!-- Robots -->
     <meta name="robots" content="index, follow">
+    <!-- Sitemap reference -->
+    <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
     <!-- Preconnect -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
@@ -102,7 +104,7 @@
     }
     </script>
 
-    <!-- Place Schema -->
+    <!-- Place Schema with Geo (local SEO boost) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -113,7 +115,46 @@
         "addressLocality": "Moses Lake",
         "addressRegion": "WA",
         "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "47.1301",
+        "longitude": "-119.2781"
       }
+    }
+    </script>
+
+    <!-- FAQPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Who is Jason David Newton?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jason David Newton is a Mechanical Technician at Group 14 Technologies in Moses Lake, Washington. He is a devoted Christian dad at Grace Harvest Church, focused on faith, family, fatherhood, and Pacific Northwest adventures."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What does Jason David Newton do for work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "He is a Mechanical Technician specializing in maintenance, fabrication, team leadership, and safety operations at Group 14 Technologies in Moses Lake, WA."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Where is Jason David Newton located?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Moses Lake, Washington, in the Pacific Northwest region of the United States."
+          }
+        }
+      ]
     }
     </script>
 
