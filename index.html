@@ -48,8 +48,7 @@
         theme: {
           extend: {
             colors: {
-              pnw: '#0A3D62',
-              'pnw-dark': '#0B2B4A'
+              pnw: '#0A3D62'
             }
           }
         }
@@ -225,7 +224,7 @@
     </div>
 </nav>
 
-<!-- NEW HERO (maritime-boat.jpg) -->
+<!-- HERO SECTION – Using maritime-boat.jpg as requested -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Jason David Newton on commercial vessel deck Pacific Northwest maritime background" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
@@ -311,22 +310,22 @@
         <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
             <h3 class="text-xl font-bold text-pnw mb-4">Being a Christian Dad in Moses Lake</h3>
             <p class="mb-6">Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
-            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
             <h3 class="text-xl font-bold text-pnw mb-4">7 Simple Bible Study Habits for Busy Christian Dads</h3>
             <p class="mb-6">Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
-            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
             <h3 class="text-xl font-bold text-pnw mb-4">Why Hard Work Still Matters in Moses Lake</h3>
             <p class="mb-6">A mechanical technician’s honest take on why showing up every day still builds real character, trust, and opportunities — even when the grind feels routine.</p>
-            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
         </div>
         <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
             <h3 class="text-xl font-bold text-pnw mb-4">Faith and Staying Grounded in Moses Lake</h3>
             <p class="mb-6">How Jesus keeps me steady as a Christian dad & mechanical technician — real talk from Moses Lake, Washington.</p>
-            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
         </div>
     </div>
     <div class="text-center mt-12">
@@ -400,8 +399,8 @@
 </section>
 
 <!-- FOOTER – YOUR ORIGINAL 17 ICONS + RSS PRESERVED EXACTLY -->
-<footer role="contentinfo" aria-label="Footer with Social Links" class="bg-gray-100 dark:bg-gray-900 py-16">
-<div class="max-w-7xl mx-auto px-6 text-center">
+<footer role="contentinfo" aria-label="Footer with Social Links">
+<div class="max-w-7xl mx-auto px-6 text-center py-16 bg-gray-100 dark:bg-gray-900">
     <div class="footer-icons flex flex-wrap justify-center gap-8 mb-12">
         <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn" loading="lazy"></a>
         <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" aria-label="About.me profile of Jason David Newton Moses Lake Washington"><img src="icons/aboutme.png" alt="About.me" loading="lazy"></a>
@@ -558,6 +557,11 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeSections.forEach(section => observer.observe(section));
   observer.observe(footerIcons);
 });
+</script>
+
+<!-- CHATBASE FLOATING BUBBLE (placed at end) -->
+<script>
+(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="oaLxsMrItiSkO4luTLhJq";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
 
 <style>
