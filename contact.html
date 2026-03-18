@@ -220,7 +220,7 @@
             <li><a href="contact.html" aria-current="page">Contact</a></li>
         </ul>
     </nav>
-   
+  
     <!-- DARK MODE TOGGLE BUTTON -->
     <div class="theme-toggle">
         <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
@@ -418,33 +418,32 @@
 </footer>
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
-
-<!-- GRAVATAR HOVERCARD WIDGET (floating bottom-right, now with all 17 social links) -->
+<!-- GRAVATAR HOVERCARD WIDGET (floating bottom-right, with all 17 social links) -->
 <div class="gravatar-hovercard" style="position: fixed; bottom: 90px; right: 20px; z-index: 999; max-width: 320px;">
   <style>
-    .gravatar-hovercard__inner { 
-      background: var(--card-bg); 
-      border-radius: 12px; 
-      box-shadow: 0 10px 30px rgba(0,0,0,0.15); 
-      overflow: hidden; 
+    .gravatar-hovercard__inner {
+      background: var(--card-bg);
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      overflow: hidden;
       transition: transform 0.3s ease;
     }
     .gravatar-hovercard:hover .gravatar-hovercard__inner { transform: scale(1.02); }
     .gravatar-hovercard__header-image { height: 120px; background-size: cover; }
     .gravatar-hovercard__avatar { border: 4px solid var(--card-bg); border-radius: 50%; }
     .gravatar-hovercard__name, .gravatar-hovercard__job, .gravatar-hovercard__location, .gravatar-hovercard__description { color: var(--text); }
-    .gravatar-hovercard__social-links { 
-      display: flex; 
-      flex-wrap: wrap; 
-      justify-content: center; 
-      gap: 12px; 
-      padding: 12px 16px; 
-      background: rgba(0,0,0,0.03); 
+    .gravatar-hovercard__social-links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding: 12px 16px;
+      background: rgba(0,0,0,0.03);
     }
     .gravatar-hovercard__social-link img { width: 28px; height: 28px; opacity: 0.9; transition: opacity 0.2s; }
     .gravatar-hovercard__social-link:hover img { opacity: 1; transform: scale(1.15); }
-    @media (max-width: 768px) { 
-      .gravatar-hovercard { bottom: 110px; right: 10px; max-width: 280px; } 
+    @media (max-width: 768px) {
+      .gravatar-hovercard { bottom: 110px; right: 10px; max-width: 280px; }
       .gravatar-hovercard__social-links { gap: 10px; padding: 10px; }
       .gravatar-hovercard__social-link img { width: 24px; height: 24px; }
     }
@@ -490,7 +489,6 @@
     </div>
   </div>
 </div>
-
 <!-- DARK MODE TOGGLE JAVASCRIPT -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
