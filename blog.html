@@ -38,7 +38,6 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-
     <!-- Person Schema -->
     <script type="application/ld+json">
     {
@@ -57,7 +56,6 @@
       "sameAs": ["https://www.linkedin.com/in/jason-newton-moses-lake","https://www.facebook.com/profile.php?id=61586469156125","https://www.instagram.com/jasondavidnewton/","https://www.tiktok.com/@jasonnewtonmoseslakewa","https://wa.me/+15097712196","https://www.threads.net/@jasondavidnewton","https://x.com/JasonDNewton","https://www.pinterest.com/JasonDavidNewton/","https://truthsocial.com/@JasonNewton","https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ","https://jasondavidnewton.vsco.site","https://about.me/jason-david-newton","https://www.crunchbase.com/person/jason-newton-cdf9","https://muckrack.com/jason-david-newton","https://medium.com/@JasonDavidNewton","https://jasonnewton.me/","https://jasondavidnewton.link"]
     }
     </script>
-
     <!-- WebPage Schema -->
     <script type="application/ld+json">
     {
@@ -67,7 +65,6 @@
       "url": "https://jasondavidnewton.com/blog.html"
     }
     </script>
-
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -79,7 +76,6 @@
       ]
     }
     </script>
-
     <style>
     :root { --ease: cubic-bezier(0.4, 0, 0.2, 1); }
     .fade-in-section { opacity: 0; transform: translateY(50px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
@@ -121,10 +117,10 @@
     .blog-card:hover { transform: translateY(-8px); }
     .blog-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
     .blog-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
-    .medium-cta { 
-        display: block; margin: 40px auto; padding: 18px 36px; background: #000; color: white; 
-        border-radius: 8px; font-weight: bold; text-align: center; max-width: 340px; 
-        transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    .medium-cta {
+        display: block; margin: 40px auto; padding: 18px 36px; background: #000; color: white;
+        border-radius: 8px; font-weight: bold; text-align: center; max-width: 340px;
+        transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
     .medium-cta:hover { background: #111; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
     .rss-link { position: relative; display: inline-flex; align-items: center; gap: 8px; margin: 20px 0; color: var(--primary-blue); font-weight: 500; }
@@ -173,9 +169,15 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
 </div>
 </header>
-
 <!-- MAIN CONTENT -->
 <main role="main">
 <!-- HERO SECTION -->
@@ -187,7 +189,6 @@
     <p>Thoughts on Christian fatherhood, leadership, hard work, faith at Grace Harvest Church, and living intentionally in the Pacific Northwest. Subscribe via RSS or follow on Medium for updates.</p>
 </div>
 </section>
-
 <!-- RSS + Medium CTA -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -204,7 +205,6 @@
     </a>
 </div>
 </section>
-
 <!-- FEATURED MEDIUM ARTICLES (all 4 live ones) -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -262,7 +262,6 @@
 </div>
 </section>
 </main>
-
 <!-- FOOTER -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
 <div class="footer-icons">
@@ -295,9 +294,34 @@
 <p>© 2026 Jason David Newton</p>
 <p>Moses Lake, Washington</p>
 </footer>
-
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
+<!-- DARK MODE TOGGLE JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlRoot = document.documentElement;
+
+    if (!toggleBtn || !themeIcon) return;
+
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  });
+</script>
 
 <script>
 // Back-to-top + animations (unchanged)
