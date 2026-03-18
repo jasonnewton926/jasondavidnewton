@@ -336,43 +336,6 @@ a {
 }
 
 /* ===================================
-   ACCESSIBLE CARD / STRETCHED LINK (for community involvement cards)
-=================================== */
-.involvement-card {
-    position: relative;
-    background: var(--section-bg);
-    border-radius: 8px;
-    padding: 20px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.involvement-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
-}
-
-/* Stretched link – makes entire card clickable via the button link */
-.involvement-card a.section-button::after {
-    content: "";
-    position: absolute;
-    top: -20px; right: -20px; bottom: -20px; left: -20px;
-    z-index: 1;
-}
-
-/* Screen-reader-only text (for "opens in new tab") */
-.sr-only {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
-/* ===================================
    CONTACT FORM
 =================================== */
 .contact-form {
@@ -588,6 +551,43 @@ footer {
 
 .lightbox:target {
     display: block;
+}
+
+/* ===================================
+   ACCESSIBLE CARD / STRETCHED LINK (for community involvement cards)
+=================================== */
+.involvement-card {
+    position: relative;
+    background: var(--section-bg);
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.involvement-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+}
+
+/* Stretched link – makes entire card clickable via the button link */
+.involvement-card a.section-button::after {
+    content: "";
+    position: absolute;
+    top: -20px; right: -20px; bottom: -20px; left: -20px;
+    z-index: 1;
+}
+
+/* Screen-reader-only text (for "opens in new tab") */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
 }
 
 /* ===================================
