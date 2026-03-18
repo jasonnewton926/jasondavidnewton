@@ -1,28 +1,29 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
-    <title>Jason David Newton Blog</title>
+    <title>Jason David Newton – Blog</title>
     <link>https://jasondavidnewton.com/blog.html</link>
-    <description>Personal reflections on faith, family, fatherhood, leadership, and life in Moses Lake, Washington by Jason David Newton</description>
+    <description>Personal reflections on faith, fatherhood, leadership, hard work, and life in Moses Lake, Washington by Jason David Newton. Mechanical technician at Group 14 Technologies, Christian dad at Grace Harvest Church, Pacific Northwest adventures.</description>
     <language>en-us</language>
-    <lastBuildDate>Wed, 17 Mar 2026 20:57:00 PDT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Mar 2026 21:00:00 PDT</lastBuildDate>
     <atom:link href="https://jasondavidnewton.com/blog-rss.xml" rel="self" type="application/rss+xml" />
 
-    <!-- Featured Medium articles as RSS items (add more as you publish) -->
+    <!-- Real Medium article #1 -->
     <item>
         <title>Being a Christian Dad in Moses Lake: Balancing Faith, Family, and a Mechanical Tech Life</title>
         <link>https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730</link>
-        <guid>https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730</guid>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730</guid>
         <pubDate>Tue, 05 Mar 2024 00:00:00 GMT</pubDate>
-        <description>Real talk on balancing faith, family, and work as a mechanical technician in Moses Lake, Washington.</description>
+        <description><![CDATA[Real talk on balancing faith, family, and work as a mechanical technician in Moses Lake, Washington. Reflections on fatherhood, Grace Harvest Church, and staying grounded in everyday life.]]></description>
     </item>
 
+    <!-- Real Medium article #2 -->
     <item>
         <title>7 Simple Bible Study Habits That Actually Work for Busy Christian Dads in Moses Lake</title>
         <link>https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637</link>
-        <guid>https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637</guid>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637</guid>
         <pubDate>Sun, 15 Jun 2024 00:00:00 GMT</pubDate>
-        <description>Practical Bible study habits for busy dads — keeping faith strong amid work and family life in Moses Lake, WA.</description>
+        <description><![CDATA[Practical, realistic Bible study habits for busy Christian dads. How to stay in the Word despite work, family, and life in Moses Lake, WA.]]></description>
     </item>
 </channel>
 </rss>
