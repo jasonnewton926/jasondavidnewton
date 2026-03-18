@@ -258,15 +258,12 @@
     .share-buttons a { color: var(--primary-blue); font-size: 1.4rem; transition: color 0.2s; }
     .share-buttons a:hover { color: var(--accent-blue); }
     @media (max-width: 768px) { .blog-preview-grid { grid-template-columns: 1fr; } }
-    /* Hovercard styles */
+    /* Hovercard styles – collapsible with close X */
     .gravatar-hovercard {
         position: fixed;
         bottom: calc(env(safe-area-inset-bottom, 0px) + 125px);
         right: 12px;
         z-index: 999;
-        max-width: 320px;
-    }
-    .gravatar-hovercard__trigger {
         width: 60px;
         height: 60px;
         border-radius: 50%;
@@ -275,51 +272,119 @@
         cursor: pointer;
         transition: transform 0.3s ease;
     }
-    .gravatar-hovercard__trigger:hover,
-    .gravatar-hovercard__trigger:active {
+    .gravatar-hovercard:hover,
+    .gravatar-hovercard:active {
         transform: scale(1.1);
     }
-    .gravatar-hovercard__expanded {
-        display: none;
-        position: relative;
-        background: var(--card-bg);
+    .gravatar-hovercard.expanded {
+        width: auto;
+        height: auto;
         border-radius: 12px;
-        box-shadow: 0 8px 25px rgba(0,0,0,0.18);
-        overflow: hidden;
-        margin-top: 8px;
+        bottom: calc(env(safe-area-inset-bottom, 0px) + 20px);
+        right: 12px;
+        max-width: 320px;
+        background: var(--card-bg);
+        box-shadow: 0 10px 40px rgba(0,0,0,0.25);
     }
-    .gravatar-hovercard.expanded .gravatar-hovercard__expanded {
-        display: block;
+    .gravatar-hovercard__backdrop {
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        backdrop-filter: blur(4px);
+        z-index: 998;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+    .gravatar-hovercard.expanded ~ .gravatar-hovercard__backdrop {
+        opacity: 1;
+        pointer-events: auto;
     }
     .gravatar-hovercard__close {
         position: absolute;
         top: 8px;
         right: 8px;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0,0,0,0.6);
         color: white;
-        width: 32px;
-        height: 32px;
+        width: 36px;
+        height: 36px;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 18px;
+        font-size: 20px;
         cursor: pointer;
         z-index: 10;
         transition: background 0.2s;
     }
     .gravatar-hovercard__close:hover,
     .gravatar-hovercard__close:active {
-        background: rgba(0,0,0,0.8);
+        background: rgba(0,0,0,0.9);
+    }
+    .gravatar-hovercard__inner {
+        padding: 12px;
+    }
+    .gravatar-hovercard__header-image {
+        height: 100px;
+        background-size: cover;
+        border-radius: 12px 12px 0 0;
+    }
+    .gravatar-hovercard__avatar {
+        border: 4px solid var(--card-bg);
+        border-radius: 50%;
+        margin-top: -50px;
+    }
+    .gravatar-hovercard__name,
+    .gravatar-hovercard__job,
+    .gravatar-hovercard__location {
+        color: var(--text);
+        margin: 4px 0;
+    }
+    .gravatar-hovercard__description {
+        color: var(--text);
+        font-size: 0.9rem;
+    }
+    .gravatar-hovercard__social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px 0;
+        overflow-x: auto;
+        scrollbar-width: none;
+    }
+    .gravatar-hovercard__social-links::-webkit-scrollbar {
+        display: none;
+    }
+    .gravatar-hovercard__social-link img {
+        width: 24px;
+        height: 24px;
+        opacity: 0.9;
+        transition: all 0.2s;
+    }
+    .gravatar-hovercard__social-link:hover img,
+    .gravatar-hovercard__social-link:active img {
+        opacity: 1;
+        transform: scale(1.15);
+    }
+    .gravatar-hovercard__footer {
+        text-align: center;
+        font-size: 0.85rem;
+        color: var(--text-light);
+        padding-top: 8px;
     }
     @media (max-width: 768px) {
         .gravatar-hovercard {
             bottom: calc(env(safe-area-inset-bottom, 0px) + 140px);
             right: 10px;
-            max-width: 210px;
         }
-        .gravatar-hovercard__trigger { width: 50px; height: 50px; }
-        .gravatar-hovercard__close { width: 28px; height: 28px; font-size: 16px; }
+        .gravatar-hovercard.expanded {
+            max-width: 260px;
+        }
+        .gravatar-hovercard__header-image { height: 80px; }
+        .gravatar-hovercard__avatar { width: 60px; height: 60px; margin-top: -40px; }
+        .gravatar-hovercard__close { width: 32px; height: 32px; font-size: 18px; }
+        .gravatar-hovercard__social-link img { width: 22px; height: 22px; }
     }
     </style>
 </head>
