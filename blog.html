@@ -121,10 +121,32 @@
     .blog-card:hover { transform: translateY(-8px); }
     .blog-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
     .blog-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
-    .medium-cta { display: block; margin: 40px auto; padding: 16px 32px; background: #000; color: white; border-radius: 8px; font-weight: bold; text-align: center; max-width: 300px; transition: background 0.3s; }
-    .medium-cta:hover { background: #222; }
-    .rss-link { display: inline-flex; align-items: center; gap: 8px; margin: 20px 0; color: var(--primary-blue); font-weight: 500; }
+    .medium-cta { 
+        display: block; margin: 40px auto; padding: 18px 36px; background: #000; color: white; 
+        border-radius: 8px; font-weight: bold; text-align: center; max-width: 340px; 
+        transition: all 0.3s; box-shadow: 0 4px 12px rgba(0,0,0,0.2); 
+    }
+    .medium-cta:hover { background: #111; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.3); }
+    .rss-link { position: relative; display: inline-flex; align-items: center; gap: 8px; margin: 20px 0; color: var(--primary-blue); font-weight: 500; }
     .rss-link i { font-size: 1.3rem; }
+    .rss-link:hover::after {
+        content: "Add to Feedly, Inoreader, etc.";
+        position: absolute;
+        bottom: 120%;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #333;
+        color: white;
+        padding: 6px 12px;
+        border-radius: 4px;
+        font-size: 0.85rem;
+        white-space: nowrap;
+        pointer-events: none;
+        z-index: 10;
+    }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 15px; }
+    .share-buttons a { color: var(--primary-blue); font-size: 1.4rem; transition: color 0.2s; }
+    .share-buttons a:hover { color: var(--accent-blue); }
     @media (max-width: 768px) { .blog-preview-grid { grid-template-columns: 1fr; } .medium-cta { max-width: 100%; } }
     </style>
 </head>
@@ -191,6 +213,11 @@
             <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button">
                 Read on Medium <span class="sr-only">(opens in new tab)</span>
             </a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730&text=Being a Christian Dad in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
         <div class="blog-card">
             <h3>7 Simple Bible Study Habits for Busy Christian Dads</h3>
@@ -198,8 +225,57 @@
             <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button">
                 Read on Medium <span class="sr-only">(opens in new tab)</span>
             </a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637&text=7 Simple Bible Study Habits for Busy Christian Dads" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
     </div>
+</div>
+</section>
+
+<!-- NATIVE BLOG TEASERS + EMAIL SUBSCRIBE -->
+<section class="section fade-in-section">
+<div class="section-content">
+    <h2>Recent Reflections from Moses Lake</h2>
+    <div class="blog-preview-grid">
+        <div class="blog-card">
+            <h3>Why Hard Work Still Matters</h3>
+            <p>In a place like Moses Lake, showing up every day and putting in the effort really builds something lasting — trust, character, and opportunities you don’t even see at first.</p>
+            <a href="#" class="section-button">Read Full Post</a>
+        </div>
+        <div class="blog-card">
+            <h3>Faith and Staying Grounded</h3>
+            <p>Faith in Jesus Christ gives me a steady point when everything else feels like it’s pulling in different directions. Grace Harvest Church keeps me rooted.</p>
+            <a href="#" class="section-button">Read Full Post</a>
+        </div>
+        <div class="blog-card">
+            <h3>Lessons from Working at Sea</h3>
+            <p>Teamwork and preparation aren’t optional out there. Those habits carry over to everything I do now in Moses Lake.</p>
+            <a href="#" class="section-button">Read Full Post</a>
+        </div>
+        <div class="blog-card">
+            <h3>Fatherhood and Responsibility</h3>
+            <p>Having a son flipped everything for me — it’s not just about my own path anymore. It’s about setting an example every single day.</p>
+            <a href="#" class="section-button">Read Full Post</a>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="#" style="font-weight: bold; color: var(--primary-blue);">View Older Posts →</a>
+    </p>
+</div>
+</section>
+
+<!-- EMAIL SUBSCRIBE -->
+<section class="section fade-in-section">
+<div class="section-content">
+    <h2>Stay Updated by Email</h2>
+    <p>Get new reflections delivered straight to your inbox — no spam, just honest thoughts on faith, family, and life in Moses Lake.</p>
+    <form action="https://formspree.io/f/YOUR-FORM-ID" method="POST" class="contact-form" style="max-width: 500px; margin: 0 auto;">
+        <input type="email" name="email" placeholder="Your email address" required>
+        <button type="submit">Subscribe to Blog Updates</button>
+    </form>
 </div>
 </section>
 </main>
@@ -241,7 +317,7 @@
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 
 <script>
-// Back-to-top + animations (unchanged from working version)
+// Back-to-top + animations (unchanged)
 let mybutton = document.getElementById("back-to-top");
 window.onscroll = function() {scrollFunction()};
 function scrollFunction() {
