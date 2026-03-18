@@ -591,6 +591,29 @@ footer {
 }
 
 /* ===================================
+   RSS LINK TOOLTIP (for blog page RSS subscribe link)
+=================================== */
+.rss-link {
+    position: relative;
+}
+
+.rss-link:hover::after {
+    content: "Add to Feedly, Inoreader, etc.";
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* ===================================
    MEDIA QUERIES (RESPONSIVE)
 =================================== */
 @media (max-width: 768px) {
