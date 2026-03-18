@@ -40,7 +40,6 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
-
     <!-- Person Schema -->
     <script type="application/ld+json">
     {
@@ -121,7 +120,6 @@
       ]
     }
     </script>
-
     <style>
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
@@ -285,9 +283,15 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
 </div>
 </header>
-
 <!-- MAIN CONTENT -->
 <main role="main">
 <!-- HERO SECTION -->
@@ -311,7 +315,6 @@
     </div>
 </div>
 </section>
-
 <!-- PERSONAL VALUES -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -324,7 +327,6 @@
     </p>
 </div>
 </section>
-
 <!-- PROFESSIONAL OVERVIEW -->
 <section class="section alt fade-in-section">
 <div class="section-content">
@@ -338,7 +340,6 @@
     <a href="experience.html" class="section-button">Explore My Career</a>
 </div>
 </section>
-
 <!-- LIFE OUTSIDE WORK -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -351,7 +352,6 @@
     </p>
 </div>
 </section>
-
 <!-- BLOG PREVIEW – now with 4 real Medium cards -->
 <section class="section alt fade-in-section">
 <div class="section-content">
@@ -404,7 +404,6 @@
     </p>
 </div>
 </section>
-
 <!-- EXPLORE MORE SECTION (unchanged) -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -471,7 +470,6 @@
 </div>
 </section>
 </main>
-
 <!-- FULL FOOTER WITH RSS -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
 <div class="footer-icons">
@@ -504,9 +502,34 @@
 <p>© 2026 Jason David Newton</p>
 <p>Moses Lake, Washington</p>
 </footer>
-
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
+<!-- DARK MODE TOGGLE JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlRoot = document.documentElement;
+
+    if (!toggleBtn || !themeIcon) return;
+
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  });
+</script>
 
 <script>
 // Back-to-top JS
