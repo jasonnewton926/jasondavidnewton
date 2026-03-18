@@ -290,6 +290,13 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
 </div>
 </header>
 <!-- MAIN CONTENT -->
@@ -372,6 +379,33 @@
 </footer>
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
+<!-- DARK MODE TOGGLE JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlRoot = document.documentElement;
+
+    if (!toggleBtn || !themeIcon) return;
+
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  });
+</script>
+
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
