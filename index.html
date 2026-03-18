@@ -3,19 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Final: Improved clickable title -->
     <title>Jason David Newton | Mechanical Technician Moses Lake WA | Faith, Family & PNW Life</title>
+    <!-- Final: Shorter, punchier meta description -->
     <meta name="description" content="Jason David Newton – Mechanical Technician at Group 14 in Moses Lake, WA. Christian dad, faith reflections, PNW adventures & photography. Explore career, blog & gallery.">
     <meta name="author" content="Jason David Newton">
+    <!-- Canonical -->
     <link rel="canonical" href="https://jasondavidnewton.com/">
+    <!-- Robots -->
     <meta name="robots" content="index, follow">
+    <!-- Sitemap reference -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
+    <!-- Open Graph -->
     <meta property="og:title" content="Jason David Newton | Moses Lake, Washington">
     <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith & Pacific Northwest adventures">
     <meta property="og:image" content="https://jasondavidnewton.com/assets/maritime-boat.jpg">
     <meta property="og:url" content="https://jasondavidnewton.com/">
     <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Jason David Newton">
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
@@ -23,6 +32,7 @@
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -30,6 +40,7 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
+    <!-- Tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -43,41 +54,155 @@
         }
       }
     </script>
+    <!-- Person Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Jason David Newton",
       "jobTitle": "Mechanical Technician",
-      "worksFor": {"@type": "Organization", "name": "Group 14 Technologies"},
-      "address": {"@type": "PostalAddress", "addressLocality": "Moses Lake", "addressRegion": "WA"},
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Group 14 Technologies"
+      },
+      "alumniOf": {
+        "@type": "EducationalOrganization",
+        "name": "Washington State University"
+      },
+      "memberOf": {
+        "@type": "Organization",
+        "name": "Grace Harvest Church"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Moses Lake",
+        "addressRegion": "Washington",
+        "addressCountry": "US"
+      },
+      "description": "Jason David Newton is a mechanical technician and operations leader based in Moses Lake, Washington.",
       "url": "https://jasondavidnewton.com/",
-      "image": "https://jasondavidnewton.com/assets/maritime-boat.jpg",
-      "sameAs": ["https://www.linkedin.com/in/jason-newton-moses-lake","https://x.com/JasonDNewton","https://www.instagram.com/jasondavidnewton/"]
+      "image": {
+        "@type": "ImageObject",
+        "url": "https://jasondavidnewton.com/assets/maritime-boat.jpg"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "https://jasondavidnewton.com/"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/in/jason-newton-moses-lake",
+        "https://www.facebook.com/profile.php?id=61586469156125",
+        "https://www.instagram.com/jasondavidnewton/",
+        "https://www.tiktok.com/@jasonnewtonmoseslakewa",
+        "https://wa.me/+15097712196",
+        "https://www.threads.net/@jasondavidnewton",
+        "https://x.com/JasonDNewton",
+        "https://www.pinterest.com/JasonDavidNewton/",
+        "https://truthsocial.com/@JasonNewton",
+        "https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ",
+        "https://jasondavidnewton.vsco.site",
+        "https://about.me/jason-david-newton",
+        "https://www.crunchbase.com/person/jason-newton-cdf9",
+        "https://muckrack.com/jason-david-newton",
+        "https://medium.com/@JasonDavidNewton",
+        "https://jasonnewton.me/",
+        "https://jasondavidnewton.link"
+      ]
+    }
+    </script>
+    <!-- WebPage Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Jason David Newton",
+      "url": "https://jasondavidnewton.com/"
+    }
+    </script>
+    <!-- BreadcrumbList Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://jasondavidnewton.com/"
+        }
+      ]
     }
     </script>
     <style>
-    :root { --ease: cubic-bezier(0.4, 0, 0.2, 1); }
-    .fade-in-section { opacity: 0; transform: translateY(50px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
-    .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+    :root {
+        --ease: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .fade-in-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
+    }
+    .fade-in-section.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
     .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
     .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
     .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
     .fade-in-section:nth-child(4) { transition-delay: 0.55s; }
     .fade-in-section:nth-child(5) { transition-delay: 0.7s; }
-    @media (max-width: 768px) { .fade-in-section { transform: translateY(40px); } }
-    .hero-content { opacity: 0; transform: scale(0.97); transition: opacity 1.1s var(--ease), transform 1.1s var(--ease); }
-    .hero-content.loaded { opacity: 1; transform: scale(1); }
-    .navbar { transition: all 0.4s var(--ease); background: white; }
-    .navbar.scrolled { background: rgba(255,255,255,0.95); box-shadow: 0 4px 20px rgba(0,0,0,0.1); }
-    .gravatar-hovercard { position: fixed; bottom: 90px; right: 20px; z-index: 999; max-width: 320px; }
-    @media (max-width: 767px) { .gravatar-hovercard { display: none !important; } }
-    .footer-icons a { display: inline-block; transition: transform 0.3s ease; }
-    .footer-icons a:hover { transform: scale(1.15); }
+    @media (max-width: 768px) {
+        .fade-in-section {
+            transform: translateY(40px);
+        }
+        .fade-in-section:nth-child(1) { transition-delay: 0.05s; }
+        .fade-in-section:nth-child(2) { transition-delay: 0.15s; }
+        .fade-in-section:nth-child(3) { transition-delay: 0.25s; }
+        .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
+        .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
+    }
+    .hero-content {
+        opacity: 0;
+        transform: scale(0.97);
+        transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+    }
+    .hero-content.loaded {
+        opacity: 1;
+        transform: scale(1);
+    }
+    .navbar {
+        transition: all 0.4s var(--ease);
+        background: white;
+    }
+    .navbar.scrolled {
+        background: rgba(255,255,255,0.95);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+    .gravatar-hovercard {
+        position: fixed;
+        bottom: 90px;
+        right: 20px;
+        z-index: 999;
+        max-width: 320px;
+    }
+    @media (max-width: 767px) {
+        .gravatar-hovercard {
+            display: none !important;
+        }
+    }
+    .footer-icons a {
+        display: inline-block;
+        transition: transform 0.3s ease;
+    }
+    .footer-icons a:hover {
+        transform: scale(1.15);
+    }
     </style>
 </head>
 <body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 scroll-smooth">
 
+<!-- STICKY NAV -->
 <nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-all duration-300">
     <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <a href="/" class="text-2xl font-bold text-pnw dark:text-white">Jason David Newton</a>
@@ -91,6 +216,7 @@
             <a href="blog.html" class="hover:text-pnw dark:hover:text-white transition">Blog</a>
             <a href="contact.html" class="hover:text-pnw dark:hover:text-white transition">Contact</a>
         </div>
+        <!-- Dark Mode Toggle -->
         <button id="theme-toggle" class="text-xl focus:outline-none" aria-label="Toggle dark mode">
             <i class="fas fa-moon dark:hidden"></i>
             <i class="fas fa-sun hidden dark:inline"></i>
@@ -98,6 +224,7 @@
     </div>
 </nav>
 
+<!-- HERO SECTION – Using maritime-boat.jpg as requested -->
 <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
     <img src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Jason David Newton on commercial vessel deck Pacific Northwest maritime background" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
     <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
@@ -112,6 +239,7 @@
     </div>
 </section>
 
+<!-- YOUR ORIGINAL HERO TEXT + IMAGE PRESERVED BELOW -->
 <section class="max-w-5xl mx-auto px-6 py-16 text-center">
     <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton Mechanical Technician Moses Lake Washington" width="200" height="200" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
     <h1 class="text-4xl font-bold mb-4">Jason David Newton – Mechanical Technician in Moses Lake, Washington</h1>
@@ -131,7 +259,7 @@
     </div>
 </section>
 
-<!-- Personal Values -->
+<!-- YOUR ORIGINAL PERSONAL VALUES SECTION PRESERVED -->
 <section class="section fade-in-section">
 <div class="section-content max-w-5xl mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold text-center mb-8">Faith, Family & Personal Growth in Moses Lake</h2>
@@ -144,7 +272,7 @@
 </div>
 </section>
 
-<!-- Professional Overview -->
+<!-- YOUR ORIGINAL PROFESSIONAL OVERVIEW PRESERVED -->
 <section class="section alt fade-in-section bg-gray-50 dark:bg-gray-900">
 <div class="section-content max-w-5xl mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold text-center mb-8">Professional Background of Jason David Newton</h2>
@@ -160,7 +288,7 @@
 </div>
 </section>
 
-<!-- Life Outside Work -->
+<!-- YOUR ORIGINAL LIFE OUTSIDE WORK PRESERVED -->
 <section class="section fade-in-section">
 <div class="section-content max-w-5xl mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold text-center mb-8">Life Outside of Work in Moses Lake</h2>
@@ -173,7 +301,7 @@
 </div>
 </section>
 
-<!-- Blog Preview -->
+<!-- YOUR ORIGINAL BLOG PREVIEW PRESERVED (4 Medium cards) -->
 <section class="section alt fade-in-section bg-gray-50 dark:bg-gray-900">
 <div class="section-content max-w-5xl mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold text-center mb-8">Featured Reflections from My Blog on Medium</h2>
@@ -206,7 +334,7 @@
 </div>
 </section>
 
-<!-- EXPLORE MORE -->
+<!-- YOUR ORIGINAL EXPLORE MORE GRID PRESERVED -->
 <section class="section fade-in-section">
 <div class="section-content max-w-7xl mx-auto px-6 py-16">
     <h2 class="text-3xl font-bold text-center mb-8">Explore More of My Site</h2>
@@ -270,7 +398,7 @@
 </div>
 </section>
 
-<!-- FOOTER -->
+<!-- FOOTER – YOUR ORIGINAL 17 ICONS + RSS PRESERVED EXACTLY -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
 <div class="max-w-7xl mx-auto px-6 text-center py-16 bg-gray-100 dark:bg-gray-900">
     <div class="footer-icons flex flex-wrap justify-center gap-8 mb-12">
@@ -310,7 +438,7 @@
     ↑
 </button>
 
-<!-- GRAVATAR HOVERCARD -->
+<!-- GRAVATAR HOVERCARD – YOUR ORIGINAL PRESERVED -->
 <div class="gravatar-hovercard">
   <div class="gravatar-hovercard__inner">
     <div class="gravatar-hovercard__header-image" style="background: url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024') 50% 50% / 100% no-repeat;"></div>
@@ -375,7 +503,7 @@
   });
 </script>
 
-<!-- BACK-TO-TOP & SCROLL ANIMATIONS -->
+<!-- BACK-TO-TOP & SCROLL ANIMATIONS (your original preserved) -->
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
@@ -431,7 +559,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<!-- CHATBASE FLOATING BUBBLE -->
+<!-- CHATBASE FLOATING BUBBLE (placed at end) -->
 <script>
 (function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="oaLxsMrItiSkO4luTLhJq";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
 </script>
