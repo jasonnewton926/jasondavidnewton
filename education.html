@@ -234,28 +234,33 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(2) { opacity: 0; }
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
     }
-    /* Enhanced table styling */
+    /* Enhanced table styling – FIXED for dark mode readability */
     .education-table {
         width: 100%;
         border-collapse: collapse;
         margin: 30px 0;
-        background: white;
+        background: var(--card-bg);                /* adapts to dark/light */
         box-shadow: 0 4px 16px rgba(0,0,0,0.08);
         border-radius: 8px;
         overflow: hidden;
+        color: var(--text);                        /* text color adapts */
     }
     .education-table th, .education-table td {
         padding: 16px 12px;
         text-align: left;
-        border-bottom: 1px solid #eee;
+        border-bottom: 1px solid var(--gray);      /* adapts to dark gray */
     }
     .education-table th {
-        background: var(--primary-blue);
+        background: #1e40af;                        /* darker blue header for contrast */
         color: white;
         font-weight: 600;
     }
-    .education-table tr:nth-child(even) { background: #f9fcff; }
-    .education-table tr:hover { background: #e6f2ff; }
+    .education-table tr:nth-child(even) {
+        background: rgba(255,255,255,0.05);        /* subtle dark stripe in dark mode, light in light */
+    }
+    .education-table tr:hover {
+        background: rgba(59,130,246,0.15);         /* blue hover tint – visible in both modes */
+    }
     .education-table ul {
         margin: 8px 0 0 0;
         padding-left: 18px;
@@ -279,7 +284,7 @@
     .section-content h2 {
         font-size: 1.8rem;
         margin: 2.5rem 0 1.5rem;
-        color: var(--primary-blue);
+        color: var(--accent-blue);
     }
     .section-content p {
         font-size: 1.1rem;
@@ -287,17 +292,17 @@
         margin-bottom: 1.25rem;
     }
     .section-content strong {
-        color: var(--primary-blue);
+        color: var(--accent-blue);
     }
     @media (max-width: 768px) {
         .education-table thead { display: none; }
         .education-table tr {
             display: block;
             margin-bottom: 24px;
-            border: 1px solid #ddd;
+            border: 1px solid var(--gray);
             border-radius: 8px;
             padding: 12px;
-            background: white;
+            background: var(--card-bg);
         }
         .education-table td {
             display: block;
@@ -305,13 +310,14 @@
             position: relative;
             padding-left: 50%;
             border: none;
+            color: var(--text);
         }
         .education-table td::before {
             content: attr(data-label);
             position: absolute;
             left: 12px;
             font-weight: bold;
-            color: var(--primary-blue);
+            color: var(--accent-blue);
         }
         .school-logo { max-width: 120px; margin: 0 auto 10px; }
         .section-content h1 { font-size: 2rem; }
