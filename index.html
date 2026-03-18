@@ -12,9 +12,9 @@
     <link rel="canonical" href="https://jasondavidnewton.com/">
     <!-- Robots -->
     <meta name="robots" content="index, follow">
-    <!-- Sitemap reference (add once you create sitemap.xml) -->
+    <!-- Sitemap reference -->
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
-    <!-- Preconnect (including Font Awesome) -->
+    <!-- Preconnect -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <!-- Open Graph -->
@@ -97,7 +97,6 @@
       ]
     }
     </script>
-
     <!-- WebPage Schema -->
     <script type="application/ld+json">
     {
@@ -107,7 +106,6 @@
       "url": "https://jasondavidnewton.com/"
     }
     </script>
-
     <!-- BreadcrumbList Schema -->
     <script type="application/ld+json">
     {
@@ -252,6 +250,16 @@
     .nav-card a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
     .nav-card a:hover { text-decoration: underline; }
     @media (max-width: 768px) { .navigation-grid { grid-template-columns: 1fr; } .nav-card { padding: 15px; } .hero-buttons { flex-direction: column; gap: 10px; } .btn-primary, .btn-secondary { width: 100%; text-align: center; } }
+    /* Blog cards from blog.html style */
+    .blog-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+    .blog-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .blog-card:hover { transform: translateY(-8px); }
+    .blog-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
+    .blog-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 15px; }
+    .share-buttons a { color: var(--primary-blue); font-size: 1.4rem; transition: color 0.2s; }
+    .share-buttons a:hover { color: var(--accent-blue); }
+    @media (max-width: 768px) { .blog-preview-grid { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -303,6 +311,7 @@
     </div>
 </div>
 </section>
+
 <!-- PERSONAL VALUES -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -315,6 +324,7 @@
     </p>
 </div>
 </section>
+
 <!-- PROFESSIONAL OVERVIEW -->
 <section class="section alt fade-in-section">
 <div class="section-content">
@@ -328,6 +338,7 @@
     <a href="experience.html" class="section-button">Explore My Career</a>
 </div>
 </section>
+
 <!-- LIFE OUTSIDE WORK -->
 <section class="section fade-in-section">
 <div class="section-content">
@@ -340,21 +351,61 @@
     </p>
 </div>
 </section>
-<!-- BLOG PREVIEW -->
+
+<!-- BLOG PREVIEW – now with 4 real Medium cards -->
 <section class="section alt fade-in-section">
 <div class="section-content">
-    <h2>From My Blog - Insights from Jason David Newton</h2>
-    <p>
-        I share thoughts on faith, growth, leadership, and life lessons from Moses Lake. Here's a glimpse – head to the <a href="blog.html">full blog</a> for more, or check <a href="resources.html">resources</a> for books I like.
+    <h2>Featured Reflections from My Blog on Medium</h2>
+    <p>I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Here are my latest pieces — click any card to read the full story.</p>
+    <div class="blog-preview-grid">
+        <div class="blog-card">
+            <h3>Being a Christian Dad in Moses Lake</h3>
+            <p>Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
+            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730&text=Being a Christian Dad in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <h3>7 Simple Bible Study Habits for Busy Christian Dads</h3>
+            <p>Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
+            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637&text=7 Simple Bible Study Habits for Busy Christian Dads" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <h3>Why Hard Work Still Matters in Moses Lake</h3>
+            <p>A mechanical technician’s honest take on why showing up every day still builds real character, trust, and opportunities — even when the grind feels routine.</p>
+            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d&text=Why Hard Work Still Matters in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+        <div class="blog-card">
+            <h3>Faith and Staying Grounded in Moses Lake</h3>
+            <p>How Jesus keeps me steady as a Christian dad & mechanical technician — real talk from Moses Lake, Washington.</p>
+            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d&text=Faith and Staying Grounded in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
+        </div>
+    </div>
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="blog.html" class="section-button">View Full Blog</a>
     </p>
-    <ul style="list-style: none; padding:0;">
-        <li><a href="blog.html#why-hard-work-still-matters" class="section-button">Why Hard Work Still Matters</a></li>
-        <li><a href="blog.html#faith-and-staying-grounded" class="section-button">Faith and Staying Grounded</a></li>
-        <li><a href="blog.html#lessons-from-working-at-sea" class="section-button">Lessons from Working at Sea</a></li>
-    </ul>
 </div>
 </section>
-<!-- EXPLORE MORE SECTION -->
+
+<!-- EXPLORE MORE SECTION (unchanged) -->
 <section class="section fade-in-section">
 <div class="section-content">
     <h2>Explore More of My Site</h2>
@@ -421,10 +472,14 @@
 </section>
 </main>
 
-<!-- FOOTER -->
+<!-- FULL FOOTER WITH RSS -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
 <div class="footer-icons">
     <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+    <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" aria-label="About.me profile of Jason David Newton Moses Lake Washington"><img src="icons/aboutme.png" alt="About.me" loading="lazy"></a>
+    <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" aria-label="Crunchbase profile of Jason David Newton Moses Lake Washington"><img src="icons/crunchbase.png" alt="Crunchbase" loading="lazy"></a>
+    <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" aria-label="Muck Rack profile of Jason David Newton Moses Lake Washington"><img src="icons/muckrack.png" alt="Muck Rack" loading="lazy"></a>
+    <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" aria-label="Medium profile of Jason David Newton Moses Lake Washington"><img src="icons/medium.png" alt="Medium" loading="lazy"></a>
     <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook" loading="lazy"></a>
     <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="me" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram" loading="lazy"></a>
     <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok" loading="lazy"></a>
@@ -435,18 +490,24 @@
     <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social" loading="lazy"></a>
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube" loading="lazy"></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO" loading="lazy"></a>
-    <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" aria-label="About.me profile of Jason David Newton Moses Lake Washington"><img src="icons/aboutme.png" alt="About.me" loading="lazy"></a>
-    <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" aria-label="Crunchbase profile of Jason David Newton Moses Lake Washington"><img src="icons/crunchbase.png" alt="Crunchbase" loading="lazy"></a>
-    <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" aria-label="Muck Rack profile of Jason David Newton Moses Lake Washington"><img src="icons/muckrack.png" alt="Muck Rack" loading="lazy"></a>
-    <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" aria-label="Medium profile of Jason David Newton Moses Lake Washington"><img src="icons/medium.png" alt="Medium" loading="lazy"></a>
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><img src="icons/carrd.png" alt="Carrd" loading="lazy"></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar profile of Jason David Newton Moses Lake Washington"><img src="icons/gravatar.png" alt="Gravatar" loading="lazy"></a>
+</div>
+<div style="text-align: center; margin: 30px 0;">
+    <a href="/blog-rss.xml" class="rss-link">
+        <i class="fas fa-rss"></i> Subscribe to RSS Feed
+    </a>
+    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 8px;">
+        (Currently syndicating Medium posts — native articles coming soon)
+    </p>
 </div>
 <p>© 2026 Jason David Newton</p>
 <p>Moses Lake, Washington</p>
 </footer>
+
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
