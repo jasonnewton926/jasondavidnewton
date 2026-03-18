@@ -16,17 +16,18 @@
 :root {
     --primary-dark: #0a1f33;
     --primary-blue: #1f4f7a;
-    --accent-blue: #4da6ff;
-    --accent-hover: #2e86de;
+    --accent-blue: #3b82f6;           /* calmer blue-500 – better in dark mode */
+    --accent-hover: #2563eb;          /* blue-600 – hover state */
     --pnw-green: #2e5d4e;
-    --light-bg: #f4f6f8;
-    --section-bg: white;
-    --alt-bg: #eef2f5;
-    --text-dark: #333;
-    --text-light: white;
-    --gray: #ccc;
+    --light-bg: #f8fafc;              /* slightly softer than #f4f6f8 */
+    --section-bg: #ffffff;
+    --alt-bg: #f1f5f9;                /* slate-50 – subtle alt */
+    --text-dark: #1e293b;             /* slate-800 – darker for better light mode contrast */
+    --text-light: #f1f5f9;            /* slate-100 – soft white */
+    --gray: #64748b;                  /* slate-500 – neutral borders */
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
-    /* Dark mode variables (applied via [data-theme="dark"] or prefers-color-scheme) */
+
+    /* Dark mode defaults */
     --bg: var(--light-bg);
     --card-bg: var(--section-bg);
     --text: var(--text-dark);
@@ -34,21 +35,23 @@
     --navbar-bg: var(--primary-dark);
     --footer-bg: var(--primary-dark);
 }
-/* System preference: respect user's OS dark mode setting */
+
+/* System preference: respect OS dark mode */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --bg: #0f172a; /* slate-900 – deep but readable */
-        --card-bg: #1e293b; /* slate-800 – card background */
-        --text: #e2e8f0; /* slate-200 – light text */
-        --text-inverse: #0f172a;
-        --navbar-bg: #020617; /* near-black for navbar/footer */
+        --bg: #0f172a;                  /* slate-950 – deep but not pure black */
+        --card-bg: #1e293b;             /* slate-800 – cards/sections */
+        --text: #f1f5f9;                /* slate-100 – readable main text */
+        --text-inverse: #e2e8f0;        /* slate-200 – visible on navbar/footer */
+        --navbar-bg: #020617;           /* near-black */
         --footer-bg: #020617;
         --section-bg: #1e293b;
-        --alt-bg: #0f172a;
-        --gray: #64748b; /* slate-500 – better contrast */
+        --alt-bg: #111827;              /* gray-900 – subtle alt */
+        --gray: #475569;                /* slate-600 – borders */
     }
 }
-/* Explicit user choice overrides */
+
+/* Explicit user toggle overrides */
 [data-theme="light"] {
     --bg: var(--light-bg);
     --card-bg: var(--section-bg);
@@ -57,52 +60,79 @@
     --navbar-bg: var(--primary-dark);
     --footer-bg: var(--primary-dark);
     --section-bg: white;
-    --alt-bg: #eef2f5;
+    --alt-bg: #f1f5f9;
 }
+
 [data-theme="dark"] {
     --bg: #0f172a;
     --card-bg: #1e293b;
-    --text: #e2e8f0;
-    --text-inverse: #0f172a;
+    --text: #f1f5f9;
+    --text-inverse: #e2e8f0;
     --navbar-bg: #020617;
     --footer-bg: #020617;
     --section-bg: #1e293b;
-    --alt-bg: #0f172a;
-    --gray: #64748b;
+    --alt-bg: #111827;
+    --gray: #475569;
 }
+
 /* Apply variables globally */
 body {
     background: var(--bg);
     color: var(--text);
 }
-.section, .section.alt {
+
+.section,
+.section.alt {
     background: var(--card-bg);
 }
-.navbar, footer {
+
+.navbar,
+footer {
     background: var(--navbar-bg) !important;
-    color: var(--text-inverse);
+    color: var(--text-inverse) !important;
 }
+
 .hero {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
     color: var(--text-inverse);
 }
-/* Cards & content areas adapt */
-.badge-card, .resource-card, .hobby-card, .involvement-card {
+
+/* Cards & content areas */
+.badge-card,
+.resource-card,
+.hobby-card,
+.involvement-card {
     background: var(--card-bg);
     color: var(--text);
-    box-shadow: 0 2px 8px rgba(0,0,0,0.15); /* softer shadow in dark mode */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* deeper shadow in dark mode */
+    border: 1px solid var(--gray); /* subtle separation */
 }
-/* Links & buttons */
-a { color: var(--accent-blue); }
-a:hover { color: var(--accent-hover); }
-.section-button, .social-btn, .btn-primary {
-    background: var(--primary-blue);
-    color: var(--text-inverse) !important;
+
+/* Links */
+a {
+    color: #60a5fa;                    /* blue-400 – calmer in dark */
+}
+a:hover {
+    color: #3b82f6;                    /* blue-500 */
+}
+
+/* Buttons – high contrast in both modes */
+.section-button,
+.social-btn,
+.btn-primary,
+.contact-form button {
+    background: #3b82f6;               /* blue-500 */
+    color: #ffffff !important;
     border: none;
 }
-.section-button:hover, .social-btn:hover, .btn-primary:hover {
-    background: var(--accent-hover);
+
+.section-button:hover,
+.social-btn:hover,
+.btn-primary:hover,
+.contact-form button:hover {
+    background: #2563eb;               /* blue-600 */
 }
+
 /* Rest of your original CSS – unchanged below this point */
 html, body { height: 100%; }
 body {
