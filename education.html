@@ -174,18 +174,18 @@
         box-shadow: 0 4px 15px rgba(0,0,0,0.3);
     }
     .hero h1 {
-        font-size: 3rem;
-        margin-bottom: 0.625rem;
-    }
-    .hero h2 {
-        font-size: 1.375rem;
-        font-weight: normal;
+        font-size: 2.5rem;
         margin-bottom: 1.25rem;
     }
+    .hero h2 {
+        font-size: 1.8rem;
+        margin: 2.5rem 0 1.5rem;
+        color: var(--primary-blue);
+    }
     .hero p {
-        font-size: 1.125rem;
-        max-width: 700px;
-        margin: 0 auto 2rem;
+        font-size: 1.1rem;
+        line-height: 1.7;
+        margin-bottom: 1.25rem;
     }
     .navbar {
         transition: all 0.4s var(--ease);
@@ -360,6 +360,13 @@
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
+    
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
+        </button>
+    </div>
 </div>
 </header>
 <!-- MAIN CONTENT -->
@@ -478,6 +485,33 @@
 </footer>
 <!-- Back-to-Top Button -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+
+<!-- DARK MODE TOGGLE JAVASCRIPT -->
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const htmlRoot = document.documentElement;
+
+    if (!toggleBtn || !themeIcon) return;
+
+    let currentTheme = localStorage.getItem('theme');
+    if (!currentTheme) {
+      currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+    }
+
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+
+    toggleBtn.addEventListener('click', () => {
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
+      localStorage.setItem('theme', newTheme);
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+    });
+  });
+</script>
+
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
