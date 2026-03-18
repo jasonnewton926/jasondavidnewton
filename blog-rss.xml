@@ -5,19 +5,35 @@
     <link>https://jasondavidnewton.com/blog.html</link>
     <description>Personal reflections on faith, fatherhood, leadership, hard work, and life in Moses Lake, Washington by Jason David Newton. Mechanical technician at Group 14 Technologies, Christian dad at Grace Harvest Church, Pacific Northwest adventures.</description>
     <language>en-us</language>
-    <lastBuildDate>Mon, 17 Mar 2026 21:00:00 PDT</lastBuildDate>
+    <lastBuildDate>Mon, 17 Mar 2026 21:30:00 PDT</lastBuildDate>
     <atom:link href="https://jasondavidnewton.com/blog-rss.xml" rel="self" type="application/rss+xml" />
 
-    <!-- Real Medium article #1 -->
+    <!-- Newest article first -->
+    <item>
+        <title>Faith and Staying Grounded in Moses Lake: How Jesus Keeps Me Steady as a Christian Dad</title>
+        <link>https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d</link>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d</guid>
+        <pubDate>Mon, 17 Mar 2026 00:00:00 GMT</pubDate> <!-- Use today's date or actual publish date -->
+        <description><![CDATA[How faith in Jesus at Grace Harvest Church keeps me steady as a Christian dad and mechanical technician amid work, family, and life’s daily pull in Moses Lake, Washington.]]></description>
+    </item>
+
+    <item>
+        <title>Why Hard Work Still Matters in Moses Lake: A Mechanical Technician’s Honest Take</title>
+        <link>https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d</link>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d</guid>
+        <pubDate>Mon, 17 Mar 2026 00:00:00 GMT</pubDate> <!-- Adjust to actual publish date if different -->
+        <description><![CDATA[Showing up every day in Moses Lake still builds real character, trust, and opportunities — even when the grind feels routine. Honest reflections from a mechanical technician.]]></description>
+    </item>
+
+    <!-- Older articles -->
     <item>
         <title>Being a Christian Dad in Moses Lake: Balancing Faith, Family, and a Mechanical Tech Life</title>
         <link>https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730</link>
         <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730</guid>
         <pubDate>Tue, 05 Mar 2024 00:00:00 GMT</pubDate>
-        <description><![CDATA[Real talk on balancing faith, family, and work as a mechanical technician in Moses Lake, Washington. Reflections on fatherhood, Grace Harvest Church, and staying grounded in everyday life.]]></description>
+        <description><![CDATA[Real talk on balancing faith, family, and work as a mechanical technician in Moses Lake, Washington. Reflections on fatherhood, Grace Harvest Church, and staying grounded.]]></description>
     </item>
 
-    <!-- Real Medium article #2 -->
     <item>
         <title>7 Simple Bible Study Habits That Actually Work for Busy Christian Dads in Moses Lake</title>
         <link>https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637</link>
