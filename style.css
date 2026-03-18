@@ -150,7 +150,7 @@ a { text-decoration: none; color: inherit; }
 .hero p { margin-bottom: 1.5625rem; font-size: 1.0625rem; }
 
 /* ===================================
-   BUTTONS (global)
+   BUTTONS (global) – FIXED blue-on-blue issue
 =================================== */
 .btn-primary,
 .btn-secondary,
@@ -163,11 +163,16 @@ a { text-decoration: none; color: inherit; }
     transition: background 0.2s ease, transform 0.1s ease;
     cursor: pointer;
 }
-.btn-primary, .section-button, .social-btn {
-    background: var(--accent-blue);
-    color: var(--text-light);
+
+/* Force white text on dark button backgrounds – prevents inheritance of blue text */
+.btn-primary,
+.section-button,
+.social-btn {
+    background: var(--primary-blue);
+    color: var(--text-light) !important;  /* WHITE text – overrides any parent blue inheritance */
     border: none;
 }
+
 .btn-primary:hover,
 .section-button:hover,
 .social-btn:hover,
@@ -198,11 +203,28 @@ a { text-decoration: none; color: inherit; }
     transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-/* Your original stagger delays unchanged */
+/* Staggered delays – your original kept intact */
 .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
 .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
-/* ... rest of your delays ... */
-
+.fade-in-section:nth-child(3) { transition-delay: 0.4s; }
+.fade-in-section:nth-child(4) { transition-delay: 0.55s; }
+.fade-in-section:nth-child(5) { transition-delay: 0.7s; }
+.fade-in-section:nth-child(6) { transition-delay: 0.85s; }
+.fade-in-section:nth-child(7) { transition-delay: 1s; }
+.fade-in-section:nth-child(8) { transition-delay: 1.15s; }
+.fade-in-section:nth-child(9) { transition-delay: 1.3s; }
+@media (max-width: 768px) {
+    .fade-in-section { transform: translateY(40px); }
+    .fade-in-section:nth-child(1) { transition-delay: 0.05s; }
+    .fade-in-section:nth-child(2) { transition-delay: 0.15s; }
+    .fade-in-section:nth-child(3) { transition-delay: 0.25s; }
+    .fade-in-section:nth-child(4) { transition-delay: 0.35s; }
+    .fade-in-section:nth-child(5) { transition-delay: 0.45s; }
+    .fade-in-section:nth-child(6) { transition-delay: 0.55s; }
+    .fade-in-section:nth-child(7) { transition-delay: 0.65s; }
+    .fade-in-section:nth-child(8) { transition-delay: 0.75s; }
+    .fade-in-section:nth-child(9) { transition-delay: 0.85s; }
+}
 .hero-content {
     opacity: 0;
     transform: scale(0.97);
@@ -307,7 +329,7 @@ footer {
 }
 .badge-card .social-btn:hover { background: #163a59; }
 
-/* Instagram Embed Styling (restored your override) */
+/* Instagram Embed Styling */
 .instagram-media {
     max-width: 300px !important;
     min-width: 0 !important;
