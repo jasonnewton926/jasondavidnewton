@@ -205,18 +205,37 @@
     [data-theme="dark"] .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--accent-blue); }
     .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s, color 0.2s, border-color 0.2s; }
     .section-button:hover { background: #163a59; transform: translateY(-2px); }
-    .resume-btn { background: transparent; border: 1.5px solid var(--primary-blue); color: var(--primary-blue); }
-    .resume-btn:hover { background: var(--primary-blue); color: #fff; border-color: var(--primary-blue); }
-    [data-theme="dark"] .resume-btn { border-color: var(--accent-blue); color: var(--accent-blue); }
-    [data-theme="dark"] .resume-btn:hover { background: var(--accent-blue); color: #0a1f33; }
-    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.2rem; }
-    .btn-group .section-button { margin-top: 0; }
-    /* Offsite CTA — outlined style to signal external link */
-    .section-button.offsite { background: #e8edf2; border: 1.5px solid #c8d4de; color: #3d5166; }
+    /* Ghost CTA — same light gray, gold text always readable, solid navy on hover */
+    .resume-btn,
+    .section-button.offsite {
+        background: #e8edf2;
+        border: 1.5px solid #c8d4de;
+        color: var(--accent-gold);
+        font-weight: 700;
+    }
     .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
-    .section-button.offsite:hover { background: var(--primary-blue); border-color: var(--primary-blue); color: #fff; transform: translateY(-2px); }
-    [data-theme="dark"] .section-button.offsite { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #a8c4dc; }
-    [data-theme="dark"] .section-button.offsite:hover { background: var(--accent-blue); border-color: var(--accent-blue); color: #0a1f33; }
+    .resume-btn:hover,
+    .section-button.offsite:hover {
+        background: var(--primary-blue);
+        border-color: var(--primary-blue);
+        color: #fff;
+        transform: translateY(-2px);
+    }
+    [data-theme="dark"] .resume-btn,
+    [data-theme="dark"] .section-button.offsite {
+        background: rgba(255,255,255,0.07);
+        border-color: rgba(200,168,75,0.35);
+        color: var(--accent-gold);
+    }
+    [data-theme="dark"] .resume-btn:hover,
+    [data-theme="dark"] .section-button.offsite:hover {
+        background: var(--primary-blue);
+        border-color: var(--primary-blue);
+        color: #fff;
+    }
+    /* Centered btn-group for professional section */
+    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.2rem; justify-content: center; }
+    .btn-group .section-button { margin-top: 0; }
 
     /* ═══ FADE IN ═══ */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
@@ -482,7 +501,7 @@
 
   <!-- ═══ PROFESSIONAL OVERVIEW ═══ -->
   <section class="section alt fade-in-section">
-    <div class="section-content">
+    <div class="section-content" style="text-align:center;">
       <h2>Professional Background of Jason David Newton</h2>
       <h3 class="sub">Group 14 Technologies · Simplot FG · USCG Credentialed</h3>
       <p>I graduated from Washington State University with a Bachelor of Arts in Business Management &amp; Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.</p>
