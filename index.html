@@ -205,33 +205,33 @@
     [data-theme="dark"] .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--accent-blue); }
     .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s, color 0.2s, border-color 0.2s; }
     .section-button:hover { background: #163a59; transform: translateY(-2px); }
-    /* Ghost CTA — light gray bg, navy text (readable in light mode), white on hover */
-    .resume-btn,
-    .section-button.offsite {
-        background: #e8edf2;
-        border: 1.5px solid #b8c8d8;
-        color: #1f4f7a;
-        font-weight: 700;
+    /* Ghost CTA — max specificity + !important beats style.css color:!important rule */
+    html body .resume-btn, html body a.resume-btn,
+    html body .section-button.offsite, html body a.section-button.offsite {
+        background: #e8edf2 !important;
+        border: 1.5px solid #b8c8d8 !important;
+        color: #1f4f7a !important;
+        font-weight: 700 !important;
     }
-    .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
-    .resume-btn:hover,
-    .section-button.offsite:hover {
-        background: var(--primary-blue);
-        border-color: var(--primary-blue);
-        color: #fff;
+    html body .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
+    html body .resume-btn:hover, html body a.resume-btn:hover,
+    html body .section-button.offsite:hover, html body a.section-button.offsite:hover {
+        background: #1f4f7a !important;
+        border-color: #1f4f7a !important;
+        color: #ffffff !important;
         transform: translateY(-2px);
     }
-    [data-theme="dark"] .resume-btn,
-    [data-theme="dark"] .section-button.offsite {
-        background: rgba(255,255,255,0.07);
-        border-color: rgba(200,168,75,0.4);
-        color: var(--accent-gold);
+    [data-theme="dark"] .resume-btn, [data-theme="dark"] a.resume-btn,
+    [data-theme="dark"] .section-button.offsite, [data-theme="dark"] a.section-button.offsite {
+        background: rgba(255,255,255,0.08) !important;
+        border: 1.5px solid rgba(200,168,75,0.5) !important;
+        color: #c8a84b !important;
     }
-    [data-theme="dark"] .resume-btn:hover,
-    [data-theme="dark"] .section-button.offsite:hover {
-        background: var(--primary-blue);
-        border-color: var(--primary-blue);
-        color: #fff;
+    [data-theme="dark"] .resume-btn:hover, [data-theme="dark"] a.resume-btn:hover,
+    [data-theme="dark"] .section-button.offsite:hover, [data-theme="dark"] a.section-button.offsite:hover {
+        background: #1f4f7a !important;
+        border-color: #1f4f7a !important;
+        color: #ffffff !important;
     }
     /* Centered btn-group for professional section */
     .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.2rem; justify-content: center; }
