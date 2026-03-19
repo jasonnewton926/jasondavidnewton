@@ -104,7 +104,7 @@
 
     /* ── Full-viewport hero ── */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
-    .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg'); background-size: cover; background-position: center 35%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
+    .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg'); background-size: cover; background-position: center top; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .page-hero-bg.loaded { transform: scale(1); }
     .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(6,18,32,0.88) 0%, rgba(10,31,51,0.75) 55%, rgba(15,42,70,0.62) 100%); }
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.75) 0%, transparent 55%); }
@@ -173,7 +173,7 @@
     .community-card-body p { font-size: 0.96rem; line-height: 1.72; color: var(--text-secondary); flex: 1; margin-bottom: 1.2rem; }
     .community-card-body a:not(.section-button) { color: var(--primary-blue); font-weight: 600; }
     [data-theme="dark"] .community-card-body a:not(.section-button) { color: var(--accent-blue); }
-    .section-button { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.25s, transform 0.2s; align-self: flex-start; }
+    .section-button { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.25s, transform 0.2s; align-self: center; }
     .section-button:hover { background: #163a59; transform: translateY(-2px); }
 
     /* ── Values strip ── */
