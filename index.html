@@ -9,24 +9,40 @@
     <link rel="canonical" href="https://jasondavidnewton.com/">
     <meta name="robots" content="index, follow">
     <link rel="sitemap" type="application/xml" title="Sitemap" href="/sitemap.xml">
+
+    <!-- ═══ PERFORMANCE: Preconnect + Preload hero BG (LCP fix) ═══ -->
     <link rel="preconnect" href="https://cdnjs.cloudflare.com">
     <link rel="preconnect" href="https://www.googletagmanager.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preload" as="image" href="https://jasondavidnewton.com/assets/maritime-boat.jpg" fetchpriority="high">
+    <link rel="preload" as="image" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" fetchpriority="high">
+
+    <!-- ═══ FONTS: display=swap prevents render-blocking ═══ -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"></noscript>
+
+    <!-- Open Graph -->
     <meta property="og:title" content="Jason David Newton | Moses Lake, Washington">
     <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith & Pacific Northwest adventures">
     <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
     <meta property="og:url" content="https://jasondavidnewton.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jason David Newton">
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Font Awesome – load async to prevent render block -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -34,6 +50,8 @@
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
     </script>
+
+    <!-- ═══ SCHEMA: Person ═══ -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -73,7 +91,10 @@
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jasondavidnewton.com/"}]}</script>
 
     <style>
+    /* ═══ RESET ═══ */
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* ═══ TOKENS ═══ */
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
         --primary-dark: #0a1f33;
@@ -85,6 +106,7 @@
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
         --text: #1a2a3a;
+        --text-secondary: #3d5166; /* ← fixed color, no opacity hack — passes AA contrast */
         --shadow: 0 4px 24px rgba(0,0,0,0.09);
         --shadow-hover: 0 14px 44px rgba(0,0,0,0.16);
         --radius: 14px;
@@ -96,24 +118,15 @@
         --section-alt: #0a1724;
         --card-bg: #132030;
         --text: #dde8f0;
+        --text-secondary: #8faecc;
         --shadow: 0 4px 24px rgba(0,0,0,0.4);
         --shadow-hover: 0 14px 44px rgba(0,0,0,0.55);
     }
     body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); line-height: 1.7; overflow-x: hidden; }
 
-    /* NAVBAR */
-    .navbar {
-        position: fixed; top: 0; left: 0; right: 0; z-index: 900;
-        background: transparent;
-        transition: all 0.4s var(--ease);
-        padding: 1rem 2rem;
-    }
-    .navbar.scrolled {
-        background: rgba(10,31,51,0.96);
-        backdrop-filter: blur(14px);
-        box-shadow: 0 2px 24px rgba(0,0,0,0.4);
-        padding: 0.65rem 2rem;
-    }
+    /* ═══ NAVBAR ═══ */
+    .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
+    .navbar.scrolled { background: rgba(10,31,51,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
     .logo { font-family: var(--font-display); font-size: 1.05rem; color: #fff; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
     nav ul { display: flex; list-style: none; gap: 0; flex-wrap: wrap; }
@@ -136,7 +149,7 @@
         .theme-toggle { margin-left: 0.5rem; }
     }
 
-    /* HERO */
+    /* ═══ HERO ═══ */
     .hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
     .hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/maritime-boat.jpg'); background-size: cover; background-position: center 40%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .hero-bg.loaded { transform: scale(1); }
@@ -170,59 +183,76 @@
         .hero-roles, .hero-buttons { justify-content: center; }
     }
 
-    /* SECTIONS */
+    /* ═══ CREDIBILITY STATS BAR ═══ */
+    .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
+    .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
+    .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
+    .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
+    @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
+
+    /* ═══ SECTIONS ═══ */
     .section { padding: 76px 2rem; background: var(--section-bg); }
     .section.alt { background: var(--section-alt); }
     .section-content { max-width: 860px; margin: 0 auto; }
     .section-content h2 { font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2.15rem); color: var(--primary-blue); margin-bottom: 1rem; line-height: 1.25; }
     [data-theme="dark"] .section-content h2 { color: var(--accent-blue); }
+    .section-content h3.sub { font-family: var(--font-display); font-size: 1.1rem; color: var(--primary-blue); margin: 1.2rem 0 0.4rem; }
+    [data-theme="dark"] .section-content h3.sub { color: var(--accent-blue); }
     .section-content p { font-size: 1.04rem; line-height: 1.8; color: var(--text); margin-bottom: 1rem; }
+    .section-content p.secondary { color: var(--text-secondary); }
     .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--primary-blue); font-weight: 600; }
     [data-theme="dark"] .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--accent-blue); }
     .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
     .section-button:hover { background: #163a59; transform: translateY(-2px); }
+    /* Offsite CTA — outlined style to signal external link */
+    .section-button.offsite { background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue); }
+    .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
+    .section-button.offsite:hover { background: var(--primary-blue); color: #fff; }
+    [data-theme="dark"] .section-button.offsite { border-color: var(--accent-blue); color: var(--accent-blue); }
+    [data-theme="dark"] .section-button.offsite:hover { background: var(--accent-blue); color: #0a1f33; }
 
-    /* FADE IN */
+    /* ═══ FADE IN ═══ */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
     .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
-    /* BLOG CARDS */
+    /* ═══ BLOG CARDS ═══ */
     .blog-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 22px; max-width: 1100px; margin: 2rem auto 0; }
     .blog-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s var(--ease), box-shadow 0.3s; display: flex; flex-direction: column; }
     .blog-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
-    .blog-card-img { width: 100%; height: 210px; object-fit: cover; object-position: center top; display: block; flex-shrink: 0; }
+    /* Explicit intrinsic dimensions set on img to prevent CLS */
+    .blog-card-img { width: 100%; height: 210px; object-fit: cover; object-position: center center; display: block; flex-shrink: 0; aspect-ratio: 16/9; }
     .blog-card-body { padding: 20px; flex: 1; display: flex; flex-direction: column; }
+    .blog-card-meta { font-size: 0.75rem; color: var(--text-secondary); font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px; }
+    .blog-card-meta i { color: var(--accent-gold); }
     .blog-card h3 { font-family: var(--font-display); font-size: 1.12rem; color: var(--primary-blue); margin-bottom: 0.55rem; line-height: 1.3; }
     [data-theme="dark"] .blog-card h3 { color: var(--accent-blue); }
-    .blog-card p { font-size: 0.94rem; line-height: 1.65; color: var(--text); flex: 1; margin-bottom: 0.9rem; }
-    .share-buttons { display: flex; gap: 12px; margin-top: 12px; }
-    .share-buttons a { color: var(--primary-blue); font-size: 1.15rem; transition: color 0.2s, transform 0.2s; }
-    .share-buttons a:hover { color: var(--accent-blue); transform: scale(1.2); }
+    .blog-card p { font-size: 0.94rem; line-height: 1.65; color: var(--text-secondary); flex: 1; margin-bottom: 0.9rem; }
+    /* Share buttons — padded for 44px tap targets */
+    .share-buttons { display: flex; gap: 4px; margin-top: 12px; }
+    .share-buttons a { color: var(--primary-blue); font-size: 1.05rem; transition: color 0.2s, transform 0.2s; padding: 8px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; min-width: 36px; min-height: 36px; }
+    .share-buttons a:hover { color: var(--accent-blue); transform: scale(1.15); background: rgba(31,79,122,0.08); }
     [data-theme="dark"] .share-buttons a { color: var(--accent-blue); }
 
-    /* NAV CARDS */
+    /* ═══ NAV CARDS ═══ */
     .navigation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 2rem auto 0; }
     .nav-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s var(--ease), box-shadow 0.3s; display: flex; flex-direction: column; }
     .nav-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
-    .nav-card-img { width: 100%; height: 185px; object-fit: cover; object-position: center top; display: block; flex-shrink: 0; }
+    /* Per-image object-position tuned to each photo subject */
+    .nav-card-img { width: 100%; height: 185px; object-fit: cover; display: block; flex-shrink: 0; aspect-ratio: 16/9; }
+    .nav-card-img.pos-top    { object-position: center top; }
+    .nav-card-img.pos-center { object-position: center center; }
+    .nav-card-img.pos-bottom { object-position: center bottom; }
     .nav-card-body { padding: 16px 18px 20px; flex: 1; display: flex; flex-direction: column; text-align: center; }
     .nav-card i { color: var(--primary-blue); font-size: 1.5rem; margin-bottom: 8px; display: block; }
     [data-theme="dark"] .nav-card i { color: var(--accent-blue); }
     .nav-card h3 { font-family: var(--font-display); font-size: 1.1rem; color: var(--primary-blue); margin-bottom: 0.35rem; }
     [data-theme="dark"] .nav-card h3 { color: var(--accent-blue); }
-    .nav-card p { font-size: 0.9rem; color: var(--text); line-height: 1.55; flex: 1; margin-bottom: 0.9rem; }
+    .nav-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; flex: 1; margin-bottom: 0.9rem; }
     .nav-card .section-button { align-self: center; margin-top: auto; }
 
-    /* FLOATING CHAT BUBBLE */
-    .chat-bubble-btn {
-        position: fixed; bottom: 26px; right: 26px; z-index: 9999;
-        width: 58px; height: 58px; border-radius: 50%;
-        background: var(--primary-blue); border: none; cursor: pointer;
-        box-shadow: 0 6px 28px rgba(31,79,122,0.52);
-        display: flex; align-items: center; justify-content: center;
-        transition: transform 0.3s var(--ease), box-shadow 0.3s;
-        color: #fff; font-size: 1.45rem;
-    }
+    /* ═══ FLOATING CHAT BUBBLE ═══ */
+    .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease), box-shadow 0.3s; color: #fff; font-size: 1.45rem; }
     .chat-bubble-btn:hover { transform: scale(1.1); box-shadow: 0 10px 36px rgba(31,79,122,0.68); }
     .chat-bubble-btn .chat-close { display: none; }
     .chat-bubble-btn.open .chat-icon { display: none; }
@@ -230,36 +260,21 @@
     .chat-ping { position: absolute; top: 4px; right: 4px; width: 12px; height: 12px; background: #3ecf6e; border-radius: 50%; border: 2px solid #fff; animation: pingPulse 2s infinite; }
     .chat-bubble-btn.open .chat-ping { display: none; }
     @keyframes pingPulse { 0%,100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.35); opacity: 0.65; } }
-
-    .chat-panel {
-        position: fixed; bottom: 96px; right: 26px; z-index: 9998;
-        width: 370px; max-width: calc(100vw - 36px);
-        height: 550px; max-height: calc(100vh - 120px);
-        border-radius: 16px; overflow: hidden;
-        box-shadow: 0 18px 64px rgba(0,0,0,0.26);
-        opacity: 0; transform: translateY(18px) scale(0.95);
-        pointer-events: none;
-        transition: opacity 0.3s var(--ease), transform 0.3s var(--ease);
-        display: flex; flex-direction: column;
-    }
+    .chat-panel { position: fixed; bottom: 96px; right: 26px; z-index: 9998; width: 370px; max-width: calc(100vw - 36px); height: 550px; max-height: calc(100vh - 120px); border-radius: 16px; overflow: hidden; box-shadow: 0 18px 64px rgba(0,0,0,0.26); opacity: 0; transform: translateY(18px) scale(0.95); pointer-events: none; transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); display: flex; flex-direction: column; }
     .chat-panel.open { opacity: 1; transform: translateY(0) scale(1); pointer-events: all; }
-    .chat-panel-header {
-        background: var(--primary-blue); color: #fff;
-        padding: 13px 16px; display: flex; align-items: center; gap: 11px;
-        font-family: var(--font-display); font-size: 0.98rem; font-weight: 700;
-        flex-shrink: 0;
-    }
+    .chat-panel-header { background: var(--primary-blue); color: #fff; padding: 13px 16px; display: flex; align-items: center; gap: 11px; font-family: var(--font-display); font-size: 0.98rem; font-weight: 700; flex-shrink: 0; }
     .chat-panel-header img { width: 34px; height: 34px; border-radius: 50%; border: 2px solid rgba(255,255,255,0.28); object-fit: cover; }
     .chat-status { font-size: 0.72rem; font-weight: 400; opacity: 0.82; display: flex; align-items: center; gap: 5px; }
     .chat-status::before { content: ''; width: 7px; height: 7px; background: #3ecf6e; border-radius: 50%; display: block; }
     #embedded-widget-container { flex: 1; width: 100%; border: none; min-height: 0; background: var(--section-bg); }
     @media (max-width: 480px) {
         .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; }
-        .chat-bubble-btn { bottom: 16px; right: 16px; }
+        .chat-bubble-btn { bottom: 70px; right: 16px; } /* lifted above mobile bottom nav */
     }
 
-    /* FOOTER */
-    footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 30px; }
+    /* ═══ FOOTER ═══ */
+    footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 100px; } /* extra bottom padding for mobile nav */
+    @media (min-width: 481px) { footer { padding-bottom: 30px; } }
     .footer-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
     .footer-icons.visible { opacity: 1; transform: translateY(0); }
     .footer-icons a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.78); font-size: 1.2rem; transition: transform 0.3s var(--ease), background 0.3s, color 0.3s, box-shadow 0.3s; text-decoration: none; }
@@ -268,38 +283,99 @@
     .rss-link:hover { color: #d9ba68; }
     footer p { font-size: 0.88rem; margin-top: 6px; opacity: 0.6; }
 
-    /* BACK TO TOP */
+    /* ═══ BACK TO TOP ═══ */
     #back-to-top { position: fixed; bottom: 96px; right: 26px; display: none; background: rgba(31,79,122,0.82); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 8000; transition: all 0.3s var(--ease); align-items: center; justify-content: center; backdrop-filter: blur(6px); }
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
 
-    .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }
+    /* ═══ FLOATING PROFILE CARD ═══ */
+    .profile-float-card { position: fixed; bottom: 96px; right: 26px; z-index: 9997; width: 280px; background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.18); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
+    .profile-float-card.hidden { opacity: 0; transform: translateY(10px) scale(0.97); pointer-events: none; }
+    /* Hide on all mobile/tablet — raised breakpoint to 768px */
+    @media (max-width: 768px) { .profile-float-card { display: none !important; } }
+    .profile-card-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.35); border: none; color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; z-index: 2; transition: background 0.2s; }
+    .profile-card-close:hover { background: rgba(0,0,0,0.6); }
+    .profile-card-header-img { height: 80px; background-size: cover; background-position: center; }
+    .profile-card-body { display: flex; align-items: center; gap: 12px; padding: 0 14px 12px; margin-top: -28px; position: relative; }
+    .profile-card-avatar { width: 56px; height: 56px; border-radius: 50%; border: 3px solid var(--card-bg); object-fit: cover; flex-shrink: 0; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .profile-card-info { padding-top: 28px; }
+    .profile-card-name { display: block; font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; color: var(--primary-blue); text-decoration: none; line-height: 1.2; }
+    [data-theme="dark"] .profile-card-name { color: var(--accent-blue); }
+    .profile-card-name:hover { text-decoration: underline; }
+    .profile-card-title { font-size: 0.78rem; color: var(--text-secondary); margin-top: 2px; }
+    .profile-card-location { font-size: 0.76rem; color: var(--text-secondary); margin-top: 3px; }
+    .profile-card-location i { margin-right: 3px; color: var(--primary-blue); }
+    .profile-card-footer { display: flex; justify-content: space-between; padding: 10px 14px; border-top: 1px solid rgba(0,0,0,0.06); font-size: 0.78rem; }
+    [data-theme="dark"] .profile-card-footer { border-top-color: rgba(255,255,255,0.07); }
+    .profile-card-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; transition: color 0.2s; }
+    [data-theme="dark"] .profile-card-footer a { color: var(--accent-blue); }
+    .profile-card-footer a:hover { text-decoration: underline; }
 
-    /* FLOATING PROFILE CARD */
-    .profile-float-card { position:fixed; bottom:96px; right:26px; z-index:9997; width:280px; background:var(--card-bg); border-radius:14px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,0.18); transition:opacity 0.3s var(--ease),transform 0.3s var(--ease); }
-    .profile-float-card.hidden { opacity:0; transform:translateY(10px) scale(0.97); pointer-events:none; }
-    .profile-card-close { position:absolute; top:8px; right:8px; background:rgba(0,0,0,0.35); border:none; color:#fff; width:26px; height:26px; border-radius:50%; cursor:pointer; font-size:0.75rem; display:flex; align-items:center; justify-content:center; z-index:2; transition:background 0.2s; }
-    .profile-card-close:hover { background:rgba(0,0,0,0.6); }
-    .profile-card-header-img { height:80px; background-size:cover; background-position:center; }
-    .profile-card-body { display:flex; align-items:center; gap:12px; padding:0 14px 12px; margin-top:-28px; position:relative; }
-    .profile-card-avatar { width:56px; height:56px; border-radius:50%; border:3px solid var(--card-bg); object-fit:cover; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
-    .profile-card-info { padding-top:28px; }
-    .profile-card-name { display:block; font-family:var(--font-display); font-weight:700; font-size:0.95rem; color:var(--primary-blue); text-decoration:none; line-height:1.2; }
-    [data-theme="dark"] .profile-card-name { color:var(--accent-blue); }
-    .profile-card-name:hover { text-decoration:underline; }
-    .profile-card-title { font-size:0.78rem; color:var(--text); opacity:0.75; margin-top:2px; }
-    .profile-card-location { font-size:0.76rem; color:var(--text); opacity:0.6; margin-top:3px; }
-    .profile-card-location i { margin-right:3px; color:var(--primary-blue); }
-    .profile-card-footer { display:flex; justify-content:space-between; padding:10px 14px; border-top:1px solid rgba(0,0,0,0.06); font-size:0.78rem; }
-    [data-theme="dark"] .profile-card-footer { border-top-color:rgba(255,255,255,0.07); }
-    .profile-card-footer a { color:var(--primary-blue); text-decoration:none; font-weight:600; transition:color 0.2s; }
-    [data-theme="dark"] .profile-card-footer a { color:var(--accent-blue); }
-    .profile-card-footer a:hover { text-decoration:underline; }
-    @media (max-width:480px) { .profile-float-card { display:none; } }
+    /* ═══ MOBILE BOTTOM NAV ═══ */
+    .mobile-bottom-nav { display: none; }
+    @media (max-width: 480px) {
+        .mobile-bottom-nav {
+            display: flex;
+            position: fixed;
+            bottom: 0; left: 0; right: 0;
+            z-index: 8500;
+            background: rgba(10,31,51,0.97);
+            backdrop-filter: blur(14px);
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 0 max(8px, env(safe-area-inset-bottom));
+            justify-content: space-around;
+            align-items: center;
+        }
+        .mobile-bottom-nav a {
+            display: flex; flex-direction: column; align-items: center; gap: 3px;
+            color: rgba(255,255,255,0.65); text-decoration: none;
+            font-size: 0.65rem; font-weight: 600; letter-spacing: 0.04em;
+            padding: 4px 12px; border-radius: 8px;
+            transition: color 0.2s;
+            min-width: 44px; min-height: 44px; justify-content: center;
+        }
+        .mobile-bottom-nav a.active,
+        .mobile-bottom-nav a:hover { color: var(--accent-gold); }
+        .mobile-bottom-nav i { font-size: 1.2rem; }
+    }
+
+    /* ═══ STICKY SCROLL CTA (appears after hero, mobile) ═══ */
+    .sticky-cta {
+        display: none;
+        position: fixed;
+        top: 0; left: 0; right: 0;
+        z-index: 8999;
+        background: rgba(10,31,51,0.97);
+        backdrop-filter: blur(12px);
+        padding: 10px 16px;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        transform: translateY(-100%);
+        transition: transform 0.3s var(--ease);
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .sticky-cta.visible { transform: translateY(0); }
+    @media (max-width: 680px) { .sticky-cta { display: flex; } }
+    .sticky-cta-name { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: #fff; white-space: nowrap; }
+    .sticky-cta-sub { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
+    .sticky-cta-btn { background: var(--accent-gold); color: #0a1f33; padding: 7px 14px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.2s; }
+    .sticky-cta-btn:hover { background: #d9ba68; }
+
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<!-- ═══ STICKY MOBILE CTA (shows after hero scroll) ═══ -->
+<div class="sticky-cta" id="stickyCta" aria-hidden="true">
+  <div>
+    <div class="sticky-cta-name">Jason David Newton</div>
+    <div class="sticky-cta-sub">Mechanical Technician · Moses Lake, WA</div>
+  </div>
+  <a href="contact.html" class="sticky-cta-btn">Get in Touch</a>
+</div>
+
+<!-- ═══ NAVIGATION ═══ -->
 <header role="navigation" class="navbar" aria-label="Main Navigation">
   <div class="nav-container">
     <div class="logo">Jason David Newton</div>
@@ -331,7 +407,7 @@
 
 <main role="main">
 
-  <!-- HERO -->
+  <!-- ═══ HERO ═══ -->
   <section class="hero" aria-label="Jason David Newton – Mechanical Technician Moses Lake Washington">
     <div class="hero-bg" id="heroBg"></div>
     <div class="hero-overlay"></div>
@@ -373,47 +449,69 @@
     </div>
   </section>
 
-  <!-- PERSONAL VALUES -->
+  <!-- ═══ CREDIBILITY STATS BAR ═══ -->
+  <div class="stats-bar" aria-label="Credentials at a glance">
+    <div class="stats-bar-inner">
+      <div class="stat-item"><i class="fas fa-hard-hat"></i> 10+ Years in Maintenance &amp; Operations</div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><i class="fas fa-graduation-cap"></i> WSU Business Management Graduate</div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><i class="fas fa-anchor"></i> USCG Merchant Mariner Credentialed</div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><i class="fas fa-church"></i> Grace Harvest Church · Moses Lake</div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><i class="fas fa-map-marker-alt"></i> Moses Lake, Washington</div>
+    </div>
+  </div>
+
+  <!-- ═══ PERSONAL VALUES ═══ -->
   <section class="section fade-in-section">
     <div class="section-content">
-      <h2>Faith, Family & Personal Growth in Moses Lake</h2>
+      <h2>Faith, Family &amp; Personal Growth in Moses Lake</h2>
+      <h3 class="sub">Rooted in Grace Harvest Church</h3>
       <p>Faith and family are what keep me going. Being a dad has taught me more about responsibility than anything else, and my faith in Jesus Christ helps me stay centered through it all. Here in Moses Lake, I'm part of Grace Harvest Church, where I find community and purpose.</p>
-      <p>Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html">community involvement</a> for more on this.</p>
+      <p class="secondary">Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html">community involvement</a> for more on this.</p>
     </div>
   </section>
 
-  <!-- PROFESSIONAL OVERVIEW -->
+  <!-- ═══ PROFESSIONAL OVERVIEW ═══ -->
   <section class="section alt fade-in-section">
     <div class="section-content">
       <h2>Professional Background of Jason David Newton</h2>
-      <p>I graduated from Washington State University with a Bachelor of Arts in Business Management & Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.</p>
-      <p>At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.</p>
+      <h3 class="sub">Group 14 Technologies · Simplot FG · USCG Credentialed</h3>
+      <p>I graduated from Washington State University with a Bachelor of Arts in Business Management &amp; Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.</p>
+      <p class="secondary">At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.</p>
       <a href="experience.html" class="section-button">Explore My Career</a>
     </div>
   </section>
 
-  <!-- LIFE OUTSIDE WORK -->
+  <!-- ═══ LIFE OUTSIDE WORK ═══ -->
   <section class="section fade-in-section">
     <div class="section-content">
       <h2>Life Outside of Work in Moses Lake</h2>
+      <h3 class="sub">Golf, Snowboarding, Youth Coaching &amp; PNW Adventures</h3>
       <p>When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html">hobbies and adventures</a> or see my <a href="community.html">coaching in the community</a>.</p>
-      <p>The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.</p>
+      <p class="secondary">The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.</p>
     </div>
   </section>
 
-  <!-- BLOG PREVIEW -->
+  <!-- ═══ BLOG PREVIEW ═══ -->
   <section class="section alt fade-in-section" style="padding-bottom:80px;">
     <div class="section-content" style="max-width:1100px;">
       <h2 style="text-align:center;">Featured Reflections from My Blog on Medium</h2>
-      <p style="text-align:center;max-width:600px;margin:0 auto 0.5rem;">I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Click any card to read the full story.</p>
+      <p style="text-align:center;max-width:600px;margin:0 auto 0.5rem;" class="secondary">I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Click any card to read the full story.</p>
       <div class="blog-preview-grid">
 
         <div class="blog-card">
-          <img class="blog-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-smiling.jpg" alt="Jason Newton with his son smiling in Moses Lake Washington" loading="lazy" width="400" height="195">
+          <img class="blog-card-img pos-top"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-smiling.jpg"
+            alt="Jason Newton with his son smiling in Moses Lake Washington"
+            loading="lazy" width="400" height="210">
           <div class="blog-card-body">
+            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2025</div>
             <h3>Being a Christian Dad in Moses Lake</h3>
             <p>Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
-            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
             <div class="share-buttons">
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730&text=Being a Christian Dad in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
@@ -423,11 +521,15 @@
         </div>
 
         <div class="blog-card">
-          <img class="blog-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-son-christmas.jpg" alt="Jason Newton and son at Christmas in Moses Lake" loading="lazy" width="400" height="195">
+          <img class="blog-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-son-christmas.jpg"
+            alt="Jason Newton and son at Christmas in Moses Lake"
+            loading="lazy" width="400" height="210">
           <div class="blog-card-body">
+            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2025</div>
             <h3>7 Simple Bible Study Habits for Busy Christian Dads</h3>
             <p>Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
-            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
             <div class="share-buttons">
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637&text=7 Simple Bible Study Habits for Busy Christian Dads" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
@@ -437,11 +539,15 @@
         </div>
 
         <div class="blog-card">
-          <img class="blog-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Jason Newton working – mechanical technician hard work Moses Lake" loading="lazy" width="400" height="195">
+          <img class="blog-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg"
+            alt="Jason Newton working – mechanical technician hard work Moses Lake"
+            loading="lazy" width="400" height="210">
           <div class="blog-card-body">
+            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2025</div>
             <h3>Why Hard Work Still Matters in Moses Lake</h3>
-            <p>A mechanical technician's honest take on why showing up every day still builds real character, trust, and opportunities — even when the grind feels routine.</p>
-            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <p>A mechanical technician's honest take on why showing up every day still builds real character, trust, and opportunities.</p>
+            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
             <div class="share-buttons">
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d&text=Why Hard Work Still Matters in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
@@ -451,11 +557,15 @@
         </div>
 
         <div class="blog-card">
-          <img class="blog-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Sunset over Moses Lake Washington – faith and staying grounded" loading="lazy" width="400" height="195">
+          <img class="blog-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg"
+            alt="Sunset over Moses Lake Washington – faith and staying grounded"
+            loading="lazy" width="400" height="210">
           <div class="blog-card-body">
+            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2025</div>
             <h3>Faith and Staying Grounded in Moses Lake</h3>
-            <p>How Jesus keeps me steady as a Christian dad & mechanical technician — real talk from Moses Lake, Washington.</p>
-            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <p>How Jesus keeps me steady as a Christian dad &amp; mechanical technician — real talk from Moses Lake, Washington.</p>
+            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
             <div class="share-buttons">
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d&text=Faith and Staying Grounded in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
@@ -469,15 +579,18 @@
     </div>
   </section>
 
-  <!-- EXPLORE MORE -->
+  <!-- ═══ EXPLORE MORE ═══ -->
   <section class="section fade-in-section" style="padding-bottom:80px;">
     <div class="section-content" style="max-width:1100px;">
       <h2 style="text-align:center;">Explore More of My Site</h2>
-      <p style="text-align:center;max-width:600px;margin:0 auto 0.5rem;">Everything from my background to photos and resources — jump right in.</p>
+      <p style="text-align:center;max-width:600px;margin:0 auto 0.5rem;" class="secondary">Everything from my background to photos and resources — jump right in.</p>
       <div class="navigation-grid">
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-sunglasses.jpg" alt="Jason Newton with his son in sunglasses – About Jason David Newton" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-top"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-sunglasses.jpg"
+            alt="Jason Newton with his son in sunglasses – About Jason David Newton"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-user"></i>
             <h3>About Me</h3>
@@ -487,7 +600,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-mlcc-wedding-groomsman.jpg" alt="Jason Newton as groomsman – education and credentials" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-mlcc-wedding-groomsman.jpg"
+            alt="Jason Newton as groomsman – education and credentials"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-graduation-cap"></i>
             <h3>Education</h3>
@@ -497,7 +613,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Jason Newton working – career and experience" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg"
+            alt="Jason Newton working – career and experience in mechanical operations"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-briefcase"></i>
             <h3>Experience</h3>
@@ -507,7 +626,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg" alt="Kids playing flag football coached by Jason Newton in Moses Lake" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg"
+            alt="Kids playing flag football coached by Jason Newton in Moses Lake"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-users"></i>
             <h3>Community</h3>
@@ -517,7 +639,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Moses Lake Washington sunset – Jason Newton blog" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg"
+            alt="Moses Lake Washington sunset – Jason Newton blog on faith and life"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-blog"></i>
             <h3>Blog</h3>
@@ -527,7 +652,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/hobbies-golf.jpg" alt="Jason Newton golfing – hobbies in Moses Lake Washington" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/hobbies-golf.jpg"
+            alt="Jason Newton golfing – hobbies in Moses Lake Washington"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-heart"></i>
             <h3>Hobbies</h3>
@@ -537,7 +665,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="Jason Newton hiking in the Pacific Northwest with dogs – Gallery" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-top"
+            src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg"
+            alt="Jason Newton hiking in the Pacific Northwest with his dogs – Gallery"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-images"></i>
             <h3>Gallery</h3>
@@ -547,7 +678,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Maritime boat – Jason Newton U.S. Coast Guard Merchant Mariner resources" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-center"
+            src="https://jasondavidnewton.com/assets/maritime-boat.jpg"
+            alt="Maritime vessel – Jason Newton USCG Merchant Mariner credential"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-book-open"></i>
             <h3>Resources</h3>
@@ -557,7 +691,10 @@
         </div>
 
         <div class="nav-card">
-          <img class="nav-card-img" src="https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg" alt="Moses Lake Washington scenic view – contact Jason Newton" loading="lazy" width="400" height="172">
+          <img class="nav-card-img pos-bottom"
+            src="https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg"
+            alt="Moses Lake Washington scenic view – contact Jason Newton"
+            loading="lazy" width="400" height="185">
           <div class="nav-card-body">
             <i class="fas fa-envelope"></i>
             <h3>Contact</h3>
@@ -572,7 +709,7 @@
 
 </main>
 
-<!-- FOOTER -->
+<!-- ═══ FOOTER ═══ -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
   <div class="footer-icons">
     <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn – Jason David Newton"><i class="fab fa-linkedin" title="LinkedIn"></i></a>
@@ -585,12 +722,12 @@
     <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok – Jason David Newton"><i class="fab fa-tiktok" title="TikTok"></i></a>
     <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" aria-label="WhatsApp – Jason David Newton"><i class="fab fa-whatsapp" title="WhatsApp"></i></a>
     <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="me" aria-label="Threads – Jason David Newton"><i class="fab fa-threads" title="Threads"></i></a>
-    <a href="https://x.com/JasonDNewton" target="_blank" rel="me" aria-label="X (Twitter) – Jason David Newton"><i class="fab fa-x-twitter" title="X"></i></a>
+    <a href="https://x.com/JasonDNewton" target="_blank" rel="me" aria-label="X – Jason David Newton"><i class="fab fa-x-twitter" title="X"></i></a>
     <a href="https://www.pinterest.com/JasonDavidNewton/" target="_blank" rel="noopener" aria-label="Pinterest – Jason David Newton"><i class="fab fa-pinterest" title="Pinterest"></i></a>
     <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social – Jason David Newton"><i class="fas fa-comment-alt" title="Truth Social"></i></a>
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube – Jason David Newton"><i class="fab fa-youtube" title="YouTube"></i></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO – Jason David Newton"><i class="fas fa-camera" title="VSCO"></i></a>
-    <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="Personal site – jasonnewton.me"><i class="fas fa-link" title="jasonnewton.me"></i></a>
+    <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><i class="fas fa-link" title="jasonnewton.me"></i></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar – Jason David Newton"><i class="fas fa-id-card" title="Gravatar"></i></a>
   </div>
   <div style="margin-bottom:16px;">
@@ -601,15 +738,15 @@
   <p>Moses Lake, Washington</p>
 </footer>
 
-<!-- BACK TO TOP -->
+<!-- ═══ BACK TO TOP ═══ -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 
-<!-- FLOATING PROFILE CARD (above chat bubble, dismissible) -->
+<!-- ═══ FLOATING PROFILE CARD ═══ -->
 <div class="profile-float-card" id="profileCard">
   <button class="profile-card-close" id="profileCardClose" aria-label="Close profile card"><i class="fas fa-times"></i></button>
   <div class="profile-card-header-img" style="background-image: url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024');"></div>
   <div class="profile-card-body">
-    <img class="profile-card-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton">
+    <img class="profile-card-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="56" height="56">
     <div class="profile-card-info">
       <a href="https://jasonnewton.me/" target="_blank" rel="noopener" class="profile-card-name">Jason David Newton</a>
       <div class="profile-card-title">Mechanical Technician · Group 14</div>
@@ -622,7 +759,7 @@
   </div>
 </div>
 
-<!-- FLOATING CHAT BUBBLE -->
+<!-- ═══ FLOATING CHAT BUBBLE ═══ -->
 <button class="chat-bubble-btn" id="chatBubble" aria-label="Open AI Chat Assistant" aria-expanded="false">
   <i class="fas fa-comment-dots chat-icon"></i>
   <i class="fas fa-times chat-close"></i>
@@ -631,7 +768,7 @@
 
 <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Jason's AI Chat Assistant" aria-modal="true">
   <div class="chat-panel-header">
-    <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton">
+    <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="34" height="34">
     <div>
       <div>Jason's AI Assistant</div>
       <div class="chat-status">Online now</div>
@@ -640,21 +777,38 @@
   <div id="embedded-widget-container"></div>
 </div>
 
-<!-- Chatbot SDK – embedded mode -->
-<script
-  src="https://cdn.apigateway.co/webchat-client..prod/sdk.js"
-  data-widget-id="77f22f3a-2250-11f1-a0b3-da4488f0b204"
-  data-embed-mode="embedded"
-  data-embed-target="embedded-widget-container"
-  defer
-></script>
+<!-- ═══ MOBILE BOTTOM NAV ═══ -->
+<nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
+  <a href="index.html" class="active" aria-current="page"><i class="fas fa-home"></i><span>Home</span></a>
+  <a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a>
+  <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
+</nav>
 
+<!-- ═══ CHATBOT SDK — lazy-loaded on first click ═══ -->
+<script>
+// Lazy-load the chatbot SDK only when the bubble is first clicked
+let chatSdkLoaded = false;
+function loadChatSdk() {
+  if (chatSdkLoaded) return;
+  chatSdkLoaded = true;
+  const s = document.createElement('script');
+  s.src = 'https://cdn.apigateway.co/webchat-client..prod/sdk.js';
+  s.setAttribute('data-widget-id', '77f22f3a-2250-11f1-a0b3-da4488f0b204');
+  s.setAttribute('data-embed-mode', 'embedded');
+  s.setAttribute('data-embed-target', 'embedded-widget-container');
+  s.defer = true;
+  document.body.appendChild(s);
+}
+</script>
+
+<!-- ═══ MAIN SCRIPTS ═══ -->
 <script>
 // Dark mode
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
-  const htmlRoot = document.documentElement;
+  const htmlRoot  = document.documentElement;
   if (!toggleBtn || !themeIcon) return;
   let currentTheme = localStorage.getItem('theme') ||
     (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
@@ -674,12 +828,21 @@ window.addEventListener('load', () => {
   document.getElementById('heroBg').classList.add('loaded');
 });
 
-// Navbar + back-to-top on scroll
+// Scroll: navbar + back-to-top + sticky CTA
+const heroSection = document.querySelector('.hero');
 window.addEventListener('scroll', () => {
-  document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
+  const sy = window.scrollY;
+  document.querySelector('.navbar').classList.toggle('scrolled', sy > 60);
   const btn = document.getElementById('back-to-top');
-  btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
-});
+  btn.style.display = sy > 300 ? 'flex' : 'none';
+  // Sticky CTA appears after scrolling past the hero on mobile
+  const stickyCta = document.getElementById('stickyCta');
+  if (stickyCta && heroSection) {
+    const heroBottom = heroSection.offsetTop + heroSection.offsetHeight;
+    stickyCta.classList.toggle('visible', sy > heroBottom - 100);
+    stickyCta.setAttribute('aria-hidden', sy <= heroBottom - 100 ? 'true' : 'false');
+  }
+}, { passive: true });
 
 // Back to top
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
@@ -702,10 +865,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 // Profile card dismiss
-const profileCard = document.getElementById('profileCard');
+const profileCard      = document.getElementById('profileCard');
 const profileCardClose = document.getElementById('profileCardClose');
 if (profileCard && profileCardClose) {
-  // Restore dismissed state across page loads
   if (sessionStorage.getItem('profileCardDismissed')) {
     profileCard.classList.add('hidden');
   }
@@ -716,29 +878,38 @@ if (profileCard && profileCardClose) {
   });
 }
 
-// Floating chat bubble toggle
+// Chat bubble toggle — also lazy-loads SDK and hides profile card while open
 const chatBubble = document.getElementById('chatBubble');
 const chatPanel  = document.getElementById('chatPanel');
 chatBubble.addEventListener('click', (e) => {
   e.stopPropagation();
+  loadChatSdk(); // lazy load on first click
   const isOpen = chatPanel.classList.toggle('open');
   chatBubble.classList.toggle('open', isOpen);
   chatBubble.setAttribute('aria-expanded', String(isOpen));
+  // Hide profile card while chat is open to avoid crowding
+  if (profileCard) profileCard.classList.toggle('hidden', isOpen);
 });
 document.addEventListener('click', (e) => {
   if (!chatPanel.contains(e.target) && !chatBubble.contains(e.target)) {
     chatPanel.classList.remove('open');
     chatBubble.classList.remove('open');
     chatBubble.setAttribute('aria-expanded', 'false');
+    // Restore profile card if it wasn't manually dismissed
+    if (profileCard && !sessionStorage.getItem('profileCardDismissed')) {
+      profileCard.classList.remove('hidden');
+    }
   }
 });
-// Close on Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && chatPanel.classList.contains('open')) {
     chatPanel.classList.remove('open');
     chatBubble.classList.remove('open');
     chatBubble.setAttribute('aria-expanded', 'false');
     chatBubble.focus();
+    if (profileCard && !sessionStorage.getItem('profileCardDismissed')) {
+      profileCard.classList.remove('hidden');
+    }
   }
 });
 </script>
