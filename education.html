@@ -143,7 +143,7 @@
 
     /* ── Full-viewport hero ── */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
-    .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-mlcc-wedding-groomsman.jpg'); background-size: cover; background-position: center 20%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
+    .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-mlcc-wedding-groomsman.jpg'); background-size: cover; background-position: center 35%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .page-hero-bg.loaded { transform: scale(1); }
     .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(6,18,32,0.88) 0%, rgba(10,31,51,0.75) 55%, rgba(15,42,70,0.62) 100%); }
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.75) 0%, transparent 55%); }
@@ -216,7 +216,7 @@
     .cred-card-header-text { color: #fff; }
     .cred-card-header-text .years { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.65); margin-bottom: 3px; }
     .cred-card-header-text .degree { font-family: var(--font-display); font-size: 0.95rem; font-weight: 700; line-height: 1.3; }
-    .cred-card-body { padding: 16px 20px 20px; flex: 1; display: flex; flex-direction: column; }
+    .cred-card-body { padding: 16px 20px 20px; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
     .cred-school { font-size: 0.85rem; font-weight: 700; color: var(--primary-blue); margin-bottom: 8px; }
     [data-theme="dark"] .cred-school { color: var(--accent-blue); }
     .cred-desc { font-size: 0.9rem; line-height: 1.65; color: var(--text-secondary); flex: 1; }
@@ -540,14 +540,22 @@
 
   <!-- HOW EDUCATION SHAPES MY LIFE -->
   <section class="section fade-in-section">
-    <div class="section-content narrow">
+    <div class="section-content narrow" style="text-align:center;">
       <h2><i class="fas fa-lightbulb"></i> How Education Shapes My Life</h2>
       <p>Education's more than the degrees you end up with — it's the stuff that sticks. Big Bend got me started close to home. WSU gave me the business side for running things efficiently. MAMA added the real technical grit for fixing problems when it matters. All of it comes together at Group 14, in the community, and in being the kind of dad I want to be here in Moses Lake.</p>
       <p class="secondary">Faith keeps it all in perspective. Want to see how it plays out day to day? Check the <a href="experience.html">experience page</a>, or <a href="contact.html">connect with me directly</a>.</p>
-      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:1.2rem;">
+      <div style="display:flex;flex-wrap:wrap;gap:12px;margin-top:1.2rem;justify-content:center;">
         <a href="experience.html" class="section-button">View My Experience</a>
         <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" class="section-button">Connect on LinkedIn</a>
       </div>
+
+      <!-- LinkedIn Profile Badge -->
+      <div style="margin-top:2.5rem;display:flex;justify-content:center;">
+        <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1">
+          <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge">Jason Newton</a>
+        </div>
+      </div>
+      <script src="https://platform.linkedin.com/badges/js/profile.js" async defer type="text/javascript"></script>
     </div>
   </section>
 
