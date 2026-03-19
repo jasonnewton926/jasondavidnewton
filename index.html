@@ -203,14 +203,20 @@
     .section-content p.secondary { color: var(--text-secondary); }
     .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--primary-blue); font-weight: 600; }
     [data-theme="dark"] .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--accent-blue); }
-    .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
+    .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s, color 0.2s, border-color 0.2s; }
     .section-button:hover { background: #163a59; transform: translateY(-2px); }
+    .resume-btn { background: transparent; border: 1.5px solid var(--primary-blue); color: var(--primary-blue); }
+    .resume-btn:hover { background: var(--primary-blue); color: #fff; border-color: var(--primary-blue); }
+    [data-theme="dark"] .resume-btn { border-color: var(--accent-blue); color: var(--accent-blue); }
+    [data-theme="dark"] .resume-btn:hover { background: var(--accent-blue); color: #0a1f33; }
+    .btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.2rem; }
+    .btn-group .section-button { margin-top: 0; }
     /* Offsite CTA — outlined style to signal external link */
-    .section-button.offsite { background: transparent; border: 2px solid var(--primary-blue); color: var(--primary-blue); }
+    .section-button.offsite { background: #e8edf2; border: 1.5px solid #c8d4de; color: #3d5166; }
     .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
-    .section-button.offsite:hover { background: var(--primary-blue); color: #fff; }
-    [data-theme="dark"] .section-button.offsite { border-color: var(--accent-blue); color: var(--accent-blue); }
-    [data-theme="dark"] .section-button.offsite:hover { background: var(--accent-blue); color: #0a1f33; }
+    .section-button.offsite:hover { background: var(--primary-blue); border-color: var(--primary-blue); color: #fff; transform: translateY(-2px); }
+    [data-theme="dark"] .section-button.offsite { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.18); color: #a8c4dc; }
+    [data-theme="dark"] .section-button.offsite:hover { background: var(--accent-blue); border-color: var(--accent-blue); color: #0a1f33; }
 
     /* ═══ FADE IN ═══ */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
@@ -481,7 +487,10 @@
       <h3 class="sub">Group 14 Technologies · Simplot FG · USCG Credentialed</h3>
       <p>I graduated from Washington State University with a Bachelor of Arts in Business Management &amp; Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.</p>
       <p class="secondary">At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.</p>
-      <a href="experience.html" class="section-button">Explore My Career</a>
+      <div class="btn-group">
+        <a href="experience.html" class="section-button">Explore My Career</a>
+        <a href="https://jasondavidnewton.com/assets/Jason_David_Newton_Resume.pdf" target="_blank" rel="noopener" class="section-button resume-btn"><i class="fas fa-download"></i> Download Resume</a>
+      </div>
     </div>
   </section>
 
