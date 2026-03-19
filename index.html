@@ -20,7 +20,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Jason David Newton | Moses Lake, Washington">
     <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith & Pacific Northwest adventures">
-    <meta property="og:image" content="https://jasondavidnewton.com/assets/maritime-boat.jpg">
+    <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
     <meta property="og:url" content="https://jasondavidnewton.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jason David Newton">
@@ -28,10 +28,16 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
-    <meta name="twitter:image" content="https://jasondavidnewton.com/assets/maritime-boat.jpg">
+    <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+      };
+    </script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
     <script>
@@ -39,20 +45,6 @@
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-LSWP3B1PKE');
-    </script>
-    <!-- Tailwind CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              pnw: '#0A3D62'
-            }
-          }
-        }
-      }
     </script>
     <!-- Person Schema -->
     <script type="application/ld+json">
@@ -83,7 +75,7 @@
       "url": "https://jasondavidnewton.com/",
       "image": {
         "@type": "ImageObject",
-        "url": "https://jasondavidnewton.com/assets/maritime-boat.jpg"
+        "url": "https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg"
       },
       "mainEntityOfPage": {
         "@type": "WebPage",
@@ -173,12 +165,106 @@
     }
     .navbar {
         transition: all 0.4s var(--ease);
-        background: white;
+        background: var(--primary-dark);
     }
     .navbar.scrolled {
-        background: rgba(255,255,255,0.95);
-        box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        background: rgba(10, 31, 51, 0.92);
+        box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+        padding: 0.8rem 1.25rem;
     }
+    .navbar.scrolled .logo {
+        font-size: 1.25rem;
+    }
+    .footer-icons a {
+        display: inline-block;
+        transition: transform 0.3s var(--ease), filter 0.3s var(--ease);
+    }
+    .footer-icons a:hover {
+        transform: scale(1.25) rotate(8deg);
+        filter: brightness(1.3) drop-shadow(0 0 8px rgba(77, 166, 255, 0.7));
+    }
+    .footer-icons {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
+    }
+    .footer-icons.visible {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    @media (max-width: 768px) {
+        .navbar.scrolled {
+            padding: 0.6rem 1rem;
+        }
+        .navbar.scrolled .logo {
+            font-size: 1.2rem;
+        }
+    }
+    .nav-toggle-checkbox {
+        display: none;
+    }
+    @media (max-width: 768px) {
+        .nav-toggle {
+            display: block;
+            cursor: pointer;
+        }
+        .nav-toggle span {
+            display: block;
+            width: 25px;
+            height: 3px;
+            background: var(--text-light);
+            margin: 5px auto;
+            transition: 0.3s;
+        }
+        .navbar nav ul {
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            width: 100%;
+            background: var(--primary-dark);
+            padding: 1rem;
+        }
+        #mobile-menu:checked ~ nav ul {
+            display: flex;
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(1) {
+            transform: rotate(45deg) translate(5px, 5px);
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(2) {
+            opacity: 0;
+        }
+        #mobile-menu:checked + .nav-toggle span:nth-child(3) {
+            transform: rotate(-45deg) translate(7px, -6px);
+        }
+    }
+    .hero-buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-top: 20px; }
+    .btn-primary { background: var(--primary-blue); color: white; padding: 12px 24px; border-radius: 5px; font-weight: bold; text-decoration: none; transition: background 0.3s; }
+    .btn-primary:hover { background: #163a59; }
+    .btn-secondary { background: #f0f0f0; color: var(--primary-blue); padding: 12px 24px; border-radius: 5px; font-weight: bold; text-decoration: none; transition: background 0.3s; }
+    .btn-secondary:hover { background: #e0e0e0; }
+    .navigation-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+    .nav-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; text-align: center; }
+    .nav-card:hover { transform: translateY(-8px); }
+    .nav-card i { color: var(--primary-blue); font-size: 2rem; margin-bottom: 15px; display: block; }
+    .nav-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
+    .nav-card p { margin: 10px 0; font-size: 1rem; line-height: 1.5; }
+    .nav-card a { color: var(--accent-blue); text-decoration: none; font-weight: bold; }
+    .nav-card a:hover { text-decoration: underline; }
+    @media (max-width: 768px) { .navigation-grid { grid-template-columns: 1fr; } .nav-card { padding: 15px; } .hero-buttons { flex-direction: column; gap: 10px; } .btn-primary, .btn-secondary { width: 100%; text-align: center; } }
+    /* Blog cards from blog.html style */
+    .blog-preview-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+    .blog-card { background: var(--section-bg); border-radius: 8px; padding: 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); transition: transform 0.3s; }
+    .blog-card:hover { transform: translateY(-8px); }
+    .blog-card h3 { margin-top: 0; color: var(--primary-blue); font-size: 1.4rem; }
+    .blog-card p { margin: 10px 0; font-size: 1.05rem; line-height: 1.6; }
+    .share-buttons { display: flex; gap: 12px; justify-content: center; margin-top: 15px; }
+    .share-buttons a { color: var(--primary-blue); font-size: 1.4rem; transition: color 0.2s; }
+    .share-buttons a:hover { color: var(--accent-blue); }
+    @media (max-width: 768px) { .blog-preview-grid { grid-template-columns: 1fr; } }
+    /* Hovercard – hidden on mobile, visible on desktop */
     .gravatar-hovercard {
         position: fixed;
         bottom: 90px;
@@ -191,290 +277,329 @@
             display: none !important;
         }
     }
-    .footer-icons a {
-        display: inline-block;
+    .gravatar-hovercard__inner {
+        background: var(--card-bg);
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        overflow: hidden;
         transition: transform 0.3s ease;
     }
-    .footer-icons a:hover {
+    .gravatar-hovercard:hover .gravatar-hovercard__inner {
+        transform: scale(1.02);
+    }
+    .gravatar-hovercard__header-image {
+        height: 120px;
+        background-size: cover;
+    }
+    .gravatar-hovercard__avatar {
+        border: 4px solid var(--card-bg);
+        border-radius: 50%;
+    }
+    .gravatar-hovercard__name,
+    .gravatar-hovercard__job,
+    .gravatar-hovercard__location,
+    .gravatar-hovercard__description {
+        color: var(--text);
+    }
+    .gravatar-hovercard__social-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+        padding: 12px 16px;
+        background: rgba(0,0,0,0.03);
+    }
+    .gravatar-hovercard__social-link img {
+        width: 28px;
+        height: 28px;
+        opacity: 0.9;
+        transition: opacity 0.2s;
+    }
+    .gravatar-hovercard__social-link:hover img {
+        opacity: 1;
         transform: scale(1.15);
     }
     </style>
 </head>
-<body class="bg-white dark:bg-gray-950 text-gray-900 dark:text-gray-100 scroll-smooth">
-
-<!-- STICKY NAV -->
-<nav class="sticky top-0 z-50 bg-white dark:bg-gray-900 shadow-md transition-all duration-300">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <a href="/" class="text-2xl font-bold text-pnw dark:text-white">Jason David Newton</a>
-        <div class="hidden md:flex gap-8 text-sm font-medium">
-            <a href="/" class="hover:text-pnw dark:hover:text-white transition">Home</a>
-            <a href="about.html" class="hover:text-pnw dark:hover:text-white transition">About</a>
-            <a href="experience.html" class="hover:text-pnw dark:hover:text-white transition">Experience</a>
-            <a href="education.html" class="hover:text-pnw dark:hover:text-white transition">Education</a>
-            <a href="community.html" class="hover:text-pnw dark:hover:text-white transition">Community</a>
-            <a href="hobbies.html" class="hover:text-pnw dark:hover:text-white transition">Hobbies</a>
-            <a href="blog.html" class="hover:text-pnw dark:hover:text-white transition">Blog</a>
-            <a href="contact.html" class="hover:text-pnw dark:hover:text-white transition">Contact</a>
-        </div>
-        <!-- Dark Mode Toggle -->
-        <button id="theme-toggle" class="text-xl focus:outline-none" aria-label="Toggle dark mode">
-            <i class="fas fa-moon dark:hidden"></i>
-            <i class="fas fa-sun hidden dark:inline"></i>
+<body>
+<!-- NAVIGATION -->
+<header role="navigation" class="navbar sticky top-0 z-50" aria-label="Main Navigation">
+<div class="nav-container">
+    <div class="logo">Jason David Newton | Moses Lake, Washington</div>
+    <input type="checkbox" id="mobile-menu" class="nav-toggle-checkbox" hidden>
+    <label for="mobile-menu" class="nav-toggle" aria-label="Toggle Navigation">
+        <span></span><span></span><span></span>
+    </label>
+    <nav>
+        <ul>
+            <li><a href="index.html" aria-current="page">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="experience.html">Experience</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+   
+    <!-- DARK MODE TOGGLE BUTTON -->
+    <div class="theme-toggle">
+        <button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+            <i class="fas fa-moon" id="theme-icon"></i>
         </button>
     </div>
-</nav>
-
-<!-- HERO SECTION – Using maritime-boat.jpg as requested -->
-<section class="relative min-h-screen flex items-center justify-center overflow-hidden">
-    <img src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Jason David Newton on commercial vessel deck Pacific Northwest maritime background" class="absolute inset-0 w-full h-full object-cover" loading="lazy">
-    <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/70"></div>
-    <div class="relative z-10 text-center text-white px-6 max-w-5xl">
-        <h1 class="text-5xl md:text-7xl font-bold mb-6 drop-shadow-lg">Jason David Newton</h1>
-        <p class="text-2xl md:text-4xl mb-10 drop-shadow-md">Mechanical Technician • Faith & Family Leader • Moses Lake, WA</p>
-        <div class="flex flex-wrap justify-center gap-6">
-            <a href="about.html" class="bg-white text-pnw px-10 py-5 rounded-full font-bold text-lg hover:bg-gray-100 transition shadow-lg">My Story</a>
-            <a href="experience.html" class="border-2 border-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-pnw transition shadow-lg">My Experience</a>
-            <a href="contact.html" class="border-2 border-white px-10 py-5 rounded-full font-bold text-lg hover:bg-white hover:text-pnw transition shadow-lg">Chat With Me</a>
-        </div>
-    </div>
-</section>
-
-<!-- YOUR ORIGINAL HERO TEXT + IMAGE PRESERVED BELOW -->
-<section class="max-w-5xl mx-auto px-6 py-16 text-center">
+</div>
+</header>
+<!-- MAIN CONTENT -->
+<main role="main">
+<!-- HERO SECTION -->
+<section class="hero h-screen bg-cover bg-center relative flex items-center justify-center overflow-hidden" style="background-image: url('https://jasondavidnewton.com/assets/maritime-boat.jpg');">
+<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/70 pointer-events-none"></div>
+<div class="hero-content relative z-20 max-w-4xl mx-auto text-center text-white px-6">
     <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton Mechanical Technician Moses Lake Washington" width="200" height="200" style="max-width: 200px; border-radius: 50%; margin-bottom: 20px;" loading="lazy">
-    <h1 class="text-4xl font-bold mb-4">Jason David Newton – Mechanical Technician in Moses Lake, Washington</h1>
-    <h2 class="text-2xl mb-6">Moses Lake, Washington</h2>
-    <h3 class="text-xl mb-8">Operations Leader • Father • Man of Faith</h3>
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed">
+    <h1>Jason David Newton – Mechanical Technician in Moses Lake, Washington</h1>
+    <h2>Moses Lake, Washington</h2>
+    <h3>Operations Leader • Father • Man of Faith</h3>
+    <p>
         Hey, welcome to my site – I'm Jason David Newton from Moses Lake, Washington. I work as a Mechanical Technician at Group 14 Technologies, handling maintenance and keeping things running smooth. Outside of that, I'm all about my family, faith at Grace Harvest Church, and getting out in the Pacific Northwest.
     </p>
-    <p class="max-w-3xl mx-auto text-lg leading-relaxed mt-6">
+    <p>
         Whether you're here for career stuff, faith talks, or just to connect, take a look around. Currently, I'm focused on leading with integrity and making a difference in my community.
     </p>
-    <div class="hero-buttons flex flex-wrap justify-center gap-6 mt-10">
-        <a href="about.html" class="bg-pnw text-white px-8 py-4 rounded-lg font-bold hover:bg-opacity-90 transition">Learn More About Me</a>
-        <a href="experience.html" class="bg-gray-200 text-pnw px-8 py-4 rounded-lg font-bold hover:bg-gray-300 transition">View My Experience</a>
-        <a href="gallery.html" class="bg-gray-200 text-pnw px-8 py-4 rounded-lg font-bold hover:bg-gray-300 transition">View Gallery</a>
-        <a href="contact.html" class="bg-gray-200 text-pnw px-8 py-4 rounded-lg font-bold hover:bg-gray-300 transition">Contact Me</a>
-    </div>
+</div>
 </section>
-
-<!-- 4 TEASER CARDS WITH YOUR REAL IMAGES -->
-<section class="max-w-7xl mx-auto px-6 py-20 grid md:grid-cols-4 gap-8">
-    <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
-        <img src="https://jasondavidnewton.com/assets/hobbies-golf.jpg" alt="Jason David Newton golfing with friends WSU gear Moses Lake WA" class="w-full h-48 object-cover" loading="lazy">
-        <div class="p-6">
-            <h3 class="font-bold text-xl text-pnw">Hobbies & PNW Life</h3>
-            <p class="mt-2 text-sm">Golf, hiking, fishing, snowboarding</p>
-            <a href="hobbies.html" class="block mt-6 text-pnw font-medium">Explore →</a>
-        </div>
-    </div>
-    <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
-        <img src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="Jason David Newton hiking in PNW forest with dogs Moses Lake WA" class="w-full h-48 object-cover" loading="lazy">
-        <div class="p-6">
-            <h3 class="font-bold text-xl text-pnw">Outdoor Adventures</h3>
-            <p class="mt-2 text-sm">Trails and nature in Washington</p>
-            <a href="hobbies.html" class="block mt-6 text-pnw font-medium">Explore →</a>
-        </div>
-    </div>
-    <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
-        <img src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Jason David Newton working on Starbound vessel maritime mechanical technician" class="w-full h-48 object-cover" loading="lazy">
-        <div class="p-6">
-            <h3 class="font-bold text-xl text-pnw">Maritime Experience</h3>
-            <p class="mt-2 text-sm">Mechanical tech at sea</p>
-            <a href="experience.html" class="block mt-6 text-pnw font-medium">View Career →</a>
-        </div>
-    </div>
-    <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition">
-        <img src="https://jasondavidnewton.com/assets/jason-david-newton-son-christmas.jpg" alt="Jason David Newton with son during Christmas Moses Lake WA family holiday" class="w-full h-48 object-cover" loading="lazy">
-        <div class="p-6">
-            <h3 class="font-bold text-xl text-pnw">Faith & Family</h3>
-            <p class="mt-2 text-sm">Dad life and Grace Harvest Church</p>
-            <a href="about.html" class="block mt-6 text-pnw font-medium">My Story →</a>
-        </div>
-    </div>
-</section>
-
-<!-- YOUR ORIGINAL PERSONAL VALUES SECTION PRESERVED -->
+<!-- PERSONAL VALUES -->
 <section class="section fade-in-section">
-<div class="section-content max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Faith, Family & Personal Growth in Moses Lake</h2>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto">
+<div class="section-content">
+    <h2>Faith, Family & Personal Growth in Moses Lake</h2>
+    <p>
         Faith and family are what keep me going. Being a dad has taught me more about responsibility than anything else, and my faith in Jesus Christ helps me stay centered through it all. Here in Moses Lake, I'm part of Grace Harvest Church, where I find community and purpose.
     </p>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto mt-6">
-        Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html" class="text-pnw font-semibold">community involvement</a> for more on this.
+    <p>
+        Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html">community involvement</a> for more on this.
     </p>
 </div>
 </section>
-
-<!-- YOUR ORIGINAL PROFESSIONAL OVERVIEW PRESERVED -->
-<section class="section alt fade-in-section bg-gray-50 dark:bg-gray-900">
-<div class="section-content max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Professional Background of Jason David Newton</h2>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto">
-        I graduated from Washington State University with a Bachelor of Arts in Business Management & Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html" class="text-pnw font-semibold">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.
+<!-- PROFESSIONAL OVERVIEW -->
+<section class="section alt fade-in-section">
+<div class="section-content">
+    <h2>Professional Background of Jason David Newton</h2>
+    <p>
+        I graduated from Washington State University with a Bachelor of Arts in Business Management & Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.
     </p>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto mt-6">
+    <p>
         At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.
     </p>
-    <div class="text-center mt-10">
-        <a href="experience.html" class="bg-pnw text-white px-10 py-5 rounded-full font-bold hover:bg-opacity-90 transition shadow-lg">Explore My Career</a>
-    </div>
+    <a href="experience.html" class="section-button">Explore My Career</a>
 </div>
 </section>
-
-<!-- YOUR ORIGINAL LIFE OUTSIDE WORK PRESERVED -->
+<!-- LIFE OUTSIDE WORK -->
 <section class="section fade-in-section">
-<div class="section-content max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Life Outside of Work in Moses Lake</h2>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto">
-        When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html" class="text-pnw font-semibold">hobbies and adventures</a> or see my <a href="community.html" class="text-pnw font-semibold">coaching in the community</a>.
+<div class="section-content">
+    <h2>Life Outside of Work in Moses Lake</h2>
+    <p>
+        When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html">hobbies and adventures</a> or see my <a href="community.html">coaching in the community</a>.
     </p>
-    <p class="text-lg leading-relaxed max-w-3xl mx-auto mt-6">
+    <p>
         The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.
     </p>
 </div>
 </section>
-
-<!-- YOUR ORIGINAL BLOG PREVIEW PRESERVED (4 Medium cards) -->
-<section class="section alt fade-in-section bg-gray-50 dark:bg-gray-900">
-<div class="section-content max-w-5xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Featured Reflections from My Blog on Medium</h2>
-    <p class="text-lg text-center mb-10">I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Here are my latest pieces — click any card to read the full story.</p>
-    <div class="grid md:grid-cols-2 gap-8">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
-            <h3 class="text-xl font-bold text-pnw mb-4">Being a Christian Dad in Moses Lake</h3>
-            <p class="mb-6">Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
-            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+<!-- BLOG PREVIEW – now with 4 real Medium cards -->
+<section class="section alt fade-in-section">
+<div class="section-content">
+    <h2>Featured Reflections from My Blog on Medium</h2>
+    <p>I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Here are my latest pieces — click any card to read the full story.</p>
+    <div class="blog-preview-grid">
+        <div class="blog-card">
+            <h3>Being a Christian Dad in Moses Lake</h3>
+            <p>Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
+            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730&text=Being a Christian Dad in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
-            <h3 class="text-xl font-bold text-pnw mb-4">7 Simple Bible Study Habits for Busy Christian Dads</h3>
-            <p class="mb-6">Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
-            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+        <div class="blog-card">
+            <h3>7 Simple Bible Study Habits for Busy Christian Dads</h3>
+            <p>Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
+            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637&text=7 Simple Bible Study Habits for Busy Christian Dads" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
-            <h3 class="text-xl font-bold text-pnw mb-4">Why Hard Work Still Matters in Moses Lake</h3>
-            <p class="mb-6">A mechanical technician’s honest take on why showing up every day still builds real character, trust, and opportunities — even when the grind feels routine.</p>
-            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+        <div class="blog-card">
+            <h3>Why Hard Work Still Matters in Moses Lake</h3>
+            <p>A mechanical technician’s honest take on why showing up every day still builds real character, trust, and opportunities — even when the grind feels routine.</p>
+            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d&text=Why Hard Work Still Matters in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-xl p-8">
-            <h3 class="text-xl font-bold text-pnw mb-4">Faith and Staying Grounded in Moses Lake</h3>
-            <p class="mb-6">How Jesus keeps me steady as a Christian dad & mechanical technician — real talk from Moses Lake, Washington.</p>
-            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="text-pnw font-medium hover:underline">Read on Medium →</a>
+        <div class="blog-card">
+            <h3>Faith and Staying Grounded in Moses Lake</h3>
+            <p>How Jesus keeps me steady as a Christian dad & mechanical technician — real talk from Moses Lake, Washington.</p>
+            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
+            <div class="share-buttons">
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d&text=Faith and Staying Grounded in Moses Lake" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank"><i class="fab fa-facebook"></i></a>
+            </div>
         </div>
     </div>
-    <div class="text-center mt-12">
-        <a href="blog.html" class="bg-pnw text-white px-10 py-5 rounded-full font-bold hover:bg-opacity-90 transition shadow-lg">View Full Blog</a>
-    </div>
+    <p style="text-align: center; margin-top: 30px;">
+        <a href="blog.html" class="section-button">View Full Blog</a>
+    </p>
 </div>
 </section>
-
-<!-- YOUR ORIGINAL EXPLORE MORE GRID PRESERVED -->
+<!-- EXPLORE MORE SECTION (unchanged) -->
 <section class="section fade-in-section">
-<div class="section-content max-w-7xl mx-auto px-6 py-16">
-    <h2 class="text-3xl font-bold text-center mb-8">Explore More of My Site</h2>
-    <p class="text-lg text-center mb-12">If you're curious about other parts of my life and work, here's a quick way to jump in – everything from my background to photos and resources.</p>
-    <div class="grid md:grid-cols-3 gap-8">
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-user text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">About Me</h3>
-            <p class="mb-6">Dive into my background and what drives me.</p>
-            <a href="about.html" class="text-pnw font-semibold hover:underline">Visit About →</a>
+<div class="section-content">
+    <h2>Explore More of My Site</h2>
+    <p>
+        If you're curious about other parts of my life and work, here's a quick way to jump in – everything from my background to photos and resources.
+    </p>
+    <div class="navigation-grid">
+        <div class="nav-card">
+            <i class="fas fa-user"></i>
+            <h3>About Me</h3>
+            <p>Dive into my background and what drives me.</p>
+            <a href="about.html" class="section-button">Visit About</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-graduation-cap text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Education</h3>
-            <p class="mb-6">My degrees and credentials that shaped my path.</p>
-            <a href="education.html" class="text-pnw font-semibold hover:underline">Visit Education →</a>
+        <div class="nav-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Education</h3>
+            <p>My degrees and credentials that shaped my path.</p>
+            <a href="education.html" class="section-button">Visit Education</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-briefcase text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Experience</h3>
-            <p class="mb-6">Career history and resume download.</p>
-            <a href="experience.html" class="text-pnw font-semibold hover:underline">Visit Experience →</a>
+        <div class="nav-card">
+            <i class="fas fa-briefcase"></i>
+            <h3>Experience</h3>
+            <p>Career history and resume download.</p>
+            <a href="experience.html" class="section-button">Visit Experience</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-users text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Community</h3>
-            <p class="mb-6">How I give back in Moses Lake.</p>
-            <a href="community.html" class="text-pnw font-semibold hover:underline">Visit Community →</a>
+        <div class="nav-card">
+            <i class="fas fa-users"></i>
+            <h3>Community</h3>
+            <p>How I give back in Moses Lake.</p>
+            <a href="community.html" class="section-button">Visit Community</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-blog text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Blog</h3>
-            <p class="mb-6">Personal reflections and insights.</p>
-            <a href="blog.html" class="text-pnw font-semibold hover:underline">Visit Blog →</a>
+        <div class="nav-card">
+            <i class="fas fa-blog"></i>
+            <h3>Blog</h3>
+            <p>Personal reflections and insights.</p>
+            <a href="blog.html" class="section-button">Visit Blog</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-heart text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Hobbies</h3>
-            <p class="mb-6">What I do to unwind and recharge.</p>
-            <a href="hobbies.html" class="text-pnw font-semibold hover:underline">Visit Hobbies →</a>
+        <div class="nav-card">
+            <i class="fas fa-heart"></i>
+            <h3>Hobbies</h3>
+            <p>What I do to unwind and recharge.</p>
+            <a href="hobbies.html" class="section-button">Visit Hobbies</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-images text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Gallery</h3>
-            <p class="mb-6">Photos from my adventures.</p>
-            <a href="gallery.html" class="text-pnw font-semibold hover:underline">Visit Gallery →</a>
+        <div class="nav-card">
+            <i class="fas fa-images"></i>
+            <h3>Gallery</h3>
+            <p>Photos from my adventures.</p>
+            <a href="gallery.html" class="section-button">Visit Gallery</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-book-open text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Resources</h3>
-            <p class="mb-6">Tools, books, and recommendations.</p>
-            <a href="resources.html" class="text-pnw font-semibold hover:underline">Visit Resources →</a>
+        <div class="nav-card">
+            <i class="fas fa-book-open"></i>
+            <h3>Resources</h3>
+            <p>Tools, books, and recommendations.</p>
+            <a href="resources.html" class="section-button">Visit Resources</a>
         </div>
-        <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-xl hover:shadow-2xl transition">
-            <i class="fas fa-envelope text-4xl text-pnw mb-6 block"></i>
-            <h3 class="text-xl font-bold mb-4">Contact</h3>
-            <p class="mb-6">Get in touch or follow me.</p>
-            <a href="contact.html" class="text-pnw font-semibold hover:underline">Visit Contact →</a>
+        <div class="nav-card">
+            <i class="fas fa-envelope"></i>
+            <h3>Contact</h3>
+            <p>Get in touch or follow me.</p>
+            <a href="contact.html" class="section-button">Visit Contact</a>
+        </div>
+    </div>
+    <h3 class="text-2xl font-bold mt-12 mb-6 text-center">Visual Teasers from My PNW Life & Community</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <!-- Teaser Card 1 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 hover:shadow-3xl">
+            <img src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="PNW Hiking with Dogs" class="w-full h-56 object-cover" loading="lazy">
+            <div class="p-6">
+                <h4 class="font-semibold text-xl mb-3 text-gray-900 dark:text-white">PNW Hiking Adventures</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">Exploring rugged trails with my dogs in the breathtaking Pacific Northwest wilderness.</p>
+                <a href="hobbies.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition">Explore Hobbies</a>
+            </div>
+        </div>
+        <!-- Teaser Card 2 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 hover:shadow-3xl">
+            <img src="https://jasondavidnewton.com/assets/hobbies-golf.jpg" alt="Golfing in Moses Lake" class="w-full h-56 object-cover" loading="lazy">
+            <div class="p-6">
+                <h4 class="font-semibold text-xl mb-3 text-gray-900 dark:text-white">Golfing in Moses Lake</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">Enjoying the greens and fresh air at local courses right here in Moses Lake, WA.</p>
+                <a href="hobbies.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition">Explore Hobbies</a>
+            </div>
+        </div>
+        <!-- Teaser Card 3 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 hover:shadow-3xl">
+            <img src="https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg" alt="Youth Football Coaching" class="w-full h-56 object-cover" loading="lazy">
+            <div class="p-6">
+                <h4 class="font-semibold text-xl mb-3 text-gray-900 dark:text-white">Community Youth Coaching</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">Giving back through youth football and flag games with the kids in Moses Lake.</p>
+                <a href="community.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition">See Community</a>
+            </div>
+        </div>
+        <!-- Teaser Card 4 -->
+        <div class="bg-white dark:bg-gray-800 rounded-2xl overflow-hidden shadow-2xl transition-all hover:scale-105 hover:shadow-3xl">
+            <img src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Moses Lake Sunset" class="w-full h-56 object-cover" loading="lazy">
+            <div class="p-6">
+                <h4 class="font-semibold text-xl mb-3 text-gray-900 dark:text-white">Moses Lake Sunsets</h4>
+                <p class="text-sm text-gray-600 dark:text-gray-300 mb-5 line-clamp-3">Capturing the stunning golden hour skies over Moses Lake and the surrounding PNW beauty.</p>
+                <a href="gallery.html" class="block text-center bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 rounded-xl transition">View Gallery</a>
+            </div>
         </div>
     </div>
 </div>
 </section>
-
-<!-- FOOTER – YOUR ORIGINAL 17 ICONS + RSS PRESERVED EXACTLY -->
+</main>
+<!-- FULL FOOTER WITH RSS -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
-<div class="max-w-7xl mx-auto px-6 text-center py-16 bg-gray-100 dark:bg-gray-900">
-    <div class="footer-icons flex flex-wrap justify-center gap-8 mb-12">
-        <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn" loading="lazy"></a>
-        <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" aria-label="About.me profile of Jason David Newton Moses Lake Washington"><img src="icons/aboutme.png" alt="About.me" loading="lazy"></a>
-        <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" aria-label="Crunchbase profile of Jason David Newton Moses Lake Washington"><img src="icons/crunchbase.png" alt="Crunchbase" loading="lazy"></a>
-        <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" aria-label="Muck Rack profile of Jason David Newton Moses Lake Washington"><img src="icons/muckrack.png" alt="Muck Rack" loading="lazy"></a>
-        <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" aria-label="Medium profile of Jason David Newton Moses Lake Washington"><img src="icons/medium.png" alt="Medium" loading="lazy"></a>
-        <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook" loading="lazy"></a>
-        <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="me" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram" loading="lazy"></a>
-        <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok" loading="lazy"></a>
-        <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" aria-label="WhatsApp chat with Jason David Newton Moses Lake Washington"><img src="icons/whatsapp.png" alt="WhatsApp" loading="lazy"></a>
-        <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="me" aria-label="Threads profile of Jason David Newton Moses Lake Washington"><img src="icons/threads.png" alt="Threads" loading="lazy"></a>
-        <a href="https://x.com/JasonDNewton" target="_blank" rel="me" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X" loading="lazy"></a>
-        <a href="https://www.pinterest.com/JasonDavidNewton/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest" loading="lazy"></a>
-        <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social" loading="lazy"></a>
-        <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube" loading="lazy"></a>
-        <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO" loading="lazy"></a>
-        <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><img src="icons/carrd.png" alt="Carrd" loading="lazy"></a>
-        <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar profile of Jason David Newton Moses Lake Washington"><img src="icons/gravatar.png" alt="Gravatar" loading="lazy"></a>
-    </div>
-    <div style="text-align: center; margin: 30px 0;">
-        <a href="/blog-rss.xml" class="rss-link text-pnw font-medium">
-            <i class="fas fa-rss mr-2"></i> Subscribe to RSS Feed
-        </a>
-        <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 8px;">
-            (Currently syndicating Medium posts — native articles coming soon)
-        </p>
-    </div>
-    <p class="text-center">© 2026 Jason David Newton</p>
-    <p class="text-center">Moses Lake, Washington</p>
+<div class="footer-icons">
+    <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn profile of Jason David Newton Moses Lake Washington"><img src="icons/linkedin.png" alt="LinkedIn" loading="lazy"></a>
+    <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" aria-label="About.me profile of Jason David Newton Moses Lake Washington"><img src="icons/aboutme.png" alt="About.me" loading="lazy"></a>
+    <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" aria-label="Crunchbase profile of Jason David Newton Moses Lake Washington"><img src="icons/crunchbase.png" alt="Crunchbase" loading="lazy"></a>
+    <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" aria-label="Muck Rack profile of Jason David Newton Moses Lake Washington"><img src="icons/muckrack.png" alt="Muck Rack" loading="lazy"></a>
+    <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" aria-label="Medium profile of Jason David Newton Moses Lake Washington"><img src="icons/medium.png" alt="Medium" loading="lazy"></a>
+    <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" aria-label="Facebook profile of Jason David Newton Moses Lake Washington"><img src="icons/facebook.png" alt="Facebook" loading="lazy"></a>
+    <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="me" aria-label="Instagram profile of Jason David Newton Moses Lake Washington"><img src="icons/instagram.png" alt="Instagram" loading="lazy"></a>
+    <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" aria-label="TikTok profile of Jason David Newton Moses Lake Washington"><img src="icons/tiktok.png" alt="TikTok" loading="lazy"></a>
+    <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" aria-label="WhatsApp chat with Jason David Newton Moses Lake Washington"><img src="icons/whatsapp.png" alt="WhatsApp" loading="lazy"></a>
+    <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="me" aria-label="Threads profile of Jason David Newton Moses Lake Washington"><img src="icons/threads.png" alt="Threads" loading="lazy"></a>
+    <a href="https://x.com/JasonDNewton" target="_blank" rel="me" aria-label="X profile of Jason David Newton Moses Lake Washington"><img src="icons/x.png" alt="X" loading="lazy"></a>
+    <a href="https://www.pinterest.com/JasonDavidNewton/" target="_blank" rel="noopener" aria-label="Pinterest profile of Jason David Newton Moses Lake Washington"><img src="icons/pinterest.png" alt="Pinterest" loading="lazy"></a>
+    <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" aria-label="Truth Social profile of Jason David Newton Moses Lake Washington"><img src="icons/truthsocial.png" alt="Truth Social" loading="lazy"></a>
+    <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube channel of Jason David Newton Moses Lake Washington"><img src="icons/youtube.png" alt="YouTube" loading="lazy"></a>
+    <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO profile of Jason David Newton Moses Lake Washington"><img src="icons/vsco.png" alt="VSCO" loading="lazy"></a>
+    <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><img src="icons/carrd.png" alt="Carrd" loading="lazy"></a>
+    <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar profile of Jason David Newton Moses Lake Washington"><img src="icons/gravatar.png" alt="Gravatar" loading="lazy"></a>
 </div>
+<div style="text-align: center; margin: 30px 0;">
+    <a href="/blog-rss.xml" class="rss-link">
+        <i class="fas fa-rss"></i> Subscribe to RSS Feed
+    </a>
+    <p style="font-size: 0.9rem; opacity: 0.8; margin-top: 8px;">
+        (Currently syndicating Medium posts — native articles coming soon)
+    </p>
+</div>
+<p>© 2026 Jason David Newton</p>
+<p>Moses Lake, Washington</p>
 </footer>
-
 <!-- Back-to-Top Button -->
-<button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top" class="fixed bottom-8 right-8 bg-pnw text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg hover:bg-opacity-90 transition hidden">
-    ↑
-</button>
-
-<!-- GRAVATAR HOVERCARD – YOUR ORIGINAL PRESERVED -->
+<button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+<!-- GRAVATAR HOVERCARD – VISIBLE ONLY ON DESKTOP -->
 <div class="gravatar-hovercard">
   <div class="gravatar-hovercard__inner">
     <div class="gravatar-hovercard__header-image" style="background: url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024') 50% 50% / 100% no-repeat;"></div>
@@ -516,30 +641,27 @@
     </div>
   </div>
 </div>
-
 <!-- DARK MODE TOGGLE JAVASCRIPT -->
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const toggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
     const htmlRoot = document.documentElement;
-    if (!toggleBtn) return;
+    if (!toggleBtn || !themeIcon) return;
     let currentTheme = localStorage.getItem('theme');
     if (!currentTheme) {
       currentTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     }
-    htmlRoot.classList.add(currentTheme);
-    toggleBtn.innerHTML = currentTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+    htmlRoot.setAttribute('data-theme', currentTheme);
+    themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     toggleBtn.addEventListener('click', () => {
-      const newTheme = htmlRoot.classList.contains('dark') ? 'light' : 'dark';
-      htmlRoot.classList.remove('dark', 'light');
-      htmlRoot.classList.add(newTheme);
+      const newTheme = htmlRoot.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+      htmlRoot.setAttribute('data-theme', newTheme);
       localStorage.setItem('theme', newTheme);
-      toggleBtn.innerHTML = newTheme === 'dark' ? '<i class="fas fa-sun"></i>' : '<i class="fas fa-moon"></i>';
+      themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
     });
   });
 </script>
-
-<!-- BACK-TO-TOP & SCROLL ANIMATIONS (your original preserved) -->
 <script>
 // Back-to-top JS
 let mybutton = document.getElementById("back-to-top");
@@ -594,12 +716,6 @@ document.addEventListener("DOMContentLoaded", () => {
   observer.observe(footerIcons);
 });
 </script>
-
-<!-- CHATBASE FLOATING BUBBLE (placed at end) -->
-<script>
-(function(){if(!window.chatbase||window.chatbase("getState")!=="initialized"){window.chatbase=(...arguments)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(arguments)};window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return(...args)=>target(prop,...args)}})}const onLoad=function(){const script=document.createElement("script");script.src="https://www.chatbase.co/embed.min.js";script.id="oaLxsMrItiSkO4luTLhJq";script.domain="www.chatbase.co";document.body.appendChild(script)};if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}})();
-</script>
-
 <style>
   #back-to-top {
     position: fixed;
@@ -614,13 +730,19 @@ document.addEventListener("DOMContentLoaded", () => {
     cursor: pointer;
     font-size: 18px;
     z-index: 1000;
-    transition: all 0.3s ease;
+    transition: all 0.3s var(--ease);
   }
   #back-to-top:hover {
     background: #163a59;
     transform: scale(1.15);
   }
 </style>
-
+<!-- CHATBASE FLOATING CHATBOT -->
+<script>
+window.chatbaseConfig = {
+  chatbotId: "oaLxsMrItiSkO4luTLhJq",
+};
+</script>
+<script src="https://www.chatbase.co/embed.min.js" id="oaLxsMrItiSkO4luTLhJq" defer></script>
 </body>
 </html>
