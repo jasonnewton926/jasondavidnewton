@@ -672,6 +672,16 @@ document.addEventListener("DOMContentLoaded", () => {
   fadeSections.forEach(section => observer.observe(section));
   if (footerIcons) observer.observe(footerIcons);
 });
+// MOBILE MENU FIX (added because chat truncation was breaking the CSS sibling selector)
+document.addEventListener('DOMContentLoaded', () => {
+  const checkbox = document.getElementById('mobile-menu');
+  const navUl = document.querySelector('nav ul');
+  if (checkbox && navUl) {
+    checkbox.addEventListener('change', () => {
+      navUl.style.display = checkbox.checked ? 'flex' : 'none';
+    });
+  }
+});
 </script>
 <!-- CHATBASE FLOATING CHATBOT -->
 <script>
