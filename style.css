@@ -16,18 +16,17 @@
 :root {
     --primary-dark: #0a1f33;
     --primary-blue: #1f4f7a;
-    --accent-blue: #3b82f6;           /* calmer blue-500 – better in dark mode */
-    --accent-hover: #2563eb;          /* blue-600 – hover state */
+    --accent-blue: #3b82f6;
+    --accent-hover: #2563eb;
     --pnw-green: #2e5d4e;
-    --light-bg: #f8fafc;              /* slightly softer than #f4f6f8 */
+    --light-bg: #f8fafc;
     --section-bg: #ffffff;
-    --alt-bg: #f1f5f9;                /* slate-50 – subtle alt */
-    --text-dark: #1e293b;             /* slate-800 – darker for better light mode contrast */
-    --text-light: #f1f5f9;            /* slate-100 – soft white */
-    --gray: #64748b;                  /* slate-500 – neutral borders */
+    --alt-bg: #f1f5f9;
+    --text-dark: #1e293b;
+    --text-light: #f1f5f9;
+    --gray: #64748b;
     --ease: cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Dark mode defaults */
     --bg: var(--light-bg);
     --card-bg: var(--section-bg);
     --text: var(--text-dark);
@@ -36,22 +35,20 @@
     --footer-bg: var(--primary-dark);
 }
 
-/* System preference: respect OS dark mode */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
-        --bg: #0f172a;                  /* slate-950 – deep but not pure black */
-        --card-bg: #1e293b;             /* slate-800 – cards/sections */
-        --text: #f1f5f9;                /* slate-100 – readable main text */
-        --text-inverse: #e2e8f0;        /* slate-200 – visible on navbar/footer */
-        --navbar-bg: #020617;           /* near-black */
+        --bg: #0f172a;
+        --card-bg: #1e293b;
+        --text: #f1f5f9;
+        --text-inverse: #e2e8f0;
+        --navbar-bg: #020617;
         --footer-bg: #020617;
         --section-bg: #1e293b;
-        --alt-bg: #111827;              /* gray-900 – subtle alt */
-        --gray: #475569;                /* slate-600 – borders */
+        --alt-bg: #111827;
+        --gray: #475569;
     }
 }
 
-/* Explicit user toggle overrides */
 [data-theme="light"] {
     --bg: var(--light-bg);
     --card-bg: var(--section-bg);
@@ -75,7 +72,6 @@
     --gray: #475569;
 }
 
-/* Apply variables globally */
 body {
     background: var(--bg);
     color: var(--text);
@@ -97,31 +93,29 @@ footer {
     color: var(--text-inverse);
 }
 
-/* Cards & content areas */
 .badge-card,
 .resource-card,
 .hobby-card,
 .involvement-card {
     background: var(--card-bg);
     color: var(--text);
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25); /* deeper shadow in dark mode */
-    border: 1px solid var(--gray); /* subtle separation */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    border: 1px solid var(--gray);
 }
 
-/* Links */
 a {
-    color: #60a5fa;                    /* blue-400 – calmer in dark */
+    color: #60a5fa;
 }
 a:hover {
-    color: #3b82f6;                    /* blue-500 */
+    color: #3b82f6;
 }
 
-/* Buttons – high contrast in both modes */
+/* ── Standard solid CTA buttons ── */
 .section-button,
 .social-btn,
 .btn-primary,
 .contact-form button {
-    background: #3b82f6;               /* blue-500 */
+    background: #3b82f6;
     color: #ffffff !important;
     border: none;
 }
@@ -130,10 +124,86 @@ a:hover {
 .social-btn:hover,
 .btn-primary:hover,
 .contact-form button:hover {
-    background: #2563eb;               /* blue-600 */
+    background: #2563eb;
 }
 
-/* Rest of your original CSS – unchanged below this point */
+/* ══════════════════════════════════════════════════════
+   GHOST CTA OVERRIDES
+   Must appear AFTER the solid button rules above so the
+   cascade can be overridden. These power the blog card
+   "Read on Medium" links and the "Download Resume" button.
+   All colors use !important to beat the color:!important
+   rule on .section-button above.
+══════════════════════════════════════════════════════ */
+.section-button.offsite,
+a.section-button.offsite,
+.resume-btn,
+a.resume-btn {
+    background: #e8edf2 !important;
+    border: 1.5px solid #b8c8d8 !important;
+    color: #1f4f7a !important;
+    font-weight: 700;
+}
+.section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
+
+.section-button.offsite:hover,
+a.section-button.offsite:hover,
+.resume-btn:hover,
+a.resume-btn:hover {
+    background: #1f4f7a !important;
+    border-color: #1f4f7a !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+[data-theme="dark"] .section-button.offsite,
+[data-theme="dark"] a.section-button.offsite,
+[data-theme="dark"] .resume-btn,
+[data-theme="dark"] a.resume-btn {
+    background: rgba(255,255,255,0.07) !important;
+    border: 1.5px solid rgba(200,168,75,0.45) !important;
+    color: #c8a84b !important;
+}
+
+[data-theme="dark"] .section-button.offsite:hover,
+[data-theme="dark"] a.section-button.offsite:hover,
+[data-theme="dark"] .resume-btn:hover,
+[data-theme="dark"] a.resume-btn:hover {
+    background: #1f4f7a !important;
+    border-color: #1f4f7a !important;
+    color: #ffffff !important;
+}
+
+/* ── Also handle system dark mode preference ── */
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .section-button.offsite,
+    :root:not([data-theme="light"]) a.section-button.offsite,
+    :root:not([data-theme="light"]) .resume-btn,
+    :root:not([data-theme="light"]) a.resume-btn {
+        background: rgba(255,255,255,0.07) !important;
+        border: 1.5px solid rgba(200,168,75,0.45) !important;
+        color: #c8a84b !important;
+    }
+    :root:not([data-theme="light"]) .section-button.offsite:hover,
+    :root:not([data-theme="light"]) a.section-button.offsite:hover,
+    :root:not([data-theme="light"]) .resume-btn:hover,
+    :root:not([data-theme="light"]) a.resume-btn:hover {
+        background: #1f4f7a !important;
+        color: #ffffff !important;
+    }
+}
+
+/* ── Centered btn-group for professional section ── */
+.btn-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1.2rem;
+    justify-content: center;
+}
+.btn-group .section-button { margin-top: 0; }
+
+/* Rest of original CSS — unchanged */
 html, body { height: 100%; }
 body {
     margin: 0;
@@ -150,6 +220,7 @@ h1, h2, h3 {
     line-height: 1.2;
 }
 a { text-decoration: none; color: inherit; }
+
 /* NAVBAR */
 .navbar {
     background: var(--navbar-bg);
@@ -186,7 +257,8 @@ a { text-decoration: none; color: inherit; }
     outline: 2px solid var(--accent-blue);
     outline-offset: 2px;
 }
-/* Hamburger Menu for Mobile */
+
+/* Hamburger */
 .nav-toggle { display: none; cursor: pointer; }
 .nav-toggle span {
     display: block;
@@ -214,7 +286,8 @@ a { text-decoration: none; color: inherit; }
     .nav-toggle.active span:nth-child(2) { opacity: 0; }
     .nav-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
 }
-/* HERO SECTION */
+
+/* HERO */
 .hero {
     background: linear-gradient(135deg, var(--primary-dark), var(--primary-blue));
     color: var(--text-inverse);
@@ -228,7 +301,8 @@ a { text-decoration: none; color: inherit; }
 .hero h1 { font-size: 3rem; margin-bottom: 0.625rem; }
 .hero h2 { font-size: 1.375rem; font-weight: normal; margin-bottom: 0.625rem; }
 .hero p { margin-bottom: 1.5625rem; font-size: 1.0625rem; }
-/* BUTTONS (global) – with dark mode fix */
+
+/* BUTTONS */
 .btn-primary,
 .btn-secondary,
 .section-button,
@@ -256,7 +330,8 @@ a { text-decoration: none; color: inherit; }
     outline: 2px solid var(--accent-hover);
     outline-offset: 2px;
 }
-/* SECTIONS & ANIMATIONS */
+
+/* SECTIONS */
 .section { padding: 3.75rem 1.25rem; background: var(--card-bg); }
 .section.alt { background: var(--card-bg); }
 .section-content {
@@ -271,7 +346,6 @@ a { text-decoration: none; color: inherit; }
     transition: opacity 0.9s var(--ease), transform 0.9s var(--ease);
 }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-/* Your original stagger delays */
 .fade-in-section:nth-child(1) { transition-delay: 0.1s; }
 .fade-in-section:nth-child(2) { transition-delay: 0.25s; }
 .fade-in-section:nth-child(3) { transition-delay: 0.4s; }
@@ -299,7 +373,8 @@ a { text-decoration: none; color: inherit; }
     transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
 }
 .hero-content.loaded { opacity: 1; transform: scale(1); }
-/* FOOTER & SOCIAL ICONS */
+
+/* FOOTER */
 .footer-icons { margin-bottom: 1rem; text-align: center; }
 .footer-icons a {
     margin: 0 0.5rem;
@@ -328,7 +403,8 @@ footer {
     margin-top: auto;
     font-size: 0.95em;
 }
-/* RSS tooltip */
+
+/* RSS */
 .rss-link {
     position: relative;
     display: inline-flex;
@@ -354,7 +430,8 @@ footer {
     pointer-events: none;
     z-index: 10;
 }
-/* SOCIAL BADGES GRID (contact page) */
+
+/* SOCIAL BADGES */
 .social-badges-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -389,7 +466,8 @@ footer {
     max-width: 220px;
 }
 .badge-card .social-btn:hover { background: var(--accent-hover); }
-/* Instagram Embed Styling */
+
+/* INSTAGRAM */
 .instagram-media {
     max-width: 300px !important;
     min-width: 0 !important;
@@ -397,7 +475,8 @@ footer {
     padding: 0 !important;
     width: auto !important;
 }
-/* GALLERY GRID & LIGHTBOX */
+
+/* GALLERY */
 .gallery-grid {
     max-width: 1000px;
     margin: auto;
@@ -444,7 +523,8 @@ footer {
     transform: translate(-50%, -50%);
 }
 .lightbox:target { display: block; }
-/* ACCESSIBLE CARD / STRETCHED LINK */
+
+/* CARDS */
 .involvement-card {
     position: relative;
     background: var(--card-bg);
@@ -463,6 +543,7 @@ footer {
     top: -20px; right: -20px; bottom: -20px; left: -20px;
     z-index: 1;
 }
+
 /* CONTACT FORM */
 .contact-form {
     max-width: 600px;
@@ -487,7 +568,8 @@ footer {
     outline: none;
 }
 .contact-form textarea { resize: vertical; min-height: 120px; }
-/* ACCESSIBILITY & PRINT */
+
+/* ACCESSIBILITY */
 :focus-visible {
     outline: 3px solid var(--accent-blue);
     outline-offset: 2px;
@@ -502,15 +584,15 @@ footer {
     clip: rect(0, 0, 0, 0);
     border: 0;
 }
-/* Print styles */
+
+/* PRINT */
 @media print {
     .navbar, footer, .hero { background: white !important; color: black !important; }
     a { text-decoration: underline; color: blue; }
     .fade-in-section, .is-visible { opacity: 1 !important; transform: none !important; }
 }
-/* ===================================
-   MEDIA QUERIES (RESPONSIVE)
-=================================== */
+
+/* RESPONSIVE */
 @media (max-width: 768px) {
     .hero h1 { font-size: 2.125rem; }
     .hero h2 { font-size: 1.125rem; }
@@ -524,15 +606,22 @@ footer {
         margin: 0.75rem auto;
         width: 80%;
     }
+    /* Keep ghost buttons from going full-width on mobile */
+    .section-button.offsite,
+    a.section-button.offsite,
+    .resume-btn,
+    a.resume-btn {
+        display: inline-block !important;
+        width: auto !important;
+        margin: 0.5rem auto !important;
+    }
 }
 @media (max-width: 480px) {
     .hero h1 { font-size: 1.875rem; }
     .hero { padding: 4rem 1rem 2.5rem; }
 }
 
-/* ===================================
-   DARK MODE TOGGLE BUTTON STYLING
-=================================== */
+/* DARK MODE TOGGLE */
 .theme-toggle {
     margin-left: auto;
     display: flex;
@@ -554,7 +643,6 @@ footer {
     transform: scale(1.15);
     outline: none;
 }
-/* Icon rotation on theme switch for visual feedback */
 #theme-icon {
     transition: transform 0.4s ease;
 }
