@@ -273,6 +273,28 @@
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
 
     .sr-only { position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0; }
+
+    /* FLOATING PROFILE CARD */
+    .profile-float-card { position:fixed; bottom:96px; right:26px; z-index:9997; width:280px; background:var(--card-bg); border-radius:14px; overflow:hidden; box-shadow:0 10px 40px rgba(0,0,0,0.18); transition:opacity 0.3s var(--ease),transform 0.3s var(--ease); }
+    .profile-float-card.hidden { opacity:0; transform:translateY(10px) scale(0.97); pointer-events:none; }
+    .profile-card-close { position:absolute; top:8px; right:8px; background:rgba(0,0,0,0.35); border:none; color:#fff; width:26px; height:26px; border-radius:50%; cursor:pointer; font-size:0.75rem; display:flex; align-items:center; justify-content:center; z-index:2; transition:background 0.2s; }
+    .profile-card-close:hover { background:rgba(0,0,0,0.6); }
+    .profile-card-header-img { height:80px; background-size:cover; background-position:center; }
+    .profile-card-body { display:flex; align-items:center; gap:12px; padding:0 14px 12px; margin-top:-28px; position:relative; }
+    .profile-card-avatar { width:56px; height:56px; border-radius:50%; border:3px solid var(--card-bg); object-fit:cover; flex-shrink:0; box-shadow:0 2px 8px rgba(0,0,0,0.15); }
+    .profile-card-info { padding-top:28px; }
+    .profile-card-name { display:block; font-family:var(--font-display); font-weight:700; font-size:0.95rem; color:var(--primary-blue); text-decoration:none; line-height:1.2; }
+    [data-theme="dark"] .profile-card-name { color:var(--accent-blue); }
+    .profile-card-name:hover { text-decoration:underline; }
+    .profile-card-title { font-size:0.78rem; color:var(--text); opacity:0.75; margin-top:2px; }
+    .profile-card-location { font-size:0.76rem; color:var(--text); opacity:0.6; margin-top:3px; }
+    .profile-card-location i { margin-right:3px; color:var(--primary-blue); }
+    .profile-card-footer { display:flex; justify-content:space-between; padding:10px 14px; border-top:1px solid rgba(0,0,0,0.06); font-size:0.78rem; }
+    [data-theme="dark"] .profile-card-footer { border-top-color:rgba(255,255,255,0.07); }
+    .profile-card-footer a { color:var(--primary-blue); text-decoration:none; font-weight:600; transition:color 0.2s; }
+    [data-theme="dark"] .profile-card-footer a { color:var(--accent-blue); }
+    .profile-card-footer a:hover { text-decoration:underline; }
+    @media (max-width:480px) { .profile-float-card { display:none; } }
     </style>
 </head>
 <body>
@@ -582,6 +604,24 @@
 <!-- BACK TO TOP -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 
+<!-- FLOATING PROFILE CARD (above chat bubble, dismissible) -->
+<div class="profile-float-card" id="profileCard">
+  <button class="profile-card-close" id="profileCardClose" aria-label="Close profile card"><i class="fas fa-times"></i></button>
+  <div class="profile-card-header-img" style="background-image: url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024');"></div>
+  <div class="profile-card-body">
+    <img class="profile-card-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton">
+    <div class="profile-card-info">
+      <a href="https://jasonnewton.me/" target="_blank" rel="noopener" class="profile-card-name">Jason David Newton</a>
+      <div class="profile-card-title">Mechanical Technician · Group 14</div>
+      <div class="profile-card-location"><i class="fas fa-map-marker-alt"></i> Moses Lake, WA</div>
+    </div>
+  </div>
+  <div class="profile-card-footer">
+    <a href="https://jasonnewton.me/" target="_blank" rel="noopener">jasonnewton.me</a>
+    <a href="https://jasonnewton.me/" target="_blank" rel="noopener">View profile →</a>
+  </div>
+</div>
+
 <!-- FLOATING CHAT BUBBLE -->
 <button class="chat-bubble-btn" id="chatBubble" aria-label="Open AI Chat Assistant" aria-expanded="false">
   <i class="fas fa-comment-dots chat-icon"></i>
@@ -660,6 +700,21 @@ document.addEventListener('DOMContentLoaded', () => {
   const fi = document.querySelector('.footer-icons');
   if (fi) observer.observe(fi);
 });
+
+// Profile card dismiss
+const profileCard = document.getElementById('profileCard');
+const profileCardClose = document.getElementById('profileCardClose');
+if (profileCard && profileCardClose) {
+  // Restore dismissed state across page loads
+  if (sessionStorage.getItem('profileCardDismissed')) {
+    profileCard.classList.add('hidden');
+  }
+  profileCardClose.addEventListener('click', (e) => {
+    e.stopPropagation();
+    profileCard.classList.add('hidden');
+    sessionStorage.setItem('profileCardDismissed', '1');
+  });
+}
 
 // Floating chat bubble toggle
 const chatBubble = document.getElementById('chatBubble');
