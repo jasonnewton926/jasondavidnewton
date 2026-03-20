@@ -26,6 +26,8 @@
     <meta property="og:title" content="Jason David Newton | Moses Lake, Washington">
     <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith & Pacific Northwest adventures">
     <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://jasondavidnewton.com/">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jason David Newton">
@@ -35,7 +37,12 @@
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
 
     <!-- Font Awesome – load async to prevent render block -->
@@ -87,6 +94,8 @@
       ]
     }
     </script>
+    
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Jason David Newton","description":"Mechanical Technician and operations leader based in Moses Lake, Washington. USCG Merchant Mariner Credentialed, WSU Graduate, Group 14 Technologies.","url":"https://jasondavidnewton.com/","image":"https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg","address":{"@type":"PostalAddress","addressLocality":"Moses Lake","addressRegion":"WA","postalCode":"98837","addressCountry":"US"},"geo":{"@type":"GeoCoordinates","latitude":47.1301,"longitude":-119.2978},"telephone":"+15097712196","email":"jasonnewton926@gmail.com","sameAs":["https://www.linkedin.com/in/jason-newton-moses-lake","https://jasondavidnewton.com/"]}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebPage","name":"Jason David Newton","url":"https://jasondavidnewton.com/"}</script>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://jasondavidnewton.com/"}]}</script>
 
@@ -97,10 +106,11 @@
     /* ═══ TOKENS ═══ */
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
-        --primary-dark: #0a1f33;
-        --primary-blue: #1f4f7a;
+        --primary-dark: #0d2244;
+        --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
+        --accent-green: #2d5a1b;
         --text-light: #f0f4f8;
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
@@ -114,9 +124,9 @@
         --font-body: 'Source Sans 3', sans-serif;
     }
     [data-theme="dark"] {
-        --section-bg: #0e1e2e;
-        --section-alt: #0a1724;
-        --card-bg: #132030;
+        --section-bg: #0a1830;
+        --section-alt: #071020;
+        --card-bg: #0f2040;
         --text: #dde8f0;
         --text-secondary: #8faecc;
         --shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -126,12 +136,12 @@
 
     /* ═══ NAVBAR ═══ */
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
-    .navbar.scrolled { background: rgba(10,31,51,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
+    .navbar.scrolled { background: rgba(13,34,68,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
     .logo { font-family: var(--font-display); font-size: 1.05rem; color: #fff; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
     nav ul { display: flex; list-style: none; gap: 0; flex-wrap: wrap; }
     nav ul li a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; padding: 0.38rem 0.6rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
-    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.12); }
+    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(45,90,27,0.35); }
     .theme-toggle { margin-left: auto; }
     .theme-toggle button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
     .theme-toggle button:hover { background: rgba(255,255,255,0.22); }
@@ -140,7 +150,7 @@
     @media (max-width: 900px) {
         .nav-toggle { display: block; cursor: pointer; margin-left: auto; }
         .nav-toggle span { display: block; width: 25px; height: 3px; background: #fff; margin: 5px auto; transition: 0.3s; border-radius: 2px; }
-        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,31,51,0.98); }
+        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,34,68,0.98); }
         .navbar nav ul { display: none; flex-direction: column; gap: 0; padding: 1rem; }
         #mobile-menu:checked ~ nav ul { display: flex; }
         #mobile-menu:checked + .nav-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
@@ -169,7 +179,7 @@
     .hero-role-pill { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: rgba(255,255,255,0.9); font-size: 0.78rem; font-weight: 600; padding: 0.28rem 0.82rem; border-radius: 20px; letter-spacing: 0.04em; }
     .hero-text p { font-size: 1.03rem; line-height: 1.78; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 1.6rem; }
     .hero-buttons { display: flex; flex-wrap: wrap; gap: 0.8rem; }
-    .btn-primary { background: var(--accent-gold); color: #0a1f33; padding: 0.72rem 1.55rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.03em; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; box-shadow: 0 4px 18px rgba(200,168,75,0.38); }
+    .btn-primary { background: var(--accent-gold); color: #0d2244; padding: 0.72rem 1.55rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; letter-spacing: 0.03em; transition: background 0.25s, transform 0.2s, box-shadow 0.25s; box-shadow: 0 4px 18px rgba(200,168,75,0.38); }
     .btn-primary:hover { background: #d9ba68; transform: translateY(-2px); box-shadow: 0 8px 26px rgba(200,168,75,0.46); }
     .btn-secondary { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.32); color: #fff; padding: 0.72rem 1.55rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
     .btn-secondary:hover { background: rgba(255,255,255,0.2); transform: translateY(-2px); }
@@ -187,7 +197,7 @@
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
-    .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
+    .stat-item i { color: var(--accent-green); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
 
@@ -204,7 +214,7 @@
     .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--primary-blue); font-weight: 600; }
     [data-theme="dark"] .section-content a:not(.section-button):not(.btn-primary):not(.btn-secondary) { color: var(--accent-blue); }
     .section-button { display: inline-block; margin-top: 1.2rem; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s, color 0.2s, border-color 0.2s; }
-    .section-button:hover { background: #163a59; transform: translateY(-2px); }
+    .section-button:hover { background: #0d2244; transform: translateY(-2px); }
     /* Ghost CTA — max specificity + !important beats style.css color:!important rule */
     html body .resume-btn, html body a.resume-btn,
     html body .section-button.offsite, html body a.section-button.offsite {
@@ -216,8 +226,8 @@
     html body .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
     html body .resume-btn:hover, html body a.resume-btn:hover,
     html body .section-button.offsite:hover, html body a.section-button.offsite:hover {
-        background: #1f4f7a !important;
-        border-color: #1f4f7a !important;
+        background: #1a4a6e !important;
+        border-color: #1a4a6e !important;
         color: #ffffff !important;
         transform: translateY(-2px);
     }
@@ -345,7 +355,7 @@
             position: fixed;
             bottom: 0; left: 0; right: 0;
             z-index: 8500;
-            background: rgba(10,31,51,0.97);
+            background: rgba(13,34,68,0.97);
             backdrop-filter: blur(14px);
             border-top: 1px solid rgba(255,255,255,0.1);
             padding: 8px 0 max(8px, env(safe-area-inset-bottom));
@@ -371,7 +381,7 @@
         position: fixed;
         top: 0; left: 0; right: 0;
         z-index: 8999;
-        background: rgba(10,31,51,0.97);
+        background: rgba(13,34,68,0.97);
         backdrop-filter: blur(12px);
         padding: 10px 16px;
         align-items: center;
@@ -385,13 +395,15 @@
     @media (max-width: 680px) { .sticky-cta { display: flex; } }
     .sticky-cta-name { font-family: var(--font-display); font-size: 0.92rem; font-weight: 700; color: #fff; white-space: nowrap; }
     .sticky-cta-sub { font-size: 0.72rem; color: rgba(255,255,255,0.6); }
-    .sticky-cta-btn { background: var(--accent-gold); color: #0a1f33; padding: 7px 14px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.2s; }
+    .sticky-cta-btn { background: var(--accent-gold); color: #0d2244; padding: 7px 14px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; text-decoration: none; white-space: nowrap; flex-shrink: 0; transition: background 0.2s; }
     .sticky-cta-btn:hover { background: #d9ba68; }
 
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <!-- ═══ STICKY MOBILE CTA (shows after hero scroll) ═══ -->
 <div class="sticky-cta" id="stickyCta" aria-hidden="true">
@@ -432,7 +444,7 @@
   </div>
 </header>
 
-<main role="main">
+<main role="main" id="main-content">
 
   <!-- ═══ HERO ═══ -->
   <section class="hero" aria-label="Jason David Newton – Mechanical Technician Moses Lake Washington">
