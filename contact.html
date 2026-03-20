@@ -23,6 +23,8 @@
     <meta property="og:title" content="Jason David Newton – Contact | Moses Lake, Washington">
     <meta property="og:description" content="Get in touch with Jason David Newton in Moses Lake, Washington via email, WhatsApp, Threads, or other profiles.">
     <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://jasondavidnewton.com/contact.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jason David Newton">
@@ -31,7 +33,12 @@
     <meta name="twitter:description" content="Get in touch with Jason David Newton – Mechanical Technician, Moses Lake, WA">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
@@ -53,10 +60,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
-        --primary-dark: #0a1f33;
-        --primary-blue: #1f4f7a;
+        --primary-dark: #0d2244;
+        --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
+        --accent-green: #2d5a1b;
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
@@ -69,24 +77,24 @@
         --font-body: 'Source Sans 3', sans-serif;
     }
     [data-theme="dark"] {
-        --section-bg: #0e1e2e;
-        --section-alt: #0a1724;
-        --card-bg: #132030;
+        --section-bg: #0a1830;
+        --section-alt: #071020;
+        --card-bg: #0f2040;
         --text: #dde8f0;
         --text-secondary: #8faecc;
         --shadow: 0 4px 24px rgba(0,0,0,0.4);
         --shadow-hover: 0 14px 44px rgba(0,0,0,0.55);
     }
     body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); line-height: 1.7; overflow-x: hidden; }
-
-    /* ── Navbar ── */
+    .skip-to-content { position: absolute; top: -100%; left: 1rem; background: var(--primary-dark); color: #fff; padding: 0.6rem 1.2rem; border-radius: 0 0 8px 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; z-index: 9999; transition: top 0.2s; }
+    .skip-to-content:focus { top: 0; }
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
-    .navbar.scrolled { background: rgba(10,31,51,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
+    .navbar.scrolled { background: rgba(13,34,68,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
     .logo { font-family: var(--font-display); font-size: 1.05rem; color: #fff; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
     nav ul { display: flex; list-style: none; gap: 0; flex-wrap: wrap; }
     nav ul li a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; padding: 0.38rem 0.6rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
-    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.12); }
+    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(45,90,27,0.35); }
     .theme-toggle { margin-left: auto; }
     .theme-toggle button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
     .theme-toggle button:hover { background: rgba(255,255,255,0.22); }
@@ -95,7 +103,7 @@
     @media (max-width: 900px) {
         .nav-toggle { display: block; cursor: pointer; margin-left: auto; }
         .nav-toggle span { display: block; width: 25px; height: 3px; background: #fff; margin: 5px auto; transition: 0.3s; border-radius: 2px; }
-        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,31,51,0.98); }
+        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,34,68,0.98); }
         .navbar nav ul { display: none; flex-direction: column; gap: 0; padding: 1rem; }
         #mobile-menu:checked ~ nav ul { display: flex; }
         #mobile-menu:checked + .nav-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
@@ -103,8 +111,6 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px,-6px); }
         .theme-toggle { margin-left: 0.5rem; }
     }
-
-    /* ── Full-viewport hero ── */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
     .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-smiling.jpg'); background-size: cover; background-position: center 30%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .page-hero-bg.loaded { transform: scale(1); }
@@ -132,16 +138,12 @@
         .hero-text p { margin-left: auto; margin-right: auto; }
         .hero-roles { justify-content: center; }
     }
-
-    /* ── Stats bar ── */
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
-    .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
+    .stat-item i { color: var(--accent-green); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
-
-    /* ── Sections ── */
     .section { padding: 70px 2rem; background: var(--section-bg); }
     .section.alt { background: var(--section-alt); }
     .section-content { max-width: 1000px; margin: 0 auto; }
@@ -152,72 +154,38 @@
     .section-content p { font-size: 1.04rem; line-height: 1.8; color: var(--text); margin-bottom: 1rem; }
     .section-content a:not(.section-button):not(.social-btn) { color: var(--primary-blue); font-weight: 600; }
     [data-theme="dark"] .section-content a:not(.section-button):not(.social-btn) { color: var(--accent-blue); }
-
-    /* ── Contact form ── */
     .contact-form { display: flex; flex-direction: column; gap: 0; margin-top: 1.5rem; }
     .contact-form label { font-size: 0.88rem; font-weight: 700; color: var(--text-secondary); margin-bottom: 6px; display: block; letter-spacing: 0.04em; text-transform: uppercase; }
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 0.78rem 1rem;
-        border: 1.5px solid rgba(100,116,139,0.25);
-        border-radius: 8px;
-        font-family: var(--font-body);
-        font-size: 1rem;
-        color: var(--text);
-        background: var(--card-bg);
-        transition: border-color 0.2s, box-shadow 0.2s;
-        margin-bottom: 1.1rem;
-    }
-    .contact-form input:focus,
-    .contact-form textarea:focus {
-        outline: none;
-        border-color: var(--primary-blue);
-        box-shadow: 0 0 0 3px rgba(31,79,122,0.12);
-    }
-    [data-theme="dark"] .contact-form input,
-    [data-theme="dark"] .contact-form textarea { border-color: rgba(255,255,255,0.12); }
+    .contact-form input, .contact-form textarea { width: 100%; padding: 0.78rem 1rem; border: 1.5px solid rgba(100,116,139,0.25); border-radius: 8px; font-family: var(--font-body); font-size: 1rem; color: var(--text); background: var(--card-bg); transition: border-color 0.2s, box-shadow 0.2s; margin-bottom: 1.1rem; }
+    .contact-form input:focus, .contact-form textarea:focus { outline: none; border-color: var(--accent-green); box-shadow: 0 0 0 3px rgba(45,90,27,0.12); }
+    [data-theme="dark"] .contact-form input, [data-theme="dark"] .contact-form textarea { border-color: rgba(255,255,255,0.12); }
     .contact-form textarea { resize: vertical; min-height: 140px; }
     .btn-submit { background: var(--primary-blue); color: #fff; border: none; padding: 0.82rem 2rem; border-radius: 8px; font-family: var(--font-body); font-size: 1rem; font-weight: 700; cursor: pointer; transition: background 0.25s, transform 0.2s; align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; }
-    .btn-submit:hover { background: #163a59; transform: translateY(-2px); }
-
-    /* ── Quick contact methods ── */
+    .btn-submit:hover { background: #0d2244; transform: translateY(-2px); }
     .quick-contact { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 2rem; }
     .quick-contact-item { display: inline-flex; align-items: center; gap: 10px; background: var(--card-bg); border: 1.5px solid rgba(100,116,139,0.18); border-radius: 10px; padding: 0.72rem 1.2rem; text-decoration: none; color: var(--text); font-weight: 600; font-size: 0.92rem; transition: border-color 0.2s, box-shadow 0.2s, transform 0.2s; }
     .quick-contact-item:hover { border-color: var(--primary-blue); box-shadow: 0 4px 16px rgba(31,79,122,0.12); transform: translateY(-2px); color: var(--primary-blue); }
     .quick-contact-item i { font-size: 1.1rem; color: var(--primary-blue); }
-    [data-theme="dark"] .quick-contact-item { background: var(--card-bg); border-color: rgba(255,255,255,0.1); }
+    [data-theme="dark"] .quick-contact-item { border-color: rgba(255,255,255,0.1); }
     [data-theme="dark"] .quick-contact-item:hover { border-color: var(--accent-blue); color: var(--accent-blue); }
     [data-theme="dark"] .quick-contact-item i { color: var(--accent-blue); }
-
-    /* ── Map ── */
     .map-wrap { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-top: 1.5rem; }
     .map-wrap iframe { display: block; width: 100%; height: 380px; border: 0; }
-
-    /* ── Social cards ── */
     .social-category-label { font-family: var(--font-display); font-size: 1rem; font-weight: 700; color: var(--text-secondary); letter-spacing: 0.06em; text-transform: uppercase; margin: 2.2rem 0 1rem; display: flex; align-items: center; gap: 10px; }
     .social-category-label::after { content: ''; flex: 1; height: 1px; background: rgba(100,116,139,0.2); }
     .social-grid { display: flex; flex-wrap: wrap; gap: 12px; }
     .social-card { background: var(--card-bg); border-radius: 10px; padding: 14px 16px; box-shadow: var(--shadow); transition: transform 0.25s var(--ease), box-shadow 0.25s; display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); flex: 1 1 200px; max-width: 260px; }
     .social-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
-    .social-card-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(31,79,122,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--primary-blue); flex-shrink: 0; }
+    .social-card-icon { width: 42px; height: 42px; border-radius: 10px; background: rgba(26,74,110,0.1); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; color: var(--primary-blue); flex-shrink: 0; }
     [data-theme="dark"] .social-card-icon { background: rgba(77,166,255,0.12); color: var(--accent-blue); }
     .social-card-info { min-width: 0; }
     .social-card-name { font-weight: 700; font-size: 0.9rem; color: var(--text); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; }
     .social-card-handle { font-size: 0.78rem; color: var(--text-secondary); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: block; margin-top: 1px; }
-
-    /* ── LinkedIn badge section ── */
     .linkedin-badge-wrap { display: flex; flex-direction: column; align-items: center; margin-top: 2rem; }
-
-    /* ── Section button ── */
     .section-button { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
-    .section-button:hover { background: #163a59; transform: translateY(-2px); }
-
-    /* ── Fade in ── */
+    .section-button:hover { background: #0d2244; transform: translateY(-2px); }
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
     .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Footer ── */
     footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 100px; }
     @media (min-width: 481px) { footer { padding-bottom: 30px; } }
     .footer-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
@@ -227,16 +195,12 @@
     .rss-link { color: var(--accent-gold); text-decoration: none; font-weight: 600; font-size: 0.93rem; }
     .rss-link:hover { color: #d9ba68; }
     footer p { font-size: 0.88rem; margin-top: 6px; opacity: 0.6; }
-
-    /* ── Back to top ── */
     #back-to-top { position: fixed; bottom: 96px; right: 26px; display: none; background: rgba(31,79,122,0.82); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 8000; transition: all 0.3s var(--ease); align-items: center; justify-content: center; backdrop-filter: blur(6px); }
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
-
-    /* ── Profile card ── */
     .profile-float-card { position: fixed; bottom: 96px; right: 26px; z-index: 9997; width: 280px; background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.18); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
     .profile-float-card.hidden { opacity: 0; transform: translateY(10px) scale(0.97); pointer-events: none; }
     @media (max-width: 768px) { .profile-float-card { display: none !important; } }
-    .profile-card-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.35); border: none; color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; z-index: 2; }
+    .profile-card-close { position: absolute; top: 8px; right: 8px; background: rgba(0,0,0,0.35); border: none; color: #fff; width: 28px; height: 28px; border-radius: 50%; cursor: pointer; font-size: 0.78rem; display: flex; align-items: center; justify-content: center; z-index: 2; transition: background 0.2s; }
     .profile-card-close:hover { background: rgba(0,0,0,0.6); }
     .profile-card-header-img { height: 80px; background-size: cover; background-position: center; }
     .profile-card-body { display: flex; align-items: center; gap: 12px; padding: 0 14px 12px; margin-top: -28px; position: relative; }
@@ -253,8 +217,6 @@
     .profile-card-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
     [data-theme="dark"] .profile-card-footer a { color: var(--accent-blue); }
     .profile-card-footer a:hover { text-decoration: underline; }
-
-    /* ── Chat bubble ── */
     .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease), box-shadow 0.3s; color: #fff; font-size: 1.45rem; }
     .chat-bubble-btn:hover { transform: scale(1.1); }
     .chat-bubble-btn .chat-close { display: none; }
@@ -274,21 +236,23 @@
         .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; }
         .chat-bubble-btn { bottom: 70px; right: 16px; }
     }
-
-    /* ── Mobile bottom nav ── */
     .mobile-bottom-nav { display: none; }
     @media (max-width: 480px) {
-        .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8500; background: rgba(10,31,51,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 8px 0 max(8px, env(safe-area-inset-bottom)); justify-content: space-around; align-items: center; }
+        .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8500; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 8px 0 max(8px, env(safe-area-inset-bottom)); justify-content: space-around; align-items: center; }
         .mobile-bottom-nav a { display: flex; flex-direction: column; align-items: center; gap: 3px; color: rgba(255,255,255,0.65); text-decoration: none; font-size: 0.65rem; font-weight: 600; padding: 4px 12px; border-radius: 8px; transition: color 0.2s; min-width: 44px; min-height: 44px; justify-content: center; }
         .mobile-bottom-nav a.active, .mobile-bottom-nav a:hover { color: var(--accent-gold); }
         .mobile-bottom-nav i { font-size: 1.2rem; }
     }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+    @media (max-width: 700px) {
+        .contact-grid { grid-template-columns: 1fr !important; gap: 36px !important; }
+    }
     </style>
 </head>
 <body>
 
-<!-- NAVIGATION -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
 <header role="navigation" class="navbar" aria-label="Main Navigation">
   <div class="nav-container">
     <div class="logo">Jason David Newton</div>
@@ -318,30 +282,22 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="page-hero" aria-label="Contact Jason David Newton – Moses Lake Washington">
   <div class="page-hero-bg" id="heroBg"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-inner" id="heroContent">
     <div class="hero-avatar-wrap">
-      <img
-        class="hero-avatar"
-        src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg"
-        alt="Jason David Newton – Mechanical Technician in Moses Lake, Washington"
-        width="175" height="175"
-        loading="eager"
-        fetchpriority="high"
-      >
+      <img class="hero-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton – Mechanical Technician in Moses Lake, Washington" width="175" height="175" loading="eager" fetchpriority="high">
       <span class="hero-badge">Moses Lake, WA</span>
     </div>
     <div class="hero-text">
-      <div class="hero-eyebrow">Contact · Moses Lake, Washington</div>
+      <div class="hero-eyebrow">Contact &middot; Moses Lake, Washington</div>
       <h1>Let's <span>Connect</span></h1>
       <div class="hero-roles">
-        <span class="hero-role-pill">✉️ Email</span>
-        <span class="hero-role-pill">💬 WhatsApp</span>
-        <span class="hero-role-pill">🔗 LinkedIn</span>
-        <span class="hero-role-pill">📱 17 Platforms</span>
+        <span class="hero-role-pill">&#x2709;&#xFE0F; Email</span>
+        <span class="hero-role-pill">&#x1F4AC; WhatsApp</span>
+        <span class="hero-role-pill">&#x1F517; LinkedIn</span>
+        <span class="hero-role-pill">&#x1F4F1; 17 Platforms</span>
       </div>
       <p>Whether it's about faith, fatherhood, community, career, or just saying hello from Moses Lake. I'd love to hear from you. Fill out the form, shoot me an email, or find me on any of my social platforms.</p>
     </div>
@@ -352,7 +308,6 @@
   </div>
 </section>
 
-<!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-bar-inner">
     <div class="stat-item"><i class="fas fa-envelope"></i> jasonnewton926@gmail.com</div>
@@ -365,13 +320,10 @@
   </div>
 </div>
 
-<main role="main">
+<main role="main" id="main-content">
 
-  <!-- CONTACT FORM + QUICK METHODS -->
   <section class="section fade-in-section">
-    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
-
-      <!-- Form -->
+    <div class="contact-grid" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:start;">
       <div>
         <h2><i class="fas fa-paper-plane"></i> Send a Message</h2>
         <p style="color:var(--text-secondary);margin-bottom:0;">Fill out the form and I'll get back to you as soon as I can.</p>
@@ -385,66 +337,36 @@
           <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Send Message</button>
         </form>
       </div>
-
-      <!-- Quick contact + info -->
       <div>
         <h2><i class="fas fa-bolt"></i> Quick Contact</h2>
         <p style="color:var(--text-secondary);margin-bottom:0;">Prefer a faster way to reach out? Pick any of these.</p>
         <div class="quick-contact">
-          <a href="mailto:jasonnewton926@gmail.com" class="quick-contact-item">
-            <i class="fas fa-envelope"></i> jasonnewton926@gmail.com
-          </a>
-          <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" class="quick-contact-item">
-            <i class="fab fa-whatsapp"></i> WhatsApp Chat
-          </a>
-          <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" class="quick-contact-item">
-            <i class="fab fa-linkedin"></i> LinkedIn
-          </a>
-          <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" class="quick-contact-item">
-            <i class="fab fa-threads"></i> Threads
-          </a>
-          <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" class="quick-contact-item">
-            <i class="fab fa-x-twitter"></i> X (Twitter)
-          </a>
-          <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" class="quick-contact-item">
-            <i class="fab fa-instagram"></i> Instagram
-          </a>
+          <a href="mailto:jasonnewton926@gmail.com" class="quick-contact-item"><i class="fas fa-envelope"></i> jasonnewton926@gmail.com</a>
+          <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" class="quick-contact-item"><i class="fab fa-whatsapp"></i> WhatsApp Chat</a>
+          <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" class="quick-contact-item"><i class="fab fa-linkedin"></i> LinkedIn</a>
+          <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" class="quick-contact-item"><i class="fab fa-threads"></i> Threads</a>
+          <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" class="quick-contact-item"><i class="fab fa-x-twitter"></i> X (Twitter)</a>
+          <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" class="quick-contact-item"><i class="fab fa-instagram"></i> Instagram</a>
         </div>
-
-        <!-- LinkedIn badge -->
         <div class="linkedin-badge-wrap">
           <div class="badge-base LI-profile-badge" data-locale="en_US" data-size="medium" data-theme="dark" data-type="VERTICAL" data-vanity="jason-newton-moses-lake" data-version="v1">
             <a class="badge-base__link LI-simple-link" href="https://www.linkedin.com/in/jason-newton-moses-lake?trk=profile-badge" style="display:block;text-align:center;">Jason Newton</a>
           </div>
         </div>
       </div>
-
     </div>
-    <!-- Mobile: stack columns -->
-    <style>
-      @media (max-width: 700px) {
-        .section > div[style*="grid-template-columns"] { grid-template-columns: 1fr !important; gap: 36px !important; }
-      }
-    </style>
   </section>
 
-  <!-- MAP -->
   <section class="section alt fade-in-section">
     <div class="section-content">
       <h2><i class="fas fa-map-marker-alt"></i> Find Me in Moses Lake, Washington</h2>
       <p style="color:var(--text-secondary);">Moses Lake is home. Feel free to connect locally.</p>
       <div class="map-wrap">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44130.78317039932!2d-119.297844!3d47.130141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549fc4f2d0d8a25f%3A0x4b4b6a4e0c3b4b4!2sMoses%20Lake%2C%20WA!5e0!3m2!1sen!2sus!4v1709921268978!5m2!1sen!2sus"
-          allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-          aria-label="Map of Moses Lake, Washington"
-          title="Moses Lake, Washington map">
-        </iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d44130.78317039932!2d-119.297844!3d47.130141!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549fc4f2d0d8a25f%3A0x4b4b6a4e0c3b4b4!2sMoses%20Lake%2C%20WA!5e0!3m2!1sen!2sus!4v1709921268978!5m2!1sen!2sus" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" aria-label="Map of Moses Lake, Washington" title="Moses Lake, Washington map"></iframe>
       </div>
     </div>
   </section>
 
-  <!-- ALL SOCIAL PLATFORMS -->
   <section class="section fade-in-section">
     <div class="section-content">
       <h2><i class="fas fa-share-alt"></i> All My Platforms</h2>
@@ -452,94 +374,38 @@
 
       <div class="social-category-label">Professional</div>
       <div class="social-grid">
-        <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-linkedin"></i></div>
-          <div class="social-card-info"><span class="social-card-name">LinkedIn</span><span class="social-card-handle">Professional network</span></div>
-        </a>
-        <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-user-circle"></i></div>
-          <div class="social-card-info"><span class="social-card-name">About.me</span><span class="social-card-handle">Personal profile</span></div>
-        </a>
-        <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-chart-line"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Crunchbase</span><span class="social-card-handle">Business profile</span></div>
-        </a>
-        <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-newspaper"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Muck Rack</span><span class="social-card-handle">Media profile</span></div>
-        </a>
-        <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-medium"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Medium</span><span class="social-card-handle">@JasonDavidNewton</span></div>
-        </a>
+        <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-linkedin"></i></div><div class="social-card-info"><span class="social-card-name">LinkedIn</span><span class="social-card-handle">Professional network</span></div></a>
+        <a href="https://about.me/jason-david-newton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-user-circle"></i></div><div class="social-card-info"><span class="social-card-name">About.me</span><span class="social-card-handle">Personal profile</span></div></a>
+        <a href="https://www.crunchbase.com/person/jason-newton-cdf9" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-chart-line"></i></div><div class="social-card-info"><span class="social-card-name">Crunchbase</span><span class="social-card-handle">Business profile</span></div></a>
+        <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-newspaper"></i></div><div class="social-card-info"><span class="social-card-name">Muck Rack</span><span class="social-card-handle">Media profile</span></div></a>
+        <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-medium"></i></div><div class="social-card-info"><span class="social-card-name">Medium</span><span class="social-card-handle">@JasonDavidNewton</span></div></a>
       </div>
 
       <div class="social-category-label">Social</div>
       <div class="social-grid">
-        <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-facebook"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Facebook</span><span class="social-card-handle">Family & community</span></div>
-        </a>
-        <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-instagram"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Instagram</span><span class="social-card-handle">@jasondavidnewton</span></div>
-        </a>
-        <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-tiktok"></i></div>
-          <div class="social-card-info"><span class="social-card-name">TikTok</span><span class="social-card-handle">@jasonnewtonmoseslakewa</span></div>
-        </a>
-        <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-threads"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Threads</span><span class="social-card-handle">@jasondavidnewton</span></div>
-        </a>
-        <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-x-twitter"></i></div>
-          <div class="social-card-info"><span class="social-card-name">X</span><span class="social-card-handle">@JasonDNewton</span></div>
-        </a>
-        <a href="https://www.pinterest.com/JasonDavidNewton/" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-pinterest"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Pinterest</span><span class="social-card-handle">@JasonDavidNewton</span></div>
-        </a>
-        <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-comment-alt"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Truth Social</span><span class="social-card-handle">@JasonNewton</span></div>
-        </a>
-        <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-youtube"></i></div>
-          <div class="social-card-info"><span class="social-card-name">YouTube</span><span class="social-card-handle">Videos & reflections</span></div>
-        </a>
-        <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-camera"></i></div>
-          <div class="social-card-info"><span class="social-card-name">VSCO</span><span class="social-card-handle">Photography</span></div>
-        </a>
+        <a href="https://www.facebook.com/profile.php?id=61586469156125" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-facebook"></i></div><div class="social-card-info"><span class="social-card-name">Facebook</span><span class="social-card-handle">Family &amp; community</span></div></a>
+        <a href="https://www.instagram.com/jasondavidnewton/" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-instagram"></i></div><div class="social-card-info"><span class="social-card-name">Instagram</span><span class="social-card-handle">@jasondavidnewton</span></div></a>
+        <a href="https://www.tiktok.com/@jasonnewtonmoseslakewa" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-tiktok"></i></div><div class="social-card-info"><span class="social-card-name">TikTok</span><span class="social-card-handle">@jasonnewtonmoseslakewa</span></div></a>
+        <a href="https://www.threads.net/@jasondavidnewton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-threads"></i></div><div class="social-card-info"><span class="social-card-name">Threads</span><span class="social-card-handle">@jasondavidnewton</span></div></a>
+        <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-x-twitter"></i></div><div class="social-card-info"><span class="social-card-name">X</span><span class="social-card-handle">@JasonDNewton</span></div></a>
+        <a href="https://www.pinterest.com/JasonDavidNewton/" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-pinterest"></i></div><div class="social-card-info"><span class="social-card-name">Pinterest</span><span class="social-card-handle">@JasonDavidNewton</span></div></a>
+        <a href="https://truthsocial.com/@JasonNewton" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-comment-alt"></i></div><div class="social-card-info"><span class="social-card-name">Truth Social</span><span class="social-card-handle">@JasonNewton</span></div></a>
+        <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-youtube"></i></div><div class="social-card-info"><span class="social-card-name">YouTube</span><span class="social-card-handle">Videos &amp; reflections</span></div></a>
+        <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-camera"></i></div><div class="social-card-info"><span class="social-card-name">VSCO</span><span class="social-card-handle">Photography</span></div></a>
       </div>
 
-      <div class="social-category-label">Direct & Profiles</div>
+      <div class="social-category-label">Direct &amp; Profiles</div>
       <div class="social-grid">
-        <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fab fa-whatsapp"></i></div>
-          <div class="social-card-info"><span class="social-card-name">WhatsApp</span><span class="social-card-handle">+1 (509) 771-2196</span></div>
-        </a>
-        <a href="mailto:jasonnewton926@gmail.com" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-envelope"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Email</span><span class="social-card-handle">jasonnewton926@gmail.com</span></div>
-        </a>
-        <a href="https://jasonnewton.me/" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-link"></i></div>
-          <div class="social-card-info"><span class="social-card-name">jasonnewton.me</span><span class="social-card-handle">Link hub</span></div>
-        </a>
-        <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" class="social-card">
-          <div class="social-card-icon"><i class="fas fa-id-card"></i></div>
-          <div class="social-card-info"><span class="social-card-name">Gravatar</span><span class="social-card-handle">jasondavidnewton.link</span></div>
-        </a>
+        <a href="https://wa.me/+15097712196" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fab fa-whatsapp"></i></div><div class="social-card-info"><span class="social-card-name">WhatsApp</span><span class="social-card-handle">+1 (509) 771-2196</span></div></a>
+        <a href="mailto:jasonnewton926@gmail.com" class="social-card"><div class="social-card-icon"><i class="fas fa-envelope"></i></div><div class="social-card-info"><span class="social-card-name">Email</span><span class="social-card-handle">jasonnewton926@gmail.com</span></div></a>
+        <a href="https://jasonnewton.me/" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-link"></i></div><div class="social-card-info"><span class="social-card-name">jasonnewton.me</span><span class="social-card-handle">Link hub</span></div></a>
+        <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" class="social-card"><div class="social-card-icon"><i class="fas fa-id-card"></i></div><div class="social-card-info"><span class="social-card-name">Gravatar</span><span class="social-card-handle">jasondavidnewton.link</span></div></a>
       </div>
-
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
   <div class="footer-icons">
     <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn – Jason David Newton"><i class="fab fa-linkedin"></i></a>
@@ -564,13 +430,12 @@
     <a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a>
     <p style="font-size:0.8rem;opacity:0.5;margin-top:5px;">(Currently syndicating Medium posts. Native articles coming soon.)</p>
   </div>
-  <p>© 2026 Jason David Newton</p>
+  <p>&copy; 2026 Jason David Newton</p>
   <p>Moses Lake, Washington</p>
 </footer>
 
-<button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
+<button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">&uarr;</button>
 
-<!-- FLOATING PROFILE CARD -->
 <div class="profile-float-card" id="profileCard">
   <button class="profile-card-close" id="profileCardClose" aria-label="Close profile card"><i class="fas fa-times"></i></button>
   <div class="profile-card-header-img" style="background-image:url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024');"></div>
@@ -578,17 +443,16 @@
     <img class="profile-card-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="56" height="56">
     <div class="profile-card-info">
       <a href="https://jasonnewton.me/" target="_blank" rel="noopener" class="profile-card-name">Jason David Newton</a>
-      <div class="profile-card-title">Mechanical Technician · Group 14</div>
+      <div class="profile-card-title">Mechanical Technician &middot; Group 14</div>
       <div class="profile-card-location"><i class="fas fa-map-marker-alt"></i> Moses Lake, WA</div>
     </div>
   </div>
   <div class="profile-card-footer">
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener">jasonnewton.me</a>
-    <a href="https://jasonnewton.me/" target="_blank" rel="noopener">View profile →</a>
+    <a href="https://jasonnewton.me/" target="_blank" rel="noopener">View profile &rarr;</a>
   </div>
 </div>
 
-<!-- FLOATING CHAT BUBBLE -->
 <button class="chat-bubble-btn" id="chatBubble" aria-label="Open AI Chat Assistant" aria-expanded="false">
   <i class="fas fa-comment-dots chat-icon"></i>
   <i class="fas fa-times chat-close"></i>
@@ -602,12 +466,11 @@
   <div id="embedded-widget-container"></div>
 </div>
 
-<!-- MOBILE BOTTOM NAV -->
 <nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
   <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
   <a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a>
   <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
-  <a href="contact.html" class="active"><i class="fas fa-envelope"></i><span>Contact</span></a>
+  <a href="contact.html" class="active" aria-current="page"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
 <script>
@@ -624,7 +487,6 @@ function loadChatSdk() {
   document.body.appendChild(s);
 }
 </script>
-
 <script>
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
@@ -642,22 +504,18 @@ document.addEventListener('DOMContentLoaded', () => {
     themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   });
 });
-
 window.addEventListener('load', () => {
   const hc = document.getElementById('heroContent');
   const hb = document.getElementById('heroBg');
   if (hc) hc.classList.add('loaded');
   if (hb) hb.classList.add('loaded');
 });
-
 window.addEventListener('scroll', () => {
   document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
   const btn = document.getElementById('back-to-top');
   btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 }, { passive: true });
-
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
 document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.innerWidth < 768;
   const observer = new IntersectionObserver((entries) => {
@@ -673,7 +531,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const fi = document.querySelector('.footer-icons');
   if (fi) observer.observe(fi);
 });
-
 const profileCard      = document.getElementById('profileCard');
 const profileCardClose = document.getElementById('profileCardClose');
 if (profileCard && profileCardClose) {
@@ -684,7 +541,6 @@ if (profileCard && profileCardClose) {
     sessionStorage.setItem('profileCardDismissed', '1');
   });
 }
-
 const chatBubble = document.getElementById('chatBubble');
 const chatPanel  = document.getElementById('chatPanel');
 chatBubble.addEventListener('click', (e) => {
