@@ -23,6 +23,8 @@
     <meta property="og:title" content="Jason David Newton – Photo Gallery | Moses Lake, Washington">
     <meta property="og:description" content="Family, fatherhood, outdoor adventures and Pacific Northwest beauty captured by Jason David Newton in Moses Lake, Washington.">
     <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://jasondavidnewton.com/gallery.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Jason David Newton">
@@ -31,7 +33,12 @@
     <meta name="twitter:description" content="Family, fatherhood, outdoor adventures and Pacific Northwest beauty – Moses Lake, Washington.">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
 
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
@@ -67,10 +74,11 @@
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
         --ease: cubic-bezier(0.4, 0, 0.2, 1);
-        --primary-dark: #0a1f33;
-        --primary-blue: #1f4f7a;
+        --primary-dark: #0d2244;
+        --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
+        --accent-green: #2d5a1b;
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
@@ -83,9 +91,9 @@
         --font-body: 'Source Sans 3', sans-serif;
     }
     [data-theme="dark"] {
-        --section-bg: #0e1e2e;
-        --section-alt: #0a1724;
-        --card-bg: #132030;
+        --section-bg: #0a1830;
+        --section-alt: #071020;
+        --card-bg: #0f2040;
         --text: #dde8f0;
         --text-secondary: #8faecc;
         --shadow: 0 4px 24px rgba(0,0,0,0.4);
@@ -95,12 +103,12 @@
 
     /* ── Navbar (matches index exactly) ── */
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
-    .navbar.scrolled { background: rgba(10,31,51,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
+    .navbar.scrolled { background: rgba(13,34,68,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
     .logo { font-family: var(--font-display); font-size: 1.05rem; color: #fff; font-weight: 700; white-space: nowrap; flex-shrink: 0; }
     nav ul { display: flex; list-style: none; gap: 0; flex-wrap: wrap; }
     nav ul li a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.85rem; font-weight: 600; letter-spacing: 0.03em; padding: 0.38rem 0.6rem; border-radius: 6px; transition: color 0.2s, background 0.2s; }
-    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(255,255,255,0.12); }
+    nav ul li a:hover, nav ul li a[aria-current="page"] { color: #fff; background: rgba(45,90,27,0.35); }
     .theme-toggle { margin-left: auto; }
     .theme-toggle button { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; border-radius: 50%; width: 36px; height: 36px; cursor: pointer; font-size: 0.9rem; transition: background 0.2s; display: flex; align-items: center; justify-content: center; }
     .theme-toggle button:hover { background: rgba(255,255,255,0.22); }
@@ -109,7 +117,7 @@
     @media (max-width: 900px) {
         .nav-toggle { display: block; cursor: pointer; margin-left: auto; }
         .nav-toggle span { display: block; width: 25px; height: 3px; background: #fff; margin: 5px auto; transition: 0.3s; border-radius: 2px; }
-        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(10,31,51,0.98); }
+        .navbar nav { position: absolute; top: 100%; left: 0; right: 0; background: rgba(13,34,68,0.98); }
         .navbar nav ul { display: none; flex-direction: column; gap: 0; padding: 1rem; }
         #mobile-menu:checked ~ nav ul { display: flex; }
         #mobile-menu:checked + .nav-toggle span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
@@ -239,7 +247,7 @@
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
-    .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
+    .stat-item i { color: var(--accent-green); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
 
@@ -267,8 +275,8 @@
         font-family: var(--font-body);
     }
     .filter-btn:hover, .filter-btn.active {
-        background: var(--primary-blue);
-        border-color: var(--primary-blue);
+        background: var(--accent-green);
+        border-color: var(--accent-green);
         color: #fff;
     }
     [data-theme="dark"] .filter-btn {
@@ -403,7 +411,7 @@
         text-decoration: none;
         transition: background 0.25s, transform 0.2s;
     }
-    .vsco-cta:hover { background: #163a59; transform: translateY(-2px); }
+    .vsco-cta:hover { background: #0d2244; transform: translateY(-2px); }
 
     /* ── Fade in ── */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
@@ -432,7 +440,7 @@
             position: fixed;
             bottom: 0; left: 0; right: 0;
             z-index: 8500;
-            background: rgba(10,31,51,0.97);
+            background: rgba(13,34,68,0.97);
             backdrop-filter: blur(14px);
             border-top: 1px solid rgba(255,255,255,0.1);
             padding: 8px 0 max(8px, env(safe-area-inset-bottom));
@@ -498,6 +506,8 @@
     </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <!-- NAVIGATION -->
 <header role="navigation" class="navbar" aria-label="Main Navigation">
@@ -578,7 +588,7 @@
   </div>
 </div>
 
-<main role="main">
+<main role="main" id="main-content">
   <section class="section fade-in-section">
     <div class="section-content">
       <h2>Moments From Life in Moses Lake</h2>
