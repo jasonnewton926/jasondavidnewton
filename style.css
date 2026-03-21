@@ -1,51 +1,32 @@
 /* ============================================================
    style.css — jasondavidnewton.com
-   Base stylesheet loaded by all pages.
-   All page-specific layout + component CSS lives in each
-   page's own <style> block. This file provides:
-     • CSS custom properties (design tokens)
-     • Dark mode overrides
-     • Shared utility classes reused across pages
-     • Ghost CTA / resume button rules
-     • Contact form base styling
-     • Print styles
+   Brand palette: Navy Dark #0d2244 | Navy Blue #1a4a6e
+                  Accent Blue #4da6ff | Accent Gold #c8a84b
+                  Gold Light #f0d080
    ============================================================ */
 
-/* ── Fonts (non-blocking; pages also preload individually) ── */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap');
 
-/* ── Design tokens ── */
 :root {
     --ease:           cubic-bezier(0.4, 0, 0.2, 1);
-
-    /* Brand palette — matched to JN logo & Carrd page */
-    --primary-dark:   #0d2244;   /* deep navy (logo background) */
-    --primary-blue:   #1a4a6e;   /* mid navy-blue */
-    --accent-green:   #2d5a1b;   /* forest green (logo monogram) */
-    --accent-blue:    #4da6ff;   /* light blue for links & highlights */
-    --accent-gold:    #c8a84b;   /* gold accent */
-
-    /* Surfaces */
+    --primary-dark:   #0d2244;
+    --primary-blue:   #1a4a6e;
+    --accent-blue:    #4da6ff;
+    --accent-gold:    #c8a84b;
+    --gold-light:     #f0d080;
     --section-bg:     #ffffff;
     --section-alt:    #f4f7fa;
     --card-bg:        #ffffff;
-
-    /* Typography */
     --text:           #1a2a3a;
     --text-secondary: #3d5166;
     --gray:           #64748b;
-
-    /* Effects */
     --shadow:         0 4px 24px rgba(0,0,0,0.09);
     --shadow-hover:   0 14px 44px rgba(0,0,0,0.16);
     --radius:         14px;
-
-    /* Fonts */
     --font-display:   'Playfair Display', Georgia, serif;
     --font-body:      'Source Sans 3', sans-serif;
 }
 
-/* ── Dark mode (JS-toggled) ── */
 [data-theme="dark"] {
     --section-bg:     #0a1830;
     --section-alt:    #071020;
@@ -57,7 +38,6 @@
     --shadow-hover:   0 14px 44px rgba(0,0,0,0.55);
 }
 
-/* ── System dark mode (no JS) ── */
 @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) {
         --section-bg:     #0a1830;
@@ -71,10 +51,8 @@
     }
 }
 
-/* ── Reset ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-/* ── Base ── */
 html, body { height: 100%; }
 body {
     font-family: var(--font-body);
@@ -88,252 +66,131 @@ body {
     display: flex;
     flex-direction: column;
 }
-h1, h2, h3 {
-    font-family: var(--font-display);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-}
+h1, h2, h3 { font-family: var(--font-display); line-height: 1.2; margin-bottom: 1rem; }
 a { text-decoration: none; color: inherit; }
 img { max-width: 100%; display: block; }
 main { flex: 1; }
 
-/* ── Skip to content (accessibility + SEO) ── */
 .skip-to-content {
-    position: absolute;
-    top: -100%;
-    left: 1rem;
-    background: var(--primary-dark);
-    color: #fff;
-    padding: 0.6rem 1.2rem;
-    border-radius: 0 0 8px 8px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    z-index: 9999;
-    transition: top 0.2s;
+    position: absolute; top: -100%; left: 1rem;
+    background: var(--primary-dark); color: #fff;
+    padding: 0.6rem 1.2rem; border-radius: 0 0 8px 8px;
+    font-weight: 700; font-size: 0.9rem; text-decoration: none;
+    z-index: 9999; transition: top 0.2s;
 }
 .skip-to-content:focus { top: 0; }
 
-/* ── Accessibility ── */
-:focus-visible {
-    outline: 3px solid var(--accent-green);
-    outline-offset: 2px;
-}
+:focus-visible { outline: 3px solid var(--accent-gold); outline-offset: 2px; }
+
 .sr-only {
-    position: absolute;
-    width: 1px; height: 1px;
-    padding: 0; margin: -1px;
-    overflow: hidden;
-    clip: rect(0,0,0,0);
-    border: 0;
+    position: absolute; width: 1px; height: 1px;
+    padding: 0; margin: -1px; overflow: hidden;
+    clip: rect(0,0,0,0); border: 0;
 }
 
-/* ── Scroll-triggered fade-in ── */
 .fade-in-section {
-    opacity: 0;
-    transform: translateY(36px);
+    opacity: 0; transform: translateY(36px);
     transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
 }
 .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-@media (max-width: 768px) {
-    .fade-in-section { transform: translateY(28px); }
-}
+@media (max-width: 768px) { .fade-in-section { transform: translateY(28px); } }
 
-/* ── Footer icons ── */
 .footer-icons {
-    opacity: 0;
-    transform: translateY(20px);
+    opacity: 0; transform: translateY(20px);
     transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
 .footer-icons.visible { opacity: 1; transform: translateY(0); }
 
-/* ── RSS link ── */
 .rss-link {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: var(--accent-gold);
-    font-weight: 600;
-    font-size: 0.93rem;
-    text-decoration: none;
-    transition: color 0.2s;
+    position: relative; display: inline-flex; align-items: center; gap: 8px;
+    color: var(--accent-gold); font-weight: 600; font-size: 0.93rem;
+    text-decoration: none; transition: color 0.2s;
 }
 .rss-link:hover { color: #d9ba68; }
 .rss-link:hover::after {
     content: "Add to Feedly, Inoreader, etc.";
-    position: absolute;
-    bottom: 120%; left: 50%;
-    transform: translateX(-50%);
-    background: #333;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 4px;
-    font-size: 0.82rem;
-    white-space: nowrap;
-    pointer-events: none;
-    z-index: 10;
+    position: absolute; bottom: 120%; left: 50%;
+    transform: translateX(-50%); background: #333; color: #fff;
+    padding: 6px 12px; border-radius: 4px; font-size: 0.82rem;
+    white-space: nowrap; pointer-events: none; z-index: 10;
 }
 
-/* ── Dark mode toggle ── */
 .theme-toggle { margin-left: auto; display: flex; align-items: center; }
 .theme-toggle button {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    border-radius: 50%;
-    width: 36px; height: 36px;
-    cursor: pointer;
-    font-size: 0.9rem;
-    transition: background 0.2s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; border-radius: 50%; width: 36px; height: 36px;
+    cursor: pointer; font-size: 0.9rem; transition: background 0.2s;
+    display: flex; align-items: center; justify-content: center;
 }
 .theme-toggle button:hover { background: rgba(255,255,255,0.22); }
 
-/* ── Section button (solid CTA) ── */
 .section-button {
-    display: inline-block;
-    background: var(--primary-blue);
-    color: #fff;
-    padding: 0.68rem 1.45rem;
-    border-radius: 8px;
-    font-weight: 700;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: background 0.25s, transform 0.2s;
-    cursor: pointer;
-    border: none;
+    display: inline-block; background: var(--primary-blue); color: #fff;
+    padding: 0.68rem 1.45rem; border-radius: 8px; font-weight: 700;
+    font-size: 0.9rem; text-decoration: none;
+    transition: background 0.25s, transform 0.2s; cursor: pointer; border: none;
 }
 .section-button:hover { background: var(--primary-dark); transform: translateY(-2px); }
 
-/* ── Ghost CTA — offsite links and resume download ── */
-.section-button.offsite,
-a.section-button.offsite,
-.resume-btn,
-a.resume-btn {
-    background: #e8edf2 !important;
-    border: 1.5px solid #b8c8d8 !important;
-    color: var(--primary-blue) !important;
-    font-weight: 700 !important;
+.section-button.offsite, a.section-button.offsite, .resume-btn, a.resume-btn {
+    background: #e8edf2 !important; border: 1.5px solid #b8c8d8 !important;
+    color: var(--primary-blue) !important; font-weight: 700 !important;
 }
 .section-button.offsite::after { content: ' ↗'; font-size: 0.8em; }
-.section-button.offsite:hover,
-a.section-button.offsite:hover,
-.resume-btn:hover,
-a.resume-btn:hover {
+.section-button.offsite:hover, a.section-button.offsite:hover,
+.resume-btn:hover, a.resume-btn:hover {
     background: var(--primary-blue) !important;
     border-color: var(--primary-blue) !important;
-    color: #fff !important;
-    transform: translateY(-2px);
+    color: #fff !important; transform: translateY(-2px);
 }
 [data-theme="dark"] .section-button.offsite,
 [data-theme="dark"] a.section-button.offsite,
-[data-theme="dark"] .resume-btn,
-[data-theme="dark"] a.resume-btn {
+[data-theme="dark"] .resume-btn, [data-theme="dark"] a.resume-btn {
     background: rgba(255,255,255,0.08) !important;
-    border: 1.5px solid rgba(200,168,75,0.5) !important;
-    color: #c8a84b !important;
+    border: 1.5px solid rgba(200,168,75,0.5) !important; color: #c8a84b !important;
 }
 [data-theme="dark"] .section-button.offsite:hover,
 [data-theme="dark"] a.section-button.offsite:hover,
-[data-theme="dark"] .resume-btn:hover,
-[data-theme="dark"] a.resume-btn:hover {
+[data-theme="dark"] .resume-btn:hover, [data-theme="dark"] a.resume-btn:hover {
     background: var(--primary-blue) !important;
-    border-color: var(--primary-blue) !important;
-    color: #fff !important;
-}
-@media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) .section-button.offsite,
-    :root:not([data-theme="light"]) a.section-button.offsite,
-    :root:not([data-theme="light"]) .resume-btn,
-    :root:not([data-theme="light"]) a.resume-btn {
-        background: rgba(255,255,255,0.08) !important;
-        border: 1.5px solid rgba(200,168,75,0.5) !important;
-        color: #c8a84b !important;
-    }
-    :root:not([data-theme="light"]) .section-button.offsite:hover,
-    :root:not([data-theme="light"]) a.section-button.offsite:hover,
-    :root:not([data-theme="light"]) .resume-btn:hover,
-    :root:not([data-theme="light"]) a.resume-btn:hover {
-        background: var(--primary-blue) !important;
-        color: #fff !important;
-    }
+    border-color: var(--primary-blue) !important; color: #fff !important;
 }
 
-/* ── Btn group (centered CTA pair) ── */
-.btn-group {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 1.2rem;
-    justify-content: center;
-}
+.btn-group { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 1.2rem; justify-content: center; }
 .btn-group .section-button { margin-top: 0; }
 
-/* ── Contact form base ── */
 .contact-form { max-width: 600px; text-align: left; }
 .contact-form label {
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.88rem;
-    font-weight: 700;
-    color: var(--text-secondary);
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+    display: block; margin-bottom: 6px; font-size: 0.88rem; font-weight: 700;
+    color: var(--text-secondary); letter-spacing: 0.04em; text-transform: uppercase;
 }
-.contact-form input,
-.contact-form textarea {
-    width: 100%;
-    padding: 0.78rem 1rem;
-    border: 1.5px solid rgba(100,116,139,0.25);
-    border-radius: 8px;
-    font-family: var(--font-body);
-    font-size: 1rem;
-    color: var(--text);
-    background: var(--card-bg);
-    margin-bottom: 1.1rem;
+.contact-form input, .contact-form textarea {
+    width: 100%; padding: 0.78rem 1rem;
+    border: 1.5px solid rgba(100,116,139,0.25); border-radius: 8px;
+    font-family: var(--font-body); font-size: 1rem; color: var(--text);
+    background: var(--card-bg); margin-bottom: 1.1rem;
     transition: border-color 0.2s, box-shadow 0.2s;
 }
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: var(--accent-green);
-    box-shadow: 0 0 0 3px rgba(45,90,27,0.12);
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none; border-color: var(--accent-gold);
+    box-shadow: 0 0 0 3px rgba(200,168,75,0.12);
 }
 [data-theme="dark"] .contact-form input,
-[data-theme="dark"] .contact-form textarea {
-    border-color: rgba(255,255,255,0.12);
-}
+[data-theme="dark"] .contact-form textarea { border-color: rgba(255,255,255,0.12); }
 .contact-form textarea { resize: vertical; min-height: 140px; }
 
-/* ── Instagram embed ── */
-.instagram-media {
-    max-width: 540px !important;
-    margin: 0 auto !important;
-}
+.instagram-media { max-width: 540px !important; margin: 0 auto !important; }
 
-/* ── Mobile: keep ghost buttons inline ── */
 @media (max-width: 768px) {
-    .section-button.offsite,
-    a.section-button.offsite,
-    .resume-btn,
-    a.resume-btn {
-        display: inline-block !important;
-        width: auto !important;
+    .section-button.offsite, a.section-button.offsite, .resume-btn, a.resume-btn {
+        display: inline-block !important; width: auto !important;
     }
 }
 
-/* ── Print ── */
 @media print {
     .navbar, footer { background: #fff !important; color: #000 !important; }
     a { text-decoration: underline; color: blue; }
-    .fade-in-section,
-    .fade-in-section.is-visible { opacity: 1 !important; transform: none !important; }
-    .chat-bubble-btn,
-    .chat-panel,
-    .profile-float-card,
-    .mobile-bottom-nav,
-    #back-to-top { display: none !important; }
+    .fade-in-section, .fade-in-section.is-visible { opacity: 1 !important; transform: none !important; }
+    .chat-bubble-btn, .chat-panel, .profile-float-card,
+    .mobile-bottom-nav, #back-to-top { display: none !important; }
 }
