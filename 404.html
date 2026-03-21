@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 – Page Not Found | Jason David Newton</title>
+    <meta name="description" content="Page not found. Return to Jason David Newton's site – Mechanical Technician in Moses Lake, Washington.">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://jasondavidnewton.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+        --primary-dark: #0d2244; --primary-blue: #1a4a6e;
+        --accent-blue: #4da6ff; --accent-gold: #c8a84b;
+        --section-bg: #ffffff; --text: #1a2a3a; --text-secondary: #3d5166;
+        --font-display: 'Playfair Display', Georgia, serif;
+        --font-body: 'Source Sans 3', sans-serif;
+    }
+    [data-theme="dark"] { --section-bg: #0a1830; --text: #dde8f0; --text-secondary: #8faecc; }
+    body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); min-height: 100vh; display: flex; flex-direction: column; overflow-x: hidden; -webkit-font-smoothing: antialiased; }
+
+    .error-page { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 3rem 2rem; position: relative; overflow: hidden; }
+    .error-bg { position: absolute; inset: 0; background: linear-gradient(140deg, var(--primary-dark) 0%, #0a2a50 60%, #0d3060 100%); }
+    .error-bg::after { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 30% 50%, rgba(200,168,75,0.08) 0%, transparent 60%); }
+    .error-content { position: relative; z-index: 2; max-width: 560px; }
+    .error-number { font-family: var(--font-display); font-size: clamp(7rem, 18vw, 12rem); font-weight: 900; line-height: 1; color: transparent; background: linear-gradient(135deg, var(--accent-gold), #f0d080); -webkit-background-clip: text; background-clip: text; margin-bottom: 0; letter-spacing: -0.02em; }
+    .error-avatar { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; border: 3px solid rgba(200,168,75,0.6); box-shadow: 0 0 0 6px rgba(200,168,75,0.12); margin: 0 auto 1.5rem; display: block; }
+    .error-content h1 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2rem); color: #fff; margin-bottom: 0.8rem; }
+    .error-content p { font-size: 1rem; color: rgba(255,255,255,0.72); line-height: 1.7; margin-bottom: 2rem; }
+    .error-links { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; }
+    .error-btn { display: inline-flex; align-items: center; gap: 8px; background: var(--accent-gold); color: #0d2244; padding: 0.75rem 1.6rem; border-radius: 8px; font-weight: 700; font-size: 0.9rem; text-decoration: none; transition: background 0.2s, transform 0.2s; }
+    .error-btn:hover { background: #d9ba68; transform: translateY(-2px); }
+    .error-btn.ghost { background: rgba(255,255,255,0.1); border: 1.5px solid rgba(255,255,255,0.25); color: #fff; }
+    .error-btn.ghost:hover { background: rgba(255,255,255,0.2); }
+    .quick-links { display: flex; flex-wrap: wrap; gap: 8px; justify-content: center; margin-top: 1.8rem; }
+    .quick-link { color: rgba(255,255,255,0.6); font-size: 0.85rem; text-decoration: none; padding: 4px 10px; border-radius: 4px; transition: color 0.2s; }
+    .quick-link:hover { color: var(--accent-gold); }
+    .quick-link::before { content: '→ '; }
+    .error-search { margin-top: 1.6rem; display: flex; gap: 8px; max-width: 380px; margin-left: auto; margin-right: auto; }
+    .error-search-input { flex: 1; padding: 0.7rem 1rem; border-radius: 8px; border: 1.5px solid rgba(255,255,255,0.2); background: rgba(255,255,255,0.08); color: #fff; font-family: var(--font-body); font-size: 0.9rem; outline: none; }
+    .error-search-input::placeholder { color: rgba(255,255,255,0.4); }
+    .error-search-input:focus { border-color: var(--accent-gold); }
+    .error-search-btn { background: var(--primary-blue); color: #fff; border: none; padding: 0.7rem 1rem; border-radius: 8px; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+    .error-search-btn:hover { background: var(--accent-gold); color: #0d2244; }
+    footer { background: var(--primary-dark); color: rgba(255,255,255,0.5); text-align: center; padding: 20px 2rem; font-size: 0.85rem; border-top: 1px solid rgba(255,255,255,0.06); }
+    footer a { color: var(--accent-gold); text-decoration: none; }
+    </style>
+</head>
+<body>
+<div class="error-page">
+  <div class="error-bg"></div>
+  <div class="error-content">
+    <div class="error-number">404</div>
+    <img class="error-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton">
+    <h1>Well, That Page Took a Hike</h1>
+    <p>Looks like this page wandered off somewhere in the Pacific Northwest and didn't leave a note. Happens to the best of us. Let's get you back somewhere useful.</p>
+    <div class="error-links">
+      <a href="index.html" class="error-btn"><i class="fas fa-home"></i> Go Home</a>
+      <a href="contact.html" class="error-btn ghost"><i class="fas fa-envelope"></i> Contact Me</a>
+    </div>
+    <div class="quick-links">
+      <a href="about.html" class="quick-link">About</a>
+      <a href="experience.html" class="quick-link">Experience</a>
+      <a href="blog.html" class="quick-link">Blog</a>
+      <a href="gallery.html" class="quick-link">Gallery</a>
+      <a href="resources.html" class="quick-link">Resources</a>
+    </div>
+  </div>
+</div>
+<footer>
+  <p>© 2026 <a href="index.html">Jason David Newton</a> · Moses Lake, Washington</p>
+</footer>
+<script>
+  const saved = localStorage.getItem('theme');
+  if (saved) document.documentElement.setAttribute('data-theme', saved);
+  else if (window.matchMedia('(prefers-color-scheme: dark)').matches) document.documentElement.setAttribute('data-theme', 'dark');
+</script>
+</body>
+</html>
