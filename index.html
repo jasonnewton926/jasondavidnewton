@@ -43,8 +43,11 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <meta name="twitter:title" content="Jason David Newton | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
-    <link rel="icon" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0d2244">
     <meta name="p:domain_verify" content="61a8c2a3e323be743a7227ff09d6b78c">
@@ -55,6 +58,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
 
     <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-LSWP3B1PKE"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-LSWP3B1PKE');
+    </script>
 
     <!-- ═══ SCHEMA: Person ═══ -->
     <script type="application/ld+json">
@@ -397,8 +407,48 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .sticky-cta-btn:hover { background: #d9ba68; }
 
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+    /* Medium/LinkedIn/VSCO card styles for home page */
+    .medium-cta { display: inline-flex; align-items: center; gap: 8px; background: var(--primary-blue); color: #fff; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
+    .medium-cta:hover { background: #0d2244; transform: translateY(-2px); }
+    .rss-cta { display: inline-flex; align-items: center; gap: 8px; color: var(--accent-gold); font-weight: 600; font-size: 0.88rem; text-decoration: none; transition: color 0.2s; padding: 0.65rem 0; }
+    .rss-cta:hover { color: #d9ba68; }
+    .home-feed-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); display: flex; align-items: stretch; margin-bottom: 0; transition: transform 0.3s var(--ease), box-shadow 0.3s; max-width: 760px; margin: 0 auto; }
+    .home-feed-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .home-feed-card-thumb { width: 140px; flex-shrink: 0; overflow: hidden; }
+    .home-feed-card-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; min-height: 120px; }
+    .home-feed-card-body { padding: 18px 20px; flex: 1; display: flex; flex-direction: column; }
+    .home-feed-card-meta { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 6px; }
+    .home-feed-card-body h3 { font-family: var(--font-display); font-size: 1.05rem; color: var(--primary-blue); margin-bottom: 6px; line-height: 1.3; }
+    [data-theme="dark"] .home-feed-card-body h3 { color: var(--accent-blue); }
+    .home-feed-card-body p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 14px; flex: 1; }
+    .home-feed-card-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+    .home-feed-read-btn { display: inline-flex; align-items: center; gap: 6px; background: var(--primary-blue); color: #fff; padding: 6px 14px; border-radius: 6px; font-weight: 700; font-size: 0.82rem; text-decoration: none; transition: background 0.2s, transform 0.2s; white-space: nowrap; }
+    .home-feed-read-btn:hover { background: #0d2244; transform: translateY(-2px); }
+    .home-feed-card-share { display: flex; gap: 2px; }
+    .home-feed-card-share a { color: var(--primary-blue); font-size: 1rem; padding: 6px 7px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; transition: color 0.2s, background 0.2s; text-decoration: none; }
+    .home-feed-card-share a:hover { color: var(--accent-blue); background: rgba(31,79,122,0.08); }
+    [data-theme="dark"] .home-feed-card-share a { color: var(--accent-blue); }
+    /* Journal card on home page */
+    .journal-home-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); max-width: 760px; margin: 0 auto; transition: transform 0.3s var(--ease), box-shadow 0.3s; }
+    .journal-home-card:hover { transform: translateY(-4px); box-shadow: var(--shadow-hover); }
+    .journal-home-card-img { width: 100%; height: 220px; object-fit: cover; object-position: center center; display: block; }
+    .journal-home-card-body { padding: 24px 26px; }
+    .journal-home-card-meta { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-gold); margin-bottom: 8px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .journal-home-card-body h3 { font-family: var(--font-display); font-size: 1.25rem; color: var(--primary-blue); margin-bottom: 10px; line-height: 1.3; }
+    [data-theme="dark"] .journal-home-card-body h3 { color: var(--accent-blue); }
+    .journal-home-card-body p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 18px; }
+    .journal-home-card-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; padding-top: 16px; border-top: 1px solid rgba(100,116,139,0.15); }
+    .journal-home-card-share { display: flex; gap: 2px; }
+    .journal-home-card-share a { color: var(--primary-blue); font-size: 1rem; padding: 6px 7px; border-radius: 5px; display: inline-flex; align-items: center; justify-content: center; transition: color 0.2s, background 0.2s; text-decoration: none; }
+    .journal-home-card-share a:hover { color: var(--accent-blue); background: rgba(31,79,122,0.08); }
+    [data-theme="dark"] .journal-home-card-share a { color: var(--accent-blue); }
+    @media (max-width: 600px) {
+        .home-feed-card { flex-direction: column; }
+        .home-feed-card-thumb { width: 100%; height: 160px; }
+        .home-feed-card-thumb img { min-height: 160px; }
+    }
     </style>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Who is Jason David Newton?","acceptedAnswer":{"@type":"Answer","text":"Jason David Newton is a Mechanical Technician at Group 14 Technologies in Moses Lake, Washington. He is a WSU Business Management graduate, USCG Merchant Mariner Credentialed, devoted Christian father, and active member of Grace Harvest Church."}},{"@type":"Question","name":"Where does Jason David Newton work?","acceptedAnswer":{"@type":"Answer","text":"Jason David Newton works as a Mechanical Technician at Group 14 Technologies in Moses Lake, Washington."}},{"@type":"Question","name":"What is Jason David Newton known for?","acceptedAnswer":{"@type":"Answer","text":"Jason David Newton is known as a mechanical technician, operations leader, Christian father, youth football coach, and community member in Moses Lake, Washington with over 10 years of industrial maintenance experience."}},{"@type":"Question","name":"Did Jason David Newton work on ships?","acceptedAnswer":{"@type":"Answer","text":"Yes. Jason David Newton worked as a Second Assistant Engineer and Oiler aboard the C/P Starbound for Aleutian Spray Fisheries from 2018 to 2021 in the Bering Sea. He holds a U.S. Coast Guard Merchant Mariner Credential."}}]}</script>
 </head>
 <body>
 
@@ -560,87 +610,118 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </section>
 
-  <!-- ═══ BLOG PREVIEW ═══ -->
-  <section class="section alt fade-in-section" style="padding-bottom:80px;">
-    <div class="section-content" style="max-width:1100px;">
-      <h2 style="text-align:center;">Featured Reflections from My Blog on Medium</h2>
-      <p style="text-align:center;max-width:600px;margin:0 auto 0.5rem;" class="secondary">I share real talk on faith, fatherhood, hard work, and life in Moses Lake. Click any card to read the full story.</p>
-      <div class="blog-preview-grid">
+  <!-- ═══ BLOG & WRITING ═══ -->
 
-        <div class="blog-card">
-          <img class="blog-card-img pos-top"
-            src="https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-smiling.jpg"
-            alt="Jason Newton with his son smiling in Moses Lake Washington"
-            loading="lazy" width="400" height="210">
-          <div class="blog-card-body">
-            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2026</div>
-            <h3>Being a Christian Dad in Moses Lake</h3>
-            <p>Balancing faith, family, and life as a mechanical tech in Moses Lake, Washington. Real talk on what it looks like day-to-day.</p>
-            <a href="https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
-            <div class="share-buttons">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730&text=Being a Christian Dad in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/being-a-christian-dad-in-moses-lake-balancing-faith-family-and-a-mechanical-tech-f9b659a58730" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-          </div>
+  <!-- LATEST FROM MEDIUM -->
+  <section class="section alt fade-in-section">
+    <div class="section-content" style="max-width:860px;">
+      <h2>Latest from Medium</h2>
+      <p class="secondary" style="margin-bottom:1.6rem;">Live feed pulling my newest posts straight from Medium as soon as they publish.</p>
+      <div id="rss-feed-container-home">
+        <div id="rss-loading-home" style="text-align:center;padding:1.5rem;color:var(--text-secondary);font-size:0.95rem;">
+          <i class="fas fa-circle-notch fa-spin" style="margin-right:8px;color:var(--accent-gold);"></i> Loading latest article...
         </div>
-
-        <div class="blog-card">
-          <img class="blog-card-img pos-center"
-            src="https://jasondavidnewton.com/assets/jason-david-newton-son-christmas.jpg"
-            alt="Jason Newton and son at Christmas in Moses Lake"
-            loading="lazy" width="400" height="210">
-          <div class="blog-card-body">
-            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2026</div>
-            <h3>7 Simple Bible Study Habits for Busy Christian Dads</h3>
-            <p>Practical ways to stay in the Word even with a demanding job and family life in Moses Lake, WA.</p>
-            <a href="https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
-            <div class="share-buttons">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637&text=7 Simple Bible Study Habits for Busy Christian Dads" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img class="blog-card-img"
-            src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg"
-            alt="Jason Newton working – mechanical technician hard work Moses Lake"
-            loading="lazy" width="400" height="210" style="object-position: center 30%;">
-          <div class="blog-card-body">
-            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2026</div>
-            <h3>Why Hard Work Still Matters in Moses Lake</h3>
-            <p>A mechanical technician's honest take on why showing up every day still builds real character, trust, and opportunities.</p>
-            <a href="https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
-            <div class="share-buttons">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d&text=Why Hard Work Still Matters in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/why-hard-work-still-matters-in-moses-lake-a-mechanical-technicians-honest-take-jason-david-3ce00bc5cd7d" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="blog-card">
-          <img class="blog-card-img pos-center"
-            src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg"
-            alt="Sunset over Moses Lake Washington – faith and staying grounded"
-            loading="lazy" width="400" height="210">
-          <div class="blog-card-body">
-            <div class="blog-card-meta"><i class="fas fa-calendar-alt"></i> Published 2026</div>
-            <h3>Faith and Staying Grounded in Moses Lake</h3>
-            <p>How Jesus keeps me steady as a Christian dad &amp; mechanical technician. Real talk on what it looks like day-to-day.</p>
-            <a href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button offsite">Read on Medium <span class="sr-only">(opens in new tab)</span></a>
-            <div class="share-buttons">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d&text=Faith and Staying Grounded in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-            </div>
-          </div>
-        </div>
-
       </div>
-      <p style="text-align:center;margin-top:30px;"><a href="blog.html" class="section-button">View Full Blog</a></p>
+      <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+        <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="medium-cta"><i class="fab fa-medium"></i> All Articles on Medium</a>
+        <a href="/blog-rss.xml" class="rss-cta"><i class="fas fa-rss"></i> Subscribe via RSS</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ON LINKEDIN -->
+  <section class="section fade-in-section">
+    <div class="section-content" style="max-width:860px;">
+      <h2>On LinkedIn</h2>
+      <p class="secondary" style="margin-bottom:1.6rem;">Articles published on my LinkedIn profile. Connect and follow for more.</p>
+      <div class="home-feed-card">
+        <div class="home-feed-card-thumb">
+          <img src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Lessons from Working at Sea" loading="lazy" width="140" height="160">
+        </div>
+        <div class="home-feed-card-body">
+          <div class="home-feed-card-meta"><i class="fab fa-linkedin" style="color:#0077b5;margin-right:4px;"></i> LinkedIn Article &nbsp;·&nbsp; <i class="fas fa-clock" style="margin-right:4px;"></i> 6 min read</div>
+          <h3>Lessons from Working at Sea: What Maritime Work Taught Me</h3>
+          <p>The real skills I picked up working as a marine engineer in the Bering Sea and how they still show up at work every single day in Moses Lake.</p>
+          <div class="home-feed-card-actions">
+            <a href="https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0077b5;">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+            <div class="home-feed-card-share">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/&text=Lessons from Working at Sea" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1.4rem;">
+        <a href="https://www.linkedin.com/in/jason-newton-moses-lake/recent-activity/articles/" target="_blank" rel="noopener" class="medium-cta" style="background:#0077b5;"><i class="fab fa-linkedin"></i> All LinkedIn Articles</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ON VSCO -->
+  <section class="section alt fade-in-section">
+    <div class="section-content" style="max-width:860px;">
+      <h2>On VSCO</h2>
+      <p class="secondary" style="margin-bottom:1.6rem;">Posts from my VSCO blog. Photography, reflections, and Pacific Northwest life.</p>
+      <div class="home-feed-card">
+        <div class="home-feed-card-thumb">
+          <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Fatherhood in the Golden Hour – VSCO" loading="lazy" width="140" height="160" style="object-position:center center;">
+        </div>
+        <div class="home-feed-card-body">
+          <div class="home-feed-card-meta"><i class="fas fa-camera" style="margin-right:4px;"></i> VSCO Blog</div>
+          <h3>Fatherhood in the Golden Hour</h3>
+          <p>Some photos just say everything. This is what it means to be a dad in Moses Lake. The light, the kid, the moment. Worth documenting.</p>
+          <div class="home-feed-card-actions">
+            <a href="https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#1a1a1a;">View on VSCO <i class="fas fa-arrow-right"></i></a>
+            <div class="home-feed-card-share">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232&text=Fatherhood in the Golden Hour" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Fatherhood in the Golden Hour https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1.4rem;">
+        <a href="https://jasondavidnewton.vsco.site/blogs" target="_blank" rel="noopener" class="medium-cta" style="background:#1a1a1a;"><i class="fas fa-camera"></i> All VSCO Posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FROM THE JOURNAL -->
+  <section class="section fade-in-section" style="padding-bottom:80px;">
+    <div class="section-content" style="max-width:860px;">
+      <h2>From the Journal</h2>
+      <p class="secondary" style="margin-bottom:1.6rem;">Original writing right here on the site. Real life, unfiltered.</p>
+      <div class="journal-home-card">
+        <img class="journal-home-card-img"
+          src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg"
+          alt="Jason Newton with his son on shoulders at sunset in Moses Lake Washington"
+          loading="lazy" width="760" height="220">
+        <div class="journal-home-card-body">
+          <div class="journal-home-card-meta">
+            <span><i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 21, 2026</span>
+            <span><i class="fas fa-clock" style="margin-right:4px;"></i> 6 min read</span>
+            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Single Dad Life</span>
+          </div>
+          <h3>Being a Single Dad in Moses Lake: The Real Unfiltered Version</h3>
+          <p>Nobody tells you how quiet the house gets when your kid is gone. You spend the whole week counting the days, and then he walks in the door and everything is loud again in the best possible way. That's the cycle. That's single dad life. The hard parts and the good ones exist at the same time. This is my honest take on what it actually looks like raising a son in Moses Lake as a single dad, a man of faith, and someone who's just trying to show up right.</p>
+          <div class="journal-home-card-footer">
+            <div class="journal-home-card-share">
+              <span style="font-size:0.82rem;font-weight:700;color:var(--text-secondary);margin-right:6px;">Share:</span>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.com/blog.html%23post-single-dad" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.com/blog.html%23post-single-dad&text=Being a Single Dad in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.com/blog.html%23post-single-dad" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Being a Single Dad in Moses Lake https://jasondavidnewton.com/blog.html%23post-single-dad" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <a href="blog.html#post-single-dad" class="home-feed-read-btn">Read Full Article <i class="fas fa-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:1.6rem;display:flex;flex-wrap:wrap;gap:14px;align-items:center;">
+        <a href="blog.html#post-single-dad" class="medium-cta"><i class="fas fa-book-open"></i> All Journal Posts</a>
+        <a href="/blog-rss.xml" class="rss-cta"><i class="fas fa-rss"></i> Subscribe via RSS</a>
+      </div>
     </div>
   </section>
 
@@ -797,7 +878,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
   <div style="margin-bottom:16px;">
     <a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a>
-    <p style="font-size:0.8rem;opacity:0.5;margin-top:5px;">(Currently syndicating Medium posts. Native articles coming soon.)</p>
   </div>
   <p>© 2026 Jason David Newton</p>
   <p>Moses Lake, Washington</p>
@@ -977,6 +1057,84 @@ document.addEventListener('keydown', (e) => {
     }
   }
 });
+</script>
+
+<script>
+// Home page Medium RSS - show 1 latest article with hardcoded fallback
+(function() {
+  var container = document.getElementById('rss-feed-container-home');
+  var loading   = document.getElementById('rss-loading-home');
+  if (!container) return;
+
+  var FALLBACK = {
+    title: 'Faith and Staying Grounded in Moses Lake',
+    pubDate: 'March 17, 2026',
+    readTime: '4 min read',
+    desc: 'How Jesus keeps me steady as a Christian dad and mechanical technician in Moses Lake. Real talk on staying grounded when life gets loud.',
+    thumb: 'https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg',
+    link: 'https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d'
+  };
+
+  function formatDate(s) {
+    try { var d = new Date(s); return isNaN(d) ? s : d.toLocaleDateString('en-US',{year:'numeric',month:'long',day:'numeric'}); } catch(e) { return s; }
+  }
+  function readTime(text) {
+    var words = (text||'').replace(/<[^>]*>/g,'').split(/\s+/).filter(Boolean).length;
+    return Math.max(1, Math.round(words/200)) + ' min read';
+  }
+
+  function renderCard(item) {
+    if (loading) loading.style.display = 'none';
+    var card = document.createElement('div');
+    card.className = 'home-feed-card';
+    card.innerHTML =
+      '<div class="home-feed-card-thumb">' +
+        '<img src="' + item.thumb + '" alt="' + item.title + '" style="width:100%;height:100%;min-height:140px;object-fit:cover;display:block;" loading="lazy">' +
+      '</div>' +
+      '<div class="home-feed-card-body">' +
+        '<div class="home-feed-card-meta"><i class="fab fa-medium" style="margin-right:4px;"></i> Medium &nbsp;&middot;&nbsp; <i class="fas fa-calendar-alt" style="margin-right:4px;"></i>' + item.pubDate + ' &nbsp;&middot;&nbsp; <i class="fas fa-clock" style="margin-right:4px;"></i>' + item.readTime + '</div>' +
+        '<h3>' + item.title + '</h3>' +
+        '<p>' + item.desc + '</p>' +
+        '<div class="home-feed-card-actions">' +
+          '<a href="' + item.link + '" target="_blank" rel="noopener" class="home-feed-read-btn">Read on Medium <i class="fas fa-arrow-right"></i></a>' +
+          '<div class="home-feed-card-share">' +
+            '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>' +
+            '<a href="https://twitter.com/intent/tweet?url=' + encodeURIComponent(item.link) + '&text=' + encodeURIComponent(item.title) + '" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>' +
+            '<a href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>' +
+            '<a href="https://wa.me/?text=' + encodeURIComponent(item.title + ' ' + item.link) + '" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>' +
+          '</div>' +
+        '</div>' +
+      '</div>';
+    container.appendChild(card);
+  }
+
+  var tried = 0;
+  var APIS = [
+    'https://api.rss2json.com/v1/api.json?rss_url=https%3A%2F%2Fmedium.com%2Ffeed%2F%40JasonDavidNewton&count=1',
+    'https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@JasonDavidNewton&count=1'
+  ];
+
+  function tryNext() {
+    if (tried >= APIS.length) { renderCard(FALLBACK); return; }
+    var url = APIS[tried++];
+    fetch(url).then(function(r) {
+      if (!r.ok) throw new Error('bad');
+      return r.json();
+    }).then(function(data) {
+      if (!data.items || !data.items.length) throw new Error('empty');
+      var item = data.items[0];
+      renderCard({
+        title: item.title,
+        pubDate: formatDate(item.pubDate),
+        readTime: readTime(item.content || item.description),
+        desc: ((item.description||item.content||'').replace(/<[^>]*>/g,'').slice(0,140) + '...'),
+        thumb: item.thumbnail || (item.enclosure && item.enclosure.link) || FALLBACK.thumb,
+        link: item.link
+      });
+    }).catch(function() { tryNext(); });
+  }
+  setTimeout(tryNext, 150);
+})();
 </script>
 </body>
 </html>
