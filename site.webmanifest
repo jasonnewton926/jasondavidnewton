@@ -1,1 +1,21 @@
-{"name":"","short_name":"","icons":[{"src":"/android-chrome-192x192.png","sizes":"192x192","type":"image/png"},{"src":"/android-chrome-512x512.png","sizes":"512x512","type":"image/png"}],"theme_color":"#ffffff","background_color":"#ffffff","display":"standalone"}
+{
+  "name": "Jason David Newton",
+  "short_name": "Jason Newton",
+  "description": "Mechanical Technician in Moses Lake, WA. Faith, family, and Pacific Northwest life.",
+  "icons": [
+    {
+      "src": "https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    },
+    {
+      "src": "https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg",
+      "sizes": "512x512",
+      "type": "image/jpeg"
+    }
+  ],
+  "theme_color": "#0d2244",
+  "background_color": "#0d2244",
+  "display": "standalone",
+  "start_url": "/"
+}
