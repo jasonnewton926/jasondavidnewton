@@ -5,10 +5,18 @@
     <link>https://jasondavidnewton.com/blog.html</link>
     <description>Personal reflections on faith, fatherhood, leadership, hard work, and life in Moses Lake, Washington by Jason David Newton. Mechanical technician at Group 14 Technologies, Christian dad at Grace Harvest Church, Pacific Northwest adventures.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 19 Mar 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://jasondavidnewton.com/blog-rss.xml" rel="self" type="application/rss+xml" />
 
-    <!-- ── ORIGINAL SITE ARTICLES (newest first) ── -->
+    <!-- ORIGINAL SITE ARTICLES (newest first) -->
+
+    <item>
+        <title>Being a Single Dad in Moses Lake: The Real Unfiltered Version</title>
+        <link>https://jasondavidnewton.com/blog.html#post-single-dad</link>
+        <guid isPermaLink="true">https://jasondavidnewton.com/blog.html#post-single-dad</guid>
+        <pubDate>Fri, 21 Mar 2026 00:00:00 GMT</pubDate>
+        <description><![CDATA[Nobody tells you how quiet the house gets when your kid is gone. An honest, unfiltered look at what single dad life actually looks like in Moses Lake, Washington. The hard parts and the good ones.]]></description>
+    </item>
 
     <item>
         <title>Five Things Three Years at Sea Taught Me That No Job on Land Ever Could</title>
@@ -50,7 +58,7 @@
         <description><![CDATA[People ask me why I stay in Moses Lake. Here's the honest answer. Small town life, community, family, and meaningful work. I'd choose it over any big city every time.]]></description>
     </item>
 
-    <!-- ── MEDIUM ARTICLES (newest first) ── -->
+    <!-- MEDIUM ARTICLES (newest first) -->
 
     <item>
         <title>Faith and Staying Grounded in Moses Lake: How Jesus Keeps Me Steady as a Christian Dad</title>
@@ -82,6 +90,22 @@
         <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/7-simple-bible-study-habits-that-actually-work-for-busy-christian-dads-in-moses-lake-f3f1ad2c0637</guid>
         <pubDate>Wed, 05 Mar 2026 00:00:00 GMT</pubDate>
         <description><![CDATA[Practical, realistic Bible study habits for busy Christian dads. How to stay in the Word despite work, family, and life in Moses Lake, WA.]]></description>
+    </item>
+
+    <item>
+        <title>Lessons from Working at Sea: How Maritime Work Shaped My Life as a Mechanical Technician in Moses Lake</title>
+        <link>https://medium.com/@JasonDavidNewton/lessons-from-working-at-sea-how-maritime-work-shaped-my-life-as-a-mechanical-technician-in-moses-761befddcb3d</link>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/lessons-from-working-at-sea-how-maritime-work-shaped-my-life-as-a-mechanical-technician-in-moses-761befddcb3d</guid>
+        <pubDate>Wed, 01 Jan 2026 00:00:00 GMT</pubDate>
+        <description><![CDATA[How maritime work aboard the C/P Starbound in the Bering Sea shaped me as a mechanical technician and as a man. Things I learned at sea that I still carry every day in Moses Lake, Washington.]]></description>
+    </item>
+
+    <item>
+        <title>Growing Up and Working in Moses Lake, Washington: Why I Never Left</title>
+        <link>https://medium.com/@JasonDavidNewton/growing-up-and-working-in-moses-lake-washington-why-i-never-left-jason-david-newton-7b7288e6d5f2</link>
+        <guid isPermaLink="true">https://medium.com/@JasonDavidNewton/growing-up-and-working-in-moses-lake-washington-why-i-never-left-jason-david-newton-7b7288e6d5f2</guid>
+        <pubDate>Wed, 01 Jan 2026 00:00:00 GMT</pubDate>
+        <description><![CDATA[Born in Moses Lake, built in Moses Lake. Why this town is more than a hometown and how growing up here shaped how I work, how I lead, and how I live.]]></description>
     </item>
 
 </channel>
