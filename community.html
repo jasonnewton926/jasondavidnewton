@@ -58,7 +58,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
-        --accent-green: #2d5a1b;
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
@@ -112,7 +111,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-hero-bg.loaded { transform: scale(1); }
     .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(6,18,32,0.88) 0%, rgba(10,31,51,0.75) 55%, rgba(15,42,70,0.62) 100%); }
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.75) 0%, transparent 55%); }
-    .page-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; max-width: 1000px; width: 100%; opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
+    .page-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; max-width: 1000px; width: 100%; opacity: 0; transform: translateY(28px); transition: opacity 1.5s var(--ease), transform 1.5s var(--ease); }
     .page-hero-inner.loaded { opacity: 1; transform: translateY(0); }
     .hero-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; flex-shrink: 0; }
     .hero-avatar { width: 175px; height: 175px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(200,168,75,0.8); box-shadow: 0 0 0 8px rgba(200,168,75,0.14), 0 10px 44px rgba(0,0,0,0.55); display: block; }
@@ -189,7 +188,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     /* ── Why community section ── */
     .why-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 1.5rem; }
     .why-item { background: var(--card-bg); border-radius: 10px; padding: 20px 22px; flex: 1 1 200px; max-width: 240px; text-align: center; box-shadow: var(--shadow); }
-    .why-item i { font-size: 1.8rem; color: var(--accent-green); margin-bottom: 10px; display: block; }
+    .why-item i { font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 10px; display: block; }
     .why-item h4 { font-family: var(--font-display); font-size: 1rem; color: var(--primary-blue); margin-bottom: 6px; }
     [data-theme="dark"] .why-item h4 { color: var(--accent-blue); }
     .why-item p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
