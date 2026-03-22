@@ -2,7 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56CV8BZH');</script>
+<!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason David Newton – Blog | Reflections on Faith, Family & Life in Moses Lake, Washington</title>
     <meta name="description" content="Jason David Newton's blog from Moses Lake, WA. Personal reflections on Christian fatherhood, faith at Grace Harvest Church, mechanical technician life, leadership, and Pacific Northwest adventures.">
@@ -33,8 +39,8 @@
     <meta name="twitter:title" content="Jason David Newton – Blog | Moses Lake, Washington">
     <meta name="twitter:description" content="Faith, fatherhood, and life in Moses Lake; real talk from Jason David Newton">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
-    <link rel="icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <link rel="icon" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
+    <link rel="apple-touch-icon" href="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
@@ -53,6 +59,7 @@
         --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
+        --accent-green: #2d5a1b;
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
@@ -158,28 +165,17 @@
     .medium-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
     .medium-card-img { width: 100%; height: 200px; object-fit: cover; display: block; flex-shrink: 0; }
     .medium-card-body { padding: 18px 20px 20px; flex: 1; display: flex; flex-direction: column; align-items: center; text-align: center; }
-    .medium-card-body .card-author-footer { align-self: stretch; }
     .medium-card-meta { font-size: 0.74rem; color: var(--text-secondary); font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 6px; }
     .medium-card-meta i { color: var(--accent-gold); }
     .medium-card h3 { font-family: var(--font-display); font-size: 1.08rem; color: var(--primary-blue); margin-bottom: 0.5rem; line-height: 1.3; }
     [data-theme="dark"] .medium-card h3 { color: var(--accent-blue); }
     .medium-card p { font-size: 0.93rem; line-height: 1.65; color: var(--text-secondary); flex: 1; margin-bottom: 1rem; }
-    .read-btn { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.58rem 1.1rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: background 0.25s, transform 0.2s; align-self: center; margin-top: auto; }
+    .read-btn { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.58rem 1.1rem; border-radius: 7px; font-weight: 700; font-size: 0.85rem; text-decoration: none; transition: background 0.25s, transform 0.2s; align-self: center; }
     .read-btn:hover { background: #0d2244; transform: translateY(-2px); }
     .share-buttons { display: flex; gap: 4px; margin-top: 12px; justify-content: center; }
     .share-buttons a { color: var(--primary-blue); font-size: 1.05rem; transition: color 0.2s, transform 0.2s; padding: 7px; border-radius: 6px; display: inline-flex; align-items: center; justify-content: center; min-width: 34px; min-height: 34px; }
     .share-buttons a:hover { color: var(--accent-blue); transform: scale(1.15); background: rgba(31,79,122,0.08); }
     [data-theme="dark"] .share-buttons a { color: var(--accent-blue); }
-    .card-author-footer { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-top: 14px; padding-top: 12px; border-top: 1px solid rgba(100,116,139,0.15); width: 100%; text-align: left; }
-    .card-author { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
-    .card-author img { width: 32px; height: 32px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-gold); flex-shrink: 0; }
-    .card-author-info { font-size: 0.78rem; color: var(--text-secondary); line-height: 1.3; text-align: left; }
-    .card-author-info strong { color: var(--text); display: block; font-size: 0.82rem; }
-    .card-share { display: flex; align-items: center; gap: 3px; flex-shrink: 0; }
-    .card-share span { font-size: 0.75rem; font-weight: 600; color: var(--text-secondary); margin-right: 2px; }
-    .card-share a { color: var(--primary-blue); font-size: 0.95rem; padding: 5px; border-radius: 5px; display: inline-flex; transition: color 0.2s, transform 0.2s, background 0.2s; }
-    .card-share a:hover { color: var(--accent-blue); transform: scale(1.15); background: rgba(31,79,122,0.08); }
-    [data-theme="dark"] .card-share a { color: var(--accent-blue); }
 
     /* ── Full blog posts ── */
     .blog-post { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 48px; transition: box-shadow 0.3s; }
@@ -283,11 +279,14 @@
 
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Jason David Newton Blog Posts","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"BlogPosting","headline":"Why I'd Choose Moses Lake Over Any Big City, Every Single Time","datePublished":"2024-09-14","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-small-town-pride","image":"https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg","description":"Why Moses Lake, Washington beats big city life for family, faith, and career."}},{"@type":"ListItem","position":2,"item":{"@type":"BlogPosting","headline":"What It's Actually Like Being a Blue-Collar Guy at a Tech Company","datePublished":"2024-11-08","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-blue-collar-tech","image":"https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg","description":"A mechanical technician's perspective on working at Group 14 Technologies in Moses Lake."}},{"@type":"ListItem","position":3,"item":{"@type":"BlogPosting","headline":"The Pacific Northwest Has a Way of Putting Things in Perspective","datePublished":"2025-01-22","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-pnw-outdoors","image":"https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg","description":"How hiking and the outdoors near Moses Lake, Washington provide spiritual clarity."}},{"@type":"ListItem","position":4,"item":{"@type":"BlogPosting","headline":"What I Want My Son to Know Before He's Old Enough to Not Listen to Me","datePublished":"2025-05-03","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-raising-son","image":"https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg","description":"Life lessons a Christian father in Moses Lake wants to pass down to his son."}},{"@type":"ListItem","position":5,"item":{"@type":"BlogPosting","headline":"Five Things Three Years at Sea Taught Me That No Job on Land Ever Could","datePublished":"2025-08-19","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-maritime-lessons","image":"https://jasondavidnewton.com/assets/maritime-boat.jpg","description":"Lessons from working as Second Assistant Engineer aboard the C/P Starbound in the Bering Sea."}}]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Jason David Newton Blog Posts","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"BlogPosting","headline":"Ryker's First Fire Department Story Time at the Moses Lake Public Library","datePublished":"2026-03-22","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-ryker-library-storytime","image":"https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-carpet.jpg","description":"A Moses Lake dad takes his two-year-old son Ryker to Fire Department Story Time at the Moses Lake Public Library. Real talk on community, faith, and fatherhood."}},{"@type":"ListItem","position":2,"item":{"@type":"BlogPosting","headline":"Being a Single Dad in Moses Lake: The Real Unfiltered Version","datePublished":"2026-03-21","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-single-dad","image":"https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg","description":"An honest look at single dad life in Moses Lake, Washington. The hard parts and the good ones."}},{"@type":"ListItem","position":3,"item":{"@type":"BlogPosting","headline":"Why I'd Choose Moses Lake Over Any Big City, Every Single Time","datePublished":"2024-09-14","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-small-town-pride","image":"https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg","description":"Why Moses Lake, Washington beats big city life for family, faith, and career."}},{"@type":"ListItem","position":4,"item":{"@type":"BlogPosting","headline":"What It's Actually Like Being a Blue-Collar Guy at a Tech Company","datePublished":"2024-11-08","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-blue-collar-tech","image":"https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg","description":"A mechanical technician's perspective on working at Group 14 Technologies in Moses Lake."}},{"@type":"ListItem","position":5,"item":{"@type":"BlogPosting","headline":"The Pacific Northwest Has a Way of Putting Things in Perspective","datePublished":"2025-01-22","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-pnw-outdoors","image":"https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg","description":"How hiking and the outdoors near Moses Lake, Washington provide spiritual clarity."}},{"@type":"ListItem","position":6,"item":{"@type":"BlogPosting","headline":"What I Want My Son to Know Before He's Old Enough to Not Listen to Me","datePublished":"2025-05-03","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-raising-son","image":"https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg","description":"Life lessons a Christian father in Moses Lake wants to pass down to his son."}},{"@type":"ListItem","position":7,"item":{"@type":"BlogPosting","headline":"Five Things Three Years at Sea Taught Me That No Job on Land Ever Could","datePublished":"2025-08-19","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-maritime-lessons","image":"https://jasondavidnewton.com/assets/maritime-boat.jpg","description":"Lessons from working as Second Assistant Engineer aboard the C/P Starbound in the Bering Sea."}}]}</script>
 </head>
 <body>
 
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56CV8BZH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
@@ -358,7 +357,7 @@
 <!-- STATS BAR -->
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div class="stat-item"><i class="fas fa-pen-nib"></i> 9 Articles Published</div>
+    <div class="stat-item"><i class="fas fa-pen-nib"></i> 10 Articles Published</div>
     <div class="stat-divider"></div>
     <div class="stat-item"><i class="fab fa-medium"></i> Also on Medium</div>
     <div class="stat-divider"></div>
@@ -398,16 +397,9 @@
             <h3>Lessons from Working at Sea: What Maritime Work Taught Me</h3>
             <p>The real skills I picked up working as a marine engineer in the Bering Sea and how they still show up at work every single day in Moses Lake.</p>
             <a href="https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" rel="noopener" class="read-btn" style="background:#0077b5;">Read on LinkedIn ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/&text=Lessons from Working at Sea" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              </div>
+            <div class="share-buttons">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/&text=Lessons from Working at Sea" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
             </div>
           </div>
         </div>
@@ -425,7 +417,6 @@
       <p class="lead">Posts from my VSCO blog. Photography, reflections, and Pacific Northwest life.</p>
       <div class="medium-grid">
 
-        <!-- VSCO Card 1 -->
         <div class="medium-card">
           <img class="medium-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Moses Lake Through My Lens" loading="lazy" width="340" height="200" style="object-position:center center;">
           <div class="medium-card-body">
@@ -433,45 +424,19 @@
             <h3>Moses Lake Through My Lens</h3>
             <p>Capturing the light, the water, and the wide open sky of Eastern Washington. Moses Lake never gets old to photograph.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd00eef5c98928ec0748d0" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd00eef5c98928ec0748d0" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd00eef5c98928ec0748d0&text=Moses Lake Through My Lens" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd00eef5c98928ec0748d0" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- VSCO Card 2 -->
         <div class="medium-card">
-          <img class="medium-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="Out on the Trails with the Dogs" loading="lazy" width="340" height="200" style="object-position:center 20%;">
+          <img class="medium-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="Out on the Trails" loading="lazy" width="340" height="200" style="object-position:center 20%;">
           <div class="medium-card-body">
             <div class="medium-card-meta"><i class="fas fa-camera"></i> VSCO Blog</div>
             <h3>Out on the Trails with the Dogs</h3>
             <p>Pacific Northwest hiking with your dogs is about as good as it gets. These moments are worth documenting.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd032cb8b45e734e6e276a" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd032cb8b45e734e6e276a" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd032cb8b45e734e6e276a&text=Out on the Trails with the Dogs" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd032cb8b45e734e6e276a" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- VSCO Card 3 -->
         <div class="medium-card">
           <img class="medium-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Fatherhood in the Golden Hour" loading="lazy" width="340" height="200" style="object-position:center center;">
           <div class="medium-card-body">
@@ -479,87 +444,36 @@
             <h3>Fatherhood in the Golden Hour</h3>
             <p>Some photos just say everything. This is what it means to be a dad in Moses Lake. The light, the kid, the moment.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232&text=Fatherhood in the Golden Hour" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- VSCO Card 4 -->
         <div class="medium-card">
-          <img class="medium-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Life at Sea: Dutch Harbor and the Starbound" loading="lazy" width="340" height="200" style="object-position:center center;">
+          <img class="medium-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Life at Sea" loading="lazy" width="340" height="200" style="object-position:center center;">
           <div class="medium-card-body">
             <div class="medium-card-meta"><i class="fas fa-camera"></i> VSCO Blog</div>
             <h3>Life at Sea: Dutch Harbor and the Starbound</h3>
             <p>Photos from my time working aboard the C/P Starbound. Dutch Harbor, Alaska is one of those places that stays with you.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd0569f5c98928ec0748d1" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd0569f5c98928ec0748d1" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd0569f5c98928ec0748d1&text=Life at Sea: Dutch Harbor and the Starbound" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd0569f5c98928ec0748d1" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- VSCO Card 5 -->
         <div class="medium-card">
-          <img class="medium-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg" alt="Community Days in Moses Lake" loading="lazy" width="340" height="200" style="object-position:center center;">
+          <img class="medium-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-kids-playing-flag.jpg" alt="Community Days" loading="lazy" width="340" height="200" style="object-position:center center;">
           <div class="medium-card-body">
             <div class="medium-card-meta"><i class="fas fa-camera"></i> VSCO Blog</div>
             <h3>Community Days in Moses Lake</h3>
             <p>Fourth of July, flag football, and family. This is what summer looks like in Moses Lake, Washington. Wouldn't trade it.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd0692193ee8d25e4a02a9" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd0692193ee8d25e4a02a9" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd0692193ee8d25e4a02a9&text=Community Days in Moses Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd0692193ee8d25e4a02a9" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
-        <!-- VSCO Card 6 -->
         <div class="medium-card">
-          <img class="medium-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg" alt="Why I Jumped Out of a Perfectly Good Airplane" loading="lazy" width="340" height="200" style="object-position:center center;">
+          <img class="medium-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-skydiving.jpg" alt="Why I Jumped Out of a Plane" loading="lazy" width="340" height="200" style="object-position:center center;">
           <div class="medium-card-body">
             <div class="medium-card-meta"><i class="fas fa-camera"></i> VSCO Blog</div>
             <h3>Why I Jumped Out of a Perfectly Good Airplane</h3>
             <p>Skydiving over the Pacific Northwest is a reminder that life is short and the view from up there is worth it every time.</p>
             <a href="https://jasondavidnewton.vsco.site/blogs/69bd07b5b8b45e734e6e276d" target="_blank" rel="noopener" class="read-btn">View on VSCO ↗</a>
-            <div class="card-author-footer">
-              <div class="card-author">
-                <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="32" height="32">
-                <div class="card-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
-              </div>
-              <div class="card-share">
-                <span>Share:</span>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd07b5b8b45e734e6e276d" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-                <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd07b5b8b45e734e6e276d&text=Why I Jumped Out of a Perfectly Good Airplane" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd07b5b8b45e734e6e276d" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              </div>
-            </div>
           </div>
         </div>
 
@@ -575,6 +489,49 @@
     <div class="section-content narrow">
       <h2>From the Journal</h2>
       <p class="lead" style="margin-bottom:2.5rem;">Original writing right here on the site. Real life, unfiltered.</p>
+
+      <!-- NEW POST: Ryker Library Story Time -->
+      <article class="blog-post fade-in-section" id="post-ryker-library-storytime">
+        <img class="blog-post-hero" src="https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-carpet.jpg" alt="Ryker sitting on the carpet at Moses Lake Public Library Fire Department Story Time" loading="lazy" style="object-position:center 30%;">
+        <div class="blog-post-inner">
+          <div class="blog-post-meta">
+            <span class="blog-post-date"><i class="fas fa-calendar-alt"></i> March 22, 2026</span>
+            <span class="blog-post-date"><i class="fas fa-clock"></i> 4 min read</span>
+            <span class="blog-post-tag">Fatherhood</span>
+            <span class="blog-post-tag">Moses Lake</span>
+          </div>
+          <h2>Ryker's First Fire Department Story Time at the Moses Lake Public Library</h2>
+          <div class="blog-post-body">
+            <p>I didn't have big plans for Saturday morning. Just a dad in Moses Lake with a free weekend and a two-year-old who had no interest in sitting still. So when I saw the Moses Lake Public Library was hosting Fire Department Story Time, I figured why not. Worst case we leave early and grab breakfast somewhere.</p>
+            <p>We didn't leave early.</p>
+            <p>Ryker walked in wearing his little "In the Lord's Army" hoodie and his hat, took one look at that blue carpet full of kids, and planted himself right in the middle of it like he'd been coming here his whole life. Within ten minutes he had a junior Moses Lake firefighter badge sticker on his chest and he was not taking it off for anything.</p>
+            <img class="blog-post-inline-img" src="https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-fire-department-storytime-badge.jpg" alt="Ryker at Moses Lake Public Library Fire Department Story Time holding the family escape plan booklet with his junior firefighter badge sticker" loading="lazy" style="object-position:center center;">
+            <p>I stood back and just watched him for a while. Watched him reach into that big pink bin of Crayola crayons and go to work on his coloring sheet. Watched him sitting cross-legged on the carpet facing the reader, completely locked in. Watched him flip through the family escape plan booklet they handed out like he was studying for something important.</p>
+            <p>He's two. He has no idea what a family escape plan is. But he was serious about it.</p>
+            <img class="blog-post-inline-img" src="https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-coloring.jpg" alt="Ryker coloring at the Moses Lake Public Library with Crayola crayons" loading="lazy" style="object-position:center center;">
+            <p>Here's what I keep thinking about on the drive home. Moses Lake gets a bad rap sometimes. People who've never been here or only passed through on I-90 have a certain picture in their head. But this is what Moses Lake actually looks like on a Saturday morning. A room full of parents who showed up for their kids. A librarian who clearly loves what she does. A fire department that sends people out to read to toddlers. Community stuff that doesn't make the news but matters way more than what does.</p>
+            <p>I grew up here. I'm raising Ryker here. And mornings like this remind me exactly why.</p>
+            <img class="blog-post-inline-img" src="https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-group.jpg" alt="Story time group at Moses Lake Public Library during Fire Department Story Time" loading="lazy" style="object-position:center center;">
+            <p>The faith piece hits me too. Ryker's got "In the Lord's Army" on his back and a junior firefighter badge on his chest and he's sitting there on a Read to Succeed carpet listening to stories with a roomful of other little kids. He doesn't know yet that his dad came to faith two years ago and is still figuring out what it means to raise a son with intention and purpose. He doesn't know that I pray over him. He doesn't know any of that yet.</p>
+            <p>But I do. And mornings like this feel like an answer to those prayers. Nothing dramatic. Just a normal Saturday in Moses Lake where my son got to be a kid surrounded by community and came home proud of that little firefighter sticker.</p>
+            <p>That's enough. That's more than enough.</p>
+            <p>If you're in Moses Lake and you've got little ones, the library does story time regularly. Free, fun, and your kid will walk out with something they won't take off for the rest of the day. Moses Lake Public Library · 411 W 3rd Ave.</p>
+          </div>
+          <div class="blog-post-footer">
+            <div class="blog-post-author">
+              <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="38" height="38">
+              <div class="blog-post-author-info"><strong>Jason David Newton</strong>Moses Lake, WA</div>
+            </div>
+            <div class="blog-post-share">
+              <span>Share:</span>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime&text=Ryker's First Fire Department Story Time at the Moses Lake Public Library" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Ryker's First Fire Department Story Time https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+      </article>
 
       <!-- NEW POST: Single Dad -->
       <article class="blog-post fade-in-section" id="post-single-dad">
@@ -1003,18 +960,6 @@ document.addEventListener('keydown', (e) => {
           '<a href="' + item.link + '" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:6px;background:var(--primary-blue);color:#fff;padding:6px 14px;border-radius:6px;font-weight:700;font-size:0.82rem;text-decoration:none;">' +
             'Read on Medium <i class="fas fa-arrow-right"></i>' +
           '</a>' +
-          '<div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-top:12px;padding-top:10px;border-top:1px solid rgba(100,116,139,0.15);">' +
-            '<div style="display:flex;align-items:center;gap:8px;">' +
-              '<img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" style="width:32px;height:32px;border-radius:50%;object-fit:cover;border:2px solid #c8a84b;flex-shrink:0;">' +
-              '<div style="font-size:0.78rem;color:var(--text-secondary);line-height:1.3;"><strong style="color:var(--text);display:block;font-size:0.82rem;">Jason David Newton</strong>Moses Lake, WA</div>' +
-            '</div>' +
-            '<div style="display:flex;align-items:center;gap:2px;">' +
-              '<span style="font-size:0.75rem;font-weight:600;color:var(--text-secondary);margin-right:3px;">Share:</span>' +
-              '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on LinkedIn" style="color:var(--primary-blue);font-size:0.95rem;padding:5px;border-radius:5px;display:inline-flex;"><i class="fab fa-linkedin"></i></a>' +
-              '<a href="https://twitter.com/intent/tweet?url=' + encodeURIComponent(item.link) + '&text=' + encodeURIComponent(item.title) + '" target="_blank" aria-label="Share on X" style="color:var(--primary-blue);font-size:0.95rem;padding:5px;border-radius:5px;display:inline-flex;"><i class="fab fa-x-twitter"></i></a>' +
-              '<a href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on Facebook" style="color:var(--primary-blue);font-size:0.95rem;padding:5px;border-radius:5px;display:inline-flex;"><i class="fab fa-facebook"></i></a>' +
-            '</div>' +
-          '</div>' +
         '</div>';
       container.appendChild(card);
     });
