@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56CV8BZH');</script>
+<!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason David Newton – About Me | Mechanical Technician in Moses Lake, Washington</title>
     <meta name="description" content="Jason David Newton – Mechanical Technician at Group 14 in Moses Lake, WA. Christian dad, faith reflections, PNW family adventures. Learn my background, career, and life.">
@@ -17,7 +24,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Source+Sans+3:wght@300;400;600&display=swap" rel="stylesheet"></noscript>
     <meta property="og:title" content="Jason David Newton – About Me | Moses Lake, Washington">
-    <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith & Pacific Northwest adventures">
+    <meta property="og:description" content="Mechanical Technician at Group 14 Technologies | Devoted Christian dad | Fatherhood, faith &amp; Pacific Northwest adventures">
     <meta property="og:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
@@ -28,8 +35,10 @@
     <meta name="twitter:title" content="Jason David Newton – About Me | Moses Lake, Washington">
     <meta name="twitter:description" content="Mechanical Technician at Group 14 Technologies | Father, Faith, Community | Pacific Northwest Adventures">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
-    <link rel="icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
@@ -55,8 +64,6 @@
     }
     [data-theme="dark"] { --section-bg:#0a1830; --section-alt:#071020; --card-bg:#0f2040; --text:#dde8f0; --text-secondary:#8faecc; --shadow:0 4px 24px rgba(0,0,0,0.4); --shadow-hover:0 14px 44px rgba(0,0,0,0.55); }
     body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); line-height: 1.7; overflow-x: hidden; }
-
-    /* NAVBAR */
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
     .navbar.scrolled { background: rgba(13,34,68,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
@@ -79,8 +86,6 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px,-6px); }
         .theme-toggle { margin-left: 0.5rem; }
     }
-
-    /* HERO */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
     .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-moses-lake-son-smiling.jpg'); background-size: cover; background-position: center 30%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .page-hero-bg.loaded { transform: scale(1); }
@@ -101,23 +106,13 @@
     .hero-text p { font-size: 1.03rem; line-height: 1.78; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 1.6rem; }
     .hero-scroll-hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 5px; color: rgba(255,255,255,0.45); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; animation: bounceY 2.2s infinite; }
     @keyframes bounceY { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(7px); } }
-    @media (max-width: 680px) {
-        .page-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
-        .hero-avatar { width: 120px; height: 120px; }
-        .hero-eyebrow { justify-content: center; }
-        .hero-text p { margin-left: auto; margin-right: auto; }
-        .hero-roles { justify-content: center; }
-    }
-
-    /* STATS BAR */
+    @media (max-width: 680px) { .page-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; } .hero-avatar { width: 120px; height: 120px; } .hero-eyebrow { justify-content: center; } .hero-text p { margin-left: auto; margin-right: auto; } .hero-roles { justify-content: center; } }
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
     .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
-
-    /* SECTIONS */
     .section { padding: 76px 2rem; background: var(--section-bg); }
     .section.alt { background: var(--section-alt); }
     .section-content { max-width: 1100px; margin: 0 auto; }
@@ -125,8 +120,6 @@
     .section-content h2 { font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2.15rem); color: var(--primary-blue); margin-bottom: 0.5rem; line-height: 1.25; text-align: center; }
     [data-theme="dark"] .section-content h2 { color: var(--accent-blue); }
     .section-content > p.lead { font-size: 1rem; color: var(--text-secondary); text-align: center; margin-bottom: 2.5rem; }
-
-    /* ABOUT CARDS */
     .about-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; }
     .about-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s var(--ease), box-shadow 0.3s; display: flex; flex-direction: column; flex: 1 1 280px; max-width: 320px; }
     .about-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
@@ -141,8 +134,6 @@
     .about-card-btns { display: flex; flex-wrap: wrap; gap: 8px; margin-top: auto; justify-content: center; }
     .section-button { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.25s, transform 0.2s; }
     .section-button:hover { background: #0d2244; transform: translateY(-2px); }
-
-    /* LIFE TIMELINE */
     .life-timeline { position: relative; max-width: 760px; margin: 2rem auto 0; }
     .life-timeline::before { content: ''; position: absolute; left: 50%; top: 0; bottom: 0; width: 3px; background: linear-gradient(to bottom, var(--accent-gold), rgba(200,168,75,0.15)); transform: translateX(-50%); }
     @media (max-width: 640px) { .life-timeline::before { left: 20px; } }
@@ -162,8 +153,6 @@
     [data-theme="dark"] .lt-card h4 { color: var(--accent-blue); }
     .lt-card p { font-size: 0.86rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
     .lt-card .lt-icon { font-size: 1.1rem; margin-bottom: 6px; display: block; }
-
-    /* TESTIMONIALS */
     .testimonials-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 22px; }
     .testimonial-card { background: var(--card-bg); border-radius: var(--radius); padding: 28px 26px 24px; box-shadow: var(--shadow); flex: 1 1 280px; max-width: 340px; position: relative; transition: transform 0.3s var(--ease), box-shadow 0.3s; }
     .testimonial-card:hover { transform: translateY(-6px); box-shadow: var(--shadow-hover); }
@@ -176,30 +165,20 @@
     [data-theme="dark"] .testimonial-name { color: var(--accent-blue); }
     .testimonial-title { font-size: 0.78rem; color: var(--text-secondary); }
     .testimonials-disclaimer { text-align: center; margin-top: 1.6rem; font-size: 0.82rem; color: var(--text-secondary); font-style: italic; }
-
-    /* QUOTE STRIP */
     .values-strip { background: var(--primary-dark); padding: 60px 2rem; text-align: center; }
     .values-strip blockquote { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.9rem); color: #fff; font-style: italic; max-width: 700px; margin: 0 auto 1rem; line-height: 1.5; }
     .values-strip blockquote span { color: var(--accent-gold); }
     .values-strip cite { font-size: 0.85rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; font-style: normal; }
-
-    /* FADE IN */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
     .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-
-    /* FOOTER */
     footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 100px; }
     @media (min-width: 481px) { footer { padding-bottom: 30px; } }
     .footer-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; }
     .footer-icons a { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); color: rgba(255,255,255,0.78); font-size: 1.2rem; transition: transform 0.3s var(--ease), background 0.3s, color 0.3s, box-shadow 0.3s; text-decoration: none; }
     .footer-icons a:hover { transform: scale(1.18) rotate(5deg); background: rgba(77,166,255,0.2); color: #fff; box-shadow: 0 0 14px rgba(77,166,255,0.5); }
     footer p { font-size: 0.88rem; margin-top: 6px; opacity: 0.6; }
-
-    /* BACK TO TOP */
     #back-to-top { position: fixed; bottom: 96px; right: 26px; display: none; background: rgba(31,79,122,0.82); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 8000; transition: all 0.3s var(--ease); align-items: center; justify-content: center; backdrop-filter: blur(6px); }
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
-
-    /* PROFILE CARD */
     .profile-float-card { position: fixed; bottom: 96px; right: 26px; z-index: 9997; width: 280px; background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.18); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
     .profile-float-card.hidden { opacity: 0; transform: translateY(10px) scale(0.97); pointer-events: none; }
     @media (max-width: 768px) { .profile-float-card { display: none !important; } }
@@ -217,8 +196,6 @@
     [data-theme="dark"] .profile-card-footer { border-top-color: rgba(255,255,255,0.07); }
     .profile-card-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
     [data-theme="dark"] .profile-card-footer a { color: var(--accent-blue); }
-
-    /* CHAT */
     .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease), box-shadow 0.3s; color: #fff; font-size: 1.45rem; }
     .chat-bubble-btn:hover { transform: scale(1.1); }
     .chat-bubble-btn .chat-close { display: none; }
@@ -234,12 +211,7 @@
     .chat-status { font-size: 0.72rem; font-weight: 400; opacity: 0.82; display: flex; align-items: center; gap: 5px; }
     .chat-status::before { content: ''; width: 7px; height: 7px; background: #3ecf6e; border-radius: 50%; display: block; }
     #embedded-widget-container { flex: 1; width: 100%; border: none; min-height: 0; background: var(--section-bg); }
-    @media (max-width: 480px) {
-        .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; }
-        .chat-bubble-btn { bottom: 70px; right: 16px; }
-    }
-
-    /* MOBILE NAV */
+    @media (max-width: 480px) { .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; } .chat-bubble-btn { bottom: 70px; right: 16px; } }
     .mobile-bottom-nav { display: none; }
     @media (max-width: 480px) {
         .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8500; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 8px 0 max(8px, env(safe-area-inset-bottom)); justify-content: space-around; align-items: center; }
@@ -247,11 +219,46 @@
         .mobile-bottom-nav a.active, .mobile-bottom-nav a:hover { color: var(--accent-gold); }
         .mobile-bottom-nav i { font-size: 1.2rem; }
     }
+
+    .rss-link { color: var(--accent-gold); text-decoration: none; font-weight: 600; font-size: 0.93rem; transition: color 0.2s; }
+    .rss-link:hover { color: #d9ba68; }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
+
+    /* Dropdown nav */
+    nav ul li { position: relative; }
+    nav ul li a { display: flex; align-items: center; gap: 4px; }
+    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown-toggle .dropdown-arrow { font-size: 0.65rem; transition: transform 0.2s var(--ease); }
+    .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); padding: 6px; opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 0.2s var(--ease), transform 0.2s var(--ease); z-index: 100; border: 1px solid rgba(255,255,255,0.08); }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .nav-dropdown-menu a { display: block; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.83rem; font-weight: 600; padding: 0.45rem 0.85rem; border-radius: 7px; transition: background 0.15s, color 0.15s; white-space: nowrap; gap: 0; }
+    .nav-dropdown-menu a:hover { background: rgba(200,168,75,0.18); color: #fff; }
+    .nav-dropdown-menu .dropdown-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 5px 0; }
+    @media (max-width: 900px) {
+        .nav-dropdown-menu { position: static; background: transparent; box-shadow: none; border: none; padding: 0 0 0 1rem; opacity: 1; pointer-events: all; transform: none; backdrop-filter: none; display: none; }
+        .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a { font-size: 0.82rem; color: rgba(255,255,255,0.7); padding: 0.32rem 0.6rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .dropdown-divider { display: none; }
+    }
+
+    /* AS SEEN IN */
+    .as-seen-in { background: var(--section-alt); border-top: 1px solid rgba(0,0,0,0.06); border-bottom: 1px solid rgba(0,0,0,0.06); padding: 28px 2rem; }
+    [data-theme="dark"] .as-seen-in { border-color: rgba(255,255,255,0.07); }
+    .as-seen-in-inner { max-width: 860px; margin: 0 auto; display: flex; align-items: center; flex-wrap: wrap; gap: 16px; justify-content: center; }
+    .as-seen-in-label { font-size: 0.72rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-secondary); white-space: nowrap; }
+    .as-seen-badge { display: inline-flex; align-items: center; gap: 7px; background: var(--card-bg); border: 1px solid rgba(0,0,0,0.08); border-radius: 8px; padding: 7px 14px; font-size: 0.82rem; font-weight: 700; color: var(--primary-blue); text-decoration: none; box-shadow: 0 2px 8px rgba(0,0,0,0.06); transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap; }
+    [data-theme="dark"] .as-seen-badge { border-color: rgba(255,255,255,0.1); color: var(--accent-blue); }
+    .as-seen-badge:hover { transform: translateY(-2px); box-shadow: 0 6px 18px rgba(0,0,0,0.12); }
+    .as-seen-badge i { color: var(--accent-gold); font-size: 0.9rem; }
     </style>
 </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56CV8BZH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
@@ -269,7 +276,25 @@
         <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="community.html">Community</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li class="nav-dropdown" id="blogDropdown">
+          <a href="blog.html" class="nav-dropdown-toggle">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="blog.html" role="menuitem">All Posts</a>
+            <div class="dropdown-divider"></div>
+            <a href="blog.html#post-press-release-launch" role="menuitem">Site News</a>
+            <a href="blog.html#post-ryker-library-storytime" role="menuitem">Fatherhood</a>
+            <a href="blog.html#post-maritime-lessons" role="menuitem">Maritime Life</a>
+            <a href="blog.html#post-blue-collar-tech" role="menuitem">Career</a>
+          </div>
+        </li>
+        <li class="nav-dropdown" id="pressDropdown">
+          <a href="news-press.html" class="nav-dropdown-toggle">News &amp; Press <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="news-press.html" role="menuitem">All Coverage</a>
+            <div class="dropdown-divider"></div>
+            <a href="media-inquiries.html" role="menuitem"><i class="fas fa-microphone-alt" style="margin-right:5px;font-size:0.8em;"></i> Media Inquiries</a>
+          </div>
+        </li>
         <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
@@ -318,6 +343,17 @@
     <div class="stat-item"><i class="fas fa-anchor"></i> USCG Merchant Mariner Credentialed</div>
     <div class="stat-divider"></div>
     <div class="stat-item"><i class="fas fa-church"></i> Grace Harvest Church · Moses Lake</div>
+  </div>
+</div>
+
+<!-- AS SEEN IN -->
+<div class="as-seen-in">
+  <div class="as-seen-in-inner">
+    <span class="as-seen-in-label">As Seen In</span>
+    <a href="https://www.digitaljournal.com/pr/news/prunderground/jasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" rel="noopener" class="as-seen-badge"><i class="fas fa-newspaper"></i> Digital Journal</a>
+    <a href="https://patch.com/washington/moses-lake-wa/classifieds/announcements/574864/moses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" rel="noopener" class="as-seen-badge"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake</a>
+    <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" class="as-seen-badge"><i class="fas fa-microphone-alt"></i> Muck Rack</a>
+    <a href="news-press.html" class="as-seen-badge" style="background:var(--primary-blue);color:#fff;border-color:var(--primary-blue);"><i class="fas fa-award" style="color:#f0d080;"></i> All Press Coverage</a>
   </div>
 </div>
 
@@ -386,139 +422,18 @@
       <h2>The Road That Got Me Here</h2>
       <p class="lead">Born in Moses Lake. Built in Moses Lake. Every milestone shaped who I am today.</p>
       <div class="life-timeline">
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">1992</div>
-          <div class="lt-card">
-            <div class="lt-card-year">1992</div>
-            <span class="lt-icon">🏥</span>
-            <h4>Born in Moses Lake</h4>
-            <p>Arrived at Samaritan Hospital in Moses Lake, Washington. Started a lifelong love affair with Grant County whether I knew it or not.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2007</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2007</div>
-            <span class="lt-icon">🚗</span>
-            <h4>First Car at 15</h4>
-            <p>1993 Toyota pickup. Rebuilt the engine and lifted it as a senior project. That truck taught me more about mechanical work than any class ever did. Classic Moses Lake rite of passage.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2010</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2010</div>
-            <span class="lt-icon">🎓</span>
-            <h4>High School Graduate</h4>
-            <p>Graduated from high school in Moses Lake. Cap, gown, and the whole thing. Next stop: Big Bend Community College to get the foundation right.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2011</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2011</div>
-            <span class="lt-icon">🔧</span>
-            <h4>First Industrial Job – D&amp;L Foundry</h4>
-            <p>Started as a Maintenance Technician at D&amp;L Foundry in Moses Lake. This is where the real education began. Grease, noise, and learning fast.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2013</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2013</div>
-            <span class="lt-icon">📚</span>
-            <h4>Graduated Big Bend Community College</h4>
-            <p>Earned my Associate of Arts &amp; Sciences at Big Bend in Moses Lake, then transferred to Washington State University. Go Cougs.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2016</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2016</div>
-            <span class="lt-icon">🎓</span>
-            <h4>Graduated Washington State University</h4>
-            <p>Bachelor of Arts in Business Management &amp; Operations from WSU Pullman. Packed up, headed home, and put that degree to work immediately.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2018</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2018</div>
-            <span class="lt-icon">⚓</span>
-            <h4>Headed to Sea – Bering Sea Maritime Life</h4>
-            <p>Signed on with Aleutian Spray Fisheries. Commercial fishing vessel, Bering Sea. Three years that changed how I think about work, resilience, and what matters.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2021</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2021</div>
-            <span class="lt-icon">🏠</span>
-            <h4>Came Home to Moses Lake</h4>
-            <p>After three years at sea, came back to Moses Lake. Back where the wide open sky, the lake, and the community that shaped me were waiting.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2017</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2017–2018</div>
-            <span class="lt-icon">🏈</span>
-            <h4>Coached Youth Football</h4>
-            <p>Coached the 7th grade team at Frontier Middle School in Moses Lake. Watching kids learn discipline and teamwork was one of the most rewarding things I've done.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2024</div>
-          <div class="lt-card">
-            <div class="lt-card-year">January 2024</div>
-            <span class="lt-icon">✝️</span>
-            <h4>Gave My Life to Christ</h4>
-            <p>January 2024. The most important milestone on this list. Came to faith in Jesus Christ, baptized at Moses Lake Christian Church, and was invited to Grace Harvest Church by a coworker from Group 14 in September 2024. Became a full member in 2026. Everything since has been built on that foundation.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2023</div>
-          <div class="lt-card">
-            <div class="lt-card-year">2023</div>
-            <span class="lt-icon">👨‍👦</span>
-            <h4>Became a Dad</h4>
-            <p>My son arrived in 2023 and completely rewired my priorities in the best possible way. Best thing that's ever happened to me, no question.</p>
-          </div>
-        </div>
-
-        <div class="lt-item">
-          <div class="lt-dot"></div>
-          <div class="lt-year">2024</div>
-          <div class="lt-card">
-            <div class="lt-card-year">August 2024</div>
-            <span class="lt-icon">⚙️</span>
-            <h4>Joined Group 14 Technologies</h4>
-            <p>Started as Mechanical Technician at Group 14 Technologies in Moses Lake. Cutting-edge advanced materials, right here in Grant County. Where I'm at today.</p>
-          </div>
-        </div>
-
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">1992</div><div class="lt-card"><div class="lt-card-year">1992</div><span class="lt-icon">🏥</span><h4>Born in Moses Lake</h4><p>Arrived at Samaritan Hospital in Moses Lake, Washington. Started a lifelong love affair with Grant County whether I knew it or not.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2007</div><div class="lt-card"><div class="lt-card-year">2007</div><span class="lt-icon">🚗</span><h4>First Car at 15</h4><p>1993 Toyota pickup. Rebuilt the engine and lifted it as a senior project. That truck taught me more about mechanical work than any class ever did. Classic Moses Lake rite of passage.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2010</div><div class="lt-card"><div class="lt-card-year">2010</div><span class="lt-icon">🎓</span><h4>High School Graduate</h4><p>Graduated from high school in Moses Lake. Cap, gown, and the whole thing. Next stop: Big Bend Community College to get the foundation right.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2011</div><div class="lt-card"><div class="lt-card-year">2011</div><span class="lt-icon">🔧</span><h4>First Industrial Job – D&amp;L Foundry</h4><p>Started as a Maintenance Technician at D&amp;L Foundry in Moses Lake. This is where the real education began. Grease, noise, and learning fast.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2013</div><div class="lt-card"><div class="lt-card-year">2013</div><span class="lt-icon">📚</span><h4>Graduated Big Bend Community College</h4><p>Earned my Associate of Arts &amp; Sciences at Big Bend in Moses Lake, then transferred to Washington State University. Go Cougs.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2016</div><div class="lt-card"><div class="lt-card-year">2016</div><span class="lt-icon">🎓</span><h4>Graduated Washington State University</h4><p>Bachelor of Arts in Business Management &amp; Operations from WSU Pullman. Packed up, headed home, and put that degree to work immediately.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2018</div><div class="lt-card"><div class="lt-card-year">2018</div><span class="lt-icon">⚓</span><h4>Headed to Sea – Bering Sea Maritime Life</h4><p>Signed on with Aleutian Spray Fisheries. Commercial fishing vessel, Bering Sea. Three years that changed how I think about work, resilience, and what matters.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2021</div><div class="lt-card"><div class="lt-card-year">2021</div><span class="lt-icon">🏠</span><h4>Came Home to Moses Lake</h4><p>After three years at sea, came back to Moses Lake. Back where the wide open sky, the lake, and the community that shaped me were waiting.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2017</div><div class="lt-card"><div class="lt-card-year">2017–2018</div><span class="lt-icon">🏈</span><h4>Coached Youth Football</h4><p>Coached the 7th grade team at Frontier Middle School in Moses Lake. Watching kids learn discipline and teamwork was one of the most rewarding things I've done.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2024</div><div class="lt-card"><div class="lt-card-year">January 2024</div><span class="lt-icon">✝️</span><h4>Gave My Life to Christ</h4><p>January 2024. The most important milestone on this list. Came to faith in Jesus Christ, baptized at Moses Lake Christian Church, and was invited to Grace Harvest Church by a coworker from Group 14 in September 2024. Became a full member in 2026. Everything since has been built on that foundation.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2023</div><div class="lt-card"><div class="lt-card-year">2023</div><span class="lt-icon">👨‍👦</span><h4>Became a Dad</h4><p>My son arrived in 2023 and completely rewired my priorities in the best possible way. Best thing that's ever happened to me, no question.</p></div></div>
+        <div class="lt-item"><div class="lt-dot"></div><div class="lt-year">2024</div><div class="lt-card"><div class="lt-card-year">August 2024</div><span class="lt-icon">⚙️</span><h4>Joined Group 14 Technologies</h4><p>Started as Mechanical Technician at Group 14 Technologies in Moses Lake. Cutting-edge advanced materials, right here in Grant County. Where I'm at today.</p></div></div>
       </div>
     </div>
   </section>
@@ -538,51 +453,10 @@
       <h2>What People Are Saying</h2>
       <p class="lead">Straight from the people who know me best. Real testimonials coming soon.</p>
       <div class="testimonials-grid">
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Jason is literally the best son a mother could ever ask for. Hardworking, kind, devoted father, and he still calls me on Sundays. I may be biased but honestly I'm just right about this one. Best son ever. Period."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar-placeholder">M</div>
-            <div>
-              <span class="testimonial-name">Mom Newton</span>
-              <span class="testimonial-title">His Mother · Moses Lake, WA · Verified Unbiased Source</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"I've worked with a lot of guys over the years. Jason is the one you call when the line goes down at 2am and nobody panics. He shows up, figures it out, and does it without making a big deal about it. That's rare."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar-placeholder">C</div>
-            <div>
-              <span class="testimonial-name">Coworker Carl</span>
-              <span class="testimonial-title">Fellow Maintenance Guy · Definitely Real Person</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Coach Newton was the real deal. Showed up every practice, knew every kid's name, and actually cared if we got better. Also he made us run laps a lot but we won't talk about that. Best coach we had."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar-placeholder">K</div>
-            <div>
-              <span class="testimonial-name">Kid From the Football Team</span>
-              <span class="testimonial-title">Former 7th Grader · Now Probably in High School</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="testimonial-card">
-          <p class="testimonial-text">"Jason has been a consistent presence at Grace Harvest since his salvation in January 2024. His commitment to faith and family is evident to everyone around him. A genuine man of integrity."</p>
-          <div class="testimonial-author">
-            <div class="testimonial-avatar-placeholder">G</div>
-            <div>
-              <span class="testimonial-name">Grace Harvest Church Member</span>
-              <span class="testimonial-title">Grace Harvest Church · Moses Lake, WA</span>
-            </div>
-          </div>
-        </div>
-
+        <div class="testimonial-card"><p class="testimonial-text">"Jason is literally the best son a mother could ever ask for. Hardworking, kind, devoted father, and he still calls me on Sundays. I may be biased but honestly I'm just right about this one. Best son ever. Period."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">M</div><div><span class="testimonial-name">Mom Newton</span><span class="testimonial-title">His Mother · Moses Lake, WA · Verified Unbiased Source</span></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"I've worked with a lot of guys over the years. Jason is the one you call when the line goes down at 2am and nobody panics. He shows up, figures it out, and does it without making a big deal about it. That's rare."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">C</div><div><span class="testimonial-name">Coworker Carl</span><span class="testimonial-title">Fellow Maintenance Guy · Definitely Real Person</span></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Coach Newton was the real deal. Showed up every practice, knew every kid's name, and actually cared if we got better. Also he made us run laps a lot but we won't talk about that. Best coach we had."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">K</div><div><span class="testimonial-name">Kid From the Football Team</span><span class="testimonial-title">Former 7th Grader · Now Probably in High School</span></div></div></div>
+        <div class="testimonial-card"><p class="testimonial-text">"Jason has been a consistent presence at Grace Harvest since his salvation in January 2024. His commitment to faith and family is evident to everyone around him. A genuine man of integrity."</p><div class="testimonial-author"><div class="testimonial-avatar-placeholder">G</div><div><span class="testimonial-name">Grace Harvest Church Member</span><span class="testimonial-title">Grace Harvest Church · Moses Lake, WA</span></div></div></div>
       </div>
       <p class="testimonials-disclaimer">* Real testimonials coming soon. These are placeholder quotes. The mom one is basically true though.</p>
     </div>
@@ -624,6 +498,7 @@
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO"><i class="fas fa-camera"></i></a>
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><i class="fas fa-link"></i></a>
+    <a href="https://patch.com/washington/moses-lake-wa/business/listing/574843/jason-david-newton" target="_blank" rel="noopener" aria-label="Patch Moses Lake"><i class="fas fa-map-marker-alt" title="Patch"></i></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar"><i class="fas fa-id-card"></i></a>
   </div>
   <div style="margin-bottom:16px;">
@@ -668,7 +543,7 @@
 <nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
   <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
   <a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a>
-  <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="news-press.html"><i class="fas fa-newspaper"></i><span>Press</span></a>
   <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
@@ -708,6 +583,21 @@ window.addEventListener('scroll', () => {
   const btn = document.getElementById('back-to-top');
   btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 }, { passive: true });
+// Dropdown menus - mobile toggle
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      dropdown.classList.toggle('mobile-open');
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('mobile-open');
+      });
+    }
+  });
+});
+
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 document.addEventListener('DOMContentLoaded', () => {
   const observer = new IntersectionObserver((entries) => {
