@@ -440,6 +440,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .home-feed-card-thumb { width: 100%; height: 160px; }
         .home-feed-card-thumb img { min-height: 160px; }
     }
+
+    /* ── Dropdown nav ── */
+    nav ul li { position: relative; }
+    nav ul li a { display: flex; align-items: center; gap: 4px; }
+    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown-toggle .dropdown-arrow { font-size: 0.65rem; transition: transform 0.2s var(--ease); }
+    .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); padding: 6px; opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 0.2s var(--ease), transform 0.2s var(--ease); z-index: 100; border: 1px solid rgba(255,255,255,0.08); }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .nav-dropdown-menu a { display: block; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.83rem; font-weight: 600; padding: 0.45rem 0.85rem; border-radius: 7px; transition: background 0.15s, color 0.15s; white-space: nowrap; gap: 0; }
+    .nav-dropdown-menu a:hover { background: rgba(200,168,75,0.18); color: #fff; }
+    .nav-dropdown-menu a[aria-current="page"] { background: rgba(200,168,75,0.2); color: var(--accent-gold); }
+    .nav-dropdown-menu .dropdown-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 5px 0; }
+    @media (max-width: 900px) {
+        .nav-dropdown-menu { position: static; background: transparent; box-shadow: none; border: none; padding: 0 0 0 1rem; opacity: 1; pointer-events: all; transform: none; backdrop-filter: none; display: none; }
+        .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a { font-size: 0.82rem; color: rgba(255,255,255,0.7); padding: 0.32rem 0.6rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .dropdown-divider { display: none; }
+    }
     </style>
 </head>
 <body>
@@ -475,7 +495,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="community.html">Community</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li class="nav-dropdown" id="blogDropdown">
+          <a href="blog.html" class="nav-dropdown-toggle">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="blog.html" role="menuitem">All Posts</a>
+            <div class="dropdown-divider"></div>
+            <a href="blog.html#post-press-release-launch" role="menuitem">Site News</a>
+            <a href="blog.html#post-ryker-library-storytime" role="menuitem">Fatherhood</a>
+            <a href="blog.html#post-maritime-lessons" role="menuitem">Maritime Life</a>
+            <a href="blog.html#post-blue-collar-tech" role="menuitem">Career</a>
+          </div>
+        </li>
+        <li class="nav-dropdown" id="pressDropdown">
+          <a href="news-press.html" class="nav-dropdown-toggle">News &amp; Press <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="news-press.html" role="menuitem">All Coverage</a>
+            <div class="dropdown-divider"></div>
+            <a href="media-inquiries.html" role="menuitem"><i class="fas fa-microphone-alt" style="margin-right:5px;font-size:0.8em;"></i> Media Inquiries</a>
+          </div>
+        </li>
         <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
@@ -687,27 +725,27 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <p class="secondary" style="margin-bottom:1.6rem;">Original writing right here on the site. Real life, unfiltered.</p>
       <div class="journal-home-card">
         <img class="journal-home-card-img"
-          src="https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-reading.jpg"
-          alt="Ryker at Moses Lake Public Library Fire Department Story Time reading the family escape plan booklet with junior firefighter badge"
-          loading="lazy" width="760" height="220" style="object-position:center 20%;">
+          src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg"
+          alt="Jason David Newton Mechanical Technician Moses Lake Washington"
+          loading="lazy" width="760" height="220" style="object-position:center top;">
         <div class="journal-home-card-body">
           <div class="journal-home-card-meta">
-            <span><i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 22, 2026</span>
-            <span><i class="fas fa-clock" style="margin-right:4px;"></i> 5 min read</span>
-            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Fatherhood</span>
-            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Moses Lake</span>
+            <span><i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 24, 2026</span>
+            <span><i class="fas fa-clock" style="margin-right:4px;"></i> 3 min read</span>
+            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Site News</span>
+            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Press</span>
           </div>
-          <h3>Ryker's Second Fire Department Story Time at the Moses Lake Public Library</h3>
-          <p>We have a routine on Fridays. At 10:00 when they open we head to the library, exchange our books, and spend some quality time together reading, playing with the toys, and coloring a couple pictures. But we always get extra excited when the library has story time. Ryker walked in wearing his little "In the Lord's Army" hoodie, planted himself right in the middle of that blue carpet full of kids, and within ten minutes had a junior Moses Lake firefighter badge sticker on his chest he was not taking off for anything.</p>
+          <h3>jasondavidnewton.com Got Picked Up by Digital Journal and Patch Moses Lake</h3>
+          <p>Kind of a cool thing happened this week. I put out a press release about the blog launch and it got picked up by Digital Journal, Patch Moses Lake, and a couple other outlets. For a mechanical technician in Moses Lake writing about faith and fatherhood, it's pretty cool to see your name in print somewhere other than your own site.</p>
           <div class="journal-home-card-footer">
             <div class="journal-home-card-share">
               <span style="font-size:0.82rem;font-weight:700;color:var(--text-secondary);margin-right:6px;">Share:</span>
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime&text=Ryker's Second Fire Department Story Time at the Moses Lake Public Library" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Ryker's Second Fire Department Story Time https://jasondavidnewton.com/blog.html%23post-ryker-library-storytime" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.com/blog.html%23post-press-release-launch" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.com/blog.html%23post-press-release-launch&text=jasondavidnewton.com+Got+Picked+Up+by+Digital+Journal+and+Patch+Moses+Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.com/blog.html%23post-press-release-launch" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=jasondavidnewton.com+Got+Picked+Up+by+Digital+Journal+and+Patch+Moses+Lake+https://jasondavidnewton.com/blog.html%23post-press-release-launch" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
-            <a href="blog.html#post-ryker-library-storytime" class="home-feed-read-btn" style="color:#fff !important;">Read Full Article <i class="fas fa-arrow-right"></i></a>
+            <a href="blog.html#post-press-release-launch" class="home-feed-read-btn" style="color:#fff !important;">Read Full Article <i class="fas fa-arrow-right"></i></a>
           </div>
         </div>
       </div>
@@ -977,6 +1015,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube – Jason David Newton"><i class="fab fa-youtube" title="YouTube"></i></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO – Jason David Newton"><i class="fas fa-camera" title="VSCO"></i></a>
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><i class="fas fa-link" title="jasonnewton.me"></i></a>
+    <a href="https://patch.com/washington/moses-lake-wa/business/listing/574843/jason-david-newton" target="_blank" rel="noopener" aria-label="Patch Moses Lake – Jason David Newton"><i class="fas fa-map-marker-alt" title="Patch Moses Lake"></i></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar – Jason David Newton"><i class="fas fa-id-card" title="Gravatar"></i></a>
   </div>
   <div style="margin-bottom:16px;">
@@ -1029,7 +1068,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
   <a href="index.html" class="active" aria-current="page"><i class="fas fa-home"></i><span>Home</span></a>
   <a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a>
-  <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="news-press.html"><i class="fas fa-newspaper"></i><span>Press</span></a>
   <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
@@ -1159,6 +1198,23 @@ document.addEventListener('keydown', (e) => {
       profileCard.classList.remove('hidden');
     }
   }
+});
+</script>
+
+<script>
+// Dropdown menus - mobile toggle
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      dropdown.classList.toggle('mobile-open');
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('mobile-open');
+      });
+    }
+  });
 });
 </script>
 
