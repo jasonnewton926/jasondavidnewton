@@ -221,9 +221,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
     /* ── SMALL MENTION CARDS ── */
     .mention-grid { display: flex; flex-wrap: wrap; gap: 18px; }
-    .mention-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.6rem 1.8rem; flex: 1 1 280px; display: flex; flex-direction: column; gap: 0.8rem; transition: box-shadow 0.3s, transform 0.3s; border-top: 3px solid transparent; }
-    .mention-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); border-top-color: var(--accent-gold); }
-    .mention-card-source { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-gold); display: flex; align-items: center; gap: 6px; }
+    .mention-card { background: var(--card-bg); border-radius: var(--radius); box-shadow: var(--shadow); padding: 0; flex: 1 1 280px; display: flex; flex-direction: column; transition: box-shadow 0.3s, transform 0.3s; overflow: hidden; border: 1px solid rgba(200,168,75,0.12); }
+    .mention-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px); }
+    .mention-card-thumb { width: 100%; height: 6px; flex-shrink: 0; transition: height 0.2s; }
+    .mention-card:hover .mention-card-thumb { height: 8px; }
+    .mention-card-inner { padding: 1.4rem 1.6rem 1.2rem; display: flex; flex-direction: column; gap: 0.75rem; flex: 1; }
+    .mention-card-source { font-size: 0.7rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent-gold); display: flex; align-items: center; gap: 6px; flex-wrap: wrap; }
+    .mention-card-source i { font-size: 0.85rem; }
     .mention-card h4 { font-family: var(--font-display); font-size: 1rem; color: var(--primary-blue); line-height: 1.3; }
     [data-theme="dark"] .mention-card h4 { color: var(--accent-blue); }
     .mention-card p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; flex: 1; }
@@ -539,7 +543,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div class="mention-grid">
 
         <div class="mention-card">
-          <div class="mention-card-source"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake &nbsp;·&nbsp; Mar 22, 2026</div>
+          <div class="mention-card-thumb" style="background:linear-gradient(90deg,#006fba,#4da6ff);"></div>
+          <div class="mention-card-inner">
+                    <div class="mention-card-source"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake &nbsp;·&nbsp; Mar 22, 2026</div>
           <h4>Jason David Newton – Patch Moses Lake Business Directory</h4>
           <p>Listed in the Patch Moses Lake local business directory as a Moses Lake resident, blogger, and community voice covering faith, fatherhood, and blue collar life in Grant County.</p>
           <div class="mention-card-footer">
@@ -551,9 +557,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
+          </div>
+        </div>
 
         <div class="mention-card">
-          <div class="mention-card-source"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake &nbsp;·&nbsp; Mar 24, 2026</div>
+          <div class="mention-card-thumb" style="background:linear-gradient(90deg,#006fba,#4da6ff);"></div>
+          <div class="mention-card-inner">
+                    <div class="mention-card-source"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake &nbsp;·&nbsp; Mar 24, 2026</div>
           <h4>Mentioned in Patch Moses Lake Local News Coverage</h4>
           <p>Jason David Newton and jasondavidnewton.com received a mention in Patch Moses Lake local news coverage, furthering the site's footprint in the Grant County community.</p>
           <div class="mention-card-footer">
@@ -565,9 +575,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
+          </div>
+        </div>
 
         <div class="mention-card">
-          <div class="mention-card-source"><i class="fas fa-newspaper"></i> Muck Rack &nbsp;·&nbsp; Mar 2026</div>
+          <div class="mention-card-thumb" style="background:linear-gradient(90deg,#2b2b2b,#6b6b6b);"></div>
+          <div class="mention-card-inner">
+                    <div class="mention-card-source"><i class="fas fa-newspaper"></i> Muck Rack &nbsp;·&nbsp; Mar 2026</div>
           <h4>Jason David Newton – Muck Rack Profile</h4>
           <p>Indexed on Muck Rack, the journalist and media database, with a full profile covering the blog, writing samples, and social presence. Includes a published interview.</p>
           <div class="mention-card-footer">
@@ -579,8 +593,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
           </div>
         </div>
+          </div>
+        </div>
         <div class="mention-card">
-          <div class="mention-card-source"><i class="fas fa-seedling"></i> Gerald Grain Center &nbsp;·&nbsp; Mar 24, 2026</div>
+          <div class="mention-card-thumb" style="background:linear-gradient(90deg,#2d5a1b,#7ab648);"></div>
+          <div class="mention-card-inner">
+                    <div class="mention-card-source"><i class="fas fa-seedling"></i> Gerald Grain Center &nbsp;·&nbsp; Mar 24, 2026</div>
           <h4>JasonDavidNewton.com Featured on Gerald Grain Center</h4>
           <p>The blog launch press release was syndicated to Gerald Grain Center, an Illinois-based agricultural markets and news site, reaching Midwest farming and commodities audiences.</p>
           <div class="mention-card-footer">
@@ -590,6 +608,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <a href="https://twitter.com/intent/tweet?url=https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life&text=JasonDavidNewton.com+on+Gerald+Grain+Center" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
               <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
             </div>
+          </div>
+        </div>
           </div>
         </div>
 
@@ -841,6 +861,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <div class="timeline-card-outlet">Digital Journal</div>
               <h4>Blog Launch Press Release</h4>
               <span class="timeline-card-type" style="background:rgba(200,168,75,0.2);">Featured</span>
+            </a>
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-dot-wrap">
+              <div class="timeline-date">Mar 24, 2026</div>
+              <div class="timeline-dot"></div>
+            </div>
+            <a href="https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" rel="noopener" class="timeline-card" style="text-decoration:none;">
+              <div class="timeline-card-outlet">Gerald Grain Center</div>
+              <h4>Blog Launch Syndicated to Ag Markets Site</h4>
+              <span class="timeline-card-type">Press Release</span>
             </a>
           </div>
 
