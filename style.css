@@ -88,18 +88,22 @@ main { flex: 1; }
     clip: rect(0,0,0,0); border: 0;
 }
 
+/* ── Fade-in sections: visible by default, no JS dependency ── */
 .fade-in-section {
-    opacity: 0; transform: translateY(36px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.85s var(--ease), transform 0.85s var(--ease);
 }
-.fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-@media (max-width: 768px) { .fade-in-section { transform: translateY(28px); } }
+.fade-in-section.is-visible { opacity: 1; transform: none; }
+@media (max-width: 768px) { .fade-in-section { transform: none; } }
 
+/* ── Footer icons: visible by default ── */
 .footer-icons {
-    opacity: 0; transform: translateY(20px);
+    opacity: 1;
+    transform: none;
     transition: opacity 0.8s var(--ease), transform 0.8s var(--ease);
 }
-.footer-icons.visible { opacity: 1; transform: translateY(0); }
+.footer-icons.visible { opacity: 1; transform: none; }
 
 .rss-link {
     position: relative; display: inline-flex; align-items: center; gap: 8px;
