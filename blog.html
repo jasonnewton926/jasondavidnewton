@@ -278,6 +278,26 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         .mobile-bottom-nav i { font-size: 1.2rem; }
     }
 
+
+    /* Dropdown nav */
+    nav ul li { position: relative; }
+    nav ul li a { display: flex; align-items: center; gap: 4px; }
+    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown-toggle .dropdown-arrow { font-size: 0.65rem; transition: transform 0.2s var(--ease); }
+    .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); padding: 6px; opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 0.2s var(--ease), transform 0.2s var(--ease); z-index: 100; border: 1px solid rgba(255,255,255,0.08); }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .nav-dropdown-menu a { display: block; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.83rem; font-weight: 600; padding: 0.45rem 0.85rem; border-radius: 7px; transition: background 0.15s, color 0.15s; white-space: nowrap; gap: 0; }
+    .nav-dropdown-menu a:hover { background: rgba(200,168,75,0.18); color: #fff; }
+    .nav-dropdown-menu a[aria-current="page"] { background: rgba(200,168,75,0.2); color: var(--accent-gold); }
+    .nav-dropdown-menu .dropdown-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 5px 0; }
+    @media (max-width: 900px) {
+        .nav-dropdown-menu { position: static; background: transparent; box-shadow: none; border: none; padding: 0 0 0 1rem; opacity: 1; pointer-events: all; transform: none; backdrop-filter: none; display: none; }
+        .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a { font-size: 0.82rem; color: rgba(255,255,255,0.7); padding: 0.32rem 0.6rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .dropdown-divider { display: none; }
+    }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"Jason David Newton Blog Posts","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"BlogPosting","headline":"jasondavidnewton.com Got Picked Up by Digital Journal and Patch Moses Lake","datePublished":"2026-03-24","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-press-release-launch","image":"https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg","description":"Press coverage roundup: Digital Journal and Patch Moses Lake picked up the blog launch announcement."}},{"@type":"ListItem","position":2,"item":{"@type":"BlogPosting","headline":"Ryker's Second Fire Department Story Time at the Moses Lake Public Library","datePublished":"2026-03-22","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-ryker-library-storytime","image":"https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-reading.jpg","description":"A Friday morning at Moses Lake Public Library Fire Department Story Time with my two-year-old son Ryker."}},{"@type":"ListItem","position":3,"item":{"@type":"BlogPosting","headline":"Being a Single Dad in Moses Lake: The Real Unfiltered Version","datePublished":"2026-03-21","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-single-dad","image":"https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg","description":"The honest, unfiltered truth about single dad life in a small town."}},{"@type":"ListItem","position":4,"item":{"@type":"BlogPosting","headline":"Why I'd Choose Moses Lake Over Any Big City, Every Single Time","datePublished":"2024-09-14","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-small-town-pride","image":"https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg","description":"Why Moses Lake, Washington beats big city life for family, faith, and career."}},{"@type":"ListItem","position":5,"item":{"@type":"BlogPosting","headline":"What It's Actually Like Being a Blue-Collar Guy at a Tech Company","datePublished":"2024-11-08","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-blue-collar-tech","image":"https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg","description":"A mechanical technician's perspective on working at Group 14 Technologies in Moses Lake."}},{"@type":"ListItem","position":6,"item":{"@type":"BlogPosting","headline":"The Pacific Northwest Has a Way of Putting Things in Perspective","datePublished":"2025-01-22","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-pnw-outdoors","image":"https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg","description":"How hiking and the outdoors near Moses Lake, Washington provide spiritual clarity."}},{"@type":"ListItem","position":7,"item":{"@type":"BlogPosting","headline":"What I Want My Son to Know Before He's Old Enough to Not Listen to Me","datePublished":"2025-05-03","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-raising-son","image":"https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg","description":"Life lessons a Christian father in Moses Lake wants to pass down to his son."}},{"@type":"ListItem","position":8,"item":{"@type":"BlogPosting","headline":"Five Things Three Years at Sea Taught Me That No Job on Land Ever Could","datePublished":"2025-08-19","author":{"@type":"Person","name":"Jason David Newton"},"url":"https://jasondavidnewton.com/blog.html#post-maritime-lessons","image":"https://jasondavidnewton.com/assets/maritime-boat.jpg","description":"Lessons from working as Second Assistant Engineer aboard the C/P Starbound in the Bering Sea."}}]}</script>
@@ -306,7 +326,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="community.html">Community</a></li>
-        <li><a href="blog.html" aria-current="page">Blog</a></li>
+        <li class="nav-dropdown" id="blogDropdown">
+          <a href="blog.html" aria-current="page" class="nav-dropdown-toggle">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="blog.html" aria-current="page" role="menuitem">All Posts</a>
+            <div class="dropdown-divider"></div>
+            <a href="blog.html#post-press-release-launch" role="menuitem">Site News</a>
+            <a href="blog.html#post-ryker-library-storytime" role="menuitem">Fatherhood</a>
+            <a href="blog.html#post-maritime-lessons" role="menuitem">Maritime Life</a>
+            <a href="blog.html#post-blue-collar-tech" role="menuitem">Career</a>
+          </div>
+        </li>
+        <li class="nav-dropdown" id="pressDropdown">
+          <a href="news-press.html" class="nav-dropdown-toggle">News &amp; Press <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="news-press.html" role="menuitem">All Coverage</a>
+            <div class="dropdown-divider"></div>
+            <a href="media-inquiries.html" role="menuitem"><i class="fas fa-microphone-alt" style="margin-right:5px;font-size:0.8em;"></i> Media Inquiries</a>
+          </div>
+        </li>
         <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
@@ -806,6 +844,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube – Jason David Newton"><i class="fab fa-youtube"></i></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO – Jason David Newton"><i class="fas fa-camera"></i></a>
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><i class="fas fa-link"></i></a>
+    <a href="https://patch.com/washington/moses-lake-wa/business/listing/574843/jason-david-newton" target="_blank" rel="noopener" aria-label="Patch Moses Lake – Jason David Newton"><i class="fas fa-map-marker-alt" title="Patch Moses Lake"></i></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar – Jason David Newton"><i class="fas fa-id-card"></i></a>
   </div>
   <div style="margin-bottom:16px;">
@@ -853,7 +892,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
   <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
   <a href="blog.html" class="active"><i class="fas fa-blog"></i><span>Blog</span></a>
-  <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="news-press.html"><i class="fas fa-newspaper"></i><span>Press</span></a>
   <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
@@ -902,6 +941,22 @@ window.addEventListener('scroll', () => {
   const btn = document.getElementById('back-to-top');
   btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 }, { passive: true });
+
+
+// Dropdown menus - mobile toggle
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      dropdown.classList.toggle('mobile-open');
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('mobile-open');
+      });
+    }
+  });
+});
 
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
