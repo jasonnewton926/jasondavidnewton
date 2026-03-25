@@ -129,6 +129,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.8) 0%, transparent 55%); }
     .page-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; max-width: 1000px; width: 100%; opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
     .page-hero-inner.loaded { opacity: 1; transform: translateY(0); }
+    /* Fallback: show hero if JS is slow or load event already fired */
+    @keyframes heroFallback { to { opacity: 1; transform: translateY(0); } }
+    .page-hero-inner { animation: heroFallback 0.001s 1.2s forwards; }
     .hero-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; flex-shrink: 0; }
     .hero-avatar { width: 175px; height: 175px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(200,168,75,0.8); box-shadow: 0 0 0 8px rgba(200,168,75,0.14), 0 10px 44px rgba(0,0,0,0.55); display: block; }
     .hero-badge { background: rgba(200,168,75,0.16); border: 1px solid rgba(200,168,75,0.5); color: var(--accent-gold); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; padding: 0.28rem 0.9rem; border-radius: 20px; text-align: center; white-space: nowrap; }
@@ -810,12 +813,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-window.addEventListener('load', () => {
+// Hero animation - fires on load or after 300ms, whichever comes first
+function initHero() {
   const hc = document.getElementById('heroContent');
   const hb = document.getElementById('heroBg');
   if (hc) hc.classList.add('loaded');
   if (hb) hb.classList.add('loaded');
-});
+}
+if (document.readyState === 'complete') {
+  initHero();
+} else {
+  window.addEventListener('load', initHero);
+  setTimeout(initHero, 300);
+}
 
 window.addEventListener('scroll', () => {
   document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
