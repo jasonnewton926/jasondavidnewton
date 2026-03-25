@@ -169,8 +169,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .section-sub { font-size: 1rem; color: var(--text-secondary); margin-bottom: 2.4rem; line-height: 1.7; }
 
     /* ── Fade in ── */
-    .fade-in-section { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
-    .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
+    .fade-in-section { opacity: 1 !important; transform: none !important; }
+    .fade-in-section.is-visible { opacity: 1 !important; transform: none !important; }
 
     /* ── Bio card ── */
     .bio-card { background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; display: grid; grid-template-columns: 280px 1fr; margin-bottom: 2.4rem; }
