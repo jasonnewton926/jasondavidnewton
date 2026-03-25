@@ -127,8 +127,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .page-hero-bg.loaded { transform: scale(1); }
     .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(6,18,32,0.92) 0%, rgba(10,31,51,0.82) 55%, rgba(15,42,70,0.7) 100%); }
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.8) 0%, transparent 55%); }
-    .page-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; max-width: 1000px; width: 100%; opacity: 0; transform: translateY(28px); transition: opacity 1s var(--ease), transform 1s var(--ease); }
-    .page-hero-inner.loaded { opacity: 1; transform: translateY(0); }
+    .page-hero-inner { position: relative !important; z-index: 2 !important; display: grid !important; grid-template-columns: auto 1fr !important; gap: 3rem !important; align-items: center !important; max-width: 1000px !important; width: 100% !important; opacity: 1 !important; transform: translateY(0) !important; }
+    .page-hero-inner.loaded { opacity: 1 !important; transform: translateY(0) !important; }
 
     .hero-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; flex-shrink: 0; }
     .hero-avatar { width: 175px; height: 175px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(200,168,75,0.8); box-shadow: 0 0 0 8px rgba(200,168,75,0.14), 0 10px 44px rgba(0,0,0,0.55); display: block; }
@@ -169,7 +169,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .section-sub { font-size: 1rem; color: var(--text-secondary); margin-bottom: 2.4rem; line-height: 1.7; }
 
     /* ── Fade in ── */
-    .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
+    .fade-in-section { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease-out, transform 0.7s ease-out; }
     .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
 
     /* ── Bio card ── */
@@ -834,26 +834,25 @@ window.addEventListener('scroll', () => {
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
 
 document.addEventListener('DOMContentLoaded', () => {
-  const isMobile = window.innerWidth < 768;
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        if (entry.target.classList.contains('footer-icons')) entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  // Show all fade-in sections immediately that are in or near viewport
+  function revealVisible() {
+    document.querySelectorAll('.fade-in-section').forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 100) el.classList.add('is-visible');
     });
-  }, { threshold: 0.01, rootMargin: '0px 0px 0px 0px' });
-  document.querySelectorAll('.fade-in-section').forEach(s => observer.observe(s));
-  const fi = document.querySelector('.footer-icons');
-  if (fi) observer.observe(fi);
-  // Force-show any elements already in viewport on load
-  setTimeout(() => {
+    const fi = document.querySelector('.footer-icons');
+    if (fi) fi.classList.add('visible');
+  }
+  revealVisible();
+  setTimeout(revealVisible, 100);
+  setTimeout(revealVisible, 400);
+  // Also watch for scroll
+  window.addEventListener('scroll', function() {
     document.querySelectorAll('.fade-in-section:not(.is-visible)').forEach(el => {
       const rect = el.getBoundingClientRect();
-      if (rect.top < window.innerHeight) el.classList.add('is-visible');
+      if (rect.top < window.innerHeight + 50) el.classList.add('is-visible');
     });
-  }, 200);
+  }, { passive: true });
 });
 
 const profileCard      = document.getElementById('profileCard');
