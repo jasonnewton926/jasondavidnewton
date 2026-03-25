@@ -3,6 +3,13 @@
 <head>
     <meta charset="UTF-8">
 
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-56CV8BZH');</script>
+<!-- End Google Tag Manager -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jason David Newton – Community Involvement | Mechanical Technician in Moses Lake, Washington</title>
     <meta name="description" content="Jason David Newton from Moses Lake, WA gives back through Grace Harvest Church, youth football coaching, mentoring, and volunteering. Faith-driven community service in Moses Lake.">
@@ -32,8 +39,10 @@
     <meta name="twitter:title" content="Jason David Newton – Community Involvement | Moses Lake, Washington">
     <meta name="twitter:description" content="Grace Harvest Church · Youth Coaching · Mentoring · Moses Lake, WA">
     <meta name="twitter:image" content="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
-    <link rel="icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" type="image/jpeg">
-    <link rel="apple-touch-icon" href="/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg">
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="/favicon-16x16.png" type="image/png" sizes="16x16">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <link rel="manifest" href="/site.webmanifest">
     <meta name="theme-color" content="#0d2244">
     <link rel="stylesheet" href="style.css">
@@ -52,7 +61,6 @@
         --primary-blue: #1a4a6e;
         --accent-blue: #4da6ff;
         --accent-gold: #c8a84b;
-
         --section-bg: #ffffff;
         --section-alt: #f4f7fa;
         --card-bg: #ffffff;
@@ -64,18 +72,8 @@
         --font-display: 'Playfair Display', Georgia, serif;
         --font-body: 'Source Sans 3', sans-serif;
     }
-    [data-theme="dark"] {
-        --section-bg: #0a1830;
-        --section-alt: #071020;
-        --card-bg: #0f2040;
-        --text: #dde8f0;
-        --text-secondary: #8faecc;
-        --shadow: 0 4px 24px rgba(0,0,0,0.4);
-        --shadow-hover: 0 14px 44px rgba(0,0,0,0.55);
-    }
+    [data-theme="dark"] { --section-bg: #0a1830; --section-alt: #071020; --card-bg: #0f2040; --text: #dde8f0; --text-secondary: #8faecc; --shadow: 0 4px 24px rgba(0,0,0,0.4); --shadow-hover: 0 14px 44px rgba(0,0,0,0.55); }
     body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); line-height: 1.7; overflow-x: hidden; }
-
-    /* ── Navbar ── */
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
     .navbar.scrolled { background: rgba(13,34,68,0.96); backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
@@ -99,8 +97,6 @@
         #mobile-menu:checked + .nav-toggle span:nth-child(3) { transform: rotate(-45deg) translate(7px,-6px); }
         .theme-toggle { margin-left: 0.5rem; }
     }
-
-    /* ── Full-viewport hero ── */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
     .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/images/jason-david-newton-frontier-middle-school-football-coaching-staff-moses-lake-2017.jpg'); background-size: cover; background-position: center 20%; transform: scale(1.06); transition: transform 9s ease-out; will-change: transform; }
     .page-hero-bg.loaded { transform: scale(1); }
@@ -121,23 +117,13 @@
     .hero-text p { font-size: 1.03rem; line-height: 1.78; color: rgba(255,255,255,0.82); max-width: 540px; margin-bottom: 1.6rem; }
     .hero-scroll-hint { position: absolute; bottom: 26px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 5px; color: rgba(255,255,255,0.45); font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; animation: bounceY 2.2s infinite; }
     @keyframes bounceY { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(7px); } }
-    @media (max-width: 680px) {
-        .page-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; }
-        .hero-avatar { width: 120px; height: 120px; }
-        .hero-eyebrow { justify-content: center; }
-        .hero-text p { margin-left: auto; margin-right: auto; }
-        .hero-roles { justify-content: center; }
-    }
-
-    /* ── Stats bar ── */
+    @media (max-width: 680px) { .page-hero-inner { grid-template-columns: 1fr; text-align: center; gap: 1.5rem; } .hero-avatar { width: 120px; height: 120px; } .hero-eyebrow { justify-content: center; } .hero-text p { margin-left: auto; margin-right: auto; } .hero-roles { justify-content: center; } }
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
     .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
-
-    /* ── Sections ── */
     .section { padding: 70px 2rem; background: var(--section-bg); }
     .section.alt { background: var(--section-alt); }
     .section-content { max-width: 1100px; margin: 0 auto; }
@@ -145,27 +131,14 @@
     .section-content h2 { font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.1rem); color: var(--primary-blue); margin-bottom: 0.5rem; line-height: 1.25; text-align: center; }
     [data-theme="dark"] .section-content h2 { color: var(--accent-blue); }
     .section-content > p { font-size: 1rem; color: var(--text-secondary); text-align: center; margin-bottom: 2.5rem; }
-
-    /* ── Community cards ── */
     .community-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 26px; }
-    .community-card {
-        background: var(--card-bg);
-        border-radius: var(--radius);
-        overflow: hidden;
-        box-shadow: var(--shadow);
-        transition: transform 0.3s var(--ease), box-shadow 0.3s;
-        flex: 1 1 300px;
-        max-width: 360px;
-        display: flex;
-        flex-direction: column;
-    }
+    .community-card { background: var(--card-bg); border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s var(--ease), box-shadow 0.3s; flex: 1 1 300px; max-width: 360px; display: flex; flex-direction: column; }
     .community-card:hover { transform: translateY(-8px); box-shadow: var(--shadow-hover); }
     .community-card-img-wrap { width: 100%; height: 210px; overflow: hidden; flex-shrink: 0; background: var(--section-alt); }
     .community-card-img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s var(--ease); }
     .community-card:hover .community-card-img { transform: scale(1.04); }
     .community-card-body { padding: 22px 22px 24px; flex: 1; display: flex; flex-direction: column; }
-    .community-card-icon { color: var(--primary-blue); font-size: 1.6rem; margin-bottom: 10px; display: block; }
-    [data-theme="dark"] .community-card-icon { color: var(--accent-blue); }
+    .community-card-icon { color: var(--accent-gold); font-size: 1.6rem; margin-bottom: 10px; display: block; }
     .community-card-body h3 { font-family: var(--font-display); font-size: 1.18rem; color: var(--primary-blue); margin-bottom: 0.7rem; line-height: 1.3; }
     [data-theme="dark"] .community-card-body h3 { color: var(--accent-blue); }
     .community-card-body p { font-size: 0.96rem; line-height: 1.72; color: var(--text-secondary); flex: 1; margin-bottom: 1.2rem; }
@@ -173,26 +146,18 @@
     [data-theme="dark"] .community-card-body a:not(.section-button) { color: var(--accent-blue); }
     .section-button { display: inline-block; background: var(--primary-blue); color: #fff; padding: 0.65rem 1.3rem; border-radius: 8px; font-weight: 700; font-size: 0.88rem; text-decoration: none; transition: background 0.25s, transform 0.2s; align-self: center; }
     .section-button:hover { background: #0d2244; transform: translateY(-2px); }
-
-    /* ── Values strip ── */
     .values-strip { background: var(--primary-dark); padding: 60px 2rem; text-align: center; }
     .values-strip blockquote { font-family: var(--font-display); font-size: clamp(1.3rem, 2.5vw, 1.9rem); color: #fff; font-style: italic; max-width: 700px; margin: 0 auto 1rem; line-height: 1.5; }
     .values-strip blockquote span { color: var(--accent-gold); }
     .values-strip cite { font-size: 0.85rem; color: rgba(255,255,255,0.55); letter-spacing: 0.1em; text-transform: uppercase; font-style: normal; }
-
-    /* ── Why community section ── */
     .why-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 18px; margin-top: 1.5rem; }
     .why-item { background: var(--card-bg); border-radius: 10px; padding: 20px 22px; flex: 1 1 200px; max-width: 240px; text-align: center; box-shadow: var(--shadow); }
     .why-item i { font-size: 1.8rem; color: var(--accent-gold); margin-bottom: 10px; display: block; }
     .why-item h4 { font-family: var(--font-display); font-size: 1rem; color: var(--primary-blue); margin-bottom: 6px; }
     [data-theme="dark"] .why-item h4 { color: var(--accent-blue); }
     .why-item p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
-
-    /* ── Fade in ── */
     .fade-in-section { opacity: 0; transform: translateY(36px); transition: opacity 0.85s var(--ease), transform 0.85s var(--ease); }
     .fade-in-section.is-visible { opacity: 1; transform: translateY(0); }
-
-    /* ── Footer ── */
     footer { background: var(--primary-dark); color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 100px; }
     @media (min-width: 481px) { footer { padding-bottom: 30px; } }
     .footer-icons { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; opacity: 0; transform: translateY(20px); transition: opacity 0.8s var(--ease), transform 0.8s var(--ease); }
@@ -202,12 +167,8 @@
     .rss-link { color: var(--accent-gold); text-decoration: none; font-weight: 600; font-size: 0.93rem; }
     .rss-link:hover { color: #d9ba68; }
     footer p { font-size: 0.88rem; margin-top: 6px; opacity: 0.6; }
-
-    /* ── Back to top ── */
     #back-to-top { position: fixed; bottom: 96px; right: 26px; display: none; background: rgba(31,79,122,0.82); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 8000; transition: all 0.3s var(--ease); align-items: center; justify-content: center; backdrop-filter: blur(6px); }
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
-
-    /* ── Profile card ── */
     .profile-float-card { position: fixed; bottom: 96px; right: 26px; z-index: 9997; width: 280px; background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.18); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
     .profile-float-card.hidden { opacity: 0; transform: translateY(10px) scale(0.97); pointer-events: none; }
     @media (max-width: 768px) { .profile-float-card { display: none !important; } }
@@ -228,8 +189,6 @@
     .profile-card-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
     [data-theme="dark"] .profile-card-footer a { color: var(--accent-blue); }
     .profile-card-footer a:hover { text-decoration: underline; }
-
-    /* ── Chat bubble ── */
     .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease), box-shadow 0.3s; color: #fff; font-size: 1.45rem; }
     .chat-bubble-btn:hover { transform: scale(1.1); }
     .chat-bubble-btn .chat-close { display: none; }
@@ -245,12 +204,7 @@
     .chat-status { font-size: 0.72rem; font-weight: 400; opacity: 0.82; display: flex; align-items: center; gap: 5px; }
     .chat-status::before { content: ''; width: 7px; height: 7px; background: #3ecf6e; border-radius: 50%; display: block; }
     #embedded-widget-container { flex: 1; width: 100%; border: none; min-height: 0; background: var(--section-bg); }
-    @media (max-width: 480px) {
-        .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; }
-        .chat-bubble-btn { bottom: 70px; right: 16px; }
-    }
-
-    /* ── Mobile bottom nav ── */
+    @media (max-width: 480px) { .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; } .chat-bubble-btn { bottom: 70px; right: 16px; } }
     .mobile-bottom-nav { display: none; }
     @media (max-width: 480px) {
         .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8500; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 8px 0 max(8px, env(safe-area-inset-bottom)); justify-content: space-around; align-items: center; }
@@ -259,17 +213,37 @@
         .mobile-bottom-nav i { font-size: 1.2rem; }
     }
 
+    /* Dropdown nav */
+    nav ul li { position: relative; }
+    nav ul li a { display: flex; align-items: center; gap: 4px; }
+    .nav-dropdown-toggle { cursor: pointer; }
+    .nav-dropdown-toggle .dropdown-arrow { font-size: 0.65rem; transition: transform 0.2s var(--ease); }
+    .nav-dropdown:hover .dropdown-arrow { transform: rotate(180deg); }
+    .nav-dropdown-menu { position: absolute; top: calc(100% + 6px); left: 0; min-width: 190px; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-radius: 10px; box-shadow: 0 8px 32px rgba(0,0,0,0.35); padding: 6px; opacity: 0; pointer-events: none; transform: translateY(-6px); transition: opacity 0.2s var(--ease), transform 0.2s var(--ease); z-index: 100; border: 1px solid rgba(255,255,255,0.08); }
+    .nav-dropdown:hover .nav-dropdown-menu { opacity: 1; pointer-events: all; transform: translateY(0); }
+    .nav-dropdown-menu a { display: block; color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.83rem; font-weight: 600; padding: 0.45rem 0.85rem; border-radius: 7px; transition: background 0.15s, color 0.15s; white-space: nowrap; gap: 0; }
+    .nav-dropdown-menu a:hover { background: rgba(200,168,75,0.18); color: #fff; }
+    .nav-dropdown-menu a[aria-current="page"] { background: rgba(200,168,75,0.2); color: var(--accent-gold); }
+    .nav-dropdown-menu .dropdown-divider { height: 1px; background: rgba(255,255,255,0.1); margin: 5px 0; }
+    @media (max-width: 900px) {
+        .nav-dropdown-menu { position: static; background: transparent; box-shadow: none; border: none; padding: 0 0 0 1rem; opacity: 1; pointer-events: all; transform: none; backdrop-filter: none; display: none; }
+        .nav-dropdown.mobile-open .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a { font-size: 0.82rem; color: rgba(255,255,255,0.7); padding: 0.32rem 0.6rem; }
+        .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
+        .dropdown-divider { display: none; }
+    }
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0; }
     </style>
     <script type="application/ld+json">{"@context":"https://schema.org","@type":"VolunteerAction","agent":{"@type":"Person","name":"Jason David Newton","url":"https://jasondavidnewton.com/"},"participant":{"@type":"Organization","name":"Grace Harvest Church","url":"https://graceharvestchurch.org/","address":{"@type":"PostalAddress","streetAddress":"313 Fig St","addressLocality":"Moses Lake","addressRegion":"WA","addressCountry":"US"}},"actionStatus":"ActiveActionStatus","description":"Jason David Newton is an active member and volunteer at Grace Harvest Church in Moses Lake, Washington, participating in worship, Bible study, outreach, youth football coaching, and community mentoring."}</script>
 </head>
 <body>
-
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-56CV8BZH"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
-<!-- NAVIGATION -->
 <header role="navigation" class="navbar" aria-label="Main Navigation">
   <div class="nav-container">
     <div class="logo">Jason David Newton</div>
@@ -284,7 +258,25 @@
         <li><a href="education.html">Education</a></li>
         <li><a href="experience.html">Experience</a></li>
         <li><a href="community.html" aria-current="page">Community</a></li>
-        <li><a href="blog.html">Blog</a></li>
+        <li class="nav-dropdown" id="blogDropdown">
+          <a href="blog.html" class="nav-dropdown-toggle">Blog <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="blog.html" role="menuitem">All Posts</a>
+            <div class="dropdown-divider"></div>
+            <a href="blog.html#post-press-release-launch" role="menuitem">Site News</a>
+            <a href="blog.html#post-ryker-library-storytime" role="menuitem">Fatherhood</a>
+            <a href="blog.html#post-maritime-lessons" role="menuitem">Maritime Life</a>
+            <a href="blog.html#post-blue-collar-tech" role="menuitem">Career</a>
+          </div>
+        </li>
+        <li class="nav-dropdown" id="pressDropdown">
+          <a href="news-press.html" class="nav-dropdown-toggle">News &amp; Press <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+          <div class="nav-dropdown-menu" role="menu">
+            <a href="news-press.html" role="menuitem">All Coverage</a>
+            <div class="dropdown-divider"></div>
+            <a href="media-inquiries.html" role="menuitem"><i class="fas fa-microphone-alt" style="margin-right:5px;font-size:0.8em;"></i> Media Inquiries</a>
+          </div>
+        </li>
         <li><a href="hobbies.html">Hobbies</a></li>
         <li><a href="gallery.html">Gallery</a></li>
         <li><a href="resources.html">Resources</a></li>
@@ -299,20 +291,12 @@
   </div>
 </header>
 
-<!-- HERO -->
 <section class="page-hero" aria-label="Community Involvement – Jason David Newton Moses Lake Washington">
   <div class="page-hero-bg" id="heroBg"></div>
   <div class="page-hero-overlay"></div>
   <div class="page-hero-inner" id="heroContent">
     <div class="hero-avatar-wrap">
-      <img
-        class="hero-avatar"
-        src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg"
-        alt="Jason David Newton – Mechanical Technician in Moses Lake, Washington"
-        width="175" height="175"
-        loading="eager"
-        fetchpriority="high"
-      >
+      <img class="hero-avatar" src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton – Mechanical Technician in Moses Lake, Washington" width="175" height="175" loading="eager" fetchpriority="high">
       <span class="hero-badge">Moses Lake, WA</span>
     </div>
     <div class="hero-text">
@@ -327,13 +311,9 @@
       <p>Giving back to Moses Lake is a big part of who I am. Through faith at Grace Harvest Church, coaching kids, and local volunteering, I try to make a real difference. It keeps me grounded in what matters most.</p>
     </div>
   </div>
-  <div class="hero-scroll-hint" aria-hidden="true">
-    <i class="fas fa-chevron-down"></i>
-    <span>Scroll</span>
-  </div>
+  <div class="hero-scroll-hint" aria-hidden="true"><i class="fas fa-chevron-down"></i><span>Scroll</span></div>
 </section>
 
-<!-- STATS BAR -->
 <div class="stats-bar" aria-label="Community involvement at a glance">
   <div class="stats-bar-inner">
     <div class="stat-item"><i class="fas fa-church"></i> Grace Harvest Church · Moses Lake</div>
@@ -348,14 +328,11 @@
 
 <main role="main" id="main-content">
 
-  <!-- COMMUNITY CARDS -->
   <section class="section fade-in-section">
     <div class="section-content">
       <h2>Key Areas of Involvement</h2>
       <p>Faith, family, and community. Here's where I show up for Moses Lake.</p>
       <div class="community-grid">
-
-        <!-- Grace Harvest Church -->
         <div class="community-card">
           <div class="community-card-img-wrap">
             <img class="community-card-img" src="https://jasondavidnewton.com/assets/moses-lake-scene-jason-david-newton.jpg" alt="Moses Lake Washington – Grace Harvest Church community" loading="lazy" width="360" height="210" style="object-position: center center;">
@@ -367,8 +344,6 @@
             <a href="https://graceharvestchurch.org/" class="section-button" target="_blank" rel="noopener">Visit Church Site <span class="sr-only">(opens in new tab)</span></a>
           </div>
         </div>
-
-        <!-- Youth Football -->
         <div class="community-card">
           <div class="community-card-img-wrap">
             <img class="community-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-frontier-middle-school-football-coaching-staff-moses-lake-2017.jpg" alt="Jason David Newton and Frontier Middle School football coaching staff – Moses Lake, Washington 2017" loading="lazy" width="360" height="210" style="object-position:center 20%;">
@@ -380,8 +355,6 @@
             <a href="gallery.html" class="section-button">View Gallery Photos</a>
           </div>
         </div>
-
-        <!-- Mentoring -->
         <div class="community-card">
           <div class="community-card-img-wrap">
             <img class="community-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg" alt="Jason Newton hiking in the PNW with his dogs – community and outdoors" loading="lazy" width="360" height="210" style="object-position: center 20%;">
@@ -393,56 +366,31 @@
             <a href="contact.html" class="section-button">Reach Out</a>
           </div>
         </div>
-
       </div>
     </div>
   </section>
 
-  <!-- SCRIPTURE STRIP -->
   <div class="values-strip fade-in-section">
-    <blockquote>
-      "Serve one another humbly in love."
-      <span>— Galatians 5:13</span>
-    </blockquote>
+    <blockquote>"Serve one another humbly in love." <span>— Galatians 5:13</span></blockquote>
     <cite>The verse behind how I show up in Moses Lake</cite>
   </div>
 
-  <!-- WHY COMMUNITY MATTERS -->
   <section class="section alt fade-in-section">
     <div class="section-content narrow" style="text-align:center;">
       <h2>Why Community Matters to Me</h2>
       <p>My faith teaches that serving others is key to a good life. Balancing work at Group 14 with family and community keeps everything real and grounded.</p>
       <div class="why-grid">
-        <div class="why-item">
-          <i class="fas fa-cross"></i>
-          <h4>Faith First</h4>
-          <p>Everything I do in the community flows from my walk with Jesus at Grace Harvest Church.</p>
-        </div>
-        <div class="why-item">
-          <i class="fas fa-child"></i>
-          <h4>Next Generation</h4>
-          <p>Coaching and mentoring kids in Moses Lake so they grow up with the values that shaped me.</p>
-        </div>
-        <div class="why-item">
-          <i class="fas fa-map-marker-alt"></i>
-          <h4>Local Roots</h4>
-          <p>Moses Lake is home. Investing in this community is investing in my family's future here.</p>
-        </div>
-        <div class="why-item">
-          <i class="fas fa-heart"></i>
-          <h4>Balance</h4>
-          <p>Community keeps work and life in perspective. It's the glue between career, faith, and fatherhood.</p>
-        </div>
+        <div class="why-item"><i class="fas fa-cross"></i><h4>Faith First</h4><p>Everything I do in the community flows from my walk with Jesus at Grace Harvest Church.</p></div>
+        <div class="why-item"><i class="fas fa-child"></i><h4>Next Generation</h4><p>Coaching and mentoring kids in Moses Lake so they grow up with the values that shaped me.</p></div>
+        <div class="why-item"><i class="fas fa-map-marker-alt"></i><h4>Local Roots</h4><p>Moses Lake is home. Investing in this community is investing in my family's future here.</p></div>
+        <div class="why-item"><i class="fas fa-heart"></i><h4>Balance</h4><p>Community keeps work and life in perspective. It's the glue between career, faith, and fatherhood.</p></div>
       </div>
-      <div style="margin-top:2rem;">
-        <a href="contact.html" class="section-button">Got ideas? Reach out</a>
-      </div>
+      <div style="margin-top:2rem;"><a href="contact.html" class="section-button">Got ideas? Reach out</a></div>
     </div>
   </section>
 
 </main>
 
-<!-- FOOTER -->
 <footer role="contentinfo" aria-label="Footer with Social Links">
   <div class="footer-icons">
     <a href="https://www.linkedin.com/in/jason-newton-moses-lake" target="_blank" rel="me" aria-label="LinkedIn – Jason David Newton"><i class="fab fa-linkedin"></i></a>
@@ -461,19 +409,16 @@
     <a href="https://www.youtube.com/channel/UCWWhcB9FTqTMsTkJxOJCWxQ" target="_blank" rel="noopener" aria-label="YouTube – Jason David Newton"><i class="fab fa-youtube"></i></a>
     <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" aria-label="VSCO – Jason David Newton"><i class="fas fa-camera"></i></a>
     <a href="https://jasonnewton.me/" target="_blank" rel="noopener" aria-label="jasonnewton.me"><i class="fas fa-link"></i></a>
+    <a href="https://patch.com/washington/moses-lake-wa/business/listing/574843/jason-david-newton" target="_blank" rel="noopener" aria-label="Patch Moses Lake – Jason David Newton"><i class="fas fa-map-marker-alt" title="Patch Moses Lake"></i></a>
     <a href="https://jasondavidnewton.link/" target="_blank" rel="noopener" aria-label="Gravatar – Jason David Newton"><i class="fas fa-id-card"></i></a>
   </div>
-  <div style="margin-bottom:16px;">
-    <a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a>
-  </div>
+  <div style="margin-bottom:16px;"><a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a></div>
   <p>© 2026 Jason David Newton</p>
   <p>Moses Lake, Washington</p>
 </footer>
 
-<!-- BACK TO TOP -->
 <button id="back-to-top" onclick="topFunction()" title="Go to top" aria-label="Back to Top">↑</button>
 
-<!-- FLOATING PROFILE CARD -->
 <div class="profile-float-card" id="profileCard">
   <button class="profile-card-close" id="profileCardClose" aria-label="Close profile card"><i class="fas fa-times"></i></button>
   <div class="profile-card-header-img" style="background-image:url('https://2.gravatar.com/userimage/278587686/19e0e06fe167ec476f7b966d8727bf47?size=1024');"></div>
@@ -491,57 +436,45 @@
   </div>
 </div>
 
-<!-- FLOATING CHAT BUBBLE -->
 <button class="chat-bubble-btn" id="chatBubble" aria-label="Open AI Chat Assistant" aria-expanded="false">
   <i class="fas fa-comment-dots chat-icon"></i>
   <i class="fas fa-times chat-close"></i>
   <span class="chat-ping" aria-hidden="true"></span>
 </button>
-
 <div class="chat-panel" id="chatPanel" role="dialog" aria-label="Jason's AI Chat Assistant" aria-modal="true">
   <div class="chat-panel-header">
     <img src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg" alt="Jason David Newton" width="34" height="34">
-    <div>
-      <div>Jason's AI Assistant</div>
-      <div class="chat-status">Online now</div>
-    </div>
+    <div><div>Jason's AI Assistant</div><div class="chat-status">Online now</div></div>
   </div>
   <div id="embedded-widget-container"></div>
 </div>
 
-<!-- MOBILE BOTTOM NAV -->
 <nav class="mobile-bottom-nav" aria-label="Mobile quick navigation">
   <a href="index.html"><i class="fas fa-home"></i><span>Home</span></a>
   <a href="blog.html"><i class="fas fa-blog"></i><span>Blog</span></a>
-  <a href="gallery.html"><i class="fas fa-images"></i><span>Gallery</span></a>
+  <a href="news-press.html"><i class="fas fa-newspaper"></i><span>Press</span></a>
   <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
-<!-- Chatbot SDK — lazy loaded -->
 <script>
 let chatSdkLoaded = false;
 function loadChatSdk() {
-  if (chatSdkLoaded) return;
-  chatSdkLoaded = true;
+  if (chatSdkLoaded) return; chatSdkLoaded = true;
   const s = document.createElement('script');
   s.src = 'https://cdn.apigateway.co/webchat-client..prod/sdk.js';
   s.setAttribute('data-widget-id', '77f22f3a-2250-11f1-a0b3-da4488f0b204');
   s.setAttribute('data-embed-mode', 'embedded');
   s.setAttribute('data-embed-target', 'embedded-widget-container');
-  s.defer = true;
-  document.body.appendChild(s);
+  s.defer = true; document.body.appendChild(s);
 }
 </script>
-
 <script>
-// Dark mode
 document.addEventListener('DOMContentLoaded', () => {
   const toggleBtn = document.getElementById('theme-toggle');
   const themeIcon = document.getElementById('theme-icon');
   const htmlRoot  = document.documentElement;
   if (!toggleBtn || !themeIcon) return;
-  let currentTheme = localStorage.getItem('theme') ||
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+  let currentTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
   htmlRoot.setAttribute('data-theme', currentTheme);
   themeIcon.className = currentTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   toggleBtn.addEventListener('click', () => {
@@ -551,25 +484,33 @@ document.addEventListener('DOMContentLoaded', () => {
     themeIcon.className = newTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   });
 });
-
-// Hero load
 window.addEventListener('load', () => {
   const hc = document.getElementById('heroContent');
   const hb = document.getElementById('heroBg');
   if (hc) hc.classList.add('loaded');
   if (hb) hb.classList.add('loaded');
 });
-
-// Navbar + back-to-top
 window.addEventListener('scroll', () => {
   document.querySelector('.navbar').classList.toggle('scrolled', window.scrollY > 60);
   const btn = document.getElementById('back-to-top');
   btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
 }, { passive: true });
+// Dropdown menus - mobile toggle
+document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
+  const toggle = dropdown.querySelector('.nav-dropdown-toggle');
+  if (!toggle) return;
+  toggle.addEventListener('click', (e) => {
+    if (window.innerWidth <= 900) {
+      e.preventDefault();
+      dropdown.classList.toggle('mobile-open');
+      document.querySelectorAll('.nav-dropdown').forEach(d => {
+        if (d !== dropdown) d.classList.remove('mobile-open');
+      });
+    }
+  });
+});
 
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-// Scroll fade-in
 document.addEventListener('DOMContentLoaded', () => {
   const isMobile = window.innerWidth < 768;
   const observer = new IntersectionObserver((entries) => {
@@ -585,25 +526,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const fi = document.querySelector('.footer-icons');
   if (fi) observer.observe(fi);
 });
-
-// Profile card
-const profileCard      = document.getElementById('profileCard');
+const profileCard = document.getElementById('profileCard');
 const profileCardClose = document.getElementById('profileCardClose');
 if (profileCard && profileCardClose) {
   if (sessionStorage.getItem('profileCardDismissed')) profileCard.classList.add('hidden');
-  profileCardClose.addEventListener('click', (e) => {
-    e.stopPropagation();
-    profileCard.classList.add('hidden');
-    sessionStorage.setItem('profileCardDismissed', '1');
-  });
+  profileCardClose.addEventListener('click', (e) => { e.stopPropagation(); profileCard.classList.add('hidden'); sessionStorage.setItem('profileCardDismissed', '1'); });
 }
-
-// Chat bubble
 const chatBubble = document.getElementById('chatBubble');
 const chatPanel  = document.getElementById('chatPanel');
 chatBubble.addEventListener('click', (e) => {
-  e.stopPropagation();
-  loadChatSdk();
+  e.stopPropagation(); loadChatSdk();
   const isOpen = chatPanel.classList.toggle('open');
   chatBubble.classList.toggle('open', isOpen);
   chatBubble.setAttribute('aria-expanded', String(isOpen));
@@ -611,18 +543,15 @@ chatBubble.addEventListener('click', (e) => {
 });
 document.addEventListener('click', (e) => {
   if (!chatPanel.contains(e.target) && !chatBubble.contains(e.target)) {
-    chatPanel.classList.remove('open');
-    chatBubble.classList.remove('open');
+    chatPanel.classList.remove('open'); chatBubble.classList.remove('open');
     chatBubble.setAttribute('aria-expanded', 'false');
     if (profileCard && !sessionStorage.getItem('profileCardDismissed')) profileCard.classList.remove('hidden');
   }
 });
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && chatPanel.classList.contains('open')) {
-    chatPanel.classList.remove('open');
-    chatBubble.classList.remove('open');
-    chatBubble.setAttribute('aria-expanded', 'false');
-    chatBubble.focus();
+    chatPanel.classList.remove('open'); chatBubble.classList.remove('open');
+    chatBubble.setAttribute('aria-expanded', 'false'); chatBubble.focus();
     if (profileCard && !sessionStorage.getItem('profileCardDismissed')) profileCard.classList.remove('hidden');
   }
 });
