@@ -474,6 +474,9 @@
     @media (max-width: 600px) { .ptab { font-size: 0.78rem; padding: 0.42rem 0.9rem; } }
     /* In the News hero card responsive */
     @media (max-width: 768px) { #in-the-news .section-content > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
+    /* Writing card titles gold in dark mode */
+    [data-theme="dark"] #medium-card-title,
+    [data-theme="dark"] .writing-card-title { color: var(--accent-gold) !important; }
     /* Section photo cards */
     .section-img-link { display: block; margin-top: 1.8rem; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
     .section-img-link:hover { transform: translateY(-6px) scale(1.01); box-shadow: var(--shadow-hover); }
@@ -768,7 +771,7 @@
             </div>
           </div>
           <div style="padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;text-align:left;">
-            <h3 id="medium-card-title" style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Faith and Staying Grounded in Moses Lake</h3>
+            <h3 id="medium-card-title" class="writing-card-title" style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Faith and Staying Grounded in Moses Lake</h3>
             <p id="medium-card-desc" style="font-size:0.83rem;color:var(--text-secondary);line-height:1.55;flex:1;margin-bottom:14px;">How Jesus keeps me steady as a Christian dad and mechanical technician in Moses Lake.</p>
             <a id="medium-card-link" href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" style="display:block;background:var(--primary-blue);color:#fff;padding:0.55rem 1rem;border-radius:8px;font-weight:700;font-size:0.83rem;text-decoration:none;text-align:center;margin-bottom:10px;">Read on Medium <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
             <div style="display:flex;align-items:center;gap:2px;border-top:1px solid rgba(0,0,0,0.07);padding-top:10px;">
@@ -792,7 +795,7 @@
             </div>
           </div>
           <div style="padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;text-align:left;">
-            <h3 style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Refrigeration Basics for Beginners</h3>
+            <h3 class="writing-card-title" style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Refrigeration Basics for Beginners</h3>
             <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.55;flex:1;margin-bottom:14px;">A straight-talk breakdown from a guy who has run these systems in the Bering Sea and in Moses Lake.</p>
             <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" style="display:block;background:#0077b5;color:#fff;padding:0.55rem 1rem;border-radius:8px;font-weight:700;font-size:0.83rem;text-decoration:none;text-align:center;margin-bottom:10px;">Read on LinkedIn <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
             <div style="display:flex;align-items:center;gap:2px;border-top:1px solid rgba(0,0,0,0.07);padding-top:10px;">
@@ -816,7 +819,7 @@
             </div>
           </div>
           <div style="padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;text-align:left;">
-            <h3 style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">A Day Off With Ryker</h3>
+            <h3 class="writing-card-title" style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">A Day Off With Ryker</h3>
             <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.55;flex:1;margin-bottom:14px;">What a day with a two-year-old in Moses Lake actually looks like. No filter.</p>
             <a href="https://vsco.co/jasondavidnewton/journal/a-day-off-with-ryker" target="_blank" rel="noopener" style="display:block;background:var(--primary-dark);color:#fff;padding:0.55rem 1rem;border-radius:8px;font-weight:700;font-size:0.83rem;text-decoration:none;text-align:center;margin-bottom:10px;border:2px solid rgba(255,255,255,0.25);">View on VSCO <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
             <div style="display:flex;align-items:center;gap:2px;border-top:1px solid rgba(0,0,0,0.07);padding-top:10px;">
@@ -841,7 +844,7 @@
             </div>
           </div>
           <div style="padding:16px 18px 18px;flex:1;display:flex;flex-direction:column;text-align:left;">
-            <h3 style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Lessons from Working at Sea</h3>
+            <h3 class="writing-card-title" style="font-family:var(--font-display);font-size:0.98rem;color:var(--primary-blue);margin-bottom:6px;line-height:1.3;">Lessons from Working at Sea</h3>
             <p style="font-size:0.83rem;color:var(--text-secondary);line-height:1.55;flex:1;margin-bottom:14px;">Years as an engineer in the Bering Sea. Here's what it taught me about work and life. Mar 19, 2026.</p>
             <a href="https://x.com/JasonDNewton/status/2034802567289741717" target="_blank" rel="noopener" style="display:block;background:#111;color:#fff;padding:0.55rem 1rem;border-radius:8px;font-weight:700;font-size:0.83rem;text-decoration:none;text-align:center;margin-bottom:10px;">Read on X <i class="fas fa-arrow-right" style="font-size:0.75rem;"></i></a>
             <div style="display:flex;align-items:center;gap:2px;border-top:1px solid rgba(0,0,0,0.07);padding-top:10px;">
