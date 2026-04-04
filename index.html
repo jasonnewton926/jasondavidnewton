@@ -469,6 +469,8 @@
     .ptab-active { box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
     .ppanel { text-align: left; }
     @media (max-width: 600px) { .ptab { font-size: 0.78rem; padding: 0.42rem 0.9rem; } }
+    /* In the News hero card responsive */
+    @media (max-width: 768px) { #in-the-news .section-content > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
     </style>
 </head>
 <body>
@@ -650,29 +652,32 @@
 
   <!-- ═══ IN THE NEWS ═══ -->
   <section class="section alt fade-in-section" id="in-the-news">
-    <div class="section-content" style="max-width:860px;text-align:center;">
+    <div class="section-content" style="max-width:900px;text-align:center;">
       <h2>In the News</h2>
       <p class="secondary" style="margin-bottom:1.8rem;">Featured in Business News &amp; Info, Digital Journal, Patch Moses Lake, Chronicle Journal, Gerald Grain Center, and Muck Rack. Nine press mentions and a published interview since launching in March 2026 — covering faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
 
-      <!-- Business News and Info hero card -->
-      <div style="background:var(--card-bg);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:grid;grid-template-columns:220px 1fr;margin-bottom:24px;text-align:left;">
-        <div style="background:linear-gradient(135deg,#0d2244 0%,#1a4a6e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.2rem;text-align:center;position:relative;overflow:hidden;min-height:200px;">
-          <div style="position:absolute;inset:0;background:url('https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg') center/cover;opacity:0.1;"></div>
-          <span style="position:relative;z-index:1;background:rgba(200,168,75,0.2);border:1px solid rgba(200,168,75,0.5);color:var(--accent-gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.8rem;border-radius:20px;margin-bottom:0.8rem;display:inline-block;">Business Spotlight</span>
-          <div style="position:relative;z-index:1;font-family:var(--font-display);font-size:1.3rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:0.4rem;">Business News &amp; Info</div>
-          <div style="position:relative;z-index:1;font-size:0.75rem;color:rgba(255,255,255,0.6);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">March 26, 2026</div>
+      <!-- Featured hero card - matches news-press page exactly -->
+      <div style="background:var(--card-bg);border-radius:20px;overflow:hidden;box-shadow:0 8px 48px rgba(0,0,0,0.14);display:grid;grid-template-columns:1fr 1fr;margin-bottom:24px;text-align:left;">
+        <div style="background:linear-gradient(135deg,#0d2244 0%,#1a4a6e 50%,#0d3058 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:3rem 2rem;text-align:center;position:relative;overflow:hidden;min-height:280px;">
+          <div style="position:absolute;inset:0;background:url('https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg') center/cover;opacity:0.15;"></div>
+          <span style="position:relative;z-index:1;background:rgba(200,168,75,0.2);border:1px solid rgba(200,168,75,0.5);color:var(--accent-gold);font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;padding:0.3rem 1rem;border-radius:20px;margin-bottom:1.2rem;display:inline-block;">Business Spotlight</span>
+          <div style="position:relative;z-index:1;font-family:var(--font-display);font-size:1.7rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:0.6rem;">Business News &amp; Info</div>
+          <div style="position:relative;z-index:1;font-size:0.8rem;color:rgba(255,255,255,0.6);font-weight:600;letter-spacing:0.08em;text-transform:uppercase;">March 26, 2026</div>
         </div>
-        <div style="padding:1.8rem 2rem;display:flex;flex-direction:column;justify-content:space-between;">
+        <div style="padding:2.8rem 2.6rem;display:flex;flex-direction:column;justify-content:space-between;">
           <div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0.8rem;">
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(200,168,75,0.15);color:var(--accent-gold);">Top Feature</span>
-              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(31,79,122,0.1);color:var(--primary-blue);">Full Article</span>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:1rem;">
+              <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(200,168,75,0.15);color:var(--accent-gold);">Top Feature</span>
+              <span style="font-size:0.7rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(31,79,122,0.1);color:var(--primary-blue);">Full Article</span>
             </div>
-            <h3 style="font-family:var(--font-display);font-size:1.2rem;color:var(--primary-blue);line-height:1.25;margin-bottom:0.8rem;">Jason David Newton Launches New Digital Media Platform</h3>
-            <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.2rem;">A full 1,000+ word Business Spotlight by Editor in Chief Daniel Hartley covering the launch of jasondavidnewton.com, the intersection of faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
+            <h3 style="font-family:var(--font-display);font-size:1.45rem;color:var(--primary-blue);line-height:1.25;margin-bottom:1rem;">Jason David Newton Launches New Digital Media Platform</h3>
+            <div style="border-left:3px solid var(--accent-gold);padding:0.9rem 1.2rem;background:rgba(200,168,75,0.06);border-radius:0 10px 10px 0;margin-bottom:1.4rem;">
+              <p style="font-size:0.97rem;line-height:1.75;color:var(--text-secondary);font-style:italic;margin:0;">A full 1,000+ word Business Spotlight by Editor in Chief Daniel Hartley covering the launch of jasondavidnewton.com, the intersection of faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
+              <cite style="display:block;margin-top:0.5rem;font-size:0.78rem;font-weight:700;color:var(--accent-gold);font-style:normal;letter-spacing:0.06em;text-transform:uppercase;">Business News &amp; Info — Editor in Chief Daniel Hartley</cite>
+            </div>
           </div>
-          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
-            <a href="https://businessnewsandinfo.com/spotlight/jason-david-newton-launches-new-digital" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0d2244;color:#fff !important;">Read the Feature <i class="fas fa-arrow-right"></i></a>
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <a href="https://businessnewsandinfo.com/spotlight/jason-david-newton-launches-new-digital" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0d2244;color:#fff !important;padding:0.68rem 1.4rem;font-size:0.88rem;">Read the Feature <i class="fas fa-arrow-right"></i></a>
             <div class="home-feed-card-share">
               <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
               <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital&text=Jason+David+Newton+Business+Spotlight" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
@@ -681,7 +686,6 @@
           </div>
         </div>
       </div>
-
       <div class="home-cta-row">
         <a href="news-press.html" class="medium-cta"><i class="fas fa-newspaper"></i> All Press Mentions</a>
       </div>
@@ -728,31 +732,39 @@
 
   <!-- ═══ WRITING & CONTENT - COMPACT 4-PLATFORM TABS ═══ -->
   <section class="section alt fade-in-section">
-    <div class="section-content" style="max-width:900px;text-align:center;">
+    <div class="section-content" style="max-width:1100px;text-align:center;">
       <h2>Writing Across Platforms</h2>
       <p class="secondary" style="margin-bottom:1.6rem;">Articles, reflections, and photography published across Medium, LinkedIn, VSCO, and X.</p>
 
       <!-- Tab buttons -->
       <div id="platform-tabs" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.6rem;">
         <button onclick="showTab('medium')" id="tab-medium" class="ptab ptab-active" style="background:#000;color:#fff;">
-          <span class="ptab-icon">M</span> Medium
+          <i class="fab fa-medium"></i> Medium
         </button>
         <button onclick="showTab('linkedin')" id="tab-linkedin" class="ptab" style="background:rgba(0,119,181,0.12);color:#0077b5;">
-          <span class="ptab-icon">in</span> LinkedIn
+          <i class="fab fa-linkedin"></i> LinkedIn
         </button>
-        <button onclick="showTab('vsco')" id="tab-vsco" class="ptab" style="background:rgba(26,26,26,0.08);color:#1a1a1a;">
-          <span class="ptab-icon">V</span> VSCO
+        <button onclick="showTab('vsco')" id="tab-vsco" class="ptab" style="background:rgba(26,26,26,0.08);color:#333;">
+          <i class="fas fa-camera"></i> VSCO
         </button>
         <button onclick="showTab('x')" id="tab-x" class="ptab" style="background:rgba(0,0,0,0.08);color:#000;">
-          <span class="ptab-icon">X</span> X
+          <i class="fab fa-x-twitter"></i> X
         </button>
       </div>
 
-      <!-- Medium panel -->
+      <!-- Medium panel - uses nav-card layout with static fallback; RSS JS still updates content -->
       <div id="panel-medium" class="ppanel">
-        <div id="rss-feed-container-home">
-          <div id="rss-loading-home" style="text-align:center;padding:1.5rem;color:var(--text-secondary);font-size:0.95rem;">
-            <i class="fas fa-circle-notch fa-spin" style="margin-right:8px;color:var(--accent-gold);"></i> Loading latest article...
+        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
+          <div class="nav-card" id="medium-nav-card">
+            <div id="medium-card-img-wrap" style="height:185px;background:linear-gradient(135deg,#1a1a1a,#333);display:flex;align-items:center;justify-content:center;overflow:hidden;">
+              <i class="fab fa-medium" style="font-size:4rem;color:#fff;opacity:0.5;"></i>
+            </div>
+            <div class="nav-card-body">
+              <i class="fab fa-medium"></i>
+              <h3 id="medium-card-title">Latest on Medium</h3>
+              <p id="medium-card-desc" style="font-size:0.88rem;">Loading latest article...</p>
+              <a id="medium-card-link" href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="section-button">Read on Medium</a>
+            </div>
           </div>
         </div>
         <div class="home-cta-row" style="margin-top:1rem;">
@@ -763,22 +775,22 @@
 
       <!-- LinkedIn panel -->
       <div id="panel-linkedin" class="ppanel" style="display:none;">
-        <div class="navigation-grid">
+        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
           <div class="nav-card">
-            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Refrigeration Basics for Beginners – LinkedIn" loading="lazy" width="400" height="185" style="object-position:center 20%;">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Refrigeration Basics for Beginners" loading="lazy" width="400" height="185" style="object-position:center 20%;">
             <div class="nav-card-body">
               <i class="fab fa-linkedin" style="color:#0077b5;"></i>
-              <h3>Refrigeration Basics for Beginners: What You Actually Need to Know</h3>
-              <p>A straight-talk breakdown of refrigeration from a guy who has run these systems on a Bering Sea fishing vessel and in industrial facilities in Moses Lake.</p>
+              <h3>Refrigeration Basics for Beginners</h3>
+              <p>A straight-talk breakdown of refrigeration from a guy who has run these systems on a Bering Sea fishing vessel and in Moses Lake industrial facilities.</p>
               <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;">Read on LinkedIn</a>
             </div>
           </div>
           <div class="nav-card">
-            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Lessons from Working at Sea – LinkedIn" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Lessons from Working at Sea" loading="lazy" width="400" height="185" style="object-position:center center;">
             <div class="nav-card-body">
               <i class="fab fa-linkedin" style="color:#0077b5;"></i>
-              <h3>Lessons from Working at Sea: What Maritime Work Taught Me</h3>
-              <p>The real skills I picked up as a marine engineer in the Bering Sea and how they still show up at work every single day in Moses Lake.</p>
+              <h3>Lessons from Working at Sea</h3>
+              <p>The real skills I picked up as a marine engineer in the Bering Sea and how they still show up at work every day in Moses Lake.</p>
               <a href="https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;">Read on LinkedIn</a>
             </div>
           </div>
@@ -790,9 +802,9 @@
 
       <!-- VSCO panel -->
       <div id="panel-vsco" class="ppanel" style="display:none;">
-        <div class="navigation-grid">
+        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
           <div class="nav-card">
-            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="A Day Off With Ryker – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="A Day Off With Ryker" loading="lazy" width="400" height="185" style="object-position:center center;">
             <div class="nav-card-body">
               <i class="fas fa-camera"></i>
               <h3>A Day Off With Ryker</h3>
@@ -801,19 +813,19 @@
             </div>
           </div>
           <div class="nav-card">
-            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Why I Stayed in Moses Lake – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Why I Stayed in Moses Lake" loading="lazy" width="400" height="185" style="object-position:center center;">
             <div class="nav-card-body">
               <i class="fas fa-camera"></i>
-              <h3>Why I Stayed in Moses Lake When I Could Have Gone Anywhere</h3>
+              <h3>Why I Stayed in Moses Lake</h3>
               <p>A lot of people leave small towns. I chose to stay. Here's why that was the right call.</p>
               <a href="https://vsco.co/jasondavidnewton/journal/why-i-stayed-in-moses-lake-when-i-could-have-gone-anywhere" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
             </div>
           </div>
           <div class="nav-card">
-            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Bering Sea at 3AM – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="The Bering Sea at 3AM" loading="lazy" width="400" height="185" style="object-position:center center;">
             <div class="nav-card-body">
               <i class="fas fa-camera"></i>
-              <h3>The Bering Sea at 3AM and What It Still Means to Me</h3>
+              <h3>The Bering Sea at 3AM</h3>
               <p>Some experiences don't leave you. The Bering Sea is one of them.</p>
               <a href="https://vsco.co/jasondavidnewton/journal/the-bering-sea-at-3am-and-what-it-still-means-to-me-living-in-moses-lake" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
             </div>
@@ -826,26 +838,26 @@
 
       <!-- X panel -->
       <div id="panel-x" class="ppanel" style="display:none;">
-        <div class="navigation-grid">
+        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
           <div class="nav-card">
             <div style="height:185px;background:#000;display:flex;align-items:center;justify-content:center;">
-              <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.85;"></i>
+              <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.7;"></i>
             </div>
             <div class="nav-card-body">
               <i class="fab fa-x-twitter"></i>
               <h3>Lessons from Working at Sea</h3>
-              <p>Spent years as an engineer on a commercial fishing vessel in the Bering Sea. Here's what it taught me. Mar 19, 2026.</p>
+              <p>Years as an engineer on a commercial fishing vessel in the Bering Sea. Here's what it taught me. Mar 19, 2026.</p>
               <a href="https://x.com/JasonDNewton/status/2029431730546020574" target="_blank" rel="noopener" class="section-button" style="background:#000;">Read on X</a>
             </div>
           </div>
           <div class="nav-card">
             <div style="height:185px;background:#111;display:flex;align-items:center;justify-content:center;">
-              <i class="fas fa-bible" style="font-size:3.5rem;color:var(--accent-gold);opacity:0.85;"></i>
+              <i class="fas fa-cross" style="font-size:3.5rem;color:var(--accent-gold);opacity:0.85;"></i>
             </div>
             <div class="nav-card-body">
               <i class="fab fa-x-twitter"></i>
-              <h3>7 Simple Bible Study Habits for Busy Christian Dads in Moses Lake</h3>
-              <p>Faith habits that fit real life as a working dad. No fluff. Mar 16, 2026.</p>
+              <h3>7 Bible Study Habits for Busy Christian Dads</h3>
+              <p>Faith habits that fit real life as a working dad in Moses Lake. No fluff. Mar 16, 2026.</p>
               <a href="https://x.com/JasonDNewton/status/2029441805318803889" target="_blank" rel="noopener" class="section-button" style="background:#000;">Read on X</a>
             </div>
           </div>
@@ -1224,9 +1236,6 @@ document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
 
 <script>
 (function() {
-  var container = document.getElementById('rss-feed-container-home');
-  var loading   = document.getElementById('rss-loading-home');
-  if (!container) return;
   var FALLBACK = {
     title: 'Faith and Staying Grounded in Moses Lake',
     pubDate: 'March 17, 2026',
@@ -1243,28 +1252,20 @@ document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     return Math.max(1, Math.round(words/200)) + ' min read';
   }
   function renderCard(item) {
-    if (loading) loading.style.display = 'none';
-    var card = document.createElement('div');
-    card.className = 'home-feed-card';
-    card.innerHTML =
-      '<div class="home-feed-card-thumb">' +
-        '<img src="' + item.thumb + '" alt="' + item.title + '" style="width:100%;height:100%;min-height:140px;object-fit:cover;display:block;" loading="lazy">' +
-      '</div>' +
-      '<div class="home-feed-card-body">' +
-        '<div class="home-feed-card-meta"><i class="fab fa-medium" style="margin-right:4px;"></i> Medium &nbsp;&middot;&nbsp; <i class="fas fa-calendar-alt" style="margin-right:4px;"></i>' + item.pubDate + ' &nbsp;&middot;&nbsp; <i class="fas fa-clock" style="margin-right:4px;"></i>' + item.readTime + '</div>' +
-        '<h3>' + item.title + '</h3>' +
-        '<p>' + item.desc + '</p>' +
-        '<div class="home-feed-card-actions">' +
-          '<a href="' + item.link + '" target="_blank" rel="noopener" class="home-feed-read-btn">Read on Medium <i class="fas fa-arrow-right"></i></a>' +
-          '<div class="home-feed-card-share">' +
-            '<a href="https://www.linkedin.com/sharing/share-offsite/?url=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>' +
-            '<a href="https://twitter.com/intent/tweet?url=' + encodeURIComponent(item.link) + '&text=' + encodeURIComponent(item.title) + '" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>' +
-            '<a href="https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(item.link) + '" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>' +
-            '<a href="https://wa.me/?text=' + encodeURIComponent(item.title + ' ' + item.link) + '" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>' +
-          '</div>' +
-        '</div>' +
-      '</div>';
-    container.appendChild(card);
+    // Populate the nav-card elements
+    var imgWrap = document.getElementById('medium-card-img-wrap');
+    var title   = document.getElementById('medium-card-title');
+    var desc    = document.getElementById('medium-card-desc');
+    var link    = document.getElementById('medium-card-link');
+    if (imgWrap) {
+      imgWrap.innerHTML = '<img src="' + item.thumb + '" alt="' + item.title + '" style="width:100%;height:100%;object-fit:cover;display:block;" loading="lazy">';
+    }
+    if (title)  title.textContent = item.title;
+    if (desc)   desc.textContent  = item.desc;
+    if (link) {
+      link.href = item.link;
+      link.textContent = 'Read on Medium \u2192';
+    }
   }
   var tried = 0;
   var APIS = [
