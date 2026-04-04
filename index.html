@@ -593,9 +593,11 @@
       <div class="stat-divider"></div>
       <div class="stat-item"><i class="fas fa-anchor"></i> USCG Merchant Mariner Credentialed</div>
       <div class="stat-divider"></div>
-      <div class="stat-item"><i class="fas fa-church"></i> Grace Harvest Church · Moses Lake</div>
+      <div class="stat-item"><i class="fas fa-pen-nib"></i> 9 Journal Posts &amp; 28 Pieces Published</div>
       <div class="stat-divider"></div>
-      <div class="stat-item"><i class="fas fa-map-marker-alt"></i> Moses Lake, Washington</div>
+      <div class="stat-item"><i class="fas fa-newspaper"></i> 9 Press Mentions</div>
+      <div class="stat-divider"></div>
+      <div class="stat-item"><i class="fas fa-church"></i> Grace Harvest Church · Moses Lake</div>
     </div>
   </div>
 
@@ -609,7 +611,7 @@
       <a href="gallery.html" class="section-img-link" aria-label="Visit the gallery">
         <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg"
           alt="Jason David Newton with son at sunset in Moses Lake Washington"
-          loading="lazy" class="section-photo-card">
+          loading="lazy" class="section-photo-card" style="object-position:center 15%;">
       </a>
     </div>
   </section>
@@ -657,9 +659,9 @@
       <p>When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html">hobbies and adventures</a> or see my <a href="community.html">coaching in the community</a>.</p>
       <p class="secondary">The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.</p>
       <a href="gallery.html" class="section-img-link" aria-label="Visit the gallery">
-        <img src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg"
-          alt="Jason David Newton hiking in the Pacific Northwest with dogs"
-          loading="lazy" class="section-photo-card">
+        <img src="https://jasondavidnewton.com/images/jason-david-newton-frontier-middle-school-football-coaching-staff-moses-lake-2017.jpg"
+          alt="Jason David Newton coaching youth football at Frontier Middle School Moses Lake 2017"
+          loading="lazy" class="section-photo-card" style="object-position:center 30%;">
       </a>
     </div>
   </section>
@@ -750,25 +752,33 @@
       <h2>Writing Across Platforms</h2>
       <p class="secondary" style="margin-bottom:1.6rem;">Articles, reflections, and photography published across Medium, LinkedIn, VSCO, and X.</p>
 
-      <!-- Tab buttons -->
-      <div id="platform-tabs" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.6rem;">
-        <button onclick="showTab('medium')" id="tab-medium" class="ptab ptab-active" style="background:#000;color:#fff;">
+      <!-- Tab buttons - bulletproof onclick inline -->
+      <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.8rem;">
+        <button id="tab-medium"
+          onclick="switchTab('medium')"
+          style="border:none;cursor:pointer;padding:0.5rem 1.3rem;border-radius:20px;font-weight:700;font-size:0.88rem;font-family:inherit;display:inline-flex;align-items:center;gap:6px;background:#000;color:#fff;box-shadow:0 4px 14px rgba(0,0,0,0.25);transition:all 0.2s;">
           <i class="fab fa-medium"></i> Medium
         </button>
-        <button onclick="showTab('linkedin')" id="tab-linkedin" class="ptab" style="background:rgba(0,119,181,0.12);color:#0077b5;">
+        <button id="tab-linkedin"
+          onclick="switchTab('linkedin')"
+          style="border:none;cursor:pointer;padding:0.5rem 1.3rem;border-radius:20px;font-weight:700;font-size:0.88rem;font-family:inherit;display:inline-flex;align-items:center;gap:6px;background:rgba(0,119,181,0.15);color:#0077b5;transition:all 0.2s;">
           <i class="fab fa-linkedin"></i> LinkedIn
         </button>
-        <button onclick="showTab('vsco')" id="tab-vsco" class="ptab" style="background:rgba(26,26,26,0.08);color:#333;">
+        <button id="tab-vsco"
+          onclick="switchTab('vsco')"
+          style="border:none;cursor:pointer;padding:0.5rem 1.3rem;border-radius:20px;font-weight:700;font-size:0.88rem;font-family:inherit;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,0.08);color:#222;transition:all 0.2s;">
           <i class="fas fa-camera"></i> VSCO
         </button>
-        <button onclick="showTab('x')" id="tab-x" class="ptab" style="background:rgba(0,0,0,0.08);color:#000;">
+        <button id="tab-x"
+          onclick="switchTab('x')"
+          style="border:none;cursor:pointer;padding:0.5rem 1.3rem;border-radius:20px;font-weight:700;font-size:0.88rem;font-family:inherit;display:inline-flex;align-items:center;gap:6px;background:rgba(0,0,0,0.08);color:#111;transition:all 0.2s;">
           <i class="fab fa-x-twitter"></i> X
         </button>
       </div>
 
-      <!-- Medium panel - uses nav-card layout with static fallback; RSS JS still updates content -->
-      <div id="panel-medium" class="ppanel">
-        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
+      <!-- Medium panel -->
+      <div id="panel-medium">
+        <div class="navigation-grid">
           <div class="nav-card" id="medium-nav-card">
             <div id="medium-card-img-wrap" style="height:185px;background:linear-gradient(135deg,#1a1a1a,#333);display:flex;align-items:center;justify-content:center;overflow:hidden;">
               <i class="fab fa-medium" style="font-size:4rem;color:#fff;opacity:0.5;"></i>
@@ -776,7 +786,7 @@
             <div class="nav-card-body">
               <i class="fab fa-medium"></i>
               <h3 id="medium-card-title">Latest on Medium</h3>
-              <p id="medium-card-desc" style="font-size:0.88rem;">Loading latest article...</p>
+              <p id="medium-card-desc">Loading latest article...</p>
               <a id="medium-card-link" href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="section-button">Read on Medium</a>
             </div>
           </div>
@@ -788,8 +798,8 @@
       </div>
 
       <!-- LinkedIn panel -->
-      <div id="panel-linkedin" class="ppanel" style="display:none;">
-        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
+      <div id="panel-linkedin" style="display:none;">
+        <div class="navigation-grid">
           <div class="nav-card">
             <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Refrigeration Basics for Beginners" loading="lazy" width="400" height="185" style="object-position:center 20%;">
             <div class="nav-card-body">
@@ -815,8 +825,8 @@
       </div>
 
       <!-- VSCO panel -->
-      <div id="panel-vsco" class="ppanel" style="display:none;">
-        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
+      <div id="panel-vsco" style="display:none;">
+        <div class="navigation-grid">
           <div class="nav-card">
             <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="A Day Off With Ryker" loading="lazy" width="400" height="185" style="object-position:center center;">
             <div class="nav-card-body">
@@ -851,8 +861,8 @@
       </div>
 
       <!-- X panel -->
-      <div id="panel-x" class="ppanel" style="display:none;">
-        <div class="navigation-grid" style="max-width:1100px;margin:0 auto;">
+      <div id="panel-x" style="display:none;">
+        <div class="navigation-grid">
           <div class="nav-card">
             <div style="height:185px;background:#000;display:flex;align-items:center;justify-content:center;">
               <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.7;"></i>
@@ -1309,30 +1319,30 @@ document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
 })();
 </script>
 <script>
-// Platform tabs
-var TAB_ACTIVE   = { medium:'#000', linkedin:'#0077b5', vsco:'#1a1a1a', x:'#000' };
-var TAB_INACTIVE = { medium:'rgba(0,0,0,0.1)', linkedin:'rgba(0,119,181,0.15)', vsco:'rgba(26,26,26,0.1)', x:'rgba(0,0,0,0.1)' };
-var TAB_TEXT_INACTIVE = { medium:'#111', linkedin:'#0077b5', vsco:'#333', x:'#111' };
+// Bulletproof tab switching - pure inline style manipulation
+var TABS = ['medium','linkedin','vsco','x'];
+var TAB_ON  = { medium:'#000', linkedin:'#0077b5', vsco:'#1a1a1a', x:'#000000' };
+var TAB_OFF_BG   = { medium:'rgba(0,0,0,0.08)', linkedin:'rgba(0,119,181,0.15)', vsco:'rgba(0,0,0,0.08)', x:'rgba(0,0,0,0.08)' };
+var TAB_OFF_COL  = { medium:'#111', linkedin:'#0077b5', vsco:'#222', x:'#111' };
 
-function showTab(name) {
-  ['medium','linkedin','vsco','x'].forEach(function(t) {
+function switchTab(name) {
+  TABS.forEach(function(t) {
     var panel = document.getElementById('panel-' + t);
     var btn   = document.getElementById('tab-' + t);
     if (!panel || !btn) return;
-    panel.style.display = (t === name) ? 'block' : 'none';
     if (t === name) {
-      btn.style.background = TAB_ACTIVE[t];
+      panel.style.display = '';
+      btn.style.background = TAB_ON[t];
       btn.style.color = '#fff';
-      btn.classList.add('ptab-active');
+      btn.style.boxShadow = '0 4px 14px rgba(0,0,0,0.25)';
     } else {
-      btn.style.background = TAB_INACTIVE[t];
-      btn.style.color = TAB_TEXT_INACTIVE[t];
-      btn.classList.remove('ptab-active');
+      panel.style.display = 'none';
+      btn.style.background = TAB_OFF_BG[t];
+      btn.style.color = TAB_OFF_COL[t];
+      btn.style.boxShadow = 'none';
     }
   });
 }
-// Run once on load to make sure Medium is active
-document.addEventListener('DOMContentLoaded', function() { showTab('medium'); });
 </script>
 </body>
 </html>
