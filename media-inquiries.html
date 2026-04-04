@@ -368,7 +368,7 @@
 
 <div class="stats-bar">
   <div class="stats-bar-inner">
-    <div class="stat-item"><i class="fas fa-newspaper"></i> 6 Press Mentions</div>
+    <div class="stat-item"><i class="fas fa-newspaper"></i> 9 Press Mentions</div>
     <div class="stat-divider"></div>
     <div class="stat-item"><i class="fas fa-microphone-alt"></i> 1 Published Interview</div>
     <div class="stat-divider"></div>
@@ -414,7 +414,9 @@
             <a href="https://businessnewsandinfo.com/spotlight/jason-david-newton-launches-new-digital" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-star"></i> Business News &amp; Info</a>
             <a href="https://www.digitaljournal.com/pr/news/prunderground/jasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-newspaper"></i> Digital Journal</a>
             <a href="https://patch.com/washington/moses-lake-wa/classifieds/announcements/574864/moses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-map-marker-alt"></i> Patch Moses Lake</a>
+            <a href="https://patch.com/washington/moses-lake-wa" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-envelope-open-text"></i> Patch PatchAM</a>
             <a href="https://muckrack.com/jason-david-newton/interview" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-microphone-alt"></i> Muck Rack</a>
+            <a href="https://markets.chroniclejournal.com/chroniclejournal/article/prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-globe"></i> Chronicle Journal</a>
             <a href="https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" rel="noopener" class="coverage-badge"><i class="fas fa-seedling"></i> Gerald Grain Center</a>
           </div>
         </div>
@@ -686,4 +688,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const t = dd.querySelector('.nav-dropdown-toggle');
     if (!t) return;
     t.addEventListener('click', e => {
-      if (window.innerWidth
+      if (window.innerWidth <= 900) {
+        e.preventDefault();
+        dd.classList.toggle('mobile-open');
+        document.querySelectorAll('.nav-dropdown').forEach(d => {
+          if (d !== dd) d.classList.remove('mobile-open');
+        });
+      }
+    });
+  });
+});
+</script>
+</body>
+</html>
