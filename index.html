@@ -286,6 +286,9 @@
     [data-theme="dark"] .nav-card h3 { color: var(--accent-blue); }
     .nav-card p { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.55; flex: 1; margin-bottom: 0.9rem; }
     .nav-card .section-button { align-self: center; margin-top: auto; }
+    /* Share icons inside nav-cards */
+    .nav-card .home-feed-card-share { color: var(--primary-blue); font-size: 1.05rem; transition: color 0.2s, transform 0.2s; padding: 6px 8px; border-radius: 6px; min-width: 32px; min-height: 32px; align-items: center; justify-content: center; }
+    .nav-card .home-feed-card-share:hover { color: var(--accent-blue); transform: scale(1.15); background: rgba(31,79,122,0.08); }
 
     /* ═══ FLOATING CHAT BUBBLE ═══ */
     .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease), box-shadow 0.3s; color: #fff; font-size: 1.45rem; }
@@ -611,7 +614,7 @@
       <a href="gallery.html" class="section-img-link" aria-label="Visit the gallery">
         <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg"
           alt="Jason David Newton with son at sunset in Moses Lake Washington"
-          loading="lazy" class="section-photo-card" style="object-position:center top;">
+          loading="lazy" class="section-photo-card" style="object-position:center 40%;">
       </a>
     </div>
   </section>
@@ -760,10 +763,16 @@
             <i class="fab fa-medium" style="font-size:4rem;color:#fff;opacity:0.5;"></i>
           </div>
           <div class="nav-card-body">
-            <i class="fab fa-medium"></i>
+            <i class="fab fa-medium" style="color:#000;"></i>
             <h3 id="medium-card-title">Faith and Staying Grounded in Moses Lake</h3>
             <p id="medium-card-desc">How Jesus keeps me steady as a Christian dad and mechanical technician in Moses Lake.</p>
-            <a id="medium-card-link" href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button">Read on Medium</a>
+            <a id="medium-card-link" href="https://medium.com/@JasonDavidNewton/faith-and-staying-grounded-in-moses-lake-how-jesus-keeps-me-steady-as-a-christian-dad-508320eb446d" target="_blank" rel="noopener" class="section-button" style="background:#000;color:#fff !important;margin-bottom:0.7rem;">Read on Medium</a>
+            <div style="display:flex;justify-content:center;gap:4px;margin-top:0.3rem;">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmedium.com%2F%40JasonDavidNewton" target="_blank" aria-label="Share on LinkedIn" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmedium.com%2F%40JasonDavidNewton&text=Faith+and+Staying+Grounded+in+Moses+Lake" target="_blank" aria-label="Share on X" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmedium.com%2F%40JasonDavidNewton" target="_blank" aria-label="Share on Facebook" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Faith+and+Staying+Grounded+in+Moses+Lake+https%3A%2F%2Fmedium.com%2F%40JasonDavidNewton" target="_blank" aria-label="Share on WhatsApp" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-whatsapp"></i></a>
+            </div>
           </div>
         </div>
 
@@ -774,7 +783,13 @@
             <i class="fab fa-linkedin" style="color:#0077b5;"></i>
             <h3>Refrigeration Basics for Beginners</h3>
             <p>A straight-talk breakdown from a guy who has run these systems in the Bering Sea and in Moses Lake.</p>
-            <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;">Read on LinkedIn</a>
+            <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;color:#fff !important;margin-bottom:0.7rem;">Read on LinkedIn</a>
+            <div style="display:flex;justify-content:center;gap:4px;margin-top:0.3rem;">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Frefrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc%2F" target="_blank" aria-label="Share on LinkedIn" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Frefrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc%2F&text=Refrigeration+Basics+for+Beginners" target="_blank" aria-label="Share on X" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Frefrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc%2F" target="_blank" aria-label="Share on Facebook" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Refrigeration+Basics+for+Beginners+https%3A%2F%2Fwww.linkedin.com%2Fpulse%2Frefrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc%2F" target="_blank" aria-label="Share on WhatsApp" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-whatsapp"></i></a>
+            </div>
           </div>
         </div>
 
@@ -782,23 +797,39 @@
         <div class="nav-card" style="flex:1 1 240px;max-width:280px;">
           <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="A Day Off With Ryker" loading="lazy" width="400" height="185" style="object-position:center center;">
           <div class="nav-card-body">
-            <i class="fas fa-camera"></i>
+            <!-- VSCO official logo SVG -->
+            <svg viewBox="0 0 100 100" style="width:28px;height:28px;display:block;margin:0 auto 8px;" aria-label="VSCO">
+              <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="8"/>
+              <circle cx="50" cy="50" r="28" fill="none" stroke="currentColor" stroke-width="8"/>
+            </svg>
             <h3>A Day Off With Ryker</h3>
             <p>What a day with a two-year-old in Moses Lake actually looks like. No filter.</p>
-            <a href="https://vsco.co/jasondavidnewton/journal/a-day-off-with-ryker" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
+            <a href="https://vsco.co/jasondavidnewton/journal/a-day-off-with-ryker" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;color:#fff !important;margin-bottom:0.7rem;">View on VSCO</a>
+            <div style="display:flex;justify-content:center;gap:4px;margin-top:0.3rem;">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fvsco.co%2Fjasondavidnewton%2Fjournal%2Fa-day-off-with-ryker" target="_blank" aria-label="Share on LinkedIn" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fvsco.co%2Fjasondavidnewton%2Fjournal%2Fa-day-off-with-ryker&text=A+Day+Off+With+Ryker" target="_blank" aria-label="Share on X" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fvsco.co%2Fjasondavidnewton%2Fjournal%2Fa-day-off-with-ryker" target="_blank" aria-label="Share on Facebook" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=A+Day+Off+With+Ryker+https%3A%2F%2Fvsco.co%2Fjasondavidnewton%2Fjournal%2Fa-day-off-with-ryker" target="_blank" aria-label="Share on WhatsApp" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-whatsapp"></i></a>
+            </div>
           </div>
         </div>
 
         <!-- X -->
         <div class="nav-card" style="flex:1 1 240px;max-width:280px;">
           <div style="height:185px;background:#000;display:flex;align-items:center;justify-content:center;">
-            <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.7;"></i>
+            <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.85;"></i>
           </div>
           <div class="nav-card-body">
-            <i class="fab fa-x-twitter"></i>
+            <i class="fab fa-x-twitter" style="color:#000;"></i>
             <h3>Lessons from Working at Sea</h3>
             <p>Years as an engineer in the Bering Sea. Here's what it taught me about work and life. Mar 19, 2026.</p>
-            <a href="https://x.com/JasonDNewton/status/2029431730546020574" target="_blank" rel="noopener" class="section-button" style="background:#000;">Read on X</a>
+            <a href="https://x.com/JasonDNewton/status/2029431730546020574" target="_blank" rel="noopener" class="section-button" style="background:#000;color:#fff !important;margin-bottom:0.7rem;">Read on X</a>
+            <div style="display:flex;justify-content:center;gap:4px;margin-top:0.3rem;">
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fx.com%2FJasonDNewton%2Fstatus%2F2029431730546020574" target="_blank" aria-label="Share on LinkedIn" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fx.com%2FJasonDNewton%2Fstatus%2F2029431730546020574&text=Lessons+from+Working+at+Sea" target="_blank" aria-label="Share on X" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fx.com%2FJasonDNewton%2Fstatus%2F2029431730546020574" target="_blank" aria-label="Share on Facebook" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-facebook"></i></a>
+              <a href="https://wa.me/?text=Lessons+from+Working+at+Sea+https%3A%2F%2Fx.com%2FJasonDNewton%2Fstatus%2F2029431730546020574" target="_blank" aria-label="Share on WhatsApp" class="home-feed-card-share" style="display:inline-flex;"><i class="fab fa-whatsapp"></i></a>
+            </div>
           </div>
         </div>
 
