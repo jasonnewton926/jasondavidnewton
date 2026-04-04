@@ -462,6 +462,13 @@
 
     .skip-to-content { position: absolute; left: -9999px; }
     .skip-to-content:focus { left: 1rem; top: 1rem; z-index: 9999; background: #fff; padding: 0.5rem 1rem; border-radius: 6px; color: var(--primary-blue); font-weight: 700; }
+
+    /* Platform tabs */
+    .ptab { border: none; cursor: pointer; padding: 0.5rem 1.2rem; border-radius: 20px; font-weight: 700; font-size: 0.85rem; font-family: var(--font-body); transition: all 0.2s; display: inline-flex; align-items: center; gap: 6px; }
+    .ptab:hover { opacity: 0.85; transform: translateY(-1px); }
+    .ptab-active { box-shadow: 0 4px 14px rgba(0,0,0,0.2); }
+    .ppanel { text-align: left; }
+    @media (max-width: 600px) { .ptab { font-size: 0.78rem; padding: 0.42rem 0.9rem; } }
     </style>
 </head>
 <body>
@@ -604,22 +611,24 @@
       <p>I graduated from Washington State University with a Bachelor of Arts in Business Management &amp; Operations, and hold a U.S. Coast Guard Merchant Mariner Credential. See details on my <a href="education.html">education page</a>. My experience spans operating refrigeration systems, diesel-electric power, and industrial lines.</p>
       <p class="secondary">At Simplot FG, I led teams of 30–50, focusing on operations, safety, and efficiency. Now at Group 14, I handle maintenance and planning. It's rewarding work that fits my life here in Moses Lake.</p>
 
-      <!-- ═══ SHORT VIDEO RESUME ═══ -->
-      <div style="max-width:380px;margin:2rem auto 0;">
-        <p style="font-size:0.8rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent-gold);text-align:center;margin-bottom:0.7rem;">&#9654; Watch My Video Resume</p>
-        <div style="position:relative;padding-bottom:177.78%;height:0;overflow:hidden;border-radius:14px;box-shadow:0 8px 40px rgba(0,0,0,0.22);background:#000;">
-          <iframe
-            src="https://www.youtube.com/embed/9NeajbZuE2M"
-            title="Jason David Newton – Video Resume Short | Mechanical Technician Moses Lake WA"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen
+      <!-- ═══ VIDEO RESUME CTA ═══ -->
+      <div style="max-width:480px;margin:2rem auto 0;">
+        <a href="experience.html#video-resume" style="display:block;text-decoration:none;border-radius:14px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.22);position:relative;background:#000;">
+          <img src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg"
+            alt="Jason David Newton video resume – watch on Experience page"
             loading="lazy"
-            style="position:absolute;top:0;left:0;width:100%;height:100%;border:0;"
-            aria-label="Jason David Newton video resume short"
-          ></iframe>
-        </div>
-        <p style="text-align:center;margin-top:0.7rem;font-size:0.85rem;"><a href="experience.html" style="color:var(--primary-blue);font-weight:600;">Watch full 12-min resume video on Experience page &#8594;</a></p>
+            style="width:100%;height:240px;object-fit:cover;object-position:center 20%;display:block;opacity:0.72;">
+          <div style="position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;">
+            <div style="width:64px;height:64px;border-radius:50%;background:rgba(200,168,75,0.9);display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(0,0,0,0.4);">
+              <i class="fas fa-play" style="font-size:1.4rem;color:#0d2244;margin-left:4px;"></i>
+            </div>
+            <div style="text-align:center;">
+              <div style="font-size:0.72rem;font-weight:700;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent-gold);margin-bottom:4px;">Watch My Video Resume</div>
+              <div style="font-size:1.05rem;font-weight:700;color:#fff;">Full 12-Minute Career Overview</div>
+            </div>
+          </div>
+        </a>
+        <p style="text-align:center;margin-top:0.8rem;font-size:0.85rem;"><a href="experience.html#video-resume" style="color:var(--primary-blue);font-weight:600;">Watch on Experience page &#8594;</a></p>
       </div>
 
       <div class="btn-group">
@@ -639,81 +648,42 @@
     </div>
   </section>
 
-  <!-- ═══ BLOG & WRITING ═══ -->
-
-  <!-- LATEST FROM MEDIUM -->
-  <section class="section alt fade-in-section">
+  <!-- ═══ IN THE NEWS ═══ -->
+  <section class="section alt fade-in-section" id="in-the-news">
     <div class="section-content" style="max-width:860px;text-align:center;">
-      <h2>Latest from Medium</h2>
-      <p class="secondary" style="margin-bottom:1.6rem;">Live feed pulling my newest posts straight from Medium as soon as they publish.</p>
-      <div id="rss-feed-container-home">
-        <div id="rss-loading-home" style="text-align:center;padding:1.5rem;color:var(--text-secondary);font-size:0.95rem;">
-          <i class="fas fa-circle-notch fa-spin" style="margin-right:8px;color:var(--accent-gold);"></i> Loading latest article...
-        </div>
-      </div>
-      <div class="home-cta-row">
-        <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="medium-cta"><i class="fab fa-medium"></i> All Articles on Medium</a>
-        <a href="/blog-rss.xml" class="rss-cta"><i class="fas fa-rss"></i> Subscribe via RSS</a>
-      </div>
-    </div>
-  </section>
+      <h2>In the News</h2>
+      <p class="secondary" style="margin-bottom:1.8rem;">Featured in Business News &amp; Info, Digital Journal, Patch Moses Lake, Chronicle Journal, Gerald Grain Center, and Muck Rack. Nine press mentions and a published interview since launching in March 2026 — covering faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
 
-  <!-- ON LINKEDIN -->
-  <section class="section fade-in-section">
-    <div class="section-content" style="max-width:860px;text-align:center;">
-      <h2>On LinkedIn</h2>
-      <p class="secondary" style="margin-bottom:1.6rem;">Articles published on my LinkedIn profile. Connect and follow for more.</p>
-      <!-- NEWEST: Refrigeration Basics -->
-      <div class="home-feed-card" style="margin-bottom:18px;">
-        <div class="home-feed-card-thumb">
-          <img src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Refrigeration Basics for Beginners" loading="lazy" width="140" height="160" style="object-position:center center;">
+      <!-- Business News and Info hero card -->
+      <div style="background:var(--card-bg);border-radius:16px;overflow:hidden;box-shadow:0 8px 40px rgba(0,0,0,0.12);display:grid;grid-template-columns:220px 1fr;margin-bottom:24px;text-align:left;">
+        <div style="background:linear-gradient(135deg,#0d2244 0%,#1a4a6e 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem 1.2rem;text-align:center;position:relative;overflow:hidden;min-height:200px;">
+          <div style="position:absolute;inset:0;background:url('https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg') center/cover;opacity:0.1;"></div>
+          <span style="position:relative;z-index:1;background:rgba(200,168,75,0.2);border:1px solid rgba(200,168,75,0.5);color:var(--accent-gold);font-size:0.68rem;font-weight:700;letter-spacing:0.12em;text-transform:uppercase;padding:0.25rem 0.8rem;border-radius:20px;margin-bottom:0.8rem;display:inline-block;">Business Spotlight</span>
+          <div style="position:relative;z-index:1;font-family:var(--font-display);font-size:1.3rem;font-weight:900;color:#fff;line-height:1.1;margin-bottom:0.4rem;">Business News &amp; Info</div>
+          <div style="position:relative;z-index:1;font-size:0.75rem;color:rgba(255,255,255,0.6);font-weight:600;letter-spacing:0.06em;text-transform:uppercase;">March 26, 2026</div>
         </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta"><i class="fab fa-linkedin" style="color:#0077b5;margin-right:4px;"></i> LinkedIn Article &nbsp;·&nbsp; <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> Latest</div>
-          <h3>Refrigeration Basics for Beginners: What You Actually Need to Know</h3>
-          <p>A straight-talk breakdown of refrigeration fundamentals from a guy who has run refrigeration systems on a commercial fishing vessel in the Bering Sea and in industrial facilities in Moses Lake.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0077b5;color:#fff !important;">Read on LinkedIn <i class="fas fa-arrow-right"></i></a>
+        <div style="padding:1.8rem 2rem;display:flex;flex-direction:column;justify-content:space-between;">
+          <div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:0.8rem;">
+              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(200,168,75,0.15);color:var(--accent-gold);">Top Feature</span>
+              <span style="font-size:0.68rem;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;padding:3px 10px;border-radius:20px;background:rgba(31,79,122,0.1);color:var(--primary-blue);">Full Article</span>
+            </div>
+            <h3 style="font-family:var(--font-display);font-size:1.2rem;color:var(--primary-blue);line-height:1.25;margin-bottom:0.8rem;">Jason David Newton Launches New Digital Media Platform</h3>
+            <p style="font-size:0.92rem;color:var(--text-secondary);line-height:1.7;margin-bottom:1.2rem;">A full 1,000+ word Business Spotlight by Editor in Chief Daniel Hartley covering the launch of jasondavidnewton.com, the intersection of faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
+          </div>
+          <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
+            <a href="https://businessnewsandinfo.com/spotlight/jason-david-newton-launches-new-digital" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0d2244;color:#fff !important;">Read the Feature <i class="fas fa-arrow-right"></i></a>
             <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/&text=Refrigeration+Basics+for+Beginners" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
+              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
+              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital&text=Jason+David+Newton+Business+Spotlight" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
+              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
             </div>
           </div>
         </div>
       </div>
-      <div class="home-cta-row">
-        <a href="https://www.linkedin.com/in/jason-newton-moses-lake/recent-activity/articles/" target="_blank" rel="noopener" class="medium-cta" style="background:#0077b5;color:#fff !important;"><i class="fab fa-linkedin"></i> All LinkedIn Articles</a>
-      </div>
-    </div>
-  </section>
 
-  <!-- ON VSCO -->
-  <section class="section alt fade-in-section">
-    <div class="section-content" style="max-width:860px;text-align:center;">
-      <h2>On VSCO</h2>
-      <p class="secondary" style="margin-bottom:1.6rem;">Posts from my VSCO blog. Photography, reflections, and Pacific Northwest life.</p>
-      <div class="home-feed-card">
-        <div class="home-feed-card-thumb">
-          <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg" alt="Fatherhood in the Golden Hour" loading="lazy" width="140" height="160" style="object-position:center center;">
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta"><i class="fas fa-camera" style="margin-right:4px;"></i> VSCO Blog</div>
-          <h3>Fatherhood in the Golden Hour</h3>
-          <p>Some photos just say everything. This is what it means to be a dad in Moses Lake. The light, the kid, the moment. Worth documenting.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#1a1a1a;color:#fff !important;">View on VSCO <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232&text=Fatherhood in the Golden Hour" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Fatherhood in the Golden Hour https://jasondavidnewton.vsco.site/blogs/69bd047b166ec8c437404232" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
       <div class="home-cta-row">
-        <a href="https://jasondavidnewton.vsco.site/blogs" target="_blank" rel="noopener" class="medium-cta" style="background:#1a1a1a;color:#fff !important;"><i class="fas fa-camera"></i> All VSCO Posts</a>
+        <a href="news-press.html" class="medium-cta"><i class="fas fa-newspaper"></i> All Press Mentions</a>
       </div>
     </div>
   </section>
@@ -725,15 +695,15 @@
       <p class="secondary" style="margin-bottom:1.6rem;">Original writing right here on the site. Real life, unfiltered.</p>
       <div class="journal-home-card">
         <img class="journal-home-card-img"
-          src="https://jasondavidnewton.com/images/jason-david-newton-mechanical-technician-moses-lake-wa.jpg"
-          alt="Jason David Newton Mechanical Technician Moses Lake Washington"
-          loading="lazy" width="760" height="220" style="object-position:center top;">
+          src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg"
+          alt="Every Park in Moses Lake WA – Jason David Newton"
+          loading="lazy" width="760" height="220" style="object-position:center center;">
         <div class="journal-home-card-body">
           <div class="journal-home-card-meta">
-            <span><i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 27, 2026</span>
-            <span><i class="fas fa-clock" style="margin-right:4px;"></i> 3 min read</span>
-            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Site News</span>
-            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Press</span>
+            <span><i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 31, 2026</span>
+            <span><i class="fas fa-clock" style="margin-right:4px;"></i> 10 min read</span>
+            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Moses Lake</span>
+            <span style="background:rgba(31,79,122,0.1);color:var(--primary-blue);padding:2px 10px;border-radius:20px;font-size:0.72rem;">Local Guide</span>
           </div>
           <h3>Every Park in Moses Lake, WA – Rated and Ranked: A Local Dad's Honest Guide</h3>
           <p>I scored all 48 parks in Moses Lake across 8 categories so you don't have to guess which ones are actually worth the trip with your kids. Blue Heron came out on top. Some of the results might surprise you.</p>
@@ -756,212 +726,132 @@
     </div>
   </section>
 
+  <!-- ═══ WRITING & CONTENT - COMPACT 4-PLATFORM TABS ═══ -->
+  <section class="section alt fade-in-section">
+    <div class="section-content" style="max-width:900px;text-align:center;">
+      <h2>Writing Across Platforms</h2>
+      <p class="secondary" style="margin-bottom:1.6rem;">Articles, reflections, and photography published across Medium, LinkedIn, VSCO, and X.</p>
 
-  <!-- ═══ IN THE NEWS ═══ -->
-  <section class="section alt fade-in-section" id="in-the-news">
-    <div class="section-content" style="max-width:860px;text-align:center;">
-      <h2>In the News</h2>
-      <p class="secondary" style="margin-bottom:1.8rem;">Press coverage and media mentions from around the web.</p>
+      <!-- Tab buttons -->
+      <div id="platform-tabs" style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:1.6rem;">
+        <button onclick="showTab('medium')" id="tab-medium" class="ptab ptab-active" style="background:#000;color:#fff;">
+          <span class="ptab-icon">M</span> Medium
+        </button>
+        <button onclick="showTab('linkedin')" id="tab-linkedin" class="ptab" style="background:rgba(0,119,181,0.12);color:#0077b5;">
+          <span class="ptab-icon">in</span> LinkedIn
+        </button>
+        <button onclick="showTab('vsco')" id="tab-vsco" class="ptab" style="background:rgba(26,26,26,0.08);color:#1a1a1a;">
+          <span class="ptab-icon">V</span> VSCO
+        </button>
+        <button onclick="showTab('x')" id="tab-x" class="ptab" style="background:rgba(0,0,0,0.08);color:#000;">
+          <span class="ptab-icon">X</span> X
+        </button>
+      </div>
 
-      <!-- CARD 1: BusinessNewsAndInfo Business Spotlight -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:linear-gradient(135deg,#0d2244,#1a4a6e);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-star" style="font-size:2.4rem;color:var(--accent-gold);"></i>
+      <!-- Medium panel -->
+      <div id="panel-medium" class="ppanel">
+        <div id="rss-feed-container-home">
+          <div id="rss-loading-home" style="text-align:center;padding:1.5rem;color:var(--text-secondary);font-size:0.95rem;">
+            <i class="fas fa-circle-notch fa-spin" style="margin-right:8px;color:var(--accent-gold);"></i> Loading latest article...
+          </div>
         </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-star" style="margin-right:4px;color:var(--accent-gold);"></i> Business News &amp; Info &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 26, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">BUSINESS SPOTLIGHT</span>
-          </div>
-          <h3>Jason David Newton Launches New Digital Media Platform</h3>
-          <p>A full 1,000+ word Business Spotlight by Editor in Chief Daniel Hartley covering the launch of jasondavidnewton.com, the intersection of faith, fatherhood, and blue collar life in Moses Lake, Washington.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://businessnewsandinfo.com/spotlight/jason-david-newton-launches-new-digital" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#0d2244;color:#fff !important;">Read the Feature <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital&text=Jason+David+Newton+Launches+New+Digital+Media+Platform" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Jason+David+Newton+Launches+New+Digital+Media+Platform+https%3A%2F%2Fbusinessnewsandinfo.com%2Fspotlight%2Fjason-david-newton-launches-new-digital" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
+        <div class="home-cta-row" style="margin-top:1rem;">
+          <a href="https://medium.com/@JasonDavidNewton" target="_blank" rel="noopener" class="medium-cta"><i class="fab fa-medium"></i> All Articles on Medium</a>
+          <a href="/blog-rss.xml" class="rss-cta"><i class="fas fa-rss"></i> Subscribe via RSS</a>
         </div>
       </div>
 
-
-
-      <!-- CARD 1: Digital Journal -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:var(--primary-dark);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-newspaper" style="font-size:2.4rem;color:var(--accent-gold);"></i>
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-newspaper" style="margin-right:4px;color:var(--accent-gold);"></i> Digital Journal &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 24, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">PRESS RELEASE</span>
-          </div>
-          <h3>JasonDavidNewton.com Launches New Blog on Faith, Fatherhood, and Pacific Northwest Life</h3>
-          <p>Coverage in Digital Journal via PRUnderground announcing the launch of the blog and what it means for working dads and people of faith in Moses Lake and beyond.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://www.digitaljournal.com/pr/news/prunderground/jasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" rel="noopener" class="home-feed-read-btn">Read on Digital Journal <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fwww.digitaljournal.com%2Fpr%2Fnews%2Fprunderground%2Fjasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fwww.digitaljournal.com%2Fpr%2Fnews%2Fprunderground%2Fjasondavidnewton-com-launches-new-blog-faith-1533498783.html&text=JasonDavidNewton.com+Launches+New+Blog+on+Faith%2C+Fatherhood%2C+and+Pacific+Northwest+Life" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.digitaljournal.com%2Fpr%2Fnews%2Fprunderground%2Fjasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=JasonDavidNewton.com+Launches+New+Blog+on+Faith%2C+Fatherhood%2C+and+Pacific+Northwest+Life+https%3A%2F%2Fwww.digitaljournal.com%2Fpr%2Fnews%2Fprunderground%2Fjasondavidnewton-com-launches-new-blog-faith-1533498783.html" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <!-- LinkedIn panel -->
+      <div id="panel-linkedin" class="ppanel" style="display:none;">
+        <div class="navigation-grid">
+          <div class="nav-card">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg" alt="Refrigeration Basics for Beginners – LinkedIn" loading="lazy" width="400" height="185" style="object-position:center 20%;">
+            <div class="nav-card-body">
+              <i class="fab fa-linkedin" style="color:#0077b5;"></i>
+              <h3>Refrigeration Basics for Beginners: What You Actually Need to Know</h3>
+              <p>A straight-talk breakdown of refrigeration from a guy who has run these systems on a Bering Sea fishing vessel and in industrial facilities in Moses Lake.</p>
+              <a href="https://www.linkedin.com/pulse/refrigeration-basics-beginners-what-you-actually-need-jason-newton-zsvcc/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;">Read on LinkedIn</a>
             </div>
           </div>
+          <div class="nav-card">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/maritime-boat.jpg" alt="Lessons from Working at Sea – LinkedIn" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <div class="nav-card-body">
+              <i class="fab fa-linkedin" style="color:#0077b5;"></i>
+              <h3>Lessons from Working at Sea: What Maritime Work Taught Me</h3>
+              <p>The real skills I picked up as a marine engineer in the Bering Sea and how they still show up at work every single day in Moses Lake.</p>
+              <a href="https://www.linkedin.com/pulse/lessons-from-working-sea-what-maritime-work-taught-me-jason-newton-lm4ic/" target="_blank" rel="noopener" class="section-button" style="background:#0077b5;">Read on LinkedIn</a>
+            </div>
+          </div>
+        </div>
+        <div class="home-cta-row" style="margin-top:1rem;">
+          <a href="https://www.linkedin.com/in/jason-newton-moses-lake/recent-activity/articles/" target="_blank" rel="noopener" class="medium-cta" style="background:#0077b5;color:#fff !important;"><i class="fab fa-linkedin"></i> All LinkedIn Articles</a>
         </div>
       </div>
 
-      <!-- CARD 2: Patch Announcement -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="overflow:hidden;">
-          <img src="https://patch.com/img/cdn20/users/27254928/20260323/010638/jason-david-newton-moses-lake-washington-father-son___23010636916.jpg" alt="Jason Newton and son Moses Lake" loading="lazy" width="140" height="160" style="width:100%;height:100%;min-height:140px;object-fit:cover;display:block;">
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-map-marker-alt" style="margin-right:4px;color:var(--accent-gold);"></i> Patch Moses Lake &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 23, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">ANNOUNCEMENT</span>
-          </div>
-          <h3>Moses Lake Dad Launching Community Blog on Faith, Fatherhood &amp; PNW Life</h3>
-          <p>Patch Moses Lake community announcement covering the blog launch and what it means for residents of Grant County and Central Washington.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://patch.com/washington/moses-lake-wa/classifieds/announcements/574864/moses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#006fba;color:#fff !important;">Read on Patch <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fclassifieds%2Fannouncements%2F574864%2Fmoses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fclassifieds%2Fannouncements%2F574864%2Fmoses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life&text=Moses+Lake+Dad+Launching+Community+Blog+on+Faith%2C+Fatherhood+%26+PNW+Life" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fclassifieds%2Fannouncements%2F574864%2Fmoses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Moses+Lake+Dad+Launching+Community+Blog+https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fclassifieds%2Fannouncements%2F574864%2Fmoses-lake-dad-launching-community-blog-on-faith-fatherhood-pnw-life" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <!-- VSCO panel -->
+      <div id="panel-vsco" class="ppanel" style="display:none;">
+        <div class="navigation-grid">
+          <div class="nav-card">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-fall-playing.jpg" alt="A Day Off With Ryker – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <div class="nav-card-body">
+              <i class="fas fa-camera"></i>
+              <h3>A Day Off With Ryker</h3>
+              <p>What a day with a two-year-old in Moses Lake actually looks like. No filter.</p>
+              <a href="https://vsco.co/jasondavidnewton/journal/a-day-off-with-ryker" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
             </div>
           </div>
+          <div class="nav-card">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg" alt="Why I Stayed in Moses Lake – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <div class="nav-card-body">
+              <i class="fas fa-camera"></i>
+              <h3>Why I Stayed in Moses Lake When I Could Have Gone Anywhere</h3>
+              <p>A lot of people leave small towns. I chose to stay. Here's why that was the right call.</p>
+              <a href="https://vsco.co/jasondavidnewton/journal/why-i-stayed-in-moses-lake-when-i-could-have-gone-anywhere" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
+            </div>
+          </div>
+          <div class="nav-card">
+            <img class="nav-card-img" src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-shiplife-starbound-dutch-harbor-ak.jpg" alt="Bering Sea at 3AM – VSCO" loading="lazy" width="400" height="185" style="object-position:center center;">
+            <div class="nav-card-body">
+              <i class="fas fa-camera"></i>
+              <h3>The Bering Sea at 3AM and What It Still Means to Me</h3>
+              <p>Some experiences don't leave you. The Bering Sea is one of them.</p>
+              <a href="https://vsco.co/jasondavidnewton/journal/the-bering-sea-at-3am-and-what-it-still-means-to-me-living-in-moses-lake" target="_blank" rel="noopener" class="section-button" style="background:#1a1a1a;">View on VSCO</a>
+            </div>
+          </div>
+        </div>
+        <div class="home-cta-row" style="margin-top:1rem;">
+          <a href="https://jasondavidnewton.vsco.site" target="_blank" rel="noopener" class="medium-cta" style="background:#1a1a1a;color:#fff !important;"><i class="fas fa-camera"></i> All VSCO Posts</a>
         </div>
       </div>
 
-      <!-- CARD 3: Patch Business Listing -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="overflow:hidden;">
-          <img src="https://patch.com/img/cdn20/users/27254928/20260322/064619/jason-david-newton-moses-lake-harvest-family-picture___22184618919.jpg" alt="Jason David Newton Moses Lake" loading="lazy" width="140" height="160" style="width:100%;height:100%;min-height:140px;object-fit:cover;display:block;object-position:center top;">
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-map-marker-alt" style="margin-right:4px;color:var(--accent-gold);"></i> Patch Moses Lake &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 22, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">BUSINESS LISTING</span>
+      <!-- X panel -->
+      <div id="panel-x" class="ppanel" style="display:none;">
+        <div class="navigation-grid">
+          <div class="nav-card">
+            <div style="height:185px;background:#000;display:flex;align-items:center;justify-content:center;">
+              <i class="fab fa-x-twitter" style="font-size:4rem;color:#fff;opacity:0.85;"></i>
+            </div>
+            <div class="nav-card-body">
+              <i class="fab fa-x-twitter"></i>
+              <h3>Lessons from Working at Sea</h3>
+              <p>Spent years as an engineer on a commercial fishing vessel in the Bering Sea. Here's what it taught me. Mar 19, 2026.</p>
+              <a href="https://x.com/JasonDNewton/status/2029431730546020574" target="_blank" rel="noopener" class="section-button" style="background:#000;">Read on X</a>
+            </div>
           </div>
-          <h3>Jason David Newton Featured on Patch Moses Lake Business Directory</h3>
-          <p>Listed in the Patch Moses Lake local business directory as a Moses Lake resident and content creator covering faith, fatherhood, and blue collar life in Grant County.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://patch.com/washington/moses-lake-wa/business/listing/574843/jason-david-newton" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#006fba;color:#fff !important;">View on Patch <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fbusiness%2Flisting%2F574843%2Fjason-david-newton" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fbusiness%2Flisting%2F574843%2Fjason-david-newton&text=Jason+David+Newton+on+Patch+Moses+Lake" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fbusiness%2Flisting%2F574843%2Fjason-david-newton" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Jason+David+Newton+on+Patch+Moses+Lake+https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fbusiness%2Flisting%2F574843%2Fjason-david-newton" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          <div class="nav-card">
+            <div style="height:185px;background:#111;display:flex;align-items:center;justify-content:center;">
+              <i class="fas fa-bible" style="font-size:3.5rem;color:var(--accent-gold);opacity:0.85;"></i>
+            </div>
+            <div class="nav-card-body">
+              <i class="fab fa-x-twitter"></i>
+              <h3>7 Simple Bible Study Habits for Busy Christian Dads in Moses Lake</h3>
+              <p>Faith habits that fit real life as a working dad. No fluff. Mar 16, 2026.</p>
+              <a href="https://x.com/JasonDNewton/status/2029441805318803889" target="_blank" rel="noopener" class="section-button" style="background:#000;">Read on X</a>
             </div>
           </div>
         </div>
-      </div>
-
-      <!-- CARD 4: Patch News Mention -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:var(--primary-blue);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-map-marker-alt" style="font-size:2.4rem;color:var(--accent-gold);"></i>
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-map-marker-alt" style="margin-right:4px;color:var(--accent-gold);"></i> Patch Moses Lake &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 24, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">NEWS MENTION</span>
-          </div>
-          <h3>Mentioned in Patch Moses Lake Local News Coverage</h3>
-          <p>Jason David Newton and jasondavidnewton.com received a mention in Patch Moses Lake local news coverage on March 24, 2026.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://patch.com/washington/moses-lake-wa/what-did-state-auditors-uncover-moses-lake-school-district-nodx-20260324" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#006fba;color:#fff !important;">Read on Patch <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fwhat-did-state-auditors-uncover-moses-lake-school-district-nodx-20260324" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fwhat-did-state-auditors-uncover-moses-lake-school-district-nodx-20260324&text=Mentioned+in+Patch+Moses+Lake+News" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fwhat-did-state-auditors-uncover-moses-lake-school-district-nodx-20260324" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Mentioned+in+Patch+Moses+Lake+News+https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa%2Fwhat-did-state-auditors-uncover-moses-lake-school-district-nodx-20260324" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 5: Gerald Grain Center -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:linear-gradient(135deg,#2d5a1b,#4a8c2a);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-seedling" style="font-size:2.4rem;color:#f0d080;"></i>
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-seedling" style="margin-right:4px;color:var(--accent-gold);"></i> Gerald Grain Center &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 24, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">PRESS RELEASE</span>
-          </div>
-          <h3>JasonDavidNewton.com Featured on Gerald Grain Center</h3>
-          <p>The blog launch press release was picked up by Gerald Grain Center, an Illinois-based agricultural markets and news site, syndicating the story to their readership across the Midwest.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#2d5a1b;color:#fff !important;">Read on Gerald Grain <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life&text=JasonDavidNewton.com+on+Gerald+Grain+Center" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=JasonDavidNewton.com+on+Gerald+Grain+Center+https://www.geraldgrain.com/markets/stocks.php?article=prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 7: Chronicle Journal -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:linear-gradient(135deg,#1a3a5c,#2d6a9f);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-newspaper" style="font-size:2.4rem;color:var(--accent-gold);"></i>
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-newspaper" style="margin-right:4px;color:var(--accent-gold);"></i> Chronicle Journal &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 24, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">PRESS RELEASE</span>
-          </div>
-          <h3>JasonDavidNewton.com Launches New Blog on Faith, Fatherhood, and Pacific Northwest Life</h3>
-          <p>The blog launch press release was syndicated to the Chronicle Journal markets section, reaching readers in Northwestern Ontario, Canada and extending the story's reach across the border.</p>
-          <div class="home-feed-card-actions">
-            <a href="https://markets.chroniclejournal.com/chroniclejournal/article/prunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" rel="noopener" class="home-feed-read-btn">Read on Chronicle Journal <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fmarkets.chroniclejournal.com%2Fchroniclejournal%2Farticle%2Fprunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fmarkets.chroniclejournal.com%2Fchroniclejournal%2Farticle%2Fprunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life&text=JasonDavidNewton.com+on+Chronicle+Journal" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fmarkets.chroniclejournal.com%2Fchroniclejournal%2Farticle%2Fprunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=JasonDavidNewton.com+on+Chronicle+Journal+https%3A%2F%2Fmarkets.chroniclejournal.com%2Fchroniclejournal%2Farticle%2Fprunderground-2026-3-24-jasondavidnewtoncom-launches-new-blog-on-faith-fatherhood-and-pacific-northwest-life" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- CARD 8: PatchAM Daily Newsletter -->
-      <div class="home-feed-card" style="margin-bottom:22px;">
-        <div class="home-feed-card-thumb" style="background:linear-gradient(135deg,#006fba,#4da6ff);display:flex;align-items:center;justify-content:center;min-width:140px;">
-          <i class="fas fa-map-marker-alt" style="font-size:2.4rem;color:#fff;"></i>
-        </div>
-        <div class="home-feed-card-body">
-          <div class="home-feed-card-meta">
-            <i class="fas fa-map-marker-alt" style="margin-right:4px;color:var(--accent-gold);"></i> Patch Moses Lake PatchAM &nbsp;&middot;&nbsp;
-            <i class="fas fa-calendar-alt" style="margin-right:4px;"></i> March 31, 2026 &nbsp;&middot;&nbsp;
-            <span style="background:rgba(200,168,75,0.15);color:var(--accent-gold);padding:2px 8px;border-radius:12px;font-size:0.7rem;font-weight:700;letter-spacing:0.06em;">NEWSLETTER FEATURE</span>
-          </div>
-          <h3>Jason David Newton Featured in Patch Moses Lake Daily Newsletter</h3>
-          <p>Featured as a community business sponsor in the PatchAM daily newsletter reaching local subscribers across Grant County, with the tagline: "Faith, fatherhood and Moses Lake life @ jasondavidnewton.com."</p>
-          <div class="home-feed-card-actions">
-            <a href="https://patch.com/washington/moses-lake-wa" target="_blank" rel="noopener" class="home-feed-read-btn" style="background:#006fba;color:#fff !important;">View on Patch <i class="fas fa-arrow-right"></i></a>
-            <div class="home-feed-card-share">
-              <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa" target="_blank" aria-label="Share on LinkedIn"><i class="fab fa-linkedin"></i></a>
-              <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa&text=Jason+David+Newton+Featured+in+Patch+Moses+Lake+Newsletter" target="_blank" aria-label="Share on X"><i class="fab fa-x-twitter"></i></a>
-              <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa" target="_blank" aria-label="Share on Facebook"><i class="fab fa-facebook"></i></a>
-              <a href="https://wa.me/?text=Jason+David+Newton+Featured+in+Patch+Moses+Lake+Newsletter+https%3A%2F%2Fpatch.com%2Fwashington%2Fmoses-lake-wa" target="_blank" aria-label="Share on WhatsApp"><i class="fab fa-whatsapp"></i></a>
-            </div>
-          </div>
+        <div class="home-cta-row" style="margin-top:1rem;">
+          <a href="https://x.com/JasonDNewton" target="_blank" rel="noopener" class="medium-cta" style="background:#000;color:#fff !important;"><i class="fab fa-x-twitter"></i> Follow on X</a>
         </div>
       </div>
 
@@ -1401,6 +1291,50 @@ document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
     }).catch(function() { tryNext(); });
   }
   setTimeout(tryNext, 150);
+})();
+</script>
+<script>
+// Platform tabs - colors match each platform brand
+var TAB_ACTIVE = {
+  medium:   { bg: '#000000',  color: '#fff' },
+  linkedin: { bg: '#0077b5',  color: '#fff' },
+  vsco:     { bg: '#1a1a1a',  color: '#fff' },
+  x:        { bg: '#000000',  color: '#fff' }
+};
+var TAB_INACTIVE = {
+  medium:   { bg: 'rgba(0,0,0,0.08)',         color: '#000' },
+  linkedin: { bg: 'rgba(0,119,181,0.12)',      color: '#0077b5' },
+  vsco:     { bg: 'rgba(26,26,26,0.08)',       color: '#1a1a1a' },
+  x:        { bg: 'rgba(0,0,0,0.08)',          color: '#000' }
+};
+function showTab(name) {
+  ['medium','linkedin','vsco','x'].forEach(function(t) {
+    var panel = document.getElementById('panel-' + t);
+    var btn   = document.getElementById('tab-' + t);
+    if (!panel || !btn) return;
+    panel.style.display = t === name ? '' : 'none';
+    var c = t === name ? TAB_ACTIVE[t] : TAB_INACTIVE[t];
+    btn.style.background = c.bg;
+    btn.style.color      = c.color;
+    if (t === name) btn.classList.add('ptab-active');
+    else            btn.classList.remove('ptab-active');
+  });
+}
+// Upgrade button icons once Font Awesome finishes loading
+(function upgradePtabIcons() {
+  var icons = { medium: 'fab fa-medium', linkedin: 'fab fa-linkedin', vsco: 'fas fa-camera', x: 'fab fa-x-twitter' };
+  function doUpgrade() {
+    Object.keys(icons).forEach(function(t) {
+      var btn = document.getElementById('tab-' + t);
+      if (!btn) return;
+      var span = btn.querySelector('.ptab-icon');
+      if (span) { span.innerHTML = ''; span.className = icons[t]; }
+    });
+  }
+  // Try after FA stylesheet onload fires; fallback to 1.5s
+  var fa = document.querySelector('link[href*="font-awesome"]');
+  if (fa) { fa.addEventListener('load', doUpgrade); }
+  setTimeout(doUpgrade, 1500);
 })();
 </script>
 </body>
