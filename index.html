@@ -471,6 +471,10 @@
     @media (max-width: 600px) { .ptab { font-size: 0.78rem; padding: 0.42rem 0.9rem; } }
     /* In the News hero card responsive */
     @media (max-width: 768px) { #in-the-news .section-content > div[style*="grid-template-columns:1fr 1fr"] { grid-template-columns: 1fr !important; } }
+    /* Section photo cards */
+    .section-img-link { display: block; margin-top: 1.8rem; border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease); }
+    .section-img-link:hover { transform: translateY(-6px) scale(1.01); box-shadow: var(--shadow-hover); }
+    .section-photo-card { width: 100%; height: 280px; object-fit: cover; object-position: center center; display: block; }
     </style>
 </head>
 <body>
@@ -602,6 +606,11 @@
       <h3 class="sub">Rooted in Grace Harvest Church</h3>
       <p>Faith and family are what keep me going. Being a dad has taught me more about responsibility than anything else, and my faith in Jesus Christ helps me stay centered through it all. Here in Moses Lake, I'm part of Grace Harvest Church, where I find community and purpose.</p>
       <p class="secondary">Personal growth is big for me too – whether through reading, mentoring, or just reflecting. It's all about leading with compassion and making the most of each day. Check out my <a href="community.html">community involvement</a> for more on this.</p>
+      <a href="gallery.html" class="section-img-link" aria-label="Visit the gallery">
+        <img src="https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-on-shoulders-sunset.jpg"
+          alt="Jason David Newton with son at sunset in Moses Lake Washington"
+          loading="lazy" class="section-photo-card">
+      </a>
     </div>
   </section>
 
@@ -647,6 +656,11 @@
       <h3 class="sub">Golf, Snowboarding, Youth Coaching &amp; PNW Adventures</h3>
       <p>When I'm not at work, I love spending time with my son, lifting weights, golfing, snowboarding, listening to music, watching movies, and coaching youth football. Dive into my <a href="hobbies.html">hobbies and adventures</a> or see my <a href="community.html">coaching in the community</a>.</p>
       <p class="secondary">The Pacific Northwest offers endless ways to recharge, and Moses Lake is the perfect base for it all – lakes, trails, and that small-town feel.</p>
+      <a href="gallery.html" class="section-img-link" aria-label="Visit the gallery">
+        <img src="https://jasondavidnewton.com/assets/jason-david-newton-hiking-pnw-dogs.jpg"
+          alt="Jason David Newton hiking in the Pacific Northwest with dogs"
+          loading="lazy" class="section-photo-card">
+      </a>
     </div>
   </section>
 
@@ -1295,48 +1309,30 @@ document.querySelectorAll('.nav-dropdown').forEach(dropdown => {
 })();
 </script>
 <script>
-// Platform tabs - colors match each platform brand
-var TAB_ACTIVE = {
-  medium:   { bg: '#000000',  color: '#fff' },
-  linkedin: { bg: '#0077b5',  color: '#fff' },
-  vsco:     { bg: '#1a1a1a',  color: '#fff' },
-  x:        { bg: '#000000',  color: '#fff' }
-};
-var TAB_INACTIVE = {
-  medium:   { bg: 'rgba(0,0,0,0.08)',         color: '#000' },
-  linkedin: { bg: 'rgba(0,119,181,0.12)',      color: '#0077b5' },
-  vsco:     { bg: 'rgba(26,26,26,0.08)',       color: '#1a1a1a' },
-  x:        { bg: 'rgba(0,0,0,0.08)',          color: '#000' }
-};
+// Platform tabs
+var TAB_ACTIVE   = { medium:'#000', linkedin:'#0077b5', vsco:'#1a1a1a', x:'#000' };
+var TAB_INACTIVE = { medium:'rgba(0,0,0,0.1)', linkedin:'rgba(0,119,181,0.15)', vsco:'rgba(26,26,26,0.1)', x:'rgba(0,0,0,0.1)' };
+var TAB_TEXT_INACTIVE = { medium:'#111', linkedin:'#0077b5', vsco:'#333', x:'#111' };
+
 function showTab(name) {
   ['medium','linkedin','vsco','x'].forEach(function(t) {
     var panel = document.getElementById('panel-' + t);
     var btn   = document.getElementById('tab-' + t);
     if (!panel || !btn) return;
-    panel.style.display = t === name ? '' : 'none';
-    var c = t === name ? TAB_ACTIVE[t] : TAB_INACTIVE[t];
-    btn.style.background = c.bg;
-    btn.style.color      = c.color;
-    if (t === name) btn.classList.add('ptab-active');
-    else            btn.classList.remove('ptab-active');
+    panel.style.display = (t === name) ? 'block' : 'none';
+    if (t === name) {
+      btn.style.background = TAB_ACTIVE[t];
+      btn.style.color = '#fff';
+      btn.classList.add('ptab-active');
+    } else {
+      btn.style.background = TAB_INACTIVE[t];
+      btn.style.color = TAB_TEXT_INACTIVE[t];
+      btn.classList.remove('ptab-active');
+    }
   });
 }
-// Upgrade button icons once Font Awesome finishes loading
-(function upgradePtabIcons() {
-  var icons = { medium: 'fab fa-medium', linkedin: 'fab fa-linkedin', vsco: 'fas fa-camera', x: 'fab fa-x-twitter' };
-  function doUpgrade() {
-    Object.keys(icons).forEach(function(t) {
-      var btn = document.getElementById('tab-' + t);
-      if (!btn) return;
-      var span = btn.querySelector('.ptab-icon');
-      if (span) { span.innerHTML = ''; span.className = icons[t]; }
-    });
-  }
-  // Try after FA stylesheet onload fires; fallback to 1.5s
-  var fa = document.querySelector('link[href*="font-awesome"]');
-  if (fa) { fa.addEventListener('load', doUpgrade); }
-  setTimeout(doUpgrade, 1500);
-})();
+// Run once on load to make sure Medium is active
+document.addEventListener('DOMContentLoaded', function() { showTab('medium'); });
 </script>
 </body>
 </html>
