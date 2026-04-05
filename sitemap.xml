@@ -139,14 +139,14 @@
         <priority>0.8</priority>
     </url>
 
-    <!-- Gallery (main page + all 32 images) -->
+    <!-- Gallery (main page + all 38 images) -->
     <url>
         <loc>https://jasondavidnewton.com/gallery.html</loc>
         <lastmod>2026-04-04</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.85</priority>
 
-        <!-- /images/ folder — 19 images -->
+        <!-- /images/ folder — 25 images -->
         <image:image>
             <image:loc>https://jasondavidnewton.com/images/jason-david-newton-moses-lake-dad-son-aquarium.jpg</image:loc>
             <image:title>Father-son aquarium adventure in Moses Lake Washington</image:title>
@@ -242,8 +242,38 @@
             <image:title>Seattle sunset captured in Pacific Northwest</image:title>
             <image:caption>Stunning sunset in Seattle by Jason David Newton</image:caption>
         </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-frontier-middle-school-football-coaching-staff-moses-lake-2017.jpg</image:loc>
+            <image:title>Frontier Middle School football coaching staff Moses Lake 2017</image:title>
+            <image:caption>Jason David Newton with the Frontier Middle School 7th grade football coaching staff in Moses Lake, Washington 2017</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-fire-department-storytime-badge.jpg</image:loc>
+            <image:title>Ryker at Fire Department Story Time Moses Lake Library with firefighter badge</image:title>
+            <image:caption>Ryker at the Moses Lake Public Library Fire Department Story Time wearing his junior firefighter badge sticker</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-reading.jpg</image:loc>
+            <image:title>Ryker reading at Moses Lake Public Library story time</image:title>
+            <image:caption>Ryker reading a book at the Moses Lake Public Library Fire Department Story Time</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-coloring.jpg</image:loc>
+            <image:title>Ryker coloring at Moses Lake Public Library</image:title>
+            <image:caption>Ryker coloring with Crayola crayons at the Moses Lake Public Library story time</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-group.jpg</image:loc>
+            <image:title>Group story time at Moses Lake Public Library Fire Department event</image:title>
+            <image:caption>Children and parents gathered for Fire Department Story Time at the Moses Lake Public Library</image:caption>
+        </image:image>
+        <image:image>
+            <image:loc>https://jasondavidnewton.com/images/jason-david-newton-ryker-moses-lake-library-storytime-carpet.jpg</image:loc>
+            <image:title>Ryker locked in at Moses Lake Public Library story time carpet</image:title>
+            <image:caption>Ryker sitting on the carpet completely focused at Moses Lake Public Library story time</image:caption>
+        </image:image>
 
-        <!-- /assets/ folder — 13 additional gallery images -->
+        <!-- /assets/ folder — 13 images -->
         <image:image>
             <image:loc>https://jasondavidnewton.com/assets/hobbies-golf.jpg</image:loc>
             <image:title>Jason David Newton golfing in Moses Lake Washington</image:title>
