@@ -357,4 +357,36 @@
         <priority>0.7</priority>
     </url>
 
+    <!-- Videos -->
+    <url>
+        <loc>https://jasondavidnewton.com/videos.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Moses Lake Kids Activities Guide -->
+    <url>
+        <loc>https://jasondavidnewton.com/moses-lake-kids-activities-guide.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Refrigeration Basics for Beginners -->
+    <url>
+        <loc>https://jasondavidnewton.com/post-refrigeration-basics.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Basic Industrial Refrigeration Tools -->
+    <url>
+        <loc>https://jasondavidnewton.com/post-refrigeration-tools.html</loc>
+        <lastmod>2026-04-05</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
