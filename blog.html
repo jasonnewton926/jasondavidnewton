@@ -1246,17 +1246,24 @@
   </div>
 </section>
 
-<!-- ═══ NEWSLETTER CTA ═══ -->
-<section class="section fade-in-section" style="background:linear-gradient(135deg,var(--primary-dark) 0%,var(--primary-blue) 100%);color:#fff;padding:3rem 0;">
-  <div class="section-content" style="text-align:center;max-width:580px;">
-    <div style="font-size:2rem;margin-bottom:0.8rem;">✉️</div>
-    <h2 style="color:#fff;margin-bottom:0.4rem;">Never Miss a Post</h2>
-    <p style="color:rgba(255,255,255,0.8);margin-bottom:1.6rem;">Get new posts straight to your inbox. Faith, fatherhood, and blue-collar life from Moses Lake.</p>
-    <form action="https://jason-david-newton.beehiiv.com/subscribe" method="GET" target="_blank" style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center;max-width:460px;margin:0 auto;">
-      <input type="email" name="email" placeholder="your@email.com" required style="flex:1;min-width:200px;padding:0.78rem 1rem;border-radius:8px;border:none;font-size:0.95rem;font-family:var(--font-body);background:rgba(255,255,255,0.95);color:var(--text);">
-      <button type="submit" style="background:var(--accent-gold);color:var(--primary-dark);border:none;border-radius:8px;padding:0.78rem 1.4rem;font-weight:700;font-size:0.9rem;cursor:pointer;white-space:nowrap;transition:background 0.2s;">Subscribe Free</button>
-    </form>
-    <p style="margin-top:0.8rem;font-size:0.75rem;color:rgba(255,255,255,0.45);">Powered by Beehiiv. Unsubscribe anytime.</p>
+<!-- ═══ NEWSLETTER ═══ -->
+<section class="section fade-in-section" id="newsletter" style="background:var(--section-alt);padding:3.5rem 0;">
+  <div class="section-content" style="max-width:680px;text-align:center;">
+    <div style="background:var(--card-bg);border-radius:18px;box-shadow:var(--shadow-hover);padding:2.8rem 2.4rem;border:1px solid rgba(200,168,75,0.15);position:relative;overflow:hidden;">
+      <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--primary-dark),var(--accent-gold),var(--primary-blue));"></div>
+      <div style="width:56px;height:56px;border-radius:50%;background:linear-gradient(135deg,var(--primary-dark),var(--primary-blue));display:flex;align-items:center;justify-content:center;margin:0 auto 1.2rem;box-shadow:0 4px 18px rgba(13,34,68,0.25);">
+        <i class="fas fa-envelope-open-text" style="color:var(--accent-gold);font-size:1.3rem;"></i>
+      </div>
+      <h2 style="font-family:var(--font-display);font-size:1.6rem;color:var(--text);margin-bottom:0.5rem;">The Jason David Newton Newsletter</h2>
+      <p style="color:var(--text-secondary);font-size:0.97rem;line-height:1.7;max-width:460px;margin:0 auto 1.8rem;">Faith, fatherhood, and blue-collar life in Moses Lake. Real writing when I actually have something worth saying. No spam, no fluff.</p>
+      <a href="https://jason-david-newton.beehiiv.com/subscribe" target="_blank" rel="noopener"
+        style="display:inline-flex;align-items:center;gap:10px;background:var(--primary-blue);color:#fff;padding:0.88rem 2rem;border-radius:9px;font-weight:700;font-size:0.97rem;text-decoration:none;transition:background 0.2s,transform 0.2s,box-shadow 0.2s;box-shadow:0 4px 18px rgba(26,74,110,0.35);"
+        onmouseover="this.style.background='var(--primary-dark)';this.style.transform='translateY(-2px)';this.style.boxShadow='0 8px 28px rgba(13,34,68,0.4)'"
+        onmouseout="this.style.background='var(--primary-blue)';this.style.transform='translateY(0)';this.style.boxShadow='0 4px 18px rgba(26,74,110,0.35)'">
+        <i class="fas fa-envelope-open-text"></i> Subscribe Free on Beehiiv
+      </a>
+      <p style="margin-top:1rem;font-size:0.78rem;color:var(--text-secondary);">Powered by Beehiiv &nbsp;&middot;&nbsp; Unsubscribe anytime</p>
+    </div>
   </div>
 </section>
 
@@ -1334,6 +1341,12 @@ function scrollCarousel(trackId, dir) {
     <a href="https://www.509-local.com/biz/19489/jason-david-newton" target="_blank" rel="noopener" aria-label="509 Local – Jason David Newton"><i class="fas fa-store" title="509 Local"></i></a>
     <a href="https://www.maxpreps.com/wa/moses-lake/moses-lake-mavericks/athletes/jason-newton/?careerid=2hqefuo0e4k66" target="_blank" rel="noopener" aria-label="MaxPreps – Jason David Newton"><i class="fas fa-football-ball" title="MaxPreps"></i></a>
     <a href="https://jason-david-newton.beehiiv.com/" target="_blank" rel="noopener" aria-label="Newsletter – Jason David Newton"><i class="fas fa-envelope-open-text" title="Newsletter"></i></a>
+  </div>
+  <div style="margin-bottom:20px;">
+    <a href="https://jason-david-newton.beehiiv.com/subscribe" target="_blank" rel="noopener"
+      style="display:inline-flex;align-items:center;gap:9px;background:rgba(200,168,75,0.12);border:1px solid rgba(200,168,75,0.35);color:var(--accent-gold);padding:0.6rem 1.4rem;border-radius:8px;font-weight:700;font-size:0.88rem;text-decoration:none;transition:background 0.2s;">
+      <i class="fas fa-envelope-open-text"></i> Subscribe to the Newsletter
+    </a>
   </div>
   <div style="margin-bottom:16px;">
     <a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a>
