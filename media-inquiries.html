@@ -62,8 +62,6 @@
         --shadow: 0 4px 24px rgba(0,0,0,0.4); --shadow-hover: 0 14px 44px rgba(0,0,0,0.55);
     }
     body { font-family: var(--font-body); color: var(--text); background: var(--section-bg); line-height: 1.7; overflow-x: hidden; }
-
-    /* ── Navbar ── */
     .navbar { position: fixed; top: 0; left: 0; right: 0; z-index: 900; background: transparent; transition: all 0.4s var(--ease); padding: 1rem 2rem; }
     .navbar.scrolled { background: rgba(13,34,68,0.96) !important; backdrop-filter: blur(14px); box-shadow: 0 2px 24px rgba(0,0,0,0.4); padding: 0.65rem 2rem; }
     .nav-container { max-width: 1200px; margin: 0 auto; display: flex; align-items: center; gap: 1rem; }
@@ -102,13 +100,10 @@
         .nav-dropdown-menu a:hover { background: rgba(255,255,255,0.08); color: #fff; }
         .dropdown-divider { display: none; }
     }
-
-    /* ── Hero ── */
     .page-hero { position: relative; min-height: 100vh; display: flex; align-items: center; justify-content: center; overflow: hidden; padding: 100px 2rem 80px; }
     .page-hero-bg { position: absolute; inset: 0; background-image: url('https://jasondavidnewton.com/assets/jason-david-newton-working-starbound.jpg'); background-size: cover; background-position: center 30%; }
     .page-hero-overlay { position: absolute; inset: 0; background: linear-gradient(140deg, rgba(6,18,32,0.92) 0%, rgba(10,31,51,0.82) 55%, rgba(15,42,70,0.7) 100%); }
     .page-hero-overlay::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to top, rgba(6,18,32,0.8) 0%, transparent 55%); }
-    /* Hero inner: always visible, no JS dependency */
     .page-hero-inner { position: relative; z-index: 2; display: grid; grid-template-columns: auto 1fr; gap: 3rem; align-items: center; max-width: 1000px; width: 100%; }
     .hero-avatar-wrap { display: flex; flex-direction: column; align-items: center; gap: 0.9rem; flex-shrink: 0; }
     .hero-avatar { width: 175px; height: 175px; border-radius: 50%; object-fit: cover; border: 4px solid rgba(200,168,75,0.8); box-shadow: 0 0 0 8px rgba(200,168,75,0.14), 0 10px 44px rgba(0,0,0,0.55); display: block; }
@@ -132,24 +127,18 @@
         .hero-text p { margin-left: auto; margin-right: auto; }
         .hero-roles { justify-content: center; }
     }
-
-    /* ── Stats bar ── */
     .stats-bar { background: var(--primary-dark); padding: 18px 2rem; border-bottom: 1px solid rgba(255,255,255,0.06); }
     .stats-bar-inner { max-width: 1000px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: center; gap: 0 2.5rem; }
     .stat-item { display: flex; align-items: center; gap: 0.55rem; color: rgba(255,255,255,0.82); font-size: 0.88rem; font-weight: 600; padding: 6px 0; white-space: nowrap; }
     .stat-item i { color: var(--accent-gold); font-size: 0.95rem; }
     .stat-divider { width: 1px; height: 22px; background: rgba(255,255,255,0.12); align-self: center; }
     @media (max-width: 600px) { .stat-divider { display: none; } .stats-bar-inner { gap: 2px 1.5rem; } .stat-item { font-size: 0.82rem; } }
-
-    /* ── Sections ── */
     .section { padding: 76px 2rem; background: var(--section-bg); }
     .section.alt { background: var(--section-alt); }
     .section-inner { max-width: 900px; margin: 0 auto; }
     .section-heading { font-family: var(--font-display); font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--primary-blue); margin-bottom: 0.5rem; line-height: 1.2; }
     [data-theme="dark"] .section-heading { color: var(--accent-blue); }
     .section-sub { font-size: 1rem; color: var(--text-secondary); margin-bottom: 2.4rem; line-height: 1.7; }
-
-    /* ── Bio card ── */
     .bio-card { background: var(--card-bg); border-radius: 20px; box-shadow: var(--shadow); overflow: hidden; display: grid; grid-template-columns: 280px 1fr; margin-bottom: 2.4rem; }
     .bio-card-visual { background: linear-gradient(160deg, #0d2244 0%, #1a4a6e 100%); position: relative; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2.5rem 2rem; gap: 1rem; overflow: hidden; }
     .bio-card-visual::before { content: ''; position: absolute; inset: 0; background: url('https://jasondavidnewton.com/assets/sunset-moses-lake-jason-david-newton.jpg') center/cover; opacity: 0.12; }
@@ -170,16 +159,12 @@
     [data-theme="dark"] .bio-fact { background: rgba(77,166,255,0.1); }
     .bio-fact i { color: var(--accent-gold); font-size: 0.78rem; }
     @media (max-width: 680px) { .bio-card { grid-template-columns: 1fr; } .bio-card-visual { padding: 2rem 1.5rem; } .bio-card-body { padding: 1.6rem; } }
-
-    /* ── Topics ── */
     .topic-grid { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 1.2rem; }
     .topic-pill { display: flex; align-items: center; gap: 8px; background: var(--card-bg); border: 1.5px solid rgba(200,168,75,0.3); border-radius: 10px; padding: 0.6rem 1rem; box-shadow: var(--shadow); transition: border-color 0.2s, box-shadow 0.2s; }
     .topic-pill:hover { border-color: var(--accent-gold); box-shadow: var(--shadow-hover); }
     .topic-pill i { color: var(--accent-gold); font-size: 1rem; flex-shrink: 0; }
     .topic-pill-text { font-size: 0.9rem; font-weight: 600; color: var(--text); }
     .topic-pill-sub { font-size: 0.78rem; color: var(--text-secondary); display: block; }
-
-    /* ── Pitch tips ── */
     .pitch-tips { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 1.4rem; }
     .pitch-tip { background: var(--card-bg); border-radius: 12px; padding: 1.4rem 1.6rem; box-shadow: var(--shadow); border-left: 3px solid var(--accent-gold); }
     .pitch-tip.red { border-left-color: #e05a4e; }
@@ -189,8 +174,6 @@
     [data-theme="dark"] .pitch-tip h4 { color: var(--accent-blue); }
     .pitch-tip p { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
     @media (max-width: 600px) { .pitch-tips { grid-template-columns: 1fr; } }
-
-    /* ── Contact ── */
     .contact-split { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
     .contact-info-col h3 { font-family: var(--font-display); font-size: 1.3rem; color: var(--primary-blue); margin-bottom: 0.7rem; }
     [data-theme="dark"] .contact-info-col h3 { color: var(--accent-blue); }
@@ -221,15 +204,11 @@
     .form-submit:hover { background: #0d2244; transform: translateY(-2px); }
     .form-note { font-size: 0.8rem; color: var(--text-secondary); text-align: center; margin-top: 10px; }
     @media (max-width: 768px) { .contact-split { grid-template-columns: 1fr; gap: 2rem; } .form-row { grid-template-columns: 1fr; } }
-
-    /* ── Coverage strip ── */
     .coverage-strip { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 1.4rem; }
     .coverage-strip-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-secondary); }
     .coverage-badge { display: inline-flex; align-items: center; gap: 6px; background: var(--card-bg); border: 1px solid rgba(100,116,139,0.15); border-radius: 8px; padding: 5px 12px; font-size: 0.82rem; font-weight: 700; color: var(--text-secondary); text-decoration: none; transition: border-color 0.2s, color 0.2s, box-shadow 0.2s; box-shadow: var(--shadow); }
     .coverage-badge:hover { border-color: var(--accent-gold); color: var(--primary-blue); box-shadow: 0 4px 16px rgba(200,168,75,0.15); }
     .coverage-badge i { color: var(--accent-gold); }
-
-    /* ── Footer ── */
     footer { background: var(--primary-dark) !important; color: rgba(255,255,255,0.7); text-align: center; padding: 48px 2rem 100px; display: block !important; opacity: 1 !important; visibility: visible !important; }
     @media (min-width: 481px) { footer { padding-bottom: 30px; } }
     .footer-icons { display: flex !important; flex-wrap: wrap; justify-content: center; gap: 14px; margin-bottom: 28px; opacity: 1 !important; transform: none !important; visibility: visible !important; }
@@ -238,12 +217,8 @@
     .rss-link { color: var(--accent-gold); text-decoration: none; font-weight: 600; font-size: 0.93rem; }
     .rss-link:hover { color: #d9ba68; }
     footer p { font-size: 0.88rem; margin-top: 6px; opacity: 0.6; }
-
-    /* ── Back to top ── */
     #back-to-top { position: fixed; bottom: 96px; right: 26px; display: none; background: rgba(31,79,122,0.82); color: #fff; border: none; width: 38px; height: 38px; border-radius: 50%; cursor: pointer; font-size: 1rem; z-index: 8000; transition: all 0.3s var(--ease); align-items: center; justify-content: center; backdrop-filter: blur(6px); }
     #back-to-top:hover { background: var(--primary-blue); transform: scale(1.1); }
-
-    /* ── Profile card ── */
     .profile-float-card { position: fixed; bottom: 96px; right: 26px; z-index: 9997; width: 280px; background: var(--card-bg); border-radius: 14px; overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.18); transition: opacity 0.3s var(--ease), transform 0.3s var(--ease); }
     .profile-float-card.hidden { opacity: 0; transform: translateY(10px) scale(0.97); pointer-events: none; }
     @media (max-width: 768px) { .profile-float-card { display: none !important; } }
@@ -262,8 +237,6 @@
     [data-theme="dark"] .profile-card-footer { border-top-color: rgba(255,255,255,0.07); }
     .profile-card-footer a { color: var(--primary-blue); text-decoration: none; font-weight: 600; }
     [data-theme="dark"] .profile-card-footer a { color: var(--accent-blue); }
-
-    /* ── Chat bubble ── */
     .chat-bubble-btn { position: fixed; bottom: 26px; right: 26px; z-index: 9999; width: 58px; height: 58px; border-radius: 50%; background: var(--primary-blue); border: none; cursor: pointer; box-shadow: 0 6px 28px rgba(31,79,122,0.52); display: flex; align-items: center; justify-content: center; transition: transform 0.3s var(--ease); color: #fff; font-size: 1.45rem; }
     .chat-bubble-btn:hover { transform: scale(1.1); }
     .chat-bubble-btn .chat-close { display: none; }
@@ -280,8 +253,6 @@
     .chat-status::before { content: ''; width: 7px; height: 7px; background: #3ecf6e; border-radius: 50%; display: block; }
     #embedded-widget-container { flex: 1; width: 100%; border: none; min-height: 0; background: var(--section-bg); }
     @media (max-width: 480px) { .chat-panel { right: 0; left: 0; bottom: 0; width: 100%; max-width: 100%; border-radius: 18px 18px 0 0; height: 68vh; } .chat-bubble-btn { bottom: 70px; right: 16px; } }
-
-    /* ── Mobile bottom nav ── */
     .mobile-bottom-nav { display: none; }
     @media (max-width: 480px) {
         .mobile-bottom-nav { display: flex; position: fixed; bottom: 0; left: 0; right: 0; z-index: 8500; background: rgba(13,34,68,0.97); backdrop-filter: blur(14px); border-top: 1px solid rgba(255,255,255,0.1); padding: 8px 0 max(8px, env(safe-area-inset-bottom)); justify-content: space-around; align-items: center; }
@@ -296,7 +267,6 @@
 </head>
 <body>
 
-
 <a href="#main-content" class="skip-to-content">Skip to main content</a>
 
 <header role="navigation" class="navbar" id="mainNav" aria-label="Main Navigation">
@@ -307,7 +277,7 @@
       <span></span><span></span><span></span>
     </label>
     <nav>
-                  <ul>
+      <ul>
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="education.html">Education</a></li>
@@ -378,8 +348,8 @@
           <div class="bio-press-links">
             <a href="news-press.html" class="bio-press-link"><i class="fas fa-newspaper"></i> Press Coverage</a>
             <a href="https://muckrack.com/jason-david-newton" target="_blank" rel="noopener" class="bio-press-link"><i class="fas fa-external-link-alt"></i> Muck Rack Profile</a>
-            <a href="https://jasondavidnewton.com/assets/Jason_David_Newton_Resume.pdf" target="_blank" rel="noopener" class="bio-press-link"><i class="fas fa-download"></i> Download Resume</a>
-            <a href="https://jasondavidnewton.com/assets/Jason_David_Newton_Resume.pdf" target="_blank" rel="noopener" class="bio-press-link" style="background:var(--accent-gold);color:var(--primary-dark);border-color:var(--accent-gold);font-weight:700;"><i class="fas fa-file-download"></i> Download Press Kit</a>
+            <a href="assets/Jason_David_Newton_Resume.pdf" target="_blank" rel="noopener" class="bio-press-link"><i class="fas fa-download"></i> Download Resume</a>
+            <a href="assets/Jason_David_Newton_Press_Kit.pdf" target="_blank" rel="noopener" class="bio-press-link" style="background:var(--accent-gold);color:var(--primary-dark);border-color:var(--accent-gold);font-weight:700;"><i class="fas fa-file-download"></i> Download Press Kit</a>
           </div>
         </div>
         <div class="bio-card-body">
@@ -545,7 +515,7 @@
   <div style="margin-bottom:16px;">
     <a href="/blog-rss.xml" class="rss-link"><i class="fas fa-rss"></i> Subscribe to RSS Feed</a>
   </div>
-  <p>© 2026 Jason David Newton</p>
+  <p>&copy; 2026 Jason David Newton</p>
   <p>Moses Lake, Washington</p>
 </footer>
 
@@ -588,7 +558,8 @@
   <a href="contact.html"><i class="fas fa-envelope"></i><span>Contact</span></a>
 </nav>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+<script>
 let chatSdkLoaded = false;
 function loadChatSdk() {
   if (chatSdkLoaded) return; chatSdkLoaded = true;
@@ -601,7 +572,6 @@ function loadChatSdk() {
 }
 </script>
 <script>
-// Theme
 document.addEventListener('DOMContentLoaded', () => {
   const btn = document.getElementById('theme-toggle');
   const icon = document.getElementById('theme-icon');
@@ -616,24 +586,16 @@ document.addEventListener('DOMContentLoaded', () => {
     icon.className = t === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
   });
 });
-
-// Navbar scroll + back to top
 function updateNav() {
   const sy = window.scrollY;
   const nb = document.getElementById('mainNav');
-  if (nb) {
-    if (sy > 60) { nb.classList.add('scrolled'); }
-    else { nb.classList.remove('scrolled'); }
-  }
+  if (nb) { if (sy > 60) { nb.classList.add('scrolled'); } else { nb.classList.remove('scrolled'); } }
   const btn = document.getElementById('back-to-top');
   if (btn) btn.style.display = sy > 300 ? 'flex' : 'none';
 }
 window.addEventListener('scroll', updateNav, { passive: true });
 document.addEventListener('DOMContentLoaded', updateNav);
-
 function topFunction() { window.scrollTo({ top: 0, behavior: 'smooth' }); }
-
-// Profile card
 document.addEventListener('DOMContentLoaded', () => {
   const card = document.getElementById('profileCard');
   const close = document.getElementById('profileCardClose');
@@ -642,8 +604,6 @@ document.addEventListener('DOMContentLoaded', () => {
     close.addEventListener('click', e => { e.stopPropagation(); card.classList.add('hidden'); sessionStorage.setItem('profileCardDismissed','1'); });
   }
 });
-
-// Chat bubble
 const chatBubble = document.getElementById('chatBubble');
 const chatPanel = document.getElementById('chatPanel');
 chatBubble.addEventListener('click', e => {
@@ -667,23 +627,6 @@ document.addEventListener('keydown', e => {
     chatPanel.classList.remove('open'); chatBubble.classList.remove('open');
     chatBubble.setAttribute('aria-expanded','false'); chatBubble.focus();
   }
-});
-
-// Dropdowns
-document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.nav-dropdown').forEach(dd => {
-    const t = dd.querySelector('.nav-dropdown-toggle');
-    if (!t) return;
-    t.addEventListener('click', e => {
-      if (window.innerWidth <= 900) {
-        e.preventDefault();
-        dd.classList.toggle('mobile-open');
-        document.querySelectorAll('.nav-dropdown').forEach(d => {
-          if (d !== dd) d.classList.remove('mobile-open');
-        });
-      }
-    });
-  });
 });
 </script>
 </body>
